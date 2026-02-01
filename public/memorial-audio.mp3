@@ -1,0 +1,7 @@
+This file should contain the actual audio content from your uploaded file. Since I cannot access the uploaded file directly, you'll need to:
+
+1. Download your uploaded audio file
+2. Rename it to "memorial-audio.mp3" 
+3. Place it in the public folder
+
+The audio player is now configured to automatically play this file when users visit the site.

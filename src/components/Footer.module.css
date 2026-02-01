@@ -1,0 +1,210 @@
+.footer {
+  background: linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+  color: #2d3748;
+  padding: 100px 24px 48px;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.memorialHeader {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.memorialSymbol {
+  font-size: 56px;
+  margin-bottom: 24px;
+  color: #3182ce;
+}
+
+.memorialHeader h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  color: #1a202c;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+.memorialLine {
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #3182ce 50%, transparent 100%);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 64px;
+  margin-bottom: 80px;
+}
+
+.footerSection h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #3182ce;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.memorialQuote {
+  margin-top: 32px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #4a5568;
+  text-align: center;
+}
+
+.quoteHebrew {
+  font-size: 19px;
+  color: #3182ce;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.7;
+  letter-spacing: -0.025em;
+}
+
+.quoteDate {
+  font-size: 15px;
+  color: #718096;
+  font-weight: 500;
+  padding-top: 16px;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerSection li {
+  margin: 12px 0;
+}
+
+.footerSection a {
+  color: #718096;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 0;
+  display: block;
+  border-bottom: 1px solid transparent;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footerSection a:hover {
+  color: #3182ce;
+  border-bottom-color: rgba(49, 130, 206, 0.3);
+  padding-right: 8px;
+}
+
+.footerBottom {
+  text-align: center;
+  padding-top: 48px;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.bottomMemorial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.memorialFlames {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.smallFlame {
+  width: 10px;
+  height: 14px;
+  background: linear-gradient(to top, #3182ce 0%, #90cdf4 60%, #dbeafe 90%, #fef3c7 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: flicker 2s ease-in-out infinite alternate;
+}
+
+.smallFlame:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.smallFlame:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.memorialText p {
+  font-size: 14px;
+  margin: 12px 0;
+  color: #718096;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.memorialText p:first-child {
+  color: #3182ce;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@keyframes flicker {
+  0% {
+    transform: rotate(-1deg) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(1deg) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-1deg) scale(0.9);
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 80px 20px 40px;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 64px;
+  }
+
+  .memorialHeader {
+    margin-bottom: 48px;
+  }
+
+  .memorialSymbol {
+    font-size: 48px;
+  }
+
+  .memorialQuote {
+    padding: 24px;
+    margin-top: 24px;
+  }
+
+  .bottomMemorial {
+    gap: 20px;
+  }
+
+  .footerBottom {
+    padding-top: 40px;
+  }
+
+  .memorialText p {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+}

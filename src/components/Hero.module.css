@@ -1,0 +1,296 @@
+.hero {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  color: #2d3748;
+  position: relative;
+  overflow: hidden;
+  margin-top: 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.memorialOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.photoCarousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  width: 700%;
+  height: 100%;
+  animation: slideCarousel 28s infinite linear;
+}
+
+.photoSlide {
+  width: 14.285714%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.photoSlide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(30%) sepia(10%) hue-rotate(90deg) contrast(0.9) brightness(0.8) saturate(0.6) opacity(0.7);
+}
+
+@keyframes slideCarousel {
+  0% { transform: translateX(0); }
+  14.285714% { transform: translateX(-14.285714%); }
+  28.571428% { transform: translateX(-28.571428%); }
+  42.857142% { transform: translateX(-42.857142%); }
+  57.142856% { transform: translateX(-57.142856%); }
+  71.42857% { transform: translateX(-71.42857%); }
+  85.714284% { transform: translateX(-85.714284%); }
+  100% { transform: translateX(-100%); }
+}
+
+.heroContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.heroMain {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 60px;
+  align-items: center;
+  background: rgba(248, 250, 252, 0.98);
+  padding: 60px;
+  border: 2px solid #cbd5e0;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.heroImageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memorialPhotoPlaceholder {
+  width: 100%;
+  max-width: 350px;
+}
+
+.photoFrame {
+  width: 100%;
+  height: 400px;
+  border: 4px solid #4a5568;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  background: #f7fafc;
+}
+
+.photoFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.05) brightness(0.95);
+}
+
+.photoFrame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(74, 85, 104, 0.05) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroText {
+  text-align: right;
+}
+
+.memorialTitle {
+  margin-bottom: 48px;
+  text-align: right;
+}
+
+.memorialTitle h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  color: #1a202c;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.titleDivider {
+  width: 120px;
+  height: 3px;
+  background: #4a5568;
+  margin: 20px 0 20px auto;
+}
+
+.serviceInfo {
+  margin: 48px 0;
+  padding: 40px;
+  background: rgba(247, 250, 252, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid #cbd5e0;
+  border-left: 4px solid #4a5568;
+  text-align: right;
+}
+
+.namePlate {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.name {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #2d5a4a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.025em;
+}
+
+.serviceDetails p {
+  margin: 12px 0;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.service {
+  font-weight: 600;
+  color: #2d5a4a;
+  font-size: 18px;
+}
+
+.dates, .age, .incident {
+  color: #718096;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.incident {
+  color: #4a5568;
+  font-weight: 600;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.heroQuote {
+  margin: 48px 0;
+  padding: 40px;
+  background: rgba(247, 250, 252, 0.95);
+  border: 1px solid #cbd5e0;
+  border-left: 4px solid #4a5568;
+  position: relative;
+  text-align: right;
+}
+
+.quoteMark {
+  font-size: 64px;
+  color: rgba(74, 85, 104, 0.3);
+  position: absolute;
+  top: -5px;
+  right: 24px;
+  font-family: Georgia, serif;
+}
+
+.quoteText {
+  margin: 20px 0 16px 0;
+  font-size: 19px;
+  color: #2d3748;
+  font-style: italic;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.quoteAttribution {
+  font-size: 15px;
+  color: #4a5568;
+  font-weight: 600;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+    margin-top: 72px;
+  }
+
+  .heroContent {
+    padding: 0 20px;
+  }
+
+  .heroMain {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .heroText {
+    text-align: center;
+  }
+
+  .memorialTitle {
+    text-align: center;
+  }
+
+  .titleDivider {
+    margin: 20px auto;
+  }
+
+  .serviceInfo {
+    padding: 32px;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .heroQuote {
+    padding: 32px;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .quoteMark {
+    left: 24px;
+  }
+
+  .memorialPhotoPlaceholder {
+    max-width: 280px;
+  }
+
+  .photoFrame {
+    height: 320px;
+  }
+}

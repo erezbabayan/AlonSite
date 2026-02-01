@@ -1,0 +1,277 @@
+.lettersPage {
+  background: #fafbfc;
+  min-height: 100vh;
+  padding: 140px 24px 100px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.pageHeader h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #1a202c;
+  margin-bottom: 24px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.pageHeader p {
+  font-size: 19px;
+  color: #718096;
+  margin: 12px 0;
+  font-weight: 400;
+}
+
+.sectionFilters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.sectionBtn {
+  background: rgba(252, 252, 250, 0.95);
+  color: #6b7280;
+  border: 1px solid rgba(74, 144, 226, 0.25);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sectionBtn:hover,
+.sectionBtn.active {
+  background: linear-gradient(135deg, #4a90e2 0%, #6b7280 100%);
+  color: #ffffff;
+  border-color: #4a90e2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.25);
+}
+
+.lettersGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 96px;
+}
+
+.letterCard {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.letterCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(49, 130, 206, 0.3);
+}
+
+.letterHeader {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.authorAvatar {
+  font-size: 36px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(49, 130, 206, 0.1);
+  border-radius: 12px;
+}
+
+.authorDetails h3 {
+  font-size: 21px;
+  color: #3182ce;
+  margin-bottom: 8px;
+  letter-spacing: -0.025em;
+}
+
+.date {
+  font-size: 15px;
+  color: #718096;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.letterContent {
+  line-height: 1.7;
+}
+
+.letterContent p {
+  font-size: 17px;
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.letterSignature {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.letterSignature p {
+  font-size: 15px;
+  color: #3182ce;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.memorialStoriesSection {
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 3px solid rgba(49, 130, 206, 0.2);
+}
+
+.memorialStoriesSection h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: #3182ce;
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
+}
+
+.sectionDescription {
+  text-align: center;
+  font-size: 17px;
+  color: #718096;
+  margin-bottom: 48px;
+  font-weight: 400;
+}
+
+.storyCard {
+  background: rgba(49, 130, 206, 0.05);
+  padding: 40px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(49, 130, 206, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.storyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(49, 130, 206, 0.3);
+}
+
+.addLetterSection {
+  text-align: center;
+  padding: 64px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 2px dashed rgba(49, 130, 206, 0.3);
+}
+
+.addLetterSection h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  color: #3182ce;
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
+}
+
+.addLetterSection p {
+  font-size: 19px;
+  color: #718096;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.addLetterBtn {
+  background: #3182ce;
+  color: #ffffff;
+  padding: 16px 32px;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.addLetterBtn:hover {
+  background: #2c5aa0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .lettersPage {
+    padding: 100px 20px 80px;
+  }
+
+  .pageHeader {
+    margin-bottom: 64px;
+  }
+
+  .sectionFilters {
+    gap: 6px;
+    margin-bottom: 48px;
+  }
+
+  .sectionBtn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .lettersGrid {
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .letterCard {
+    padding: 32px 24px;
+  }
+
+  .authorInfo {
+    gap: 16px;
+  }
+
+  .authorAvatar {
+    font-size: 32px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .memorialStoriesSection {
+    margin-top: 64px;
+    padding-top: 40px;
+  }
+
+  .storyCard {
+    padding: 32px 24px;
+    margin-bottom: 24px;
+  }
+
+  .addLetterSection {
+    padding: 48px 32px;
+  }
+
+  .addLetterBtn {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
