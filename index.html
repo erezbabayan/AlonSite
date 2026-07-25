@@ -1,22 +1,513 @@
-<!doctype html>
-<html lang="he" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="לזכרו הנצחי - אלון אברהם חי בביאן ז&quot;ל" />
-    <meta property="og:description" content="אתר זיכרון נצחי לחייל גיבור שנפל בעת מילוי תפקידו בהגנה על המדינה ואזרחיה" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="לזכרו הנצחי - אלון אברהם חי בביאן ז&quot;ל" />
-    <meta property="twitter:description" content="אתר זיכרון נצחי לחייל גיבור שנפל בעת מילוי תפקידו בהגנה על המדינה ואזרחיה" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <title>לזכרו הנצחי • In Eternal Memory</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1b1c19",
+                    "primary-container": "#1a2e44",
+                    "on-primary-container": "#8296b0",
+                    "on-tertiary-fixed-variant": "#504536",
+                    "on-tertiary-fixed": "#231a0e",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f5f3ee",
+                    "tertiary-fixed-dim": "#d5c4b1",
+                    "on-secondary-container": "#5e656c",
+                    "outline": "#74777d",
+                    "on-surface-variant": "#43474d",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#dce3eb",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dbdad5",
+                    "on-primary-fixed-variant": "#35485f",
+                    "primary-fixed-dim": "#b4c8e4",
+                    "surface-tint": "#4c6078",
+                    "on-background": "#1b1c19",
+                    "inverse-primary": "#b4c8e4",
+                    "on-secondary-fixed": "#161c22",
+                    "on-error": "#ffffff",
+                    "surface-container": "#f0eee9",
+                    "surface-bright": "#fbf9f4",
+                    "tertiary": "#1f170b",
+                    "on-tertiary-container": "#a19280",
+                    "surface-variant": "#e4e2dd",
+                    "surface": "#fbf9f4",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#f1e0cc",
+                    "inverse-surface": "#30312e",
+                    "primary": "#1A2E44", /* Navy from Eternal Grace */
+                    "primary-fixed": "#d1e4ff",
+                    "inverse-on-surface": "#f2f1ec",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#352b1e",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eae8e3",
+                    "on-primary-fixed": "#061d32",
+                    "on-secondary-fixed-variant": "#41484e",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fbf9f4", /* Cream from Eternal Grace */
+                    "secondary-fixed": "#dce3eb",
+                    "outline-variant": "#c4c6cd",
+                    "secondary-fixed-dim": "#c0c7ce",
+                    "secondary": "#585f65",
+                    "accent-gold": "#D4AF37" /* Gold Accent */
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "serif": ["Assistant", "sans-serif"],
+                    "sans": ["Assistant", "sans-serif"],
+                    "headline": ["Assistant", "sans-serif"],
+                    "body": ["Assistant", "sans-serif"],
+                    "label": ["Assistant", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Assistant', sans-serif; background-color: #fbf9f4; }
+        
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+        .masonry-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        .gold-border {
+            border-color: #D4AF37;
+        }
+        .gold-text {
+            color: #D4AF37;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        section[id] {
+            scroll-margin-top: 5rem;
+        }
+        @keyframes candle-in {
+            from { opacity: 0; transform: translateY(12px); box-shadow: 0 0 0 rgba(212, 175, 55, 0); }
+            30% { box-shadow: 0 0 24px rgba(212, 175, 55, 0.25); }
+            to { opacity: 1; transform: translateY(0); box-shadow: 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .candle-entry-new {
+            animation: candle-in 1400ms ease-out;
+        }
+        #mobile-nav-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 400ms ease-out;
+        }
+        #mobile-nav-panel.open {
+            max-height: 20rem;
+        }
+        @keyframes reveal-up {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal.reveal-pending {
+            opacity: 0;
+        }
+        .reveal.in-view {
+            animation: reveal-up 700ms ease-out forwards;
+        }
+        /* Framed-photograph treatment: a clean white mat, like a page from a
+           physical photo album, instead of a hard dark frame. */
+        .photo-frame {
+            position: relative;
+            background: #ffffff;
+            border-radius: 0.4rem;
+            padding: 0.65rem;
+            box-shadow: 0 16px 34px rgba(27, 28, 25, 0.12);
+            transition: box-shadow 400ms ease-out;
+        }
+        .photo-frame:hover {
+            box-shadow: 0 24px 46px rgba(27, 28, 25, 0.18);
+        }
+        .photo-frame .photo-frame-inner {
+            border-radius: 0.15rem;
+            overflow: hidden;
+        }
+        /* Reads as quiet archival grayscale until a visitor's cursor finds it,
+           then color returns. Pointer-only: touch visitors see full color. */
+        @media (hover: hover) {
+            .photo-frame .photo-frame-inner img {
+                filter: grayscale(85%) contrast(1.02);
+                transition: filter 600ms ease-out, transform 700ms ease-out;
+            }
+            .photo-frame:hover .photo-frame-inner img {
+                filter: grayscale(0%);
+                transform: scale(1.05);
+            }
+        }
+        /* Light variant for photos sitting on the dark navy section, where a
+           navy-on-navy frame would lose all definition. */
+        .photo-frame-light {
+            background: #ffffff;
+            border-radius: 0.5rem;
+            padding: 0.625rem;
+            box-shadow: 0 20px 40px rgba(27, 28, 25, 0.10);
+        }
+        .photo-frame-light .photo-frame-inner {
+            border-radius: 0.25rem;
+            overflow: hidden;
+        }
+        /* A slow, quiet flicker for flame glyphs — never bouncy, just alive. */
+        @keyframes flame-flicker {
+            0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
+            25% { transform: scale(1.05) translateY(-1px); opacity: 0.92; }
+            50% { transform: scale(0.97) translateY(0); opacity: 1; }
+            75% { transform: scale(1.03) translateY(-0.5px); opacity: 0.95; }
+        }
+        .flame-icon {
+            display: inline-block;
+            transform-origin: 50% 85%;
+            animation: flame-flicker 2600ms ease-in-out infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .flame-icon { animation: none; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/70 backdrop-blur-xl transition-all duration-400">
+<div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto rtl">
+<a class="text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="index.html">אלון אברהם-חי בביאן ז״ל</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" href="index.html">דף הבית</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="#chapters">פרקי חיים</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="gallery.html">גלריה</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="#legacy">הנצחה ומורשת</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-[#1A2E44] text-white px-4 py-1.5 rounded text-sm font-label tracking-wide hover:bg-[#1A2E44]/90 transition-colors" data-candle-trigger="">הדלקת נר</button>
+<button aria-expanded="false" aria-label="תפריט" class="md:hidden text-[#1A2E44]" id="mobile-nav-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<div class="md:hidden bg-[#fbf9f4]/95 backdrop-blur-xl px-6" id="mobile-nav-panel">
+<div class="flex flex-col gap-1 py-4 max-w-7xl mx-auto">
+<a class="font-label text-lg text-[#1A2E44] py-2" href="index.html">דף הבית</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="#chapters">פרקי חיים</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="gallery.html">גלריה</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="#legacy">הנצחה ומורשת</a>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden" id="hero">
+<div class="absolute inset-0 z-0">
+<img alt="אלון, סגן בחטיבת גולני, בבופור" class="w-full h-full object-cover object-top scale-125 origin-bottom" src="images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
+<div class="absolute inset-0 bg-black/50"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#fbf9f4] via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl text-white">
+<p class="font-label text-sm uppercase tracking-[0.4em] mb-4 text-white/90 drop-shadow-md">לזכר עולם</p>
+<h1 class="text-5xl md:text-7xl font-headline font-black mb-6 tracking-tight drop-shadow-xl">אלון אברהם-חי בביאן ז״ל</h1>
+<p class="text-xl md:text-2xl font-body text-white/95 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+                בענווה הוביל, באחריות שירת, ובחיוך שלא כבה — כך זוכרים את אלון.
+            </p>
+<div class="mt-10 flex flex-col items-center gap-2">
+<div class="w-16 h-px bg-accent-gold/50 mb-2"></div>
+<p class="font-label text-base md:text-lg tracking-wide text-white/90">
+                נפל ב-4 בפברואר 1997 (כ״ח בשבט תשנ״ז)
+            </p>
+<p class="font-label text-sm text-white/60 tracking-wide">
+                בגיל 21, יליד ירושלים
+            </p>
+</div>
+</div>
+</section>
+<!-- Life Chapters -->
+<section class="max-w-7xl mx-auto px-8 py-24 space-y-32" id="chapters">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center reveal">
+<div class="md:col-span-5 order-2 md:order-1">
+<h2 class="text-4xl font-headline font-bold mb-6 text-primary">ילדות בירושלים</h2>
+<p class="text-lg leading-relaxed text-on-surface-variant font-body">
+                    אלון נולד ב-1 באוקטובר 1975 (כ"ו בתשרי תשל"ו) וגדל בשכונת רמת אשכול שבירושלים. למד בבית הספר "פרדס", ולאחר מכן במגמת האלקטרוניקה בתיכון. כבר כנער בלטה בו מנהיגות טבעית — היה מדריך פעיל בתנועת בני עקיבא, אהב משחקי כדור וספורט אתגרי, והתאמן באומנויות לחימה כמו קונג-פו וקראטה. מי שהכיר אותו מתאר נער חייכן, אחראי וצנוע, שהקרין ביטחון על סביבתו.
+                </p>
+</div>
+<div class="md:col-span-7 order-1 md:order-2">
+<div class="photo-frame">
+<div class="photo-frame-inner relative aspect-[3/4]">
+<img alt="אלון ביום הראשון בכיתה א׳" class="w-full h-full object-cover" src="images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/21%20%D7%99%D7%95%D7%9D%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%91%D7%9B%D7%AA%D7%94%20%D7%90%20(2).jpg"/>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center reveal">
+<div class="md:col-span-7">
+<div class="photo-frame">
+<div class="photo-frame-inner relative aspect-[4/3]">
+<img alt="לימודים במכינת עצמונה" class="w-full h-full object-cover" src="images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%D7%A9%D7%A2%D7%95%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%91%D7%9E%D7%9B%D7%99%D7%A0%D7%94.jpg"/>
+</div>
+</div>
+</div>
+<div class="md:col-span-5">
+<h2 class="text-4xl font-headline font-bold mb-6 text-primary">לקראת דרך חדשה</h2>
+<p class="text-lg leading-relaxed text-on-surface-variant font-body">
+                    לפני גיוסו למד במכינה הקדם-צבאית עצמונה שבגוש קטיף, שם המשיך לפתח את תחושת השליחות והמנהיגות שאפיינו אותו לאורך חייו. ביולי 1994 התגייס לצה"ל, ובטקס השבועה בצומת גולני צעד לשורות חטיבת גולני — הבחירה שליוותה אותו עד יומו האחרון.
+                </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center reveal">
+<div class="md:col-span-5 order-2 md:order-1">
+<h2 class="text-4xl font-headline font-bold mb-6 text-primary">מפקד בחטיבת גולני</h2>
+<p class="text-lg leading-relaxed text-on-surface-variant font-body">
+                    אלון שירת כמפקד צוות בפלוגת הקשר של החטיבה, סיים את קורס הסמלים ולאחריו את קורס הקצינים, ונודע כמפקד ענייני שלא ויתר על הקשר האנושי עם פקודיו. ב-4 בפברואר 1997 (כ"ח בשבט תשנ"ז), בעת שירות מבצעי לקראת פעילות בלבנון, התנגשו באוויר שני מסוקי תובלה מעל כפר שאר ישוב. אלון נמנה עם 73 חללי אסון המסוקים, ובסמוך לכך הועלה לדרגת סגן.
+                </p>
+</div>
+<div class="md:col-span-7 order-1 md:order-2">
+<div class="photo-frame">
+<div class="photo-frame-inner relative aspect-[4/3]">
+<img alt="אלון בסיום קורס הקצינים, ליד אנדרטת בית הספר לקצינים" class="w-full h-full object-cover" src="images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(35).jpg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Preview -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-4 border-b gold-border pb-4">
+<div>
+<h2 class="text-4xl font-headline font-bold text-primary">גלריית חיים</h2>
+<p class="text-secondary mt-2">רגעים שנלכדו בזמן, זיכרונות שלא יימוגו.</p>
+</div>
+<a class="text-accent-gold font-bold text-sm flex items-center gap-2 hover:opacity-80 transition-opacity shrink-0" href="gallery.html">
+                    לגלריה המלאה <span class="material-symbols-outlined text-sm">arrow_left</span>
+</a>
+</div>
+<p class="text-sm text-secondary/70 font-label tracking-wide mb-12">הצצה קטנה מתוך למעלה מ-560 תמונות בגלריה המלאה — ילדות, חברים, שירות צבאי ומשפחה.</p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5">
+<a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
+<span class="photo-frame-inner block aspect-square">
+<img alt="בבופור" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(20).jpg"/>
+</span>
+</a>
+<a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
+<span class="photo-frame-inner block aspect-square">
+<img alt="אלון מחופש לחייל בפורים" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/17%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9E'%D7%90.jpg"/>
+</span>
+</a>
+<a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
+<span class="photo-frame-inner block aspect-square">
+<img alt="אלון עם אחותו" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1985%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%93%D7%A7%D7%9C%D7%94%20%D7%9E%D7%99%D7%9E%D7%95%D7%A0%D7%94%20%D7%92%D7%9F%20%D7%A1%D7%90%D7%A7%D7%A8.jpg"/>
+</span>
+</a>
+<a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
+<span class="photo-frame-inner block aspect-square">
+<img alt="בר המצווה של אלון" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(44).jpg"/>
+</span>
+</a>
+<a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
+<span class="photo-frame-inner block aspect-square">
+<img alt="עם חברים בטבע" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(9).jpg"/>
+</span>
+</a>
+<a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
+<span class="photo-frame-inner block aspect-square">
+<img alt="יום משפחה" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(15).jpg"/>
+</span>
+</a>
+<a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
+<span class="photo-frame-inner block aspect-square">
+<img alt="סיום קורס סמלים" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%A6%D7%91%D7%90/1996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D.jpg"/>
+</span>
+</a>
+<a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
+<span class="photo-frame-inner block aspect-square">
+<img alt="חברים במדים" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%A6%D7%91%D7%90/05%20%D7%90%D7%9C%D7%99%D7%94%D7%95%20%D7%96%D7%A8%D7%A7%D7%95%D7%91%20%D7%99%D7%A8%D7%99%D7%91%20%D7%93%D7%9F%20%D7%95%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A9%D7%A2%D7%A8%20%D7%94%D7%A2%D7%92%D7%9C%20%D7%9C%D7%99%D7%93%20%D7%A7.%D7%A9%D7%9E%D7%95%D7%A0%D7%94.jpg"/>
+</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Memorial Site Section -->
+<section class="py-24 px-8 bg-primary text-white reveal">
+<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-7">
+<div class="photo-frame-light">
+<div class="photo-frame-inner relative aspect-[4/3]">
+<img alt="מצבת הזיכרון לחללי אסון המסוקים" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(1).jpg"/>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 text-center md:text-right">
+<h2 class="text-4xl font-headline font-bold mb-6 gold-text">אתר ההנצחה</h2>
+<p class="text-lg font-body opacity-90 leading-relaxed">
+                    בסמוך למקום אסון המסוקים, הוקם אתר הנצחה לזכר 73 החברים שנפלו יחד עם אלון באותו לילה. משפחתו וחבריו שבים ומבקרים במקום, כדי ששמם וזכרם לא יישכחו.
+                </p>
+</div>
+</div>
+</section>
+<!-- Legacy Section -->
+<section class="max-w-5xl mx-auto px-8 py-24" id="legacy">
+<h2 class="text-4xl font-headline font-bold text-center mb-4 text-primary">הנצחה ומורשת</h2>
+<p class="text-center text-secondary font-body text-lg mb-16 max-w-2xl mx-auto">רוחו של אלון ממשיכה ללוות את מי שאהב, במקומות שהיו יקרים לליבו.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white rounded-lg overflow-hidden border border-outline-variant/15 shadow-[0_20px_40px_rgba(27,28,25,0.08)] reveal">
+<div class="aspect-[4/3] overflow-hidden p-2.5">
+<div class="w-full h-full rounded-sm overflow-hidden">
+<img alt="ספר תורה לזכר אלון" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(2).jpg"/>
+</div>
+</div>
+<div class="p-8">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-accent-gold mb-4">
+<span class="material-symbols-outlined text-lg">menu_book</span>
+</div>
+<h3 class="font-headline font-bold text-xl text-primary mb-2">ספר תורה לזכרו</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">לזכרו נתרם ונחנך ספר תורה בבית הכנסת "משכן יוסף", בטקס משפחתי ומרגש שנשא עמו את שמו הלאה.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden border border-outline-variant/15 shadow-[0_20px_40px_rgba(27,28,25,0.08)] reveal">
+<div class="aspect-[4/3] overflow-hidden p-2.5">
+<div class="w-full h-full rounded-sm overflow-hidden">
+<img alt="עצמונה - מכינה קדם צבאית" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%20%D7%A2%D7%A6%D7%9E%D7%95%D7%A0%D7%94%20%D7%9E%D7%A1%D7%99%D7%91%D7%AA%20%D7%A1%D7%99%D7%95%D7%9D%201994.jpg"/>
+</div>
+</div>
+<div class="p-8">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-accent-gold mb-4">
+<span class="material-symbols-outlined text-lg">school</span>
+</div>
+<h3 class="font-headline font-bold text-xl text-primary mb-2">כיתה על שמו במכינת עצמונה</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">במכינה הקדם-צבאית עצמונה, שם למד לקראת גיוסו, הוקדשה כיתת לימוד הנושאת את שמו — כך שרוחו ממשיכה ללוות דורות של בוגרים.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Candle Lighting Section -->
+<section class="bg-surface-container py-24 px-8" id="candle-section">
+<div class="max-w-xl mx-auto text-center">
+<div class="mb-8 relative inline-block">
+<div class="w-32 h-32 bg-primary rounded-full flex items-center justify-center text-accent-gold shadow-2xl relative z-10">
+<span class="material-symbols-outlined flame-icon text-6xl" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
+</div>
+<div class="absolute -inset-4 bg-accent-gold/10 rounded-full animate-pulse"></div>
+</div>
+<h2 class="text-3xl font-headline font-bold text-primary mb-4">הדלקת נר לזכרו של אלון</h2>
+<p class="text-on-surface-variant font-body text-lg mb-10">
+      הצטרפו לכיבוד זכרו. כל נר שמודלק כאן, עם שם ומילה, מצטרף לרשימת הזיכרון שלמטה.
+    </p>
+<div class="flex flex-col items-center gap-6">
+<div class="flex flex-wrap justify-center gap-4">
+<div class="flex items-center gap-4 bg-white px-8 py-4 rounded-xl border border-accent-gold/20 shadow-[0_10px_30px_rgba(27,28,25,0.06)]">
+<span class="material-symbols-outlined text-3xl text-accent-gold">groups</span>
+<div class="text-right">
+<span class="block text-xs font-label text-secondary uppercase mb-1">חברים שנפלו עמו באסון</span>
+<span class="text-4xl font-headline font-bold text-primary">73</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white px-8 py-4 rounded-xl border border-accent-gold/20 shadow-[0_10px_30px_rgba(27,28,25,0.06)]">
+<span class="material-symbols-outlined text-3xl text-accent-gold" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
+<div class="text-right">
+<span class="block text-xs font-label text-secondary uppercase mb-1">נרות שהדלקתם כאן</span>
+<span class="text-4xl font-headline font-bold text-primary" data-candle-count="">0</span>
+</div>
+</div>
+</div>
+<button class="bg-primary text-white px-12 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-3" data-candle-trigger=""><span class="material-symbols-outlined">local_fire_department</span> הדליקו נר לזכרו</button>
+</div>
+</div>
+<!-- Condolence Scroll -->
+<div class="max-w-2xl mx-auto mt-16 space-y-4 text-right" id="candle-list"></div>
+</section><section class="py-24 bg-[#fbf9f4] text-center px-8">
+<div class="max-w-3xl mx-auto">
+<span class="material-symbols-outlined flame-icon text-4xl mb-6 text-accent-gold" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-8 italic text-primary">יהי זכרו ברוך ומבורך לעד.</h2>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary text-white px-8 py-3 rounded font-bold shadow-lg" data-candle-trigger="">הוספת זיכרון</button>
+<button class="border border-primary/30 text-primary px-8 py-3 rounded font-bold hover:bg-primary/5 transition-colors" id="share-button">שתף דף זיכרון</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-[#f5f3ee] py-12 px-8 flex flex-col items-center gap-6 rtl rounded-t-xl transition-all duration-300">
+<div class="text-lg font-serif font-semibold text-[#1A2E44]">אלון אברהם-חי בביאן ז״ל</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" data-candle-trigger="" href="#">הדלקת נר</a>
+<a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="gallery.html">גלריית תמונות</a>
+</div>
+<div class="text-xs font-label text-secondary text-center mt-4">© דף הנצחה לזכרו של אלון. לזכר עולם.</div>
+</footer>
+<!-- FAB -->
+<div class="fixed bottom-8 left-8 z-50">
+<button class="w-16 h-16 bg-primary text-accent-gold rounded shadow-2xl flex items-center justify-center group relative border border-accent-gold/30" data-candle-trigger="">
+<span class="material-symbols-outlined flame-icon text-2xl" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
+<span class="absolute right-full mr-4 bg-primary text-white px-4 py-2 rounded text-sm font-label opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">הדלקת נר לזכרו</span>
+</button>
+</div>
+
+<!-- Ambient Song Widget: local file autoplays muted on load (browser policy), one click unmutes -->
+<audio id="bg-audio" loop="" preload="auto" src="audio/atzlenu-bagan.mp3"></audio>
+<div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2">
+<button aria-label="השתקה/השמעת קול לשיר ברקע" class="w-14 h-14 bg-primary rounded-full shadow-2xl border border-accent-gold/30 flex items-center justify-center relative" id="song-widget">
+<span class="material-symbols-outlined text-accent-gold text-2xl" id="song-mute-icon">volume_off</span>
+<span class="absolute inset-0 rounded-full border-2 border-accent-gold/40 animate-ping" id="song-widget-pulse"></span>
+</button>
+<span class="text-[10px] font-label text-secondary bg-surface/90 backdrop-blur px-2 py-1 rounded shadow-sm">אצלנו בגן — שי-לי עטרי</span>
+</div>
+
+<!-- Candle Modal -->
+<div class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#03192e]/80 backdrop-blur-md px-6" id="candle-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-8 relative shadow-2xl">
+<button aria-label="סגור" class="absolute top-5 left-5 text-secondary hover:text-primary transition-colors" id="candle-modal-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex flex-col items-center text-center mb-6">
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-accent-gold mb-4">
+<span class="material-symbols-outlined flame-icon text-3xl" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary">הדלקת נר לזכרו</h3>
+<p class="text-sm text-secondary font-body mt-2">השאירו שם ומילה לזכרו של אלון. הנר וההקדשה יצטרפו לרשימת הזיכרון.</p>
+</div>
+<form class="flex flex-col gap-5" id="candle-form">
+<div>
+<label class="block font-label text-xs text-on-surface-variant uppercase tracking-wide mb-1" for="candle-name-input">שם *</label>
+<input class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body text-lg transition-colors" id="candle-name-input" maxlength="60" placeholder="השם שלך" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label text-xs text-on-surface-variant uppercase tracking-wide mb-1" for="candle-message-input">הקדשה (לא חובה)</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body resize-none transition-colors" id="candle-message-input" maxlength="300" placeholder="כתבו כמה מילים לזכרו..." rows="3"></textarea>
+</div>
+<button class="bg-primary text-white rounded-full py-3 font-bold text-lg shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined">local_fire_department</span> הדליקו נר
+                </button>
+</form>
+</div>
+</div>
+<script src="site.js"></script>
+</body></html>

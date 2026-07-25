@@ -22,3 +22,13 @@ npm-debug.log*
 # OS files
 .DS_Store
 Thumbs.db
+
+# Deploy
+.vercel
+
+# Large local-only assets
+images.zip
+
+# Backup snapshots
+version1/
+version1 copy/

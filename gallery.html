@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>גלריית חיים — אלון אברהם-חי בביאן ז״ל</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1b1c19",
+                    "primary-container": "#1a2e44",
+                    "on-primary-container": "#8296b0",
+                    "surface-container-highest": "#e4e2dd",
+                    "surface-container-low": "#f5f3ee",
+                    "on-secondary-container": "#5e656c",
+                    "outline": "#74777d",
+                    "on-surface-variant": "#43474d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f0eee9",
+                    "surface-bright": "#fbf9f4",
+                    "surface-variant": "#e4e2dd",
+                    "surface": "#fbf9f4",
+                    "on-primary": "#ffffff",
+                    "primary": "#1A2E44",
+                    "background": "#fbf9f4",
+                    "outline-variant": "#c4c6cd",
+                    "secondary": "#585f65",
+                    "accent-gold": "#D4AF37"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "serif": ["Assistant", "sans-serif"],
+                    "sans": ["Assistant", "sans-serif"],
+                    "headline": ["Assistant", "sans-serif"],
+                    "body": ["Assistant", "sans-serif"],
+                    "label": ["Assistant", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body { font-family: 'Assistant', sans-serif; background-color: #fbf9f4; }
+
+    .masonry-grid {
+        column-count: 1;
+        column-gap: 1.75rem;
+        transition: opacity 300ms ease-out;
+    }
+    @media (min-width: 768px) {
+        .masonry-grid { column-count: 2; }
+    }
+    @media (min-width: 1024px) {
+        .masonry-grid { column-count: 3; }
+    }
+    .masonry-item {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 1.75rem;
+        break-inside: avoid;
+    }
+    .gold-border { border-color: #D4AF37; }
+    .gold-text { color: #D4AF37; }
+
+    .filter-scroll {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .filter-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category-pill {
+        background-color: #fbf6ec !important;
+        border-color: rgba(139, 111, 43, 0.25) !important;
+        transition: background-color 300ms ease-out, color 300ms ease-out, box-shadow 300ms ease-out, border-color 300ms ease-out, transform 200ms ease-out;
+    }
+    .category-pill:hover {
+        border-color: rgba(139, 111, 43, 0.5) !important;
+        box-shadow: 0 8px 18px rgba(27, 28, 25, 0.12);
+        transform: translateY(-1px);
+    }
+    .category-pill .pill-count {
+        color: inherit;
+        opacity: 0.5;
+        font-variant-numeric: tabular-nums;
+        margin-inline-start: 0.15em;
+    }
+    .category-pill.active {
+        background-color: #D4AF37;
+        border-color: #D4AF37 !important;
+        color: #1A2E44;
+        box-shadow: 0 8px 20px rgba(139, 111, 43, 0.35);
+        transform: translateY(-1px);
+    }
+    .category-pill.active .pill-count {
+        opacity: 0.65;
+    }
+
+    .gallery-thumb {
+        transition: transform 400ms ease-out;
+    }
+    .gallery-thumb:hover {
+        transform: translateY(-4px);
+    }
+    .gallery-thumb img {
+        opacity: 0;
+        transition: opacity 500ms ease-out;
+    }
+    .gallery-thumb img.loaded {
+        opacity: 1;
+    }
+
+    /* Mounted-photograph frame: a clean white mat, like a page from a
+       physical photo album, instead of a hard dark frame. */
+    .photo-frame {
+        position: relative;
+        background: #ffffff;
+        border-radius: 0.4rem;
+        padding: 0.65rem;
+        box-shadow: 0 12px 26px rgba(27, 28, 25, 0.16);
+        transition: box-shadow 400ms ease-out;
+    }
+    .gallery-thumb:hover .photo-frame {
+        box-shadow: 0 22px 40px rgba(27, 28, 25, 0.24);
+    }
+    .photo-frame-inner {
+        display: block;
+        border-radius: 0.15rem;
+        overflow: hidden;
+    }
+    /* Photos read as quiet, archival grayscale until a visitor's cursor finds
+       them — then color returns, like a memory coming back into focus.
+       Pointer-only: touch visitors (who can't hover) just see full color. */
+    @media (hover: hover) {
+        .photo-frame-inner img {
+            filter: grayscale(88%) contrast(1.03);
+            transition: filter 600ms ease-out, transform 700ms ease-out;
+        }
+        .gallery-thumb:hover .photo-frame-inner img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    }
+    #lightbox {
+        opacity: 0;
+        transition: opacity 280ms ease-out;
+    }
+    #lightbox.lightbox-open {
+        opacity: 1;
+    }
+    .lightbox-frame {
+        position: relative;
+        background: #ffffff;
+        border-radius: 0.5rem;
+        padding: 0.9rem;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+        max-width: 100%;
+    }
+    #lightbox-img {
+        opacity: 0;
+        transform: scale(0.97);
+        transition: opacity 300ms ease-out, transform 300ms ease-out;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    #mobile-nav-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 400ms ease-out;
+    }
+    #mobile-nav-panel.open {
+        max-height: 20rem;
+    }
+</style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/70 backdrop-blur-xl transition-all duration-400">
+<div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto rtl">
+<a class="text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="index.html">אלון אברהם-חי בביאן ז״ל</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html">דף הבית</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html#chapters">פרקי חיים</a>
+<a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" href="gallery.html">גלריה</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html#legacy">הנצחה ומורשת</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-[#1A2E44] text-white px-4 py-1.5 rounded text-sm font-label tracking-wide hover:bg-[#1A2E44]/90 transition-colors" data-candle-trigger="">הדלקת נר</button>
+<button aria-expanded="false" aria-label="תפריט" class="md:hidden text-[#1A2E44]" id="mobile-nav-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<div class="md:hidden bg-[#fbf9f4]/95 backdrop-blur-xl px-6" id="mobile-nav-panel">
+<div class="flex flex-col gap-1 py-4 max-w-7xl mx-auto">
+<a class="font-label text-lg text-[#585f65] py-2" href="index.html">דף הבית</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="index.html#chapters">פרקי חיים</a>
+<a class="font-label text-lg text-[#1A2E44] py-2" href="gallery.html">גלריה</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="index.html#legacy">הנצחה ומורשת</a>
+</div>
+</div>
+</nav>
+
+<main class="pt-16">
+<!-- Gallery Header -->
+<section class="relative h-[68vh] min-h-[460px] flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="אלון בבופור" class="w-full h-full object-cover object-[center_8%]" src="images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#03192e] via-[#03192e]/45 to-[#03192e]/5"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 pb-14 text-center w-full">
+<p class="font-label text-sm uppercase tracking-[0.4em] mb-4 text-accent-gold">רגעים שנלכדו בזמן</p>
+<h1 class="text-5xl md:text-6xl font-headline font-bold mb-4 text-white drop-shadow-lg">גלריית חיים</h1>
+<p class="text-lg text-white/85 font-body max-w-2xl mx-auto leading-relaxed drop-shadow">
+    מסע ויזואלי דרך שנותיו של אלון — מהילדות ועד היום בו הפך לזיכרון נצחי בליבנו.
+</p>
+</div>
+</section>
+
+<!-- Category Filters (sticky glass bar) -->
+<section class="sticky top-16 z-40 bg-[#fbf9f4]/85 backdrop-blur-xl border-b border-outline-variant/10 py-5">
+<div class="max-w-7xl mx-auto px-8">
+<div id="category-filters" class="flex flex-col items-center gap-2.5"></div>
+</div>
+</section>
+
+<!-- Gallery Grid -->
+<section class="max-w-7xl mx-auto px-8 py-16">
+<p id="gallery-count" class="text-center font-label text-xs tracking-[0.25em] uppercase text-secondary/70 mb-10"></p>
+<div id="gallery-grid" class="masonry-grid"></div>
+<div id="gallery-empty" class="hidden text-center py-24 text-secondary font-body text-lg">
+    לא נמצאו תמונות בקטגוריה זו.
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full mt-20 bg-[#f5f3ee] py-12 px-8 flex flex-col items-center gap-6 rtl rounded-t-xl transition-all duration-300">
+<div class="text-lg font-serif font-semibold text-[#1A2E44]">אלון אברהם-חי בביאן ז״ל</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" data-candle-trigger="" href="#">הדלקת נר</a>
+<a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="index.html">חזרה לדף הבית</a>
+</div>
+<div class="text-xs font-label text-secondary text-center mt-4">© דף הנצחה לזכרו של אלון. לזכר עולם.</div>
+</footer>
+
+<!-- Ambient Song Widget: local file autoplays muted on load (browser policy), one click unmutes.
+     Position/mute state is persisted so navigating between pages resumes the same song instead of restarting. -->
+<audio id="bg-audio" loop="" preload="auto" src="audio/atzlenu-bagan.mp3"></audio>
+<div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2">
+<button aria-label="השתקה/השמעת קול לשיר ברקע" class="w-14 h-14 bg-primary rounded-full shadow-2xl border border-accent-gold/30 flex items-center justify-center relative" id="song-widget">
+<span class="material-symbols-outlined text-accent-gold text-2xl" id="song-mute-icon">volume_off</span>
+<span class="absolute inset-0 rounded-full border-2 border-accent-gold/40 animate-ping" id="song-widget-pulse"></span>
+</button>
+<span class="text-[10px] font-label text-secondary bg-surface/90 backdrop-blur px-2 py-1 rounded shadow-sm">אצלנו בגן — שי-לי עטרי</span>
+</div>
+
+<!-- Candle Modal -->
+<div class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#03192e]/80 backdrop-blur-md px-6" id="candle-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-8 relative shadow-2xl">
+<button aria-label="סגור" class="absolute top-5 left-5 text-secondary hover:text-primary transition-colors" id="candle-modal-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex flex-col items-center text-center mb-6">
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-accent-gold mb-4">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary">הדלקת נר לזכרו</h3>
+<p class="text-sm text-secondary font-body mt-2">השאירו שם ומילה לזכרו של אלון. הנר וההקדשה יצטרפו לרשימת הזיכרון בדף הבית.</p>
+</div>
+<form class="flex flex-col gap-5" id="candle-form">
+<div>
+<label class="block font-label text-xs text-on-surface-variant uppercase tracking-wide mb-1" for="candle-name-input">שם *</label>
+<input class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body text-lg transition-colors" id="candle-name-input" maxlength="60" placeholder="השם שלך" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label text-xs text-on-surface-variant uppercase tracking-wide mb-1" for="candle-message-input">הקדשה (לא חובה)</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body resize-none transition-colors" id="candle-message-input" maxlength="300" placeholder="כתבו כמה מילים לזכרו..." rows="3"></textarea>
+</div>
+<button class="bg-primary text-white rounded-full py-3 font-bold text-lg shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined">local_fire_department</span> הדליקו נר
+                </button>
+</form>
+</div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-[#1b1c19]/96 backdrop-blur-md">
+<button id="lightbox-close" aria-label="סגור" class="absolute top-6 left-6 text-white/80 hover:text-accent-gold transition-colors">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<button id="lightbox-prev" aria-label="הקודם" class="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent-gold transition-colors">
+<span class="material-symbols-outlined text-5xl">chevron_right</span>
+</button>
+<button id="lightbox-next" aria-label="הבא" class="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent-gold transition-colors">
+<span class="material-symbols-outlined text-5xl">chevron_left</span>
+</button>
+<div class="max-w-5xl w-full mx-auto px-6 flex flex-col items-center gap-6">
+<div class="lightbox-frame">
+<img id="lightbox-img" alt="" class="block max-h-[68vh] w-auto max-w-full object-contain rounded-sm"/>
+<div id="lightbox-spinner" class="absolute inset-0 hidden items-center justify-center">
+<span class="w-9 h-9 border-2 border-primary/15 border-t-accent-gold rounded-full animate-spin"></span>
+</div>
+</div>
+<div class="text-center bg-[#1b1c19]/80 rounded-lg px-6 py-3">
+<p id="lightbox-label" class="font-headline text-white text-lg"></p>
+<div class="w-10 h-px bg-accent-gold/50 mx-auto mt-2"></div>
+<p id="lightbox-counter" dir="ltr" class="font-label text-white/80 text-xs tracking-wide mt-2"></p>
+</div>
+</div>
+</div>
+
+<script src="gallery-data.js"></script>
+<script>
+(function () {
+    const DATA = window.GALLERY_DATA || { categories: [] };
+    const ALL_KEY = "__all__";
+
+    const filtersEl = document.getElementById("category-filters");
+    const gridEl = document.getElementById("gallery-grid");
+    const emptyEl = document.getElementById("gallery-empty");
+    const countEl = document.getElementById("gallery-count");
+
+    // Flat list of every image with its category label, in category order.
+    const flatImages = DATA.categories.flatMap((cat) =>
+        cat.images.map((img) => ({ ...img, categoryKey: cat.key, categoryLabel: cat.label }))
+    );
+
+    let activeKey = ALL_KEY;
+    let visibleImages = flatImages;
+    let lightboxIndex = 0;
+
+    // Categories fall into two chronological groups: chapters of his life,
+    // then the categories that came after — separated by a visual divider
+    // so the grouping reads clearly instead of one jumbled row of chips.
+    const LIFE_KEYS = ["ילדות-ובגרות", "בר-מצווה-אלון", "חברים", "צבא", "משפחה", "כתבים-של-אלון"];
+
+    function pillHtml(p) {
+        return `
+        <button data-key="${p.key}" class="category-pill ${p.key === activeKey ? "active" : ""} whitespace-nowrap flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-white border border-outline-variant/25 text-primary font-label text-sm font-medium tracking-wide">
+            ${p.label}<span class="pill-count">${p.count}</span>
+        </button>`;
+    }
+
+    function renderFilters() {
+        const allPill = { key: ALL_KEY, label: "הכל", count: flatImages.length };
+        const lifePills = DATA.categories
+            .filter((c) => LIFE_KEYS.includes(c.key))
+            .map((c) => ({ key: c.key, label: c.label, count: c.images.length }));
+        const afterPills = DATA.categories
+            .filter((c) => !LIFE_KEYS.includes(c.key))
+            .map((c) => ({ key: c.key, label: c.label, count: c.images.length }));
+
+        filtersEl.innerHTML = `
+        <div class="flex flex-wrap justify-center gap-2.5">
+            ${[allPill].concat(lifePills).map(pillHtml).join("")}
+        </div>
+        <div class="flex flex-wrap justify-center gap-2.5">
+            ${afterPills.map(pillHtml).join("")}
+        </div>`;
+    }
+
+    function renderGrid() {
+        visibleImages =
+            activeKey === ALL_KEY ? flatImages : flatImages.filter((img) => img.categoryKey === activeKey);
+
+        countEl.textContent = `${visibleImages.length} תמונות`;
+
+        if (visibleImages.length === 0) {
+            gridEl.innerHTML = "";
+            emptyEl.classList.remove("hidden");
+            return;
+        }
+        emptyEl.classList.add("hidden");
+
+        gridEl.innerHTML = visibleImages
+            .map(
+                (img, i) => `
+        <div class="masonry-item">
+            <button data-index="${i}" class="gallery-thumb group relative block w-full">
+                <span class="photo-frame block">
+                    <span class="photo-frame-inner bg-surface-container-highest">
+                        <img alt="${img.alt}" loading="lazy" class="w-full h-auto object-cover" src="${img.thumb}"/>
+                    </span>
+                </span>
+                ${
+                    activeKey === ALL_KEY
+                        ? `<span class="block pt-3 pb-0.5 text-[11px] font-label tracking-[0.08em] text-secondary/75 truncate">${img.categoryLabel}</span>`
+                        : ""
+                }
+            </button>
+        </div>`
+            )
+            .join("");
+
+        gridEl.querySelectorAll(".gallery-thumb").forEach((btn) => {
+            btn.addEventListener("click", () => openLightbox(Number(btn.dataset.index)));
+            const imgEl = btn.querySelector("img");
+            if (imgEl.complete) {
+                imgEl.classList.add("loaded");
+            } else {
+                imgEl.addEventListener("load", () => imgEl.classList.add("loaded"));
+            }
+        });
+    }
+
+    function renderAll() {
+        renderFilters();
+        renderGrid();
+    }
+
+    filtersEl.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-key]");
+        if (!btn) return;
+        if (btn.dataset.key === activeKey) return;
+        activeKey = btn.dataset.key;
+        renderFilters();
+        gridEl.style.opacity = "0";
+        setTimeout(() => {
+            renderGrid();
+            gridEl.style.opacity = "1";
+        }, 220);
+
+        // Jump back to the start of the results so a new category never
+        // leaves the visitor stranded mid-scroll in an unrelated spot.
+        // (Measured off the grid section, not the sticky filter bar — a
+        // sticky element's own rect reports its stuck viewport position,
+        // not its true document offset, once it's actually stuck.)
+        const filterSection = filtersEl.closest("section");
+        const gridSection = gridEl.closest("section");
+        const navHeight = 64;
+        const offset = navHeight + filterSection.offsetHeight;
+        const targetY = gridSection.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: Math.max(targetY, 0), behavior: "smooth" });
+    });
+
+    // Lightbox
+    const lightboxEl = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxLabel = document.getElementById("lightbox-label");
+    const lightboxCounter = document.getElementById("lightbox-counter");
+    const lightboxSpinner = document.getElementById("lightbox-spinner");
+
+    function openLightbox(index) {
+        lightboxIndex = index;
+        updateLightbox();
+        lightboxEl.classList.remove("hidden");
+        lightboxEl.classList.add("flex");
+        requestAnimationFrame(() => lightboxEl.classList.add("lightbox-open"));
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+        lightboxEl.classList.remove("lightbox-open");
+        document.body.style.overflow = "";
+        setTimeout(() => {
+            lightboxEl.classList.add("hidden");
+            lightboxEl.classList.remove("flex");
+        }, 280);
+    }
+
+    function updateLightbox() {
+        const img = visibleImages[lightboxIndex];
+        if (!img) return;
+        lightboxImg.style.opacity = "0";
+        lightboxImg.style.transform = "scale(0.97)";
+        const swap = () => {
+            lightboxImg.src = img.full;
+            lightboxImg.alt = img.alt;
+            lightboxLabel.textContent = img.categoryLabel;
+            lightboxCounter.textContent = `${lightboxIndex + 1} / ${visibleImages.length}`;
+            lightboxSpinner.classList.remove("hidden");
+            lightboxSpinner.classList.add("flex");
+        };
+        const reveal = () => {
+            lightboxImg.style.opacity = "1";
+            lightboxImg.style.transform = "scale(1)";
+            lightboxSpinner.classList.add("hidden");
+            lightboxSpinner.classList.remove("flex");
+        };
+        if (lightboxImg.src) {
+            setTimeout(() => {
+                swap();
+                lightboxImg.onload = reveal;
+            }, 150);
+        } else {
+            swap();
+            lightboxImg.onload = reveal;
+        }
+    }
+
+    function showPrev() {
+        lightboxIndex = (lightboxIndex - 1 + visibleImages.length) % visibleImages.length;
+        updateLightbox();
+    }
+    function showNext() {
+        lightboxIndex = (lightboxIndex + 1) % visibleImages.length;
+        updateLightbox();
+    }
+
+    document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+    document.getElementById("lightbox-prev").addEventListener("click", showPrev);
+    document.getElementById("lightbox-next").addEventListener("click", showNext);
+    lightboxEl.addEventListener("click", (e) => {
+        if (e.target === lightboxEl) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+        if (lightboxEl.classList.contains("hidden")) return;
+        if (e.key === "Escape") closeLightbox();
+        // RTL gallery: right arrow = previous, left arrow = next.
+        if (e.key === "ArrowRight") showPrev();
+        if (e.key === "ArrowLeft") showNext();
+    });
+
+    // Swipe to navigate on touch devices. RTL gallery: same mapping as the
+    // arrow keys above — drag toward screen-right = previous, toward left = next.
+    let touchStartX = null;
+    lightboxEl.addEventListener(
+        "touchstart",
+        (e) => { touchStartX = e.changedTouches[0].clientX; },
+        { passive: true }
+    );
+    lightboxEl.addEventListener(
+        "touchend",
+        (e) => {
+            if (touchStartX === null) return;
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            touchStartX = null;
+            if (Math.abs(dx) < 40) return;
+            if (dx > 0) showPrev();
+            else showNext();
+        },
+        { passive: true }
+    );
+
+    renderAll();
+})();
+</script>
+<script src="site.js"></script>
+</body>
+</html>
