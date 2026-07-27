@@ -351,6 +351,25 @@
     });
   }
 
+  function setupScrollTopButton() {
+    var btn = document.getElementById("scroll-top-btn");
+    if (!btn) return;
+
+    function update() {
+      var visible = window.scrollY > 400;
+      btn.classList.toggle("opacity-0", !visible);
+      btn.classList.toggle("pointer-events-none", !visible);
+      btn.classList.toggle("translate-y-4", !visible);
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
   function setupRevealAnimations() {
     var targets = document.querySelectorAll(".reveal");
     if (!targets.length || !("IntersectionObserver" in window)) return;
@@ -377,6 +396,7 @@
     setupMobileNav();
     setupSongWidget();
     setupShareButton();
+    setupScrollTopButton();
     setupRevealAnimations();
   });
 })();
