@@ -207,9 +207,13 @@
 <a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" href="index.html">דף הבית</a>
 <a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="#chapters">פרקי חיים</a>
 <a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="gallery.html">גלריה</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="sections.html">מכתבים, סרטונים וקטעי קול</a>
 <a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="#legacy">הנצחה ומורשת</a>
 </div>
 <div class="flex items-center gap-3">
+<button aria-label="השתקה/השמעת קול לשיר ברקע" title="אצלנו בגן — שי-לי עטרי" class="text-[#1A2E44] hover:opacity-70 transition-opacity" id="song-widget">
+<span class="material-symbols-outlined text-xl" id="song-mute-icon">volume_off</span>
+</button>
 <button class="bg-[#1A2E44] text-white px-4 py-1.5 rounded text-sm font-label tracking-wide hover:bg-[#1A2E44]/90 transition-colors" data-candle-trigger="">הדלקת נר</button>
 <button aria-expanded="false" aria-label="תפריט" class="md:hidden text-[#1A2E44]" id="mobile-nav-toggle">
 <span class="material-symbols-outlined">menu</span>
@@ -221,6 +225,7 @@
 <a class="font-label text-lg text-[#1A2E44] py-2" href="index.html">דף הבית</a>
 <a class="font-label text-lg text-[#585f65] py-2" href="#chapters">פרקי חיים</a>
 <a class="font-label text-lg text-[#585f65] py-2" href="gallery.html">גלריה</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="sections.html">מכתבים, סרטונים וקטעי קול</a>
 <a class="font-label text-lg text-[#585f65] py-2" href="#legacy">הנצחה ומורשת</a>
 </div>
 </div>
@@ -229,13 +234,13 @@
 <!-- Hero Section -->
 <section class="relative h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden" id="hero">
 <div class="absolute inset-0 z-0">
-<img alt="אלון, סגן בחטיבת גולני, בבופור" class="w-full h-full object-cover object-top scale-125 origin-bottom" src="images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
+<img alt="אלון, סגן בחטיבת גולני, בבופור" class="w-full h-full object-cover object-top scale-125 origin-bottom" src="media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
 <div class="absolute inset-0 bg-black/50"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-[#fbf9f4] via-transparent to-transparent"></div>
 </div>
 <div class="relative z-10 text-center max-w-4xl text-white">
 <p class="font-label text-sm uppercase tracking-[0.4em] mb-4 text-white/90 drop-shadow-md">לזכר עולם</p>
-<h1 class="text-5xl md:text-7xl font-headline font-black mb-6 tracking-tight drop-shadow-xl">אלון אברהם-חי בביאן ז״ל</h1>
+<h1 class="text-5xl md:text-7xl font-headline font-black mb-6 tracking-tight drop-shadow-xl">סגן אלון אברהם-חי בביאן ז״ל</h1>
 <p class="text-xl md:text-2xl font-body text-white/95 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
                 בענווה הוביל, באחריות שירת, ובחיוך שלא כבה — כך זוכרים את אלון.
             </p>
@@ -262,7 +267,7 @@
 <div class="md:col-span-7 order-1 md:order-2">
 <div class="photo-frame">
 <div class="photo-frame-inner relative aspect-[3/4]">
-<img alt="אלון ביום הראשון בכיתה א׳" class="w-full h-full object-cover" src="images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/21%20%D7%99%D7%95%D7%9D%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%91%D7%9B%D7%AA%D7%94%20%D7%90%20(2).jpg"/>
+<img alt="אלון ביום הראשון בכיתה א׳" class="w-full h-full object-cover" src="media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/21%20%D7%99%D7%95%D7%9D%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%91%D7%9B%D7%AA%D7%94%20%D7%90%20(2).jpg"/>
 </div>
 </div>
 </div>
@@ -271,7 +276,7 @@
 <div class="md:col-span-7">
 <div class="photo-frame">
 <div class="photo-frame-inner relative aspect-[4/3]">
-<img alt="לימודים במכינת עצמונה" class="w-full h-full object-cover" src="images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%D7%A9%D7%A2%D7%95%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%91%D7%9E%D7%9B%D7%99%D7%A0%D7%94.jpg"/>
+<img alt="לימודים במכינת עצמונה" class="w-full h-full object-cover" src="media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%D7%A9%D7%A2%D7%95%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%91%D7%9E%D7%9B%D7%99%D7%A0%D7%94.jpg"/>
 </div>
 </div>
 </div>
@@ -292,7 +297,7 @@
 <div class="md:col-span-7 order-1 md:order-2">
 <div class="photo-frame">
 <div class="photo-frame-inner relative aspect-[4/3]">
-<img alt="אלון בסיום קורס הקצינים, ליד אנדרטת בית הספר לקצינים" class="w-full h-full object-cover" src="images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(35).jpg"/>
+<img alt="אלון בסיום קורס הקצינים, ליד אנדרטת בית הספר לקצינים" class="w-full h-full object-cover" src="media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(35).jpg"/>
 </div>
 </div>
 </div>
@@ -314,42 +319,42 @@
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5">
 <a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
 <span class="photo-frame-inner block aspect-square">
-<img alt="בבופור" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(20).jpg"/>
+<img alt="בבופור" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(20).jpg"/>
 </span>
 </a>
 <a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
 <span class="photo-frame-inner block aspect-square">
-<img alt="אלון מחופש לחייל בפורים" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/17%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9E'%D7%90.jpg"/>
+<img alt="אלון מחופש לחייל בפורים" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/17%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9E'%D7%90.jpg"/>
 </span>
 </a>
 <a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
 <span class="photo-frame-inner block aspect-square">
-<img alt="אלון עם אחותו" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1985%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%93%D7%A7%D7%9C%D7%94%20%D7%9E%D7%99%D7%9E%D7%95%D7%A0%D7%94%20%D7%92%D7%9F%20%D7%A1%D7%90%D7%A7%D7%A8.jpg"/>
+<img alt="אלון עם אחותו" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1985%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%93%D7%A7%D7%9C%D7%94%20%D7%9E%D7%99%D7%9E%D7%95%D7%A0%D7%94%20%D7%92%D7%9F%20%D7%A1%D7%90%D7%A7%D7%A8.jpg"/>
 </span>
 </a>
 <a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
 <span class="photo-frame-inner block aspect-square">
-<img alt="בר המצווה של אלון" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(44).jpg"/>
+<img alt="בר המצווה של אלון" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(44).jpg"/>
 </span>
 </a>
 <a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
 <span class="photo-frame-inner block aspect-square">
-<img alt="עם חברים בטבע" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(9).jpg"/>
+<img alt="עם חברים בטבע" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(9).jpg"/>
 </span>
 </a>
 <a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
 <span class="photo-frame-inner block aspect-square">
-<img alt="יום משפחה" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(15).jpg"/>
+<img alt="יום משפחה" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(15).jpg"/>
 </span>
 </a>
 <a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
 <span class="photo-frame-inner block aspect-square">
-<img alt="סיום קורס סמלים" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%A6%D7%91%D7%90/1996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D.jpg"/>
+<img alt="סיום קורס סמלים" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%A6%D7%91%D7%90/1996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D.jpg"/>
 </span>
 </a>
 <a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="gallery.html">
 <span class="photo-frame-inner block aspect-square">
-<img alt="חברים במדים" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%A6%D7%91%D7%90/05%20%D7%90%D7%9C%D7%99%D7%94%D7%95%20%D7%96%D7%A8%D7%A7%D7%95%D7%91%20%D7%99%D7%A8%D7%99%D7%91%20%D7%93%D7%9F%20%D7%95%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A9%D7%A2%D7%A8%20%D7%94%D7%A2%D7%92%D7%9C%20%D7%9C%D7%99%D7%93%20%D7%A7.%D7%A9%D7%9E%D7%95%D7%A0%D7%94.jpg"/>
+<img alt="חברים במדים" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%A6%D7%91%D7%90/05%20%D7%90%D7%9C%D7%99%D7%94%D7%95%20%D7%96%D7%A8%D7%A7%D7%95%D7%91%20%D7%99%D7%A8%D7%99%D7%91%20%D7%93%D7%9F%20%D7%95%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A9%D7%A2%D7%A8%20%D7%94%D7%A2%D7%92%D7%9C%20%D7%9C%D7%99%D7%93%20%D7%A7.%D7%A9%D7%9E%D7%95%D7%A0%D7%94.jpg"/>
 </span>
 </a>
 </div>
@@ -361,7 +366,7 @@
 <div class="md:col-span-7">
 <div class="photo-frame-light">
 <div class="photo-frame-inner relative aspect-[4/3]">
-<img alt="מצבת הזיכרון לחללי אסון המסוקים" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(1).jpg"/>
+<img alt="מצבת הזיכרון לחללי אסון המסוקים" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(1).jpg"/>
 </div>
 </div>
 </div>
@@ -381,7 +386,7 @@
 <div class="bg-white rounded-lg overflow-hidden border border-outline-variant/15 shadow-[0_20px_40px_rgba(27,28,25,0.08)] reveal">
 <div class="aspect-[4/3] overflow-hidden p-2.5">
 <div class="w-full h-full rounded-sm overflow-hidden">
-<img alt="ספר תורה לזכר אלון" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(2).jpg"/>
+<img alt="ספר תורה לזכר אלון" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(2).jpg"/>
 </div>
 </div>
 <div class="p-8">
@@ -395,7 +400,7 @@
 <div class="bg-white rounded-lg overflow-hidden border border-outline-variant/15 shadow-[0_20px_40px_rgba(27,28,25,0.08)] reveal">
 <div class="aspect-[4/3] overflow-hidden p-2.5">
 <div class="w-full h-full rounded-sm overflow-hidden">
-<img alt="עצמונה - מכינה קדם צבאית" class="w-full h-full object-cover" loading="lazy" src="images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%20%D7%A2%D7%A6%D7%9E%D7%95%D7%A0%D7%94%20%D7%9E%D7%A1%D7%99%D7%91%D7%AA%20%D7%A1%D7%99%D7%95%D7%9D%201994.jpg"/>
+<img alt="עצמונה - מכינה קדם צבאית" class="w-full h-full object-cover" loading="lazy" src="media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%20%D7%A2%D7%A6%D7%9E%D7%95%D7%A0%D7%94%20%D7%9E%D7%A1%D7%99%D7%91%D7%AA%20%D7%A1%D7%99%D7%95%D7%9D%201994.jpg"/>
 </div>
 </div>
 <div class="p-8">
@@ -471,15 +476,8 @@
 </button>
 </div>
 
-<!-- Ambient Song Widget: local file autoplays muted on load (browser policy), one click unmutes -->
+<!-- Ambient Song: local file autoplays muted on load (browser policy), one click unmutes. Toggle button lives in the nav (song-widget). -->
 <audio id="bg-audio" loop="" preload="auto" src="audio/atzlenu-bagan.mp3"></audio>
-<div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2">
-<button aria-label="השתקה/השמעת קול לשיר ברקע" class="w-14 h-14 bg-primary rounded-full shadow-2xl border border-accent-gold/30 flex items-center justify-center relative" id="song-widget">
-<span class="material-symbols-outlined text-accent-gold text-2xl" id="song-mute-icon">volume_off</span>
-<span class="absolute inset-0 rounded-full border-2 border-accent-gold/40 animate-ping" id="song-widget-pulse"></span>
-</button>
-<span class="text-[10px] font-label text-secondary bg-surface/90 backdrop-blur px-2 py-1 rounded shadow-sm">אצלנו בגן — שי-לי עטרי</span>
-</div>
 
 <!-- Candle Modal -->
 <div class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#03192e]/80 backdrop-blur-md px-6" id="candle-modal">

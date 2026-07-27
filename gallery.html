@@ -117,6 +117,7 @@
     }
     .gallery-thumb img {
         opacity: 0;
+        min-height: 180px;
         transition: opacity 500ms ease-out;
     }
     .gallery-thumb img.loaded {
@@ -196,9 +197,13 @@
 <a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html">דף הבית</a>
 <a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html#chapters">פרקי חיים</a>
 <a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" href="gallery.html">גלריה</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="sections.html">מכתבים, סרטונים וקטעי קול</a>
 <a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html#legacy">הנצחה ומורשת</a>
 </div>
 <div class="flex items-center gap-3">
+<button aria-label="השתקה/השמעת קול לשיר ברקע" title="אצלנו בגן — שי-לי עטרי" class="text-[#1A2E44] hover:opacity-70 transition-opacity" id="song-widget">
+<span class="material-symbols-outlined text-xl" id="song-mute-icon">volume_off</span>
+</button>
 <button class="bg-[#1A2E44] text-white px-4 py-1.5 rounded text-sm font-label tracking-wide hover:bg-[#1A2E44]/90 transition-colors" data-candle-trigger="">הדלקת נר</button>
 <button aria-expanded="false" aria-label="תפריט" class="md:hidden text-[#1A2E44]" id="mobile-nav-toggle">
 <span class="material-symbols-outlined">menu</span>
@@ -210,6 +215,7 @@
 <a class="font-label text-lg text-[#585f65] py-2" href="index.html">דף הבית</a>
 <a class="font-label text-lg text-[#585f65] py-2" href="index.html#chapters">פרקי חיים</a>
 <a class="font-label text-lg text-[#1A2E44] py-2" href="gallery.html">גלריה</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="sections.html">מכתבים, סרטונים וקטעי קול</a>
 <a class="font-label text-lg text-[#585f65] py-2" href="index.html#legacy">הנצחה ומורשת</a>
 </div>
 </div>
@@ -219,7 +225,7 @@
 <!-- Gallery Header -->
 <section class="relative h-[68vh] min-h-[460px] flex items-end overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="אלון בבופור" class="w-full h-full object-cover object-[center_8%]" src="images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
+<img alt="אלון בבופור" class="w-full h-full object-cover object-[center_8%]" src="media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-[#03192e] via-[#03192e]/45 to-[#03192e]/5"></div>
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-8 pb-14 text-center w-full">
@@ -258,16 +264,10 @@
 <div class="text-xs font-label text-secondary text-center mt-4">© דף הנצחה לזכרו של אלון. לזכר עולם.</div>
 </footer>
 
-<!-- Ambient Song Widget: local file autoplays muted on load (browser policy), one click unmutes.
-     Position/mute state is persisted so navigating between pages resumes the same song instead of restarting. -->
+<!-- Ambient Song: local file autoplays muted on load (browser policy), one click unmutes.
+     Position/mute state is persisted so navigating between pages resumes the same song instead of restarting.
+     Toggle button lives in the nav (song-widget). -->
 <audio id="bg-audio" loop="" preload="auto" src="audio/atzlenu-bagan.mp3"></audio>
-<div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2">
-<button aria-label="השתקה/השמעת קול לשיר ברקע" class="w-14 h-14 bg-primary rounded-full shadow-2xl border border-accent-gold/30 flex items-center justify-center relative" id="song-widget">
-<span class="material-symbols-outlined text-accent-gold text-2xl" id="song-mute-icon">volume_off</span>
-<span class="absolute inset-0 rounded-full border-2 border-accent-gold/40 animate-ping" id="song-widget-pulse"></span>
-</button>
-<span class="text-[10px] font-label text-secondary bg-surface/90 backdrop-blur px-2 py-1 rounded shadow-sm">אצלנו בגן — שי-לי עטרי</span>
-</div>
 
 <!-- Candle Modal -->
 <div class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#03192e]/80 backdrop-blur-md px-6" id="candle-modal">
