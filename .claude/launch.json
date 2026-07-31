@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "static-site",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8420"],
-      "port": 8420
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.js"],
+      "port": 8420,
+      "autoPort": true
     }
   ]
 }

@@ -32,3 +32,6 @@ images.zip
 # Backup snapshots
 version1/
 version1 copy/
+
+# Runtime data written by server.js (candle-lighting submissions)
+data/

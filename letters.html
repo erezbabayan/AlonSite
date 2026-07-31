@@ -4,7 +4,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>מכתבים — אלון אברהם-חי בביאן ז״ל</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Frank+Ruhl+Libre:wght@400;500;600;700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -67,9 +67,9 @@
                     "full": "0.75rem"
             },
             "fontFamily": {
-                    "serif": ["Frank Ruhl Libre", "serif"],
+                    "serif": ["Assistant", "sans-serif"],
                     "sans": ["Assistant", "sans-serif"],
-                    "headline": ["Frank Ruhl Libre", "serif"],
+                    "headline": ["Assistant", "sans-serif"],
                     "body": ["Assistant", "sans-serif"],
                     "label": ["Assistant", "sans-serif"]
             }
@@ -177,12 +177,12 @@
         box-shadow: 0 24px 44px rgba(27, 28, 25, 0.14);
     }
     .letter-body {
-        font-family: "Frank Ruhl Libre", "Assistant", serif;
+        font-family: "Assistant", sans-serif;
         font-style: italic;
         line-height: 1.85;
     }
     .letter-signature {
-        font-family: "Frank Ruhl Libre", serif;
+        font-family: "Assistant", sans-serif;
         font-style: italic;
         font-weight: 600;
     }
@@ -293,12 +293,12 @@
 </div>
 <div class="text-center mt-4">
 <p class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-accent-gold/80 mb-1.5">כתב יד מקורי · 1982</p>
-<p class="text-sm text-primary/80" style="font-family: 'Frank Ruhl Libre', serif; font-style: italic;">מתוך כתביו של אלון</p>
+<p class="text-sm text-primary/80" style="font-family: 'Assistant', sans-serif; font-style: italic;">מתוך כתביו של אלון</p>
 </div>
 </div>
 </div>
 <div class="md:col-span-8">
-<p class="flex items-center gap-2 text-sm text-secondary/60" style="font-family: 'Frank Ruhl Libre', serif; font-style: italic;">
+<p class="flex items-center gap-2 text-sm text-secondary/60" style="font-family: 'Assistant', sans-serif; font-style: italic;">
 <span class="material-symbols-outlined text-base text-accent-gold not-italic">edit_note</span>
                     המכתבים שלהלן הם דוגמה בלבד, לצורך המחשה, עד שיעלו מכתביו האמיתיים של אלון.
                 </p>
@@ -306,10 +306,10 @@
 </div>
 </section>
 
-<!-- Direction Filters -->
+<!-- Category Filters -->
 <section class="sticky top-16 z-40 bg-[#eef0f2]/85 backdrop-blur-xl border-b border-outline-variant/10 py-5">
 <div class="max-w-7xl mx-auto px-8">
-<div id="direction-filters" class="flex flex-wrap justify-center gap-2.5"></div>
+<div id="category-filters" class="filter-scroll flex flex-wrap justify-center gap-2.5 overflow-x-auto"></div>
 </div>
 </section>
 
@@ -387,7 +387,7 @@
 <div class="letter-card w-full max-h-[75vh] overflow-y-auto p-8 md:p-10" id="reader-card">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div>
-<p class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-secondary/60 mb-1">מכתב</p>
+<p class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-secondary/60 mb-1" id="reader-category"></p>
 <h3 class="text-2xl font-headline font-bold text-primary" id="reader-title"></h3>
 </div>
 <span class="font-label text-xs text-secondary shrink-0 mt-1" dir="ltr" id="reader-date"></span>
@@ -406,16 +406,22 @@
     "use strict";
     var letters = (window.LETTERS_DATA && window.LETTERS_DATA.letters ? window.LETTERS_DATA.letters.slice() : [])
         .sort(function (a, b) { return new Date(a.date) - new Date(b.date); });
+    var categories = (window.LETTERS_DATA && window.LETTERS_DATA.categories) || [];
 
     var ALL_KEY = "__all__";
     var activeKey = ALL_KEY;
     var visibleLetters = letters;
     var readerIndex = 0;
 
-    var filtersEl = document.getElementById("direction-filters");
+    var filtersEl = document.getElementById("category-filters");
     var gridEl = document.getElementById("letters-grid");
     var emptyEl = document.getElementById("letters-empty");
     var countEl = document.getElementById("letters-count");
+
+    function categoryLabel(key) {
+        var cat = categories.filter(function (c) { return c.key === key; })[0];
+        return cat ? cat.label : key;
+    }
 
     function escapeHtml(str) {
         var div = document.createElement("div");
@@ -428,8 +434,8 @@
         return d.toLocaleDateString("he-IL", { year: "numeric", month: "long", day: "numeric" });
     }
 
-    function directionCount(dir) {
-        return letters.filter(function (l) { return l.direction === dir; }).length;
+    function categoryCount(key) {
+        return letters.filter(function (l) { return l.category === key; }).length;
     }
 
     function pillHtml(p) {
@@ -442,15 +448,14 @@
     }
 
     function renderFilters() {
-        filtersEl.innerHTML = [
-            { key: ALL_KEY, label: "הכל", count: letters.length },
-            { key: "from", label: "מכתבים מאלון", count: directionCount("from") },
-            { key: "to", label: "מכתבים אליו", count: directionCount("to") }
-        ].map(pillHtml).join("");
+        var pills = [{ key: ALL_KEY, label: "הכל", count: letters.length }].concat(
+            categories.map(function (c) { return { key: c.key, label: c.label, count: categoryCount(c.key) }; })
+        );
+        filtersEl.innerHTML = pills.filter(function (p) { return p.key === ALL_KEY || p.count > 0; }).map(pillHtml).join("");
     }
 
     function renderGrid() {
-        visibleLetters = activeKey === ALL_KEY ? letters : letters.filter(function (l) { return l.direction === activeKey; });
+        visibleLetters = activeKey === ALL_KEY ? letters : letters.filter(function (l) { return l.category === activeKey; });
         countEl.textContent = visibleLetters.length + " מכתבים";
 
         if (visibleLetters.length === 0) {
@@ -462,16 +467,17 @@
 
         gridEl.innerHTML = visibleLetters
             .map(function (letter, i) {
+                var metaParts = [];
+                if (letter.from) metaParts.push('מאת <span class="text-primary/80 font-semibold">' + escapeHtml(letter.from) + "</span>");
+                if (letter.to) metaParts.push('אל <span class="text-primary/80 font-semibold">' + escapeHtml(letter.to) + "</span>");
                 return (
                     '<button data-index="' + i + '" class="letter-card text-right p-6 md:p-7 flex flex-col">' +
                     '<div class="flex items-start justify-between gap-3 mb-3">' +
-                    '<span class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-secondary/60">מכתב</span>' +
+                    '<span class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-secondary/60">' + escapeHtml(categoryLabel(letter.category)) + "</span>" +
                     '<span class="font-label text-xs text-secondary" dir="ltr">' + formatDate(letter.date) + "</span>" +
                     "</div>" +
                     '<h3 class="text-lg font-headline font-bold text-primary mb-2">' + escapeHtml(letter.title) + "</h3>" +
-                    '<p class="font-label text-xs text-secondary/80 mb-3">מאת <span class="text-primary/80 font-semibold">' +
-                    escapeHtml(letter.from) + '</span> · אל <span class="text-primary/80 font-semibold">' +
-                    escapeHtml(letter.to) + "</span></p>" +
+                    (metaParts.length ? '<p class="font-label text-xs text-secondary/80 mb-3">' + metaParts.join(" · ") + "</p>" : "") +
                     '<p class="letter-body text-sm text-on-surface-variant line-clamp-5 flex-1">' + escapeHtml(letter.body) + "</p>" +
                     '<span class="inline-flex items-center gap-1 text-accent-gold text-xs font-bold mt-4">' +
                     "קראו את המכתב המלא" +
@@ -503,6 +509,7 @@
     // Reader modal
     var readerEl = document.getElementById("letter-reader");
     var readerCard = document.getElementById("reader-card");
+    var readerCategory = document.getElementById("reader-category");
     var readerTitle = document.getElementById("reader-title");
     var readerDate = document.getElementById("reader-date");
     var readerMeta = document.getElementById("reader-meta");
@@ -515,9 +522,13 @@
         if (!letter) return;
         readerCard.classList.remove("reader-card-visible");
         setTimeout(function () {
+            readerCategory.textContent = categoryLabel(letter.category);
             readerTitle.textContent = letter.title;
             readerDate.textContent = formatDate(letter.date);
-            readerMeta.textContent = "מאת " + letter.from + " · אל " + letter.to;
+            var metaParts = [];
+            if (letter.from) metaParts.push("מאת " + letter.from);
+            if (letter.to) metaParts.push("אל " + letter.to);
+            readerMeta.textContent = metaParts.join(" · ");
             readerBody.innerHTML = letter.body
                 .split(/\n\n+/)
                 .map(function (p) { return '<p class="mb-4 last:mb-0">' + escapeHtml(p) + "</p>"; })
