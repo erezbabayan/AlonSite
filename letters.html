@@ -4,7 +4,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>מכתבים — אלון אברהם-חי בביאן ז״ל</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Frank+Ruhl+Libre:wght@400;500;600;700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -14,22 +14,51 @@
                     "on-surface": "#1b1c19",
                     "primary-container": "#1a2e44",
                     "on-primary-container": "#8296b0",
-                    "surface-container-highest": "#e4e2dd",
-                    "surface-container-low": "#f5f3ee",
+                    "on-tertiary-fixed-variant": "#504536",
+                    "on-tertiary-fixed": "#231a0e",
+                    "surface-container-highest": "#ccd1d6",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#e6e9ec",
+                    "tertiary-fixed-dim": "#d5c4b1",
                     "on-secondary-container": "#5e656c",
                     "outline": "#74777d",
                     "on-surface-variant": "#43474d",
                     "surface-container-lowest": "#ffffff",
-                    "surface-container": "#f0eee9",
-                    "surface-bright": "#fbf9f4",
+                    "secondary-container": "#dce3eb",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#c7ccd1",
+                    "on-primary-fixed-variant": "#35485f",
+                    "primary-fixed-dim": "#b4c8e4",
+                    "surface-tint": "#4c6078",
+                    "on-background": "#1b1c19",
+                    "inverse-primary": "#b4c8e4",
+                    "on-secondary-fixed": "#161c22",
+                    "on-error": "#ffffff",
+                    "surface-container": "#e1e4e8",
+                    "surface-bright": "#eef0f2",
+                    "tertiary": "#1f170b",
+                    "on-tertiary-container": "#a19280",
                     "surface-variant": "#e4e2dd",
-                    "surface": "#fbf9f4",
+                    "surface": "#eef0f2",
                     "on-primary": "#ffffff",
-                    "primary": "#1A2E44",
-                    "background": "#fbf9f4",
+                    "tertiary-fixed": "#f1e0cc",
+                    "inverse-surface": "#30312e",
+                    "primary": "#1A2E44", /* Navy from Eternal Grace */
+                    "primary-fixed": "#d1e4ff",
+                    "inverse-on-surface": "#f2f1ec",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#352b1e",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#d9dce1",
+                    "on-primary-fixed": "#061d32",
+                    "on-secondary-fixed-variant": "#41484e",
+                    "on-tertiary": "#ffffff",
+                    "background": "#eef0f2", /* Cool slate-grey (was warm cream) */
+                    "secondary-fixed": "#dce3eb",
                     "outline-variant": "#c4c6cd",
+                    "secondary-fixed-dim": "#c0c7ce",
                     "secondary": "#585f65",
-                    "accent-gold": "#D4AF37"
+                    "accent-gold": "#7C8CA0" /* Dusty slate-blue (was gold) */
             },
             "borderRadius": {
                     "DEFAULT": "0.125rem",
@@ -38,9 +67,9 @@
                     "full": "0.75rem"
             },
             "fontFamily": {
-                    "serif": ["Assistant", "sans-serif"],
+                    "serif": ["Frank Ruhl Libre", "serif"],
                     "sans": ["Assistant", "sans-serif"],
-                    "headline": ["Assistant", "sans-serif"],
+                    "headline": ["Frank Ruhl Libre", "serif"],
                     "body": ["Assistant", "sans-serif"],
                     "label": ["Assistant", "sans-serif"]
             }
@@ -52,11 +81,11 @@
     .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
-    body { font-family: 'Assistant', sans-serif; background-color: #fbf9f4; }
+    body { font-family: 'Assistant', sans-serif; background-color: #eef0f2; }
     html { scroll-behavior: smooth; }
 
-    .gold-border { border-color: #D4AF37; }
-    .gold-text { color: #D4AF37; }
+    .gold-border { border-color: #7C8CA0; }
+    .gold-text { color: #7C8CA0; }
 
     #mobile-nav-panel {
         max-height: 0;
@@ -75,12 +104,12 @@
         display: none;
     }
     .category-pill {
-        background-color: #fbf6ec !important;
-        border-color: rgba(139, 111, 43, 0.25) !important;
+        background-color: #e9edf1 !important;
+        border-color: rgba(124, 140, 160, 0.25) !important;
         transition: background-color 300ms ease-out, color 300ms ease-out, box-shadow 300ms ease-out, border-color 300ms ease-out, transform 200ms ease-out;
     }
     .category-pill:hover {
-        border-color: rgba(139, 111, 43, 0.5) !important;
+        border-color: rgba(124, 140, 160, 0.5) !important;
         box-shadow: 0 8px 18px rgba(27, 28, 25, 0.12);
         transform: translateY(-1px);
     }
@@ -91,10 +120,10 @@
         margin-inline-start: 0.15em;
     }
     .category-pill.active {
-        background-color: #D4AF37;
-        border-color: #D4AF37 !important;
+        background-color: #7C8CA0;
+        border-color: #7C8CA0 !important;
         color: #1A2E44;
-        box-shadow: 0 8px 20px rgba(139, 111, 43, 0.35);
+        box-shadow: 0 8px 20px rgba(124, 140, 160, 0.35);
         transform: translateY(-1px);
     }
     .category-pill.active .pill-count {
@@ -148,12 +177,12 @@
         box-shadow: 0 24px 44px rgba(27, 28, 25, 0.14);
     }
     .letter-body {
-        font-family: "Newsreader", "Assistant", serif;
+        font-family: "Frank Ruhl Libre", "Assistant", serif;
         font-style: italic;
         line-height: 1.85;
     }
     .letter-signature {
-        font-family: "Newsreader", serif;
+        font-family: "Frank Ruhl Libre", serif;
         font-style: italic;
         font-weight: 600;
     }
@@ -188,11 +217,25 @@
     @media (prefers-reduced-motion: reduce) {
         .letter-card, .letter-card:hover, #reader-card { transition: none; }
     }
+    /* A faint paper grain over the whole page, so surfaces read as
+       parchment rather than flat digital color. Fixed + negative
+       z-index keeps it behind all in-flow content without needing to
+       touch every section's stacking. */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.05;
+        mix-blend-mode: multiply;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
 </style>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/70 backdrop-blur-xl transition-all duration-400">
+<nav class="fixed top-0 w-full z-50 bg-[#eef0f2]/70 backdrop-blur-xl transition-all duration-400">
 <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto rtl">
 <a class="text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="index.html">אלון אברהם-חי בביאן ז״ל</a>
 <div class="hidden md:flex gap-8 items-center">
@@ -212,7 +255,7 @@
 </button>
 </div>
 </div>
-<div class="md:hidden bg-[#fbf9f4]/95 backdrop-blur-xl px-6" id="mobile-nav-panel">
+<div class="md:hidden bg-[#eef0f2]/95 backdrop-blur-xl px-6" id="mobile-nav-panel">
 <div class="flex flex-col gap-1 py-4 max-w-7xl mx-auto">
 <a class="font-label text-lg text-[#585f65] py-2" href="index.html">דף הבית</a>
 <a class="font-label text-lg text-[#585f65] py-2" href="index.html#chapters">פרקי חיים</a>
@@ -250,12 +293,12 @@
 </div>
 <div class="text-center mt-4">
 <p class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-accent-gold/80 mb-1.5">כתב יד מקורי · 1982</p>
-<p class="text-sm text-primary/80" style="font-family: 'Newsreader', serif; font-style: italic;">מתוך כתביו של אלון</p>
+<p class="text-sm text-primary/80" style="font-family: 'Frank Ruhl Libre', serif; font-style: italic;">מתוך כתביו של אלון</p>
 </div>
 </div>
 </div>
 <div class="md:col-span-8">
-<p class="flex items-center gap-2 text-sm text-secondary/60" style="font-family: 'Newsreader', serif; font-style: italic;">
+<p class="flex items-center gap-2 text-sm text-secondary/60" style="font-family: 'Frank Ruhl Libre', serif; font-style: italic;">
 <span class="material-symbols-outlined text-base text-accent-gold not-italic">edit_note</span>
                     המכתבים שלהלן הם דוגמה בלבד, לצורך המחשה, עד שיעלו מכתביו האמיתיים של אלון.
                 </p>
@@ -264,7 +307,7 @@
 </section>
 
 <!-- Direction Filters -->
-<section class="sticky top-16 z-40 bg-[#fbf9f4]/85 backdrop-blur-xl border-b border-outline-variant/10 py-5">
+<section class="sticky top-16 z-40 bg-[#eef0f2]/85 backdrop-blur-xl border-b border-outline-variant/10 py-5">
 <div class="max-w-7xl mx-auto px-8">
 <div id="direction-filters" class="flex flex-wrap justify-center gap-2.5"></div>
 </div>
@@ -282,7 +325,7 @@
 </main>
 
 <!-- Footer -->
-<footer class="w-full mt-4 bg-[#f5f3ee] py-12 px-8 flex flex-col items-center gap-6 rtl rounded-t-xl transition-all duration-300">
+<footer class="w-full mt-4 bg-[#e6e9ec] py-12 px-8 flex flex-col items-center gap-6 rtl rounded-t-xl transition-all duration-300">
 <div class="text-lg font-serif font-semibold text-[#1A2E44]">אלון אברהם-חי בביאן ז״ל</div>
 <div class="flex flex-wrap justify-center gap-8">
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" data-candle-trigger="" href="#">הדלקת נר</a>
@@ -322,7 +365,7 @@
 <label class="block font-label text-xs text-on-surface-variant uppercase tracking-wide mb-1" for="candle-message-input">הקדשה (לא חובה)</label>
 <textarea class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body resize-none transition-colors" id="candle-message-input" maxlength="300" placeholder="כתבו כמה מילים לזכרו..." rows="3"></textarea>
 </div>
-<button class="bg-primary text-white rounded-full py-3 font-bold text-lg shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2" type="submit">
+<button class="bg-primary text-white rounded-full py-3 font-bold text-lg shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2" id="candle-submit-btn" type="submit">
 <span class="material-symbols-outlined">local_fire_department</span> הדליקו נר
                 </button>
 </form>

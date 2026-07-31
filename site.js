@@ -1,21 +1,34 @@
-// Shared behavior for the memorial site: candle-lighting (localStorage-backed),
-// mobile nav toggle, and the share button. Included by index.html and gallery.html.
+// Shared behavior for the memorial site: candle-lighting (backed by a JSON
+// file on the server via /api/candles, shared across all visitors), mobile
+// nav toggle, and the share button. Included by index.html and gallery.html.
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "alon-bibian-memorial-candles";
+  var candlesCache = [];
 
-  function loadCandles() {
-    try {
-      var raw = JSON.parse(localStorage.getItem(STORAGE_KEY));
-      return Array.isArray(raw) ? raw : [];
-    } catch (e) {
-      return [];
-    }
+  function fetchCandles() {
+    return fetch("/api/candles")
+      .then(function (res) {
+        if (!res.ok) throw new Error("request failed");
+        return res.json();
+      })
+      .then(function (data) {
+        return Array.isArray(data) ? data : [];
+      })
+      .catch(function () {
+        return [];
+      });
   }
 
-  function saveCandles(candles) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(candles));
+  function postCandle(name, message) {
+    return fetch("/api/candles", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: name, message: message }),
+    }).then(function (res) {
+      if (!res.ok) throw new Error("request failed");
+      return res.json();
+    });
   }
 
   function escapeHtml(str) {
@@ -30,7 +43,7 @@
   }
 
   function renderCandles() {
-    var candles = loadCandles();
+    var candles = candlesCache;
     var countEls = document.querySelectorAll("[data-candle-count]");
     for (var i = 0; i < countEls.length; i++) countEls[i].textContent = candles.length;
 
@@ -95,19 +108,31 @@
       return;
     }
     var message = (messageInput.value || "").trim();
-    var candles = loadCandles();
-    candles.push({ name: name, message: message, date: new Date().toISOString() });
-    saveCandles(candles);
-    nameInput.value = "";
-    messageInput.value = "";
-    renderCandles();
-    closeModal();
-    var listEl = document.getElementById("candle-list");
-    if (listEl) listEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    var submitBtn = document.getElementById("candle-submit-btn");
+    if (submitBtn) submitBtn.disabled = true;
+    postCandle(name, message)
+      .then(function (entry) {
+        candlesCache.push(entry);
+        nameInput.value = "";
+        messageInput.value = "";
+        renderCandles();
+        closeModal();
+        var listEl = document.getElementById("candle-list");
+        if (listEl) listEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      })
+      .catch(function () {
+        window.alert("לא הצלחנו לשמור את הנר. נסו שוב בעוד רגע.");
+      })
+      .then(function () {
+        if (submitBtn) submitBtn.disabled = false;
+      });
   }
 
   function setupCandles() {
-    renderCandles();
+    fetchCandles().then(function (candles) {
+      candlesCache = candles;
+      renderCandles();
+    });
 
     var triggers = document.querySelectorAll("[data-candle-trigger]");
     for (var i = 0; i < triggers.length; i++) {
@@ -370,6 +395,63 @@
     });
   }
 
+  // Living-memorial dates: how long it's been, and when the next Hebrew-
+  // calendar yahrzeit (anniversary) falls. Both are derived at load time
+  // instead of hardcoded so the page stays accurate on every future visit.
+  var DEATH_DATE = new Date(1997, 1, 4); // 4 בפברואר 1997
+  var YAHRZEIT_HEBREW_MONTH = "Shevat";
+  var YAHRZEIT_HEBREW_DAY = "28";
+
+  function yearsSince(fromDate, now) {
+    var years = now.getFullYear() - fromDate.getFullYear();
+    var hadAnniversaryThisYear =
+      now.getMonth() > fromDate.getMonth() ||
+      (now.getMonth() === fromDate.getMonth() && now.getDate() >= fromDate.getDate());
+    if (!hadAnniversaryThisYear) years--;
+    return years;
+  }
+
+  function nextHebrewYahrzeit(now) {
+    var fmt = new Intl.DateTimeFormat("en-US-u-ca-hebrew", { day: "numeric", month: "long" });
+    var d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    for (var i = 0; i < 400; i++) {
+      var parts = fmt.formatToParts(d);
+      var day, month;
+      for (var j = 0; j < parts.length; j++) {
+        if (parts[j].type === "day") day = parts[j].value;
+        if (parts[j].type === "month") month = parts[j].value;
+      }
+      if (day === YAHRZEIT_HEBREW_DAY && month === YAHRZEIT_HEBREW_MONTH) return d;
+      d = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1);
+    }
+    return null;
+  }
+
+  function setupMemorialDates() {
+    var now = new Date();
+
+    var yearsEl = document.getElementById("years-since-note");
+    if (yearsEl) {
+      yearsEl.textContent = yearsSince(DEATH_DATE, now) + " שנים בהם זכרו ממשיך ללוות אותנו";
+    }
+
+    var yahrzeitEl = document.getElementById("next-yahrzeit-note");
+    if (yahrzeitEl) {
+      try {
+        var next = nextHebrewYahrzeit(now);
+        if (next) {
+          var days = Math.round((next - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+          var dateLabel = next.toLocaleDateString("he-IL", { year: "numeric", month: "long", day: "numeric" });
+          var when = days === 0 ? "היום" : days === 1 ? "מחר" : "בעוד " + days + " ימים";
+          yahrzeitEl.textContent = "יום השנה הבא (כ\"ח בשבט) — " + dateLabel + " · " + when;
+        }
+      } catch (e) {
+        // Hebrew-calendar Intl support isn't universal; leave the note
+        // blank rather than show something wrong.
+      }
+    }
+  }
+
   function setupRevealAnimations() {
     var targets = document.querySelectorAll(".reveal");
     if (!targets.length || !("IntersectionObserver" in window)) return;
@@ -397,6 +479,7 @@
     setupSongWidget();
     setupShareButton();
     setupScrollTopButton();
+    setupMemorialDates();
     setupRevealAnimations();
   });
 })();
