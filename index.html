@@ -16,9 +16,9 @@
                     "on-primary-container": "#8296b0",
                     "on-tertiary-fixed-variant": "#504536",
                     "on-tertiary-fixed": "#231a0e",
-                    "surface-container-highest": "#e4e2dd",
+                    "surface-container-highest": "#ccd1d6",
                     "on-error-container": "#93000a",
-                    "surface-container-low": "#f5f3ee",
+                    "surface-container-low": "#e6e9ec",
                     "tertiary-fixed-dim": "#d5c4b1",
                     "on-secondary-container": "#5e656c",
                     "outline": "#74777d",
@@ -26,7 +26,7 @@
                     "surface-container-lowest": "#ffffff",
                     "secondary-container": "#dce3eb",
                     "error": "#ba1a1a",
-                    "surface-dim": "#dbdad5",
+                    "surface-dim": "#c7ccd1",
                     "on-primary-fixed-variant": "#35485f",
                     "primary-fixed-dim": "#b4c8e4",
                     "surface-tint": "#4c6078",
@@ -34,12 +34,12 @@
                     "inverse-primary": "#b4c8e4",
                     "on-secondary-fixed": "#161c22",
                     "on-error": "#ffffff",
-                    "surface-container": "#f0eee9",
-                    "surface-bright": "#fbf9f4",
+                    "surface-container": "#e1e4e8",
+                    "surface-bright": "#eef0f2",
                     "tertiary": "#1f170b",
                     "on-tertiary-container": "#a19280",
                     "surface-variant": "#e4e2dd",
-                    "surface": "#fbf9f4",
+                    "surface": "#eef0f2",
                     "on-primary": "#ffffff",
                     "tertiary-fixed": "#f1e0cc",
                     "inverse-surface": "#30312e",
@@ -49,16 +49,16 @@
                     "error-container": "#ffdad6",
                     "tertiary-container": "#352b1e",
                     "on-secondary": "#ffffff",
-                    "surface-container-high": "#eae8e3",
+                    "surface-container-high": "#d9dce1",
                     "on-primary-fixed": "#061d32",
                     "on-secondary-fixed-variant": "#41484e",
                     "on-tertiary": "#ffffff",
-                    "background": "#fbf9f4", /* Cream from Eternal Grace */
+                    "background": "#eef0f2", /* Cool slate-grey (was warm cream) */
                     "secondary-fixed": "#dce3eb",
                     "outline-variant": "#c4c6cd",
                     "secondary-fixed-dim": "#c0c7ce",
                     "secondary": "#585f65",
-                    "accent-gold": "#D4AF37" /* Gold Accent */
+                    "accent-gold": "#7C8CA0" /* Dusty slate-blue (was gold) */
             },
             "borderRadius": {
                     "DEFAULT": "0.125rem",
@@ -81,7 +81,8 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        body { font-family: 'Assistant', sans-serif; background-color: #fbf9f4; }
+        body { font-family: 'Assistant', sans-serif; background-color: #eef0f2; }
+        img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
         
         .masonry-grid {
             column-count: 1;
@@ -103,10 +104,10 @@
             margin-bottom: 1.5rem;
         }
         .gold-border {
-            border-color: #D4AF37;
+            border-color: #7C8CA0;
         }
         .gold-text {
-            color: #D4AF37;
+            color: #7C8CA0;
         }
         html {
             scroll-behavior: smooth;
@@ -115,9 +116,9 @@
             scroll-margin-top: 5rem;
         }
         @keyframes candle-in {
-            from { opacity: 0; transform: translateY(12px); box-shadow: 0 0 0 rgba(212, 175, 55, 0); }
-            30% { box-shadow: 0 0 24px rgba(212, 175, 55, 0.25); }
-            to { opacity: 1; transform: translateY(0); box-shadow: 0 0 0 rgba(212, 175, 55, 0); }
+            from { opacity: 0; transform: translateY(12px); box-shadow: 0 0 0 rgba(124, 140, 160, 0); }
+            30% { box-shadow: 0 0 24px rgba(124, 140, 160, 0.25); }
+            to { opacity: 1; transform: translateY(0); box-shadow: 0 0 0 rgba(124, 140, 160, 0); }
         }
         .candle-entry-new {
             animation: candle-in 1400ms ease-out;
