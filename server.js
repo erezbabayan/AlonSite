@@ -8,9 +8,14 @@ var http = require("http");
 var fs = require("fs");
 var path = require("path");
 
-var PORT = process.env.PORT || 8420;
+var DEFAULT_PORT = 8420;
+var PORT = process.env.PORT || DEFAULT_PORT;
 var ROOT = __dirname;
 var CANDLES_FILE = path.join(ROOT, "data", "candles.json");
+
+var MAX_CANDLE_BODY_BYTES = 10000; // guards the POST /api/candles request body
+var CANDLE_NAME_MAX_LENGTH = 200;
+var CANDLE_MESSAGE_MAX_LENGTH = 2000;
 
 var MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -62,7 +67,7 @@ function handlePostCandle(req, res) {
   var size = 0;
   req.on("data", function (chunk) {
     size += chunk.length;
-    if (size > 10000) {
+    if (size > MAX_CANDLE_BODY_BYTES) {
       req.destroy();
       return;
     }
@@ -76,8 +81,8 @@ function handlePostCandle(req, res) {
       sendJson(res, 400, { error: "invalid json" });
       return;
     }
-    var name = typeof body.name === "string" ? body.name.trim().slice(0, 200) : "";
-    var message = typeof body.message === "string" ? body.message.trim().slice(0, 2000) : "";
+    var name = typeof body.name === "string" ? body.name.trim().slice(0, CANDLE_NAME_MAX_LENGTH) : "";
+    var message = typeof body.message === "string" ? body.message.trim().slice(0, CANDLE_MESSAGE_MAX_LENGTH) : "";
     if (!name) {
       sendJson(res, 400, { error: "name is required" });
       return;
