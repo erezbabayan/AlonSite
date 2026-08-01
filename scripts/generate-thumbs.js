@@ -8,7 +8,7 @@ const path = require("path");
 const { execFileSync } = require("child_process");
 
 const ROOT = path.join(__dirname, "..");
-const IMAGES_DIR = path.join(ROOT, "images");
+const IMAGES_DIR = path.join(ROOT, "media", "images");
 const THUMBS_DIR = path.join(IMAGES_DIR, "thumbs");
 const MAX_SIZE = 900;
 const QUALITY = 65;

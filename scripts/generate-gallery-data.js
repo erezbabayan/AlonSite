@@ -8,7 +8,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const IMAGES_DIR = path.join(ROOT, "images");
+const IMAGES_DIR = path.join(ROOT, "media", "images");
 const EXT_RE = /\.(jpe?g|png)$/i;
 
 // Narrative order (life-story flow) rather than alphabetical.
@@ -59,8 +59,8 @@ const categories = orderedDirs.map((category) => {
   const images = files.map((name) => {
     const thumbName = name.replace(EXT_RE, ".jpg");
     return {
-      full: `images/${toUrl(category)}/${toUrl(name)}`,
-      thumb: `images/thumbs/${toUrl(category)}/${toUrl(thumbName)}`,
+      full: `media/images/${toUrl(category)}/${toUrl(name)}`,
+      thumb: `media/images/thumbs/${toUrl(category)}/${toUrl(thumbName)}`,
       alt: `${category} - ${name.replace(EXT_RE, "")}`,
     };
   });
