@@ -16,12 +16,11 @@
 <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto rtl">
 <a class="text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="/index.html">אלון אברהם-חי בביאן ז״ל</a>
 <div class="hidden md:flex gap-8 items-center">
-<a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" href="/index.html">דף הבית</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="#chapters">פרקי חיים</a>
+<a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" data-nav-key="home" href="/index.html">דף הבית</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" data-nav-key="chapters" href="#chapters">פרקי חיים</a>
 <a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/pages/gallery.html">גלריית חיים</a>
 <a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/pages/sections.html">מכתבים, סרטונים וקטעי קול</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/pages/disaster.html">אסון המסוקים</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="#legacy">הנצחה ומורשת</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" data-nav-key="legacy" href="#legacy">הנצחה ומורשת</a>
 </div>
 <div class="flex items-center gap-3">
 <button aria-label="השתקה/השמעת קול לשיר ברקע" title="אצלנו בגן — שי-לי עטרי" class="text-[#1A2E44] hover:opacity-70 transition-opacity" id="song-widget">
@@ -35,18 +34,17 @@
 </div>
 <div class="md:hidden bg-[#eef0f2]/95 backdrop-blur-xl px-6" id="mobile-nav-panel">
 <div class="flex flex-col gap-1 py-4 max-w-7xl mx-auto">
-<a class="font-label text-lg text-[#1A2E44] py-2" href="/index.html">דף הבית</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="#chapters">פרקי חיים</a>
+<a class="font-label text-lg text-[#1A2E44] py-2" data-nav-key="home" href="/index.html">דף הבית</a>
+<a class="font-label text-lg text-[#585f65] py-2" data-nav-key="chapters" href="#chapters">פרקי חיים</a>
 <a class="font-label text-lg text-[#585f65] py-2" href="/pages/gallery.html">גלריית חיים</a>
 <a class="font-label text-lg text-[#585f65] py-2" href="/pages/sections.html">מכתבים, סרטונים וקטעי קול</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="/pages/disaster.html">אסון המסוקים</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="#legacy">הנצחה ומורשת</a>
+<a class="font-label text-lg text-[#585f65] py-2" data-nav-key="legacy" href="#legacy">הנצחה ומורשת</a>
 </div>
 </div>
 </nav>
-<main class="pt-16">
+<main>
 <!-- Hero Section -->
-<section class="relative h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden" id="hero">
+<section class="relative h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden" data-nav-section="home" id="hero">
 <div class="absolute inset-0 z-0">
 <img alt="אלון, סגן בחטיבת גולני, בבופור" class="w-full h-full object-cover object-[32%_14%]" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
 <div class="absolute inset-0 bg-black/50"></div>
@@ -71,7 +69,7 @@
 </div>
 </section>
 <!-- Life Chapters -->
-<section class="relative max-w-7xl mx-auto px-8 py-24 space-y-32">
+<section class="relative max-w-7xl mx-auto px-8 py-24 space-y-32" data-nav-section="chapters">
 <div aria-hidden="true" class="hidden md:block absolute right-1/2 top-12 bottom-12 w-px translate-x-1/2 bg-gradient-to-b from-transparent via-accent-gold/40 to-transparent"></div>
 <div class="relative grid grid-cols-1 md:grid-cols-12 gap-16 items-center reveal scroll-mt-20" id="chapters">
 <div class="md:col-span-5 order-2 md:order-1">
@@ -93,8 +91,10 @@
 <div class="relative grid grid-cols-1 md:grid-cols-12 gap-16 items-center reveal">
 <div class="md:col-span-7">
 <div class="photo-frame">
-<div class="photo-frame-inner relative aspect-[4/3]">
+<div class="photo-frame-inner crossfade-frame relative aspect-[4/3]">
 <img alt="לימודים במכינת עצמונה" class="w-full h-full object-cover" src="/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%D7%A9%D7%A2%D7%95%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%91%D7%9E%D7%9B%D7%99%D7%A0%D7%94.jpg"/>
+<img alt="מסיבת סיום במכינת עצמונה, 1994" class="w-full h-full object-cover" src="/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%20%D7%A2%D7%A6%D7%9E%D7%95%D7%A0%D7%94%20%D7%9E%D7%A1%D7%99%D7%91%D7%AA%20%D7%A1%D7%99%D7%95%D7%9D%201994.jpg"/>
+<img alt="טקס השבועה בצומת גולני, 1994" class="w-full h-full object-cover" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/1994%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99.jpg"/>
 </div>
 </div>
 </div>
@@ -114,8 +114,10 @@
 </div>
 <div class="md:col-span-7 order-1 md:order-2">
 <div class="photo-frame">
-<div class="photo-frame-inner relative aspect-[4/3]">
+<div class="photo-frame-inner crossfade-frame relative aspect-[4/3]">
 <img alt="אלון בסיום קורס הקצינים, ליד אנדרטת בית הספר לקצינים" class="w-full h-full object-cover" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(35).jpg"/>
+<img alt="אלון בסיום קורס הסמלים, 1996" class="w-full h-full object-cover" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/1996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D.jpg"/>
+<img alt="אלון בשירות מבצעי במהלך קורס הקצינים" class="w-full h-full object-cover" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(2).jpg"/>
 </div>
 </div>
 </div>
@@ -209,10 +211,10 @@
 </div>
 </section>
 <!-- Legacy Section -->
-<section class="max-w-5xl mx-auto px-8 py-24" id="legacy">
+<section class="max-w-5xl mx-auto px-8 py-24" data-nav-section="legacy" id="legacy">
 <h2 class="text-4xl font-headline font-bold text-center mb-4 text-primary">הנצחה ומורשת</h2>
 <p class="text-center text-secondary font-body text-lg mb-16 max-w-2xl mx-auto">רוחו של אלון ממשיכה ללוות את מי שאהב, במקומות שהיו יקרים לליבו.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="bg-white rounded-lg overflow-hidden border border-outline-variant/15 shadow-[0_20px_40px_rgba(27,28,25,0.08)] reveal">
 <div class="aspect-[4/3] overflow-hidden p-2.5">
 <div class="w-full h-full rounded-sm overflow-hidden">
@@ -220,9 +222,6 @@
 </div>
 </div>
 <div class="p-8">
-<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-accent-gold mb-4">
-<span class="material-symbols-outlined text-lg">menu_book</span>
-</div>
 <h3 class="font-headline font-bold text-xl text-primary mb-2">ספר תורה לזכרו</h3>
 <p class="font-body text-on-surface-variant leading-relaxed">לזכרו נתרם ונחנך ספר תורה בבית הכנסת "משכן יוסף", בטקס משפחתי ומרגש שנשא עמו את שמו הלאה.</p>
 </div>
@@ -234,13 +233,24 @@
 </div>
 </div>
 <div class="p-8">
-<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-accent-gold mb-4">
-<span class="material-symbols-outlined text-lg">school</span>
-</div>
 <h3 class="font-headline font-bold text-xl text-primary mb-2">כיתה על שמו במכינת עצמונה</h3>
 <p class="font-body text-on-surface-variant leading-relaxed">במכינה הקדם-צבאית עצמונה, שם למד לקראת גיוסו, הוקדשה כיתת לימוד הנושאת את שמו — כך שרוחו ממשיכה ללוות דורות של בוגרים.</p>
 </div>
 </div>
+<a class="group bg-white rounded-lg overflow-hidden border border-outline-variant/15 shadow-[0_20px_40px_rgba(27,28,25,0.08)] hover:shadow-[0_28px_54px_rgba(27,28,25,0.14)] hover:-translate-y-1 transition-all duration-300 reveal" href="/pages/disaster.html">
+<div class="aspect-[4/3] overflow-hidden p-2.5">
+<div class="w-full h-full rounded-sm overflow-hidden">
+<img alt="אתר ההנצחה לחללי אסון המסוקים" class="w-full h-full object-cover" loading="lazy" src="/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg"/>
+</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline font-bold text-xl text-primary mb-2">אסון המסוקים</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">ליל 4 בפברואר 1997 — סיפור האסון שבו נפל אלון יחד עם 72 חברים נוספים, ושמותיהם של 73 הנופלים.</p>
+<p class="font-label text-sm text-accent-gold mt-4 flex items-center gap-1 group-hover:gap-2 transition-all">
+                    קראו את הסיפור המלא <span class="material-symbols-outlined text-base">arrow_back</span>
+                </p>
+</div>
+</a>
 </div>
 </section>
 <!-- Candle Lighting Section -->
@@ -258,22 +268,6 @@
     </p>
 <p class="font-label text-sm text-secondary tracking-wide mb-10" id="next-yahrzeit-note"></p>
 <div class="flex flex-col items-center gap-6">
-<div class="flex flex-wrap justify-center gap-4">
-<div class="flex items-center gap-4 bg-white px-8 py-4 rounded-xl border border-accent-gold/20 shadow-[0_10px_30px_rgba(27,28,25,0.06)]">
-<span class="material-symbols-outlined text-3xl text-accent-gold">groups</span>
-<div class="text-right">
-<span class="block text-xs font-label text-secondary uppercase mb-1">חברים שנפלו עמו באסון</span>
-<span class="text-4xl font-headline font-bold text-primary">73</span>
-</div>
-</div>
-<div class="flex items-center gap-4 bg-white px-8 py-4 rounded-xl border border-accent-gold/20 shadow-[0_10px_30px_rgba(27,28,25,0.06)]">
-<span class="material-symbols-outlined text-3xl text-accent-gold" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
-<div class="text-right">
-<span class="block text-xs font-label text-secondary uppercase mb-1">נרות שהדלקתם כאן</span>
-<span class="text-4xl font-headline font-bold text-primary" data-candle-count="">0</span>
-</div>
-</div>
-</div>
 <button class="bg-primary text-white px-12 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-3" data-candle-trigger=""><span class="material-symbols-outlined">local_fire_department</span> הדליקו נר לזכרו</button>
 </div>
 </div>

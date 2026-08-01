@@ -183,6 +183,31 @@
   // Mobile nav
   // ---------------------------------------------------------------------
 
+  // ---------------------------------------------------------------------
+  // Nav height
+  // The fixed top nav is normally one line (~4rem), but wraps to two lines
+  // on narrow screens once the site title no longer fits — anything that
+  // assumes a fixed nav height (main's top padding, the sticky filter bar,
+  // anchor scroll offsets) would otherwise sit partly hidden underneath it.
+  // Measuring the real height and exposing it as --nav-h keeps all of that
+  // correct regardless of title length, viewport width, or font load timing.
+  // ---------------------------------------------------------------------
+  function setupNavHeightVar() {
+    const nav = document.querySelector("nav");
+    if (!nav) return;
+
+    function updateNavHeight() {
+      document.documentElement.style.setProperty("--nav-h", `${nav.getBoundingClientRect().height}px`);
+    }
+
+    updateNavHeight();
+    window.addEventListener("resize", updateNavHeight);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(updateNavHeight);
+    }
+    window.addEventListener("load", updateNavHeight);
+  }
+
   function setupMobileNav() {
     const toggle = document.getElementById("mobile-nav-toggle");
     const panel = document.getElementById("mobile-nav-panel");
@@ -513,7 +538,50 @@
     targets.forEach((t) => observer.observe(t));
   }
 
+  // ---------------------------------------------------------------------
+  // Home-page nav scroll spy — keeps "פרקי חיים" / "הנצחה ומורשת" in the
+  // top nav underlined once their section is in view, matching how the
+  // nav already highlights the current page on every other page.
+  // ---------------------------------------------------------------------
+
+  const NAV_DESKTOP_ACTIVE = ["text-[#1A2E44]", "border-b-2", "border-[#1A2E44]", "pb-1"];
+  const NAV_DESKTOP_INACTIVE = ["text-[#585f65]", "hover:text-[#1A2E44]", "transition-colors", "duration-300"];
+  const NAV_MOBILE_ACTIVE = ["text-[#1A2E44]"];
+  const NAV_MOBILE_INACTIVE = ["text-[#585f65]"];
+
+  function setupHomeNavScrollSpy() {
+    const sections = document.querySelectorAll("[data-nav-section]");
+    const navLinks = document.querySelectorAll("nav a[data-nav-key]");
+    if (!sections.length || !navLinks.length || !("IntersectionObserver" in window)) return;
+
+    let activeKey = null;
+
+    function activate(key) {
+      if (!key || key === activeKey) return;
+      activeKey = key;
+      navLinks.forEach((link) => {
+        const isMobile = link.closest("#mobile-nav-panel") !== null;
+        const activeClasses = isMobile ? NAV_MOBILE_ACTIVE : NAV_DESKTOP_ACTIVE;
+        const inactiveClasses = isMobile ? NAV_MOBILE_INACTIVE : NAV_DESKTOP_INACTIVE;
+        const isActive = link.dataset.navKey === key;
+        link.classList.remove(...(isActive ? inactiveClasses : activeClasses));
+        link.classList.add(...(isActive ? activeClasses : inactiveClasses));
+      });
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) activate(entry.target.dataset.navSection);
+        });
+      },
+      { rootMargin: "-45% 0px -45% 0px" }
+    );
+    sections.forEach((s) => observer.observe(s));
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
+    setupNavHeightVar();
     setupCandles();
     setupMobileNav();
     setupSongWidget();
@@ -521,5 +589,6 @@
     setupScrollTopButton();
     setupMemorialDates();
     setupRevealAnimations();
+    setupHomeNavScrollSpy();
   });
 })();

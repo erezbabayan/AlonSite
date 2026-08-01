@@ -16,9 +16,17 @@ body {
 html {
     scroll-behavior: smooth;
 }
+/* The fixed top nav is usually one line (~4rem) but wraps to two lines on
+   narrow screens once the title no longer fits. --nav-h is the real,
+   measured nav height (set by site.js); the 4rem fallback only applies
+   before that JS runs. Anything that assumes a fixed nav height reads from
+   this variable instead of a hardcoded value, so it stays correct either way. */
+main {
+    padding-top: var(--nav-h, 4rem);
+}
 /* Offsets anchor-jump targets so content doesn't land underneath the fixed nav. */
 section[id] {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: calc(var(--nav-h, 4rem) + 1rem);
 }
 .gold-border { border-color: #7C8CA0; }
 .gold-text { color: #7C8CA0; }
@@ -99,6 +107,12 @@ body::before {
 /* ---------------------------------------------------------------------
    Category filter pills (gallery + letters pages)
    --------------------------------------------------------------------- */
+/* Sticks right below the nav — top offset uses the same real, measured
+   --nav-h variable so the bar's own top edge never sits under the nav. */
+.filters-sticky {
+    position: sticky;
+    top: var(--nav-h, 4rem);
+}
 .filter-scroll {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -123,10 +137,10 @@ body::before {
     margin-inline-start: 0.15em;
 }
 .category-pill.active {
-    background-color: #7C8CA0;
-    border-color: #7C8CA0 !important;
+    background-color: rgba(124, 140, 160, 0.16) !important;
+    border-color: rgba(124, 140, 160, 0.55) !important;
     color: #1A2E44;
-    box-shadow: 0 8px 20px rgba(124, 140, 160, 0.35);
+    box-shadow: 0 4px 10px rgba(124, 140, 160, 0.18);
     transform: translateY(-1px);
 }
 .category-pill.active .pill-count {

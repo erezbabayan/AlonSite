@@ -12,9 +12,6 @@
   const LIFE_KEYS = ["ילדות-ובגרות", "בר-מצווה-אלון", "חברים", "צבא", "משפחה", "כתבים-של-אלון"];
 
   const FILTER_SWITCH_TRANSITION_MS = 220; // grid fade-out/in while switching categories
-  // Height of the sticky top nav bar (`top-16` in gallery.html) that the
-  // filter bar sticks below — used to compute the true scroll target.
-  const STICKY_NAV_HEIGHT_PX = 64;
   const LIGHTBOX_SWAP_DELAY_MS = 150; // lets the fade-out finish before swapping the image src
   const LIGHTBOX_CLOSE_TRANSITION_MS = 280; // matches the CSS lightbox-open transition duration
   const SWIPE_THRESHOLD_PX = 40; // minimum horizontal drag to count as a swipe
@@ -124,9 +121,12 @@
     // (Measured off the grid section, not the sticky filter bar — a
     // sticky element's own rect reports its stuck viewport position,
     // not its true document offset, once it's actually stuck.)
+    // Nav height is read live (site.js keeps --nav-h in sync) rather than
+    // assumed, since the nav wraps to two lines on narrow screens.
+    const navHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--nav-h")) || 64;
     const filterSection = filtersEl.closest("section");
     const gridSection = gridEl.closest("section");
-    const offset = STICKY_NAV_HEIGHT_PX + filterSection.offsetHeight;
+    const offset = navHeight + filterSection.offsetHeight;
     const targetY = gridSection.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top: Math.max(targetY, 0), behavior: "smooth" });
   });
