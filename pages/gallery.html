@@ -5,173 +5,23 @@
 <title>גלריית חיים — אלון אברהם-חי בביאן ז״ל</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="tailwind-config.js"></script>
-<style>
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-    body { font-family: 'Assistant', sans-serif; background-color: #eef0f2; }
-
-    .masonry-grid {
-        column-count: 1;
-        column-gap: 1.75rem;
-        transition: opacity 300ms ease-out;
-    }
-    @media (min-width: 768px) {
-        .masonry-grid { column-count: 2; }
-    }
-    @media (min-width: 1024px) {
-        .masonry-grid { column-count: 3; }
-    }
-    .masonry-item {
-        display: inline-block;
-        width: 100%;
-        margin-bottom: 1.75rem;
-        break-inside: avoid;
-    }
-    .gold-border { border-color: #7C8CA0; }
-    .gold-text { color: #7C8CA0; }
-
-    .filter-scroll {
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-    .filter-scroll::-webkit-scrollbar {
-        display: none;
-    }
-
-    .category-pill {
-        background-color: #e9edf1 !important;
-        border-color: rgba(124, 140, 160, 0.25) !important;
-        transition: background-color 300ms ease-out, color 300ms ease-out, box-shadow 300ms ease-out, border-color 300ms ease-out, transform 200ms ease-out;
-    }
-    .category-pill:hover {
-        border-color: rgba(124, 140, 160, 0.5) !important;
-        box-shadow: 0 8px 18px rgba(27, 28, 25, 0.12);
-        transform: translateY(-1px);
-    }
-    .category-pill .pill-count {
-        color: inherit;
-        opacity: 0.5;
-        font-variant-numeric: tabular-nums;
-        margin-inline-start: 0.15em;
-    }
-    .category-pill.active {
-        background-color: #7C8CA0;
-        border-color: #7C8CA0 !important;
-        color: #1A2E44;
-        box-shadow: 0 8px 20px rgba(124, 140, 160, 0.35);
-        transform: translateY(-1px);
-    }
-    .category-pill.active .pill-count {
-        opacity: 0.65;
-    }
-
-    .gallery-thumb {
-        transition: transform 400ms ease-out;
-    }
-    .gallery-thumb:hover {
-        transform: translateY(-4px);
-    }
-    .gallery-thumb img {
-        opacity: 0;
-        min-height: 180px;
-        transition: opacity 500ms ease-out;
-    }
-    .gallery-thumb img.loaded {
-        opacity: 1;
-    }
-
-    /* Mounted-photograph frame: a clean white mat, like a page from a
-       physical photo album, instead of a hard dark frame. */
-    .photo-frame {
-        position: relative;
-        background: #ffffff;
-        border-radius: 0.4rem;
-        padding: 0.65rem;
-        box-shadow: 0 12px 26px rgba(27, 28, 25, 0.16);
-        transition: box-shadow 400ms ease-out;
-    }
-    .gallery-thumb:hover .photo-frame {
-        box-shadow: 0 22px 40px rgba(27, 28, 25, 0.24);
-    }
-    .photo-frame-inner {
-        display: block;
-        border-radius: 0.15rem;
-        overflow: hidden;
-    }
-    /* Photos read as quiet, archival grayscale until a visitor's cursor finds
-       them — then color returns, like a memory coming back into focus.
-       Pointer-only: touch visitors (who can't hover) just see full color. */
-    @media (hover: hover) {
-        .photo-frame-inner img {
-            filter: grayscale(88%) contrast(1.03);
-            transition: filter 600ms ease-out, transform 700ms ease-out;
-        }
-        .gallery-thumb:hover .photo-frame-inner img {
-            filter: grayscale(0%);
-            transform: scale(1.05);
-        }
-    }
-    #lightbox {
-        opacity: 0;
-        transition: opacity 280ms ease-out;
-    }
-    #lightbox.lightbox-open {
-        opacity: 1;
-    }
-    .lightbox-frame {
-        position: relative;
-        background: #ffffff;
-        border-radius: 0.5rem;
-        padding: 0.9rem;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
-        max-width: 100%;
-    }
-    #lightbox-img {
-        opacity: 0;
-        transform: scale(0.97);
-        transition: opacity 300ms ease-out, transform 300ms ease-out;
-    }
-    html {
-        scroll-behavior: smooth;
-    }
-    #mobile-nav-panel {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 400ms ease-out;
-    }
-    #mobile-nav-panel.open {
-        max-height: 20rem;
-    }
-    /* A faint paper grain over the whole page, so surfaces read as
-       parchment rather than flat digital color. Fixed + negative
-       z-index keeps it behind all in-flow content without needing to
-       touch every section's stacking. */
-    body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        pointer-events: none;
-        opacity: 0.05;
-        mix-blend-mode: multiply;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-</style>
+<script src="/js/tailwind-config.js"></script>
+<link href="/css/shared.css" rel="stylesheet"/>
+<link href="/css/gallery.css" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<img src="/notify-visit.php?page=gallery" alt="" width="1" height="1" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none" aria-hidden="true"/>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-[#eef0f2]/70 backdrop-blur-xl transition-all duration-400">
 <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto rtl">
-<a class="text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="index.html">אלון אברהם-חי בביאן ז״ל</a>
+<a class="text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="/index.html">אלון אברהם-חי בביאן ז״ל</a>
 <div class="hidden md:flex gap-8 items-center">
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html">דף הבית</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html#chapters">פרקי חיים</a>
-<a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" href="gallery.html">גלריית חיים</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="sections.html">מכתבים, סרטונים וקטעי קול</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="disaster.html">אסון המסוקים</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html#legacy">הנצחה ומורשת</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/index.html">דף הבית</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/index.html#chapters">פרקי חיים</a>
+<a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" href="/pages/gallery.html">גלריית חיים</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/pages/sections.html">מכתבים, סרטונים וקטעי קול</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/pages/disaster.html">אסון המסוקים</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/index.html#legacy">הנצחה ומורשת</a>
 </div>
 <div class="flex items-center gap-3">
 <button aria-label="השתקה/השמעת קול לשיר ברקע" title="אצלנו בגן — שי-לי עטרי" class="text-[#1A2E44] hover:opacity-70 transition-opacity" id="song-widget">
@@ -185,12 +35,12 @@
 </div>
 <div class="md:hidden bg-[#eef0f2]/95 backdrop-blur-xl px-6" id="mobile-nav-panel">
 <div class="flex flex-col gap-1 py-4 max-w-7xl mx-auto">
-<a class="font-label text-lg text-[#585f65] py-2" href="index.html">דף הבית</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="index.html#chapters">פרקי חיים</a>
-<a class="font-label text-lg text-[#1A2E44] py-2" href="gallery.html">גלריית חיים</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="sections.html">מכתבים, סרטונים וקטעי קול</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="disaster.html">אסון המסוקים</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="index.html#legacy">הנצחה ומורשת</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/index.html">דף הבית</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/index.html#chapters">פרקי חיים</a>
+<a class="font-label text-lg text-[#1A2E44] py-2" href="/pages/gallery.html">גלריית חיים</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/pages/sections.html">מכתבים, סרטונים וקטעי קול</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/pages/disaster.html">אסון המסוקים</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/index.html#legacy">הנצחה ומורשת</a>
 </div>
 </div>
 </nav>
@@ -199,7 +49,7 @@
 <!-- Gallery Header -->
 <section class="relative h-[68vh] min-h-[460px] flex items-end overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="אלון בבופור" class="w-full h-full object-cover object-[32%_14%]" src="media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
+<img alt="אלון בבופור" class="w-full h-full object-cover object-[32%_14%]" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-[#03192e] via-[#03192e]/45 to-[#03192e]/5"></div>
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-8 pb-14 text-center w-full">
@@ -233,7 +83,7 @@
 <div class="text-lg font-serif font-semibold text-[#1A2E44]">אלון אברהם-חי בביאן ז״ל</div>
 <div class="flex flex-wrap justify-center gap-8">
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" data-candle-trigger="" href="#">הדלקת נר</a>
-<a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="index.html">חזרה לדף הבית</a>
+<a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="/index.html">חזרה לדף הבית</a>
 </div>
 <div class="text-xs font-label text-secondary text-center mt-4">© דף הנצחה לזכרו של אלון. לזכר עולם.</div>
 </footer>
@@ -246,7 +96,7 @@
 <!-- Ambient Song: local file autoplays muted on load (browser policy), one click unmutes.
      Position/mute state is persisted so navigating between pages resumes the same song instead of restarting.
      Toggle button lives in the nav (song-widget). -->
-<audio id="bg-audio" loop="" preload="auto" src="audio/atzlenu-bagan.mp3"></audio>
+<audio id="bg-audio" loop="" preload="auto" src="/audio/atzlenu-bagan.mp3"></audio>
 
 <!-- Candle Modal -->
 <div class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#03192e]/80 backdrop-blur-md px-6" id="candle-modal">
@@ -303,8 +153,8 @@
 </div>
 </div>
 
-<script src="gallery-data.js"></script>
-<script src="gallery.js"></script>
-<script src="site.js"></script>
+<script src="/js/gallery-data.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/site.js"></script>
 </body>
 </html>

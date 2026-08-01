@@ -1,0 +1,84 @@
+/* index.html — home page only. Loaded after css/shared.css. */
+
+img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
+
+/* Photo frame: this page's specific shadow depth + hover lift. */
+.photo-frame {
+    box-shadow: 0 16px 34px rgba(27, 28, 25, 0.12);
+    transition: box-shadow 400ms ease-out;
+}
+.photo-frame:hover {
+    box-shadow: 0 24px 46px rgba(27, 28, 25, 0.18);
+}
+/* Reads as quiet archival grayscale until a visitor's cursor finds it,
+   then color returns. Pointer-only: touch visitors see full color. */
+@media (hover: hover) {
+    .photo-frame .photo-frame-inner img {
+        filter: grayscale(85%) contrast(1.02);
+        transition: filter 600ms ease-out, transform 700ms ease-out;
+    }
+    .photo-frame:hover .photo-frame-inner img {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+    }
+}
+
+/* New candle-lighting entry sliding into the memorial list. */
+@keyframes candle-in {
+    from { opacity: 0; transform: translateY(12px); box-shadow: 0 0 0 rgba(124, 140, 160, 0); }
+    30% { box-shadow: 0 0 24px rgba(124, 140, 160, 0.25); }
+    to { opacity: 1; transform: translateY(0); box-shadow: 0 0 0 rgba(124, 140, 160, 0); }
+}
+.candle-entry-new {
+    animation: candle-in 1400ms ease-out;
+}
+
+/* A slow, quiet flicker for flame glyphs — never bouncy, just alive. */
+@keyframes flame-flicker {
+    0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
+    25% { transform: scale(1.05) translateY(-1px); opacity: 0.92; }
+    50% { transform: scale(0.97) translateY(0); opacity: 1; }
+    75% { transform: scale(1.03) translateY(-0.5px); opacity: 0.95; }
+}
+.flame-icon {
+    display: inline-block;
+    transform-origin: 50% 85%;
+    animation: flame-flicker 2600ms ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+    .flame-icon { animation: none; }
+}
+
+/* Photos quietly crossfading in one frame instead of a hard cut: each
+   holds for ~3s, dissolves into the next over ~1s, on a 12s loop shared
+   evenly across 3 images (4s each). Keyframe endpoints are equal (opacity 1
+   at 0% and 100%) so the loop restarts with no visible jump; each image's
+   delay is offset by one slot (4s) so they take turns in DOM order. */
+.crossfade-frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: crossfade 12s ease-in-out infinite;
+}
+.crossfade-frame img:nth-child(2) {
+    animation-delay: -4s;
+}
+.crossfade-frame img:nth-child(3) {
+    animation-delay: -8s;
+}
+@keyframes crossfade {
+    0%, 25% { opacity: 1; }
+    33.333%, 91.667% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .crossfade-frame img {
+        animation: none;
+        opacity: 0;
+    }
+    .crossfade-frame img:first-child {
+        opacity: 1;
+    }
+}

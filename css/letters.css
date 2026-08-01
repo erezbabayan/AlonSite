@@ -1,0 +1,80 @@
+/* letters.html — letters page only. Loaded after css/shared.css. */
+
+/* Photo frame: this page's specific shadow depth, for the one real scan. */
+.photo-frame {
+    box-shadow: 0 12px 26px rgba(27, 28, 25, 0.16);
+    transition: box-shadow 400ms ease-out;
+}
+
+/* Letters read as kept keepsakes, not UI cards: warm parchment tone
+   instead of stark white, a faint quote glyph and fold crease to read as a
+   folded page, and a soft handwritten-pile tilt that settles flat on
+   hover/focus. */
+.letter-card {
+    position: relative;
+    background: linear-gradient(180deg, #fffdf8 0%, #faf6ea 100%);
+    border-radius: 0.4rem;
+    box-shadow: 0 14px 30px rgba(27, 28, 25, 0.08);
+    transition: transform 400ms ease-out, box-shadow 400ms ease-out;
+    overflow: hidden;
+}
+.letter-card::before {
+    content: "\201D";
+    position: absolute;
+    top: -1rem;
+    right: 1.25rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4.5rem;
+    color: rgba(212, 175, 55, 0.16);
+    line-height: 1;
+    pointer-events: none;
+}
+.letter-grid .letter-card:nth-child(3n+1) { transform: rotate(-0.4deg); }
+.letter-grid .letter-card:nth-child(3n+2) { transform: rotate(0.3deg); }
+.letter-grid .letter-card:nth-child(3n+3) { transform: rotate(-0.2deg); }
+.letter-grid .letter-card:hover,
+.letter-grid .letter-card:focus-within {
+    transform: rotate(0deg) translateY(-3px);
+    box-shadow: 0 24px 44px rgba(27, 28, 25, 0.14);
+}
+.letter-body {
+    font-family: "Assistant", sans-serif;
+    font-style: italic;
+    line-height: 1.85;
+}
+.letter-signature {
+    font-family: "Assistant", sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+.line-clamp-5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Reader modal */
+#letter-reader {
+    opacity: 0;
+    transition: opacity 280ms ease-out;
+}
+#letter-reader.reader-open {
+    opacity: 1;
+}
+#letter-reader .letter-card {
+    transform: none !important;
+}
+#reader-card {
+    opacity: 0;
+    transform: scale(0.97) translateY(6px);
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+#reader-card.reader-card-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .letter-card, .letter-card:hover, #reader-card { transition: none; }
+}

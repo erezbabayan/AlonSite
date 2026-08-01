@@ -5,83 +5,23 @@
 <title>אסון המסוקים — אלון אברהם-חי בביאן ז״ל</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="tailwind-config.js"></script>
-<style>
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-    body { font-family: 'Assistant', sans-serif; background-color: #eef0f2; }
-    .gold-border { border-color: #7C8CA0; }
-    .gold-text { color: #7C8CA0; }
-    html { scroll-behavior: smooth; }
-    #mobile-nav-panel {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 400ms ease-out;
-    }
-    #mobile-nav-panel.open {
-        max-height: 24rem;
-    }
-    .photo-frame-light {
-        background: #ffffff;
-        border-radius: 0.5rem;
-        padding: 0.625rem;
-        box-shadow: 0 20px 40px rgba(27, 28, 25, 0.10);
-    }
-    .photo-frame-light .photo-frame-inner {
-        border-radius: 0.25rem;
-        overflow: hidden;
-    }
-    .reveal {
-        opacity: 1;
-        transform: none;
-        transition: opacity 700ms ease-out, transform 700ms ease-out;
-    }
-    .reveal-pending {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-    /* Each name reads as one of the 73 stones at the memorial site —
-       a quiet, uniform marker rather than a ranked list. */
-    .name-stone {
-        background: #ffffff;
-        border: 1px solid rgba(124, 140, 160, 0.18);
-        border-radius: 0.4rem;
-        transition: box-shadow 300ms ease-out, transform 300ms ease-out;
-    }
-    .name-stone:hover {
-        box-shadow: 0 14px 28px rgba(27, 28, 25, 0.1);
-        transform: translateY(-2px);
-    }
-    .name-stone.is-alon {
-        background: #7C8CA0;
-        border-color: #eef0f2;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-    }
-    body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        pointer-events: none;
-        opacity: 0.05;
-        mix-blend-mode: multiply;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-</style>
+<script src="/js/tailwind-config.js"></script>
+<link href="/css/shared.css" rel="stylesheet"/>
+<link href="/css/disaster.css" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<img src="/notify-visit.php?page=disaster" alt="" width="1" height="1" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none" aria-hidden="true"/>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-[#eef0f2]/70 backdrop-blur-xl transition-all duration-400">
 <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto rtl">
-<a class="text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="index.html">אלון אברהם-חי בביאן ז״ל</a>
+<a class="text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="/index.html">אלון אברהם-חי בביאן ז״ל</a>
 <div class="hidden md:flex gap-8 items-center">
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html">דף הבית</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html#chapters">פרקי חיים</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="gallery.html">גלריית חיים</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="sections.html">מכתבים, סרטונים וקטעי קול</a>
-<a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" href="disaster.html">אסון המסוקים</a>
-<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="index.html#legacy">הנצחה ומורשת</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/index.html">דף הבית</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/index.html#chapters">פרקי חיים</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/pages/gallery.html">גלריית חיים</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/pages/sections.html">מכתבים, סרטונים וקטעי קול</a>
+<a class="font-label text-lg tracking-tight text-[#1A2E44] border-b-2 border-[#1A2E44] pb-1" href="/pages/disaster.html">אסון המסוקים</a>
+<a class="font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/index.html#legacy">הנצחה ומורשת</a>
 </div>
 <div class="flex items-center gap-3">
 <button aria-label="השתקה/השמעת קול לשיר ברקע" title="אצלנו בגן — שי-לי עטרי" class="text-[#1A2E44] hover:opacity-70 transition-opacity" id="song-widget">
@@ -95,12 +35,12 @@
 </div>
 <div class="md:hidden bg-[#eef0f2]/95 backdrop-blur-xl px-6" id="mobile-nav-panel">
 <div class="flex flex-col gap-1 py-4 max-w-7xl mx-auto">
-<a class="font-label text-lg text-[#585f65] py-2" href="index.html">דף הבית</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="index.html#chapters">פרקי חיים</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="gallery.html">גלריית חיים</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="sections.html">מכתבים, סרטונים וקטעי קול</a>
-<a class="font-label text-lg text-[#1A2E44] py-2" href="disaster.html">אסון המסוקים</a>
-<a class="font-label text-lg text-[#585f65] py-2" href="index.html#legacy">הנצחה ומורשת</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/index.html">דף הבית</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/index.html#chapters">פרקי חיים</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/pages/gallery.html">גלריית חיים</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/pages/sections.html">מכתבים, סרטונים וקטעי קול</a>
+<a class="font-label text-lg text-[#1A2E44] py-2" href="/pages/disaster.html">אסון המסוקים</a>
+<a class="font-label text-lg text-[#585f65] py-2" href="/index.html#legacy">הנצחה ומורשת</a>
 </div>
 </div>
 </nav>
@@ -110,7 +50,7 @@
 <!-- Header -->
 <section class="relative h-[62vh] min-h-[420px] flex items-end overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="אתר ההנצחה לחללי אסון המסוקים" class="w-full h-full object-cover" src="media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg"/>
+<img alt="אתר ההנצחה לחללי אסון המסוקים" class="w-full h-full object-cover" src="/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-[#03192e] via-[#03192e]/55 to-[#03192e]/15"></div>
 </div>
 <div class="relative z-10 max-w-4xl mx-auto px-8 pb-14 text-center w-full">
@@ -122,43 +62,9 @@
 </div>
 </section>
 
-<!-- Stats -->
-<section class="bg-surface-container-low py-10 px-8">
-<div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
-<div class="flex items-center gap-3 bg-white px-6 py-4 rounded-xl border border-accent-gold/20 shadow-[0_10px_30px_rgba(27,28,25,0.06)]">
-<span class="material-symbols-outlined text-2xl text-accent-gold">groups</span>
-<div class="text-right">
-<span class="block text-xs font-label text-secondary uppercase mb-0.5">נופלים</span>
-<span class="text-2xl font-headline font-bold text-primary">73</span>
-</div>
-</div>
-<div class="flex items-center gap-3 bg-white px-6 py-4 rounded-xl border border-accent-gold/20 shadow-[0_10px_30px_rgba(27,28,25,0.06)]">
-<span class="material-symbols-outlined text-2xl text-accent-gold">flight</span>
-<div class="text-right">
-<span class="block text-xs font-label text-secondary uppercase mb-0.5">מסוקי יסעור</span>
-<span class="text-2xl font-headline font-bold text-primary">2</span>
-</div>
-</div>
-<div class="flex items-center gap-3 bg-white px-6 py-4 rounded-xl border border-accent-gold/20 shadow-[0_10px_30px_rgba(27,28,25,0.06)]">
-<span class="material-symbols-outlined text-2xl text-accent-gold">badge</span>
-<div class="text-right">
-<span class="block text-xs font-label text-secondary uppercase mb-0.5">אנשי צוות אוויר</span>
-<span class="text-2xl font-headline font-bold text-primary">8</span>
-</div>
-</div>
-<div class="flex items-center gap-3 bg-white px-6 py-4 rounded-xl border border-accent-gold/20 shadow-[0_10px_30px_rgba(27,28,25,0.06)]">
-<span class="material-symbols-outlined text-2xl text-accent-gold">calendar_month</span>
-<div class="text-right">
-<span class="block text-xs font-label text-secondary uppercase mb-0.5">תאריך</span>
-<span class="text-2xl font-headline font-bold text-primary">4.2.1997</span>
-</div>
-</div>
-</div>
-</section>
-
 <!-- What Happened -->
 <section class="max-w-3xl mx-auto px-8 py-20 reveal">
-<h2 class="text-3xl font-headline font-bold text-primary mb-8 text-center">מה קרה</h2>
+<h2 class="text-3xl font-headline font-bold text-primary mb-8 text-center">מהלך האסון</h2>
 <div class="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed">
 <p>
     באמצע שנות ה-90, במסגרת השהות הצבאית ב"רצועת הביטחון" בדרום לבנון, היוו שיירות ההסעה של חיילים בין הבסיסים בארץ למוצבים בלבנון יעד נוח לתקיפה. כאחת הדרכים לצמצם את הסיכון, הוחל בהטסת חיילים במסוקים במקום בשיירות קרקעיות.
@@ -202,7 +108,7 @@
 <p class="font-body text-on-surface-variant leading-relaxed mb-6">
     בסמוך למקום האסון, ליד קיבוץ דפנה, הוקם אתר הנצחה לזכר 73 הנופלים. תמונות מהמקום, וסיפורו של אלון, מופיעים בדף הבית.
 </p>
-<a class="inline-flex items-center gap-2 font-label text-sm tracking-wide bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors" href="index.html#memorial-site">
+<a class="inline-flex items-center gap-2 font-label text-sm tracking-wide bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors" href="/index.html#memorial-site">
     לתמונות אתר ההנצחה <span class="material-symbols-outlined text-base">arrow_back</span>
 </a>
 <p class="text-xs text-secondary/70 font-label mt-10">
@@ -217,7 +123,7 @@
 <div class="text-lg font-serif font-semibold text-[#1A2E44]">אלון אברהם-חי בביאן ז״ל</div>
 <div class="flex flex-wrap justify-center gap-8">
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" data-candle-trigger="" href="#">הדלקת נר</a>
-<a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="index.html">חזרה לדף הבית</a>
+<a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="/index.html">חזרה לדף הבית</a>
 </div>
 <div class="text-xs font-label text-secondary text-center mt-4">© דף הנצחה לזכרו של אלון. לזכר עולם.</div>
 </footer>
@@ -228,7 +134,7 @@
 </button>
 
 <!-- Ambient Song -->
-<audio id="bg-audio" loop="" preload="auto" src="audio/atzlenu-bagan.mp3"></audio>
+<audio id="bg-audio" loop="" preload="auto" src="/audio/atzlenu-bagan.mp3"></audio>
 
 <!-- Candle Modal -->
 <div class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#03192e]/80 backdrop-blur-md px-6" id="candle-modal">
@@ -273,7 +179,7 @@
       { rank: "סמל ראשון", name: "אברהם אפנר", unit: "פלחה\"ן, חטיבת הנח\"ל" },
       { rank: "רב-סמל", name: "שגיא ארזי", unit: "חטיבה 7" },
       { rank: "סמל ראשון", name: "רן ארמן", unit: "חיל הקשר והתקשוב" },
-      { rank: "סגן", name: "אלון בביאן", unit: "פלחי\"ק, חטיבת גולני", alon: true },
+      { rank: "סגן", name: "אלון בביאן", unit: "פלחי\"ק, חטיבת גולני" },
       { rank: "רב-סמל ראשון", name: "פול ביבס", unit: "טייסת 118" },
       { rank: "סמל ראשון", name: "רפי בללטי", unit: "פלחה\"ן, חטיבת הנח\"ל" },
       { rank: "סמל ראשון", name: "ניר בן-חיים", unit: "חיל השריון" },
@@ -343,15 +249,13 @@
     const count = document.getElementById("names-count");
     count.textContent = `${FALLEN.length} שמות`;
     grid.innerHTML = FALLEN.map((p) => `
-      <div class="name-stone px-5 py-4 ${p.alon ? "is-alon" : ""}">
-        <p class="font-headline font-bold text-lg text-primary">
-          ${p.alon ? '<span class="material-symbols-outlined align-middle text-base text-primary/70 ml-1" style="font-variation-settings: \'FILL\' 1">local_fire_department</span>' : ""}${p.name}
-        </p>
-        <p class="font-label text-xs ${p.alon ? "text-primary/70" : "text-secondary"} mt-1">${p.rank} · ${p.unit}</p>
+      <div class="name-stone px-5 py-4">
+        <p class="font-headline font-bold text-lg text-primary">${p.name}</p>
+        <p class="font-label text-xs text-secondary mt-1">${p.rank} · ${p.unit}</p>
       </div>
     `).join("");
 </script>
 
-<script src="site.js"></script>
+<script src="/js/site.js"></script>
 </body>
 </html>

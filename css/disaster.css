@@ -1,0 +1,14 @@
+/* disaster.html — helicopter disaster page only. Loaded after css/shared.css. */
+
+/* Each name reads as one of the 73 stones at the memorial site — a quiet,
+   uniform marker rather than a ranked list. */
+.name-stone {
+    background: #ffffff;
+    border: 1px solid rgba(124, 140, 160, 0.18);
+    border-radius: 0.4rem;
+    transition: box-shadow 300ms ease-out, transform 300ms ease-out;
+}
+.name-stone:hover {
+    box-shadow: 0 14px 28px rgba(27, 28, 25, 0.1);
+    transform: translateY(-2px);
+}

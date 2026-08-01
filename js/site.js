@@ -10,6 +10,9 @@
 
   let candlesCache = [];
 
+  const CANDLES_PAGE_SIZE = 18; // cards per "show more" batch, fits 3 grid columns x 6 rows
+  let visibleCandleCount = CANDLES_PAGE_SIZE;
+
   function fetchCandles() {
     return fetch("/api/candles")
       .then((res) => {
@@ -46,7 +49,7 @@
       ? `<p class="font-body text-on-surface-variant leading-relaxed">${escapeHtml(candle.message)}</p>`
       : "";
     return `
-      <div class="candle-entry bg-surface-container-low rounded-lg p-6${isNewest ? " candle-entry-new" : ""}">
+      <div class="candle-entry bg-surface-container-low rounded-lg p-6 h-full flex flex-col${isNewest ? " candle-entry-new" : ""}">
         <div class="flex justify-between items-baseline gap-4 mb-2">
           <span class="flex items-center gap-2 font-headline font-bold text-primary">
             <span class="material-symbols-outlined flame-icon text-accent-gold text-base" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
@@ -56,6 +59,12 @@
         </div>
         ${message}
       </div>`;
+  }
+
+  function updateCandleLoadMoreButton(shownCount, totalCount) {
+    const btn = document.getElementById("candle-load-more");
+    if (!btn) return;
+    btn.classList.toggle("hidden", shownCount >= totalCount);
   }
 
   function renderCandles() {
@@ -69,15 +78,16 @@
 
     if (candles.length === 0) {
       listEl.innerHTML =
-        '<p class="text-center text-secondary font-body py-6">היו הראשונים להדליק כאן נר ולהשאיר מילה לזכרו.</p>';
+        '<p class="col-span-full text-center text-secondary font-body py-6">היו הראשונים להדליק כאן נר ולהשאיר מילה לזכרו.</p>';
+      updateCandleLoadMoreButton(0, 0);
       return;
     }
 
-    listEl.innerHTML = candles
-      .slice()
-      .reverse()
-      .map((candle, index) => candleEntryHtml(candle, index === 0))
-      .join("");
+    const newestFirst = candles.slice().reverse();
+    const visible = newestFirst.slice(0, visibleCandleCount);
+
+    listEl.innerHTML = visible.map((candle, index) => candleEntryHtml(candle, index === 0)).join("");
+    updateCandleLoadMoreButton(visible.length, newestFirst.length);
   }
 
   const MODAL_FOCUS_DELAY_MS = 150; // let the open transition start before stealing focus
@@ -159,6 +169,14 @@
 
     const form = document.getElementById("candle-form");
     if (form) form.addEventListener("submit", handleCandleSubmit);
+
+    const loadMoreBtn = document.getElementById("candle-load-more");
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", () => {
+        visibleCandleCount += CANDLES_PAGE_SIZE;
+        renderCandles();
+      });
+    }
   }
 
   // ---------------------------------------------------------------------

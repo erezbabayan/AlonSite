@@ -1,0 +1,134 @@
+/* Shared styles — loaded on every page, before the page's own stylesheet.
+   Anything here is either a true site-wide base rule or a component used
+   identically by two or more pages. Page-specific variants and one-off
+   rules belong in that page's own css/<page>.css instead. */
+
+/* ---------------------------------------------------------------------
+   Base
+   --------------------------------------------------------------------- */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+body {
+    font-family: 'Assistant', sans-serif;
+    background-color: #eef0f2;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Offsets anchor-jump targets so content doesn't land underneath the fixed nav. */
+section[id] {
+    scroll-margin-top: 5rem;
+}
+.gold-border { border-color: #7C8CA0; }
+.gold-text { color: #7C8CA0; }
+
+/* A faint paper grain over the whole page, so surfaces read as parchment
+   rather than flat digital color. Fixed + negative z-index keeps it behind
+   all in-flow content without needing to touch every section's stacking. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------------------------------------------------------------------
+   Top nav / mobile menu
+   --------------------------------------------------------------------- */
+#mobile-nav-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 400ms ease-out;
+}
+#mobile-nav-panel.open {
+    max-height: 20rem;
+}
+
+/* ---------------------------------------------------------------------
+   Scroll-reveal animation
+   Driven by site.js: every ".reveal" target gets "reveal-pending" added on
+   load, then swapped for "in-view" the first time it crosses the viewport.
+   --------------------------------------------------------------------- */
+@keyframes reveal-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.reveal.reveal-pending {
+    opacity: 0;
+}
+.reveal.in-view {
+    animation: reveal-up 700ms ease-out forwards;
+}
+
+/* ---------------------------------------------------------------------
+   Photo frame — the mounted-photograph treatment used across the site:
+   a clean white mat, like a page from a physical photo album, instead of
+   a hard dark frame. This is the shared "shape"; each page adds its own
+   box-shadow depth and hover behavior in css/<page>.css.
+   --------------------------------------------------------------------- */
+.photo-frame {
+    position: relative;
+    background: #ffffff;
+    border-radius: 0.4rem;
+    padding: 0.65rem;
+}
+.photo-frame-inner {
+    display: block;
+    border-radius: 0.15rem;
+    overflow: hidden;
+}
+
+/* Light variant for photos sitting on the dark navy section, where a
+   navy-on-navy frame would lose all definition. */
+.photo-frame-light {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    box-shadow: 0 20px 40px rgba(27, 28, 25, 0.10);
+}
+.photo-frame-light .photo-frame-inner {
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------------------
+   Category filter pills (gallery + letters pages)
+   --------------------------------------------------------------------- */
+.filter-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.filter-scroll::-webkit-scrollbar {
+    display: none;
+}
+.category-pill {
+    background-color: #e9edf1 !important;
+    border-color: rgba(124, 140, 160, 0.25) !important;
+    transition: background-color 300ms ease-out, color 300ms ease-out, box-shadow 300ms ease-out, border-color 300ms ease-out, transform 200ms ease-out;
+}
+.category-pill:hover {
+    border-color: rgba(124, 140, 160, 0.5) !important;
+    box-shadow: 0 8px 18px rgba(27, 28, 25, 0.12);
+    transform: translateY(-1px);
+}
+.category-pill .pill-count {
+    color: inherit;
+    opacity: 0.5;
+    font-variant-numeric: tabular-nums;
+    margin-inline-start: 0.15em;
+}
+.category-pill.active {
+    background-color: #7C8CA0;
+    border-color: #7C8CA0 !important;
+    color: #1A2E44;
+    box-shadow: 0 8px 20px rgba(124, 140, 160, 0.35);
+    transform: translateY(-1px);
+}
+.category-pill.active .pill-count {
+    opacity: 0.65;
+}
