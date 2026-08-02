@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://alonb.com/sitemap.xml
