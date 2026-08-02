@@ -7,13 +7,15 @@
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="he_IL"/>
 <meta property="og:site_name" content="אלון אברהם-חי בביאן ז״ל — דף הנצחה"/>
+<meta property="og:url" content="https://alonb.com/pages/disaster.html"/>
 <meta property="og:title" content="אסון המסוקים — אלון אברהם-חי בביאן ז״ל"/>
 <meta property="og:description" content="סיפור אסון המסוקים בליל 4 בפברואר 1997, בו נפל אלון אברהם-חי בביאן ז״ל יחד עם 72 חברים נוספים, ושמותיהם של 73 הנופלים."/>
-<meta property="og:image" content="/media/images/og/alon-social-share.jpg"/>
+<meta property="og:image" content="https://alonb.com/media/images/og/alon-social-share.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="אסון המסוקים — אלון אברהם-חי בביאן ז״ל"/>
 <meta name="twitter:description" content="סיפור אסון המסוקים בליל 4 בפברואר 1997, בו נפל אלון אברהם-חי בביאן ז״ל יחד עם 72 חברים נוספים, ושמותיהם של 73 הנופלים."/>
-<meta name="twitter:image" content="/media/images/og/alon-social-share.jpg"/>
+<meta name="twitter:image" content="https://alonb.com/media/images/og/alon-social-share.jpg"/>
+<link rel="canonical" href="https://alonb.com/pages/disaster.html"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/media/icons/favicon-32.png"/>
 <link rel="icon" type="image/png" sizes="192x192" href="/media/icons/favicon-192.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/media/icons/favicon-180.png"/>
@@ -114,16 +116,21 @@
 </div>
 </section>
 
-<!-- Back to memorial site -->
-<section class="max-w-3xl mx-auto px-8 py-20 text-center reveal">
-<h2 class="text-2xl font-headline font-bold text-primary mb-4">אתר ההנצחה</h2>
-<p class="font-body text-on-surface-variant leading-relaxed mb-6">
-    בסמוך למקום האסון, ליד קיבוץ דפנה, הוקם אתר הנצחה לזכר 73 הנופלים. תמונות מהמקום, וסיפורו של אלון, מופיעים בדף הבית.
+<!-- Memorial Site Gallery -->
+<section class="max-w-6xl mx-auto px-8 py-20 reveal" id="memorial-photos">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-headline font-bold text-primary mb-4">אתר ההנצחה</h2>
+<p class="font-body text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+    בסמוך למקום האסון, ליד קיבוץ דפנה, הוקם אתר הנצחה לזכר 73 הנופלים. משפחתו וחבריו של אלון שבים ומבקרים במקום, כדי ששמם וזכרם לא יישכחו.
 </p>
-<a class="inline-flex items-center gap-2 font-label text-sm tracking-wide bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors" href="/index.html#memorial-site">
-    לתמונות אתר ההנצחה <span class="material-symbols-outlined text-base">arrow_back</span>
-</a>
-<p class="text-xs text-secondary/70 font-label mt-10">
+</div>
+<div class="masonry-grid" id="memorial-gallery"></div>
+<p class="text-xs text-secondary/70 font-label tracking-wide mt-6 text-center">צילומי אתר ההנצחה: זאב שטיין, שלמה רודד ואיגוד שימור המורשת · פרויקט Pikiwiki Israel, ויקישיתוף (CC BY 2.5)</p>
+</section>
+
+<!-- Sources -->
+<section class="max-w-3xl mx-auto px-8 pb-20 text-center reveal">
+<p class="text-xs text-secondary/70 font-label">
     הפרטים בעמוד זה מבוססים על תיעוד פומבי — בהם ערך "אסון המסוקים" בוויקיפדיה העברית ואתר יזכור של משרד הביטחון — ומובאים כאן לזכרם של 73 החברים.
 </p>
 </section>
@@ -174,6 +181,30 @@
 <span class="material-symbols-outlined">local_fire_department</span> הדליקו נר
                 </button>
 </form>
+</div>
+</div>
+
+<!-- Memorial Site Lightbox -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center bg-[#1b1c19]/96 backdrop-blur-md" id="lightbox">
+<button aria-label="סגור" class="absolute top-6 left-6 text-white/80 hover:text-accent-gold transition-colors" id="lightbox-close">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<button aria-label="הקודם" class="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent-gold transition-colors" id="lightbox-prev">
+<span class="material-symbols-outlined text-5xl">chevron_right</span>
+</button>
+<button aria-label="הבא" class="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent-gold transition-colors" id="lightbox-next">
+<span class="material-symbols-outlined text-5xl">chevron_left</span>
+</button>
+<div class="max-w-5xl w-full mx-auto px-6 flex flex-col items-center gap-6">
+<div class="lightbox-frame">
+<img alt="" class="block max-h-[68vh] w-auto max-w-full object-contain rounded-sm" id="lightbox-img"/>
+<div class="absolute inset-0 hidden items-center justify-center" id="lightbox-spinner">
+<span class="w-9 h-9 border-2 border-primary/15 border-t-accent-gold rounded-full animate-spin"></span>
+</div>
+</div>
+<div class="text-center bg-[#1b1c19]/80 rounded-lg px-6 py-3">
+<p dir="ltr" class="font-label text-white/80 text-xs tracking-wide" id="lightbox-counter"></p>
+</div>
 </div>
 </div>
 
@@ -266,6 +297,129 @@
         <p class="font-label text-xs text-secondary mt-1">${p.rank} · ${p.unit}</p>
       </div>
     `).join("");
+</script>
+
+<script>
+    // Photos of the memorial site near Kibbutz Dafna. Same files/paths as the
+    // "אתר הנצחה" category in js/gallery-data.js (full gallery page).
+    const MEMORIAL_PHOTOS = [
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg", alt: "מבט כללי על אתר ההנצחה" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/15%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%90%D7%91%D7%A0%D7%99%20%D7%94%D7%96%D7%99%D7%9B%D7%A8%D7%95%D7%9F).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/15%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%90%D7%91%D7%A0%D7%99%20%D7%94%D7%96%D7%99%D7%9B%D7%A8%D7%95%D7%9F).jpg", alt: "אבני הזיכרון לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/14%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%AA%D7%A2%D7%9C%D7%AA%20%D7%94%D7%9E%D7%99%D7%9D).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/14%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%AA%D7%A2%D7%9C%D7%AA%20%D7%94%D7%9E%D7%99%D7%9D).jpg", alt: "תעלת המים באתר ההנצחה" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(1).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(1).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(2).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(2).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(3).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(3).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(4).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(4).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(5).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(5).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(6).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(6).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(7).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(7).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(8).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(8).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(9).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(9).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(10).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(10).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(11).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(11).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(12).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(12).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(13).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(13).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+    ];
+
+    const memorialGrid = document.getElementById("memorial-gallery");
+    memorialGrid.innerHTML = MEMORIAL_PHOTOS.map((img, index) => `
+      <div class="masonry-item">
+        <button data-index="${index}" class="gallery-thumb group relative block w-full">
+          <span class="photo-frame block">
+            <span class="photo-frame-inner bg-surface-container-highest">
+              <img alt="${img.alt}" loading="lazy" class="w-full h-auto object-cover"/>
+            </span>
+          </span>
+        </button>
+      </div>
+    `).join("");
+
+    memorialGrid.querySelectorAll(".gallery-thumb").forEach((btn, index) => {
+      const imgEl = btn.querySelector("img");
+      imgEl.src = MEMORIAL_PHOTOS[index].thumb;
+      imgEl.addEventListener("load", () => imgEl.classList.add("loaded"), { once: true });
+      btn.addEventListener("click", () => openLightbox(index));
+    });
+
+    const lightboxEl = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCounter = document.getElementById("lightbox-counter");
+    const lightboxSpinner = document.getElementById("lightbox-spinner");
+    let lightboxIndex = 0;
+
+    function openLightbox(index) {
+      lightboxIndex = index;
+      updateLightbox(false);
+      lightboxEl.classList.remove("hidden");
+      lightboxEl.classList.add("flex");
+      requestAnimationFrame(() => lightboxEl.classList.add("lightbox-open"));
+      document.body.style.overflow = "hidden";
+    }
+    function closeLightbox() {
+      lightboxEl.classList.remove("lightbox-open");
+      document.body.style.overflow = "";
+      setTimeout(() => {
+        lightboxEl.classList.add("hidden");
+        lightboxEl.classList.remove("flex");
+      }, 280);
+    }
+    function updateLightbox(fade) {
+      const photo = MEMORIAL_PHOTOS[lightboxIndex];
+      const swap = () => {
+        lightboxImg.src = photo.full;
+        lightboxImg.alt = photo.alt;
+        lightboxCounter.textContent = `${lightboxIndex + 1} / ${MEMORIAL_PHOTOS.length}`;
+        lightboxSpinner.classList.remove("hidden");
+        lightboxSpinner.classList.add("flex");
+      };
+      const reveal = () => {
+        lightboxImg.style.opacity = "1";
+        lightboxImg.style.transform = "scale(1)";
+        lightboxSpinner.classList.add("hidden");
+        lightboxSpinner.classList.remove("flex");
+      };
+      if (fade) {
+        lightboxImg.style.opacity = "0";
+        lightboxImg.style.transform = "scale(0.97)";
+        setTimeout(() => {
+          swap();
+          lightboxImg.onload = reveal;
+        }, 150);
+      } else {
+        swap();
+        lightboxImg.onload = reveal;
+      }
+    }
+    function showPrev() {
+      lightboxIndex = (lightboxIndex - 1 + MEMORIAL_PHOTOS.length) % MEMORIAL_PHOTOS.length;
+      updateLightbox(true);
+    }
+    function showNext() {
+      lightboxIndex = (lightboxIndex + 1) % MEMORIAL_PHOTOS.length;
+      updateLightbox(true);
+    }
+
+    document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+    document.getElementById("lightbox-prev").addEventListener("click", showPrev);
+    document.getElementById("lightbox-next").addEventListener("click", showNext);
+    lightboxEl.addEventListener("click", (e) => { if (e.target === lightboxEl) closeLightbox(); });
+    document.addEventListener("keydown", (e) => {
+      if (lightboxEl.classList.contains("hidden")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") showPrev();
+      if (e.key === "ArrowLeft") showNext();
+    });
+
+    let touchStartX = null;
+    lightboxEl.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+    lightboxEl.addEventListener("touchend", (e) => {
+      if (touchStartX === null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(dx) < 40) return;
+      if (dx > 0) showPrev(); else showNext();
+    }, { passive: true });
 </script>
 
 <script src="/js/site.js"></script>

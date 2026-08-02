@@ -12,3 +12,71 @@
     box-shadow: 0 14px 28px rgba(27, 28, 25, 0.1);
     transform: translateY(-2px);
 }
+
+/* Memorial-site photo grid + lightbox (mirrors gallery.css's pattern,
+   scoped here since this page doesn't load the full gallery stylesheet). */
+.masonry-grid {
+    column-count: 2;
+    column-gap: 1.25rem;
+}
+@media (min-width: 768px) {
+    .masonry-grid { column-count: 3; }
+}
+.masonry-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    break-inside: avoid;
+}
+.gallery-thumb {
+    transition: transform 400ms ease-out;
+}
+.gallery-thumb:hover {
+    transform: translateY(-4px);
+}
+.gallery-thumb img {
+    opacity: 0;
+    min-height: 120px;
+    transition: opacity 500ms ease-out;
+}
+.gallery-thumb img.loaded {
+    opacity: 1;
+}
+.gallery-thumb .photo-frame {
+    box-shadow: 0 12px 26px rgba(27, 28, 25, 0.16);
+    transition: box-shadow 400ms ease-out;
+}
+.gallery-thumb:hover .photo-frame {
+    box-shadow: 0 22px 40px rgba(27, 28, 25, 0.24);
+}
+@media (hover: hover) {
+    .gallery-thumb .photo-frame-inner img {
+        filter: grayscale(88%) contrast(1.03);
+        transition: filter 600ms ease-out, transform 700ms ease-out;
+    }
+    .gallery-thumb:hover .photo-frame-inner img {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+    }
+}
+
+#lightbox {
+    opacity: 0;
+    transition: opacity 280ms ease-out;
+}
+#lightbox.lightbox-open {
+    opacity: 1;
+}
+.lightbox-frame {
+    position: relative;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    padding: 0.9rem;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+    max-width: 100%;
+}
+#lightbox-img {
+    opacity: 0;
+    transform: scale(0.97);
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
