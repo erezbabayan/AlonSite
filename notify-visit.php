@@ -9,7 +9,7 @@
 // dev server (server.js) is plain Node and cannot execute this file —
 // it only works once deployed to real PHP hosting.
 
-$to = "roeygol@gmail.com";
+$to = "roeygol@gmail.com, erezbabayan@gmail.com";
 
 function clean_header_value($value, $maxLength) {
     $value = (string) $value;

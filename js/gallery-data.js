@@ -2760,9 +2760,79 @@ window.GALLERY_DATA = {
           "alt": "אתר הנצחה - 02 הנצחה (13)"
         },
         {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(14).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(14).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (14)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(15).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(15).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (15)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(16).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(16).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (16)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(17).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(17).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (17)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(18).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(18).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (18)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(19).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(19).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (19)"
+        },
+        {
           "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(2).jpg",
           "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(2).jpg",
           "alt": "אתר הנצחה - 02 הנצחה (2)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(20).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(20).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (20)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(21).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(21).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (21)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(22).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(22).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (22)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(23).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(23).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (23)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(24).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(24).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (24)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(25).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(25).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (25)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(26).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(26).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (26)"
+        },
+        {
+          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(27).jpg",
+          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(27).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (27)"
         },
         {
           "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(3).jpg",
@@ -2895,6 +2965,17 @@ window.GALLERY_DATA = {
           "full": "/media/images/%D7%9B%D7%9C%D7%9C%D7%99/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(35).jpg",
           "thumb": "/media/images/thumbs/%D7%9B%D7%9C%D7%9C%D7%99/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(35).jpg",
           "alt": "כללי - 01 ספר תורה לזכר אלון (35)"
+        }
+      ]
+    },
+    {
+      "key": "og",
+      "label": "og",
+      "images": [
+        {
+          "full": "/media/images/og/alon-social-share.jpg",
+          "thumb": "/media/images/thumbs/og/alon-social-share.jpg",
+          "alt": "og - alon-social-share"
         }
       ]
     }
