@@ -112,7 +112,6 @@
     73 השמות האלה חרוטים יחד על אבני הזיכרון באתר ההנצחה בשאר ישוב. אלון ביניהם, ולצדו החברים הבאים שיצאו לדרך באותו לילה ולא שבו ממנה.
 </p>
 </div>
-<p id="names-count" class="text-center font-label text-xs tracking-[0.25em] uppercase text-white/50 mb-8"></p>
 <div class="names-columns" id="names-grid"></div>
 </div>
 </section>
@@ -298,8 +297,6 @@
       .sort((a, b) => a.name.localeCompare(b.name, "he"));
 
     const grid = document.getElementById("names-grid");
-    const count = document.getElementById("names-count");
-    count.textContent = `${OTHER_FALLEN.length} חברים נוספים`;
     grid.innerHTML = OTHER_FALLEN.map((p) => `
       <div class="name-entry">
         <span class="name-entry-name font-headline">${p.name}</span>
