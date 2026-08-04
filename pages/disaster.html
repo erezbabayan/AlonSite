@@ -106,13 +106,14 @@
 <section class="bg-primary text-white py-20 px-8 reveal" id="names">
 <div class="max-w-6xl mx-auto">
 <div class="text-center mb-14">
+<span aria-hidden="true" class="material-symbols-outlined flame-icon text-4xl text-accent-gold mb-3 inline-block" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
 <h2 class="text-4xl font-headline font-bold gold-text mb-4">73 הנופלים</h2>
 <p class="font-body text-white/75 max-w-2xl mx-auto leading-relaxed">
-    73 השמות האלה חרוטים יחד על אבני הזיכרון באתר ההנצחה בשאר ישוב. כל אחד מהם היה חבר שיצא לדרך באותו לילה ולא שב ממנה — ואלון בתוכם.
+    73 השמות האלה חרוטים יחד על אבני הזיכרון באתר ההנצחה בשאר ישוב. אלון ביניהם, ולצדו החברים הבאים שיצאו לדרך באותו לילה ולא שבו ממנה.
 </p>
 </div>
 <p id="names-count" class="text-center font-label text-xs tracking-[0.25em] uppercase text-white/50 mb-8"></p>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="names-grid"></div>
+<div class="names-columns" id="names-grid"></div>
 </div>
 </section>
 
@@ -288,13 +289,21 @@
       { rank: "רב-סמל", name: "צפריר שרוני", unit: "טייסת 118" },
     ];
 
+    // Alon has the rest of the site to himself — this list is the other
+    // 72 who fell alongside him, so he's excluded here on purpose. Sorted
+    // alphabetically by (first) name for the display, though FALLEN itself
+    // stays in the source article's order.
+    const OTHER_FALLEN = FALLEN
+      .filter((p) => p.name !== "אלון בביאן")
+      .sort((a, b) => a.name.localeCompare(b.name, "he"));
+
     const grid = document.getElementById("names-grid");
     const count = document.getElementById("names-count");
-    count.textContent = `${FALLEN.length} שמות`;
-    grid.innerHTML = FALLEN.map((p) => `
-      <div class="name-stone px-5 py-4">
-        <p class="font-headline font-bold text-lg text-primary">${p.name}</p>
-        <p class="font-label text-xs text-secondary mt-1">${p.rank} · ${p.unit}</p>
+    count.textContent = `${OTHER_FALLEN.length} חברים נוספים`;
+    grid.innerHTML = OTHER_FALLEN.map((p) => `
+      <div class="name-entry">
+        <span class="name-entry-name font-headline">${p.name}</span>
+        <span class="name-entry-meta font-label">${p.rank} · ${p.unit}</span>
       </div>
     `).join("");
 </script>
