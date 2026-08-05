@@ -86,11 +86,11 @@
     opacity: 1;
 }
 .gallery-thumb .photo-frame {
-    box-shadow: 0 12px 26px rgba(27, 28, 25, 0.16);
+    box-shadow: 0 4px 10px rgba(27, 28, 25, 0.10);
     transition: box-shadow 400ms ease-out;
 }
 .gallery-thumb:hover .photo-frame {
-    box-shadow: 0 22px 40px rgba(27, 28, 25, 0.24);
+    box-shadow: 0 8px 18px rgba(27, 28, 25, 0.15);
 }
 @media (hover: hover) {
     .gallery-thumb .photo-frame-inner img {

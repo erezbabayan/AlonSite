@@ -197,7 +197,7 @@
 </button>
 <div class="max-w-5xl w-full mx-auto px-6 flex flex-col items-center gap-6">
 <div class="lightbox-frame">
-<img alt="" class="block max-h-[68vh] w-auto max-w-full object-contain rounded-sm" id="lightbox-img"/>
+<img alt="" class="block max-h-[68vh] w-auto max-w-full object-contain" id="lightbox-img"/>
 <div class="absolute inset-0 hidden items-center justify-center" id="lightbox-spinner">
 <span class="w-9 h-9 border-2 border-primary/15 border-t-accent-gold rounded-full animate-spin"></span>
 </div>
@@ -423,7 +423,10 @@
     document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
     document.getElementById("lightbox-prev").addEventListener("click", showPrev);
     document.getElementById("lightbox-next").addEventListener("click", showNext);
-    lightboxEl.addEventListener("click", (e) => { if (e.target === lightboxEl) closeLightbox(); });
+    lightboxEl.addEventListener("click", (e) => {
+      if (e.target.closest("#lightbox-img, button")) return;
+      closeLightbox();
+    });
     document.addEventListener("keydown", (e) => {
       if (lightboxEl.classList.contains("hidden")) return;
       if (e.key === "Escape") closeLightbox();

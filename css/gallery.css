@@ -36,11 +36,11 @@
 /* Photo frame: this page's specific shadow depth. Hover lift is triggered
    by the enclosing .gallery-thumb link, not the frame itself. */
 .photo-frame {
-    box-shadow: 0 12px 26px rgba(27, 28, 25, 0.16);
+    box-shadow: 0 4px 10px rgba(27, 28, 25, 0.10);
     transition: box-shadow 400ms ease-out;
 }
 .gallery-thumb:hover .photo-frame {
-    box-shadow: 0 22px 40px rgba(27, 28, 25, 0.24);
+    box-shadow: 0 8px 18px rgba(27, 28, 25, 0.15);
 }
 /* Photos read as quiet, archival grayscale until a visitor's cursor finds
    them — then color returns, like a memory coming back into focus.
@@ -63,11 +63,14 @@
 #lightbox.lightbox-open {
     opacity: 1;
 }
+/* Same mounted-photo mat as .photo-frame elsewhere on the site (white mat,
+   square corners) — just a deeper shadow to read as floating over the
+   dark backdrop. */
 .lightbox-frame {
     position: relative;
     background: #ffffff;
-    border-radius: 0.5rem;
-    padding: 0.9rem;
+    border-radius: 0;
+    padding: 0.4rem;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
     max-width: 100%;
 }

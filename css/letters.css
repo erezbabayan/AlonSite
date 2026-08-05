@@ -2,7 +2,7 @@
 
 /* Photo frame: this page's specific shadow depth, for the one real scan. */
 .photo-frame {
-    box-shadow: 0 12px 26px rgba(27, 28, 25, 0.16);
+    box-shadow: 0 4px 10px rgba(27, 28, 25, 0.10);
     transition: box-shadow 400ms ease-out;
 }
 

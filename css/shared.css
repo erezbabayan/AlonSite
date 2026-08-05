@@ -82,12 +82,12 @@ body::before {
 .photo-frame {
     position: relative;
     background: #ffffff;
-    border-radius: 0.4rem;
-    padding: 0.65rem;
+    border-radius: 0;
+    padding: 0.4rem;
 }
 .photo-frame-inner {
     display: block;
-    border-radius: 0.15rem;
+    border-radius: 0;
     overflow: hidden;
 }
 
@@ -97,7 +97,7 @@ body::before {
     background: #ffffff;
     border-radius: 0.5rem;
     padding: 0.625rem;
-    box-shadow: 0 20px 40px rgba(27, 28, 25, 0.10);
+    box-shadow: 0 4px 10px rgba(27, 28, 25, 0.10);
 }
 .photo-frame-light .photo-frame-inner {
     border-radius: 0.25rem;

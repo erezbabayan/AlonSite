@@ -4,11 +4,11 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 /* Photo frame: this page's specific shadow depth + hover lift. */
 .photo-frame {
-    box-shadow: 0 16px 34px rgba(27, 28, 25, 0.12);
+    box-shadow: 0 4px 10px rgba(27, 28, 25, 0.10);
     transition: box-shadow 400ms ease-out;
 }
 .photo-frame:hover {
-    box-shadow: 0 24px 46px rgba(27, 28, 25, 0.18);
+    box-shadow: 0 8px 18px rgba(27, 28, 25, 0.15);
 }
 /* Reads as quiet archival grayscale until a visitor's cursor finds it,
    then color returns. Pointer-only: touch visitors see full color. */
@@ -21,6 +21,11 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
         filter: grayscale(0%);
         transform: scale(1.05);
     }
+}
+
+/* Life-chapters photos: deeper resting shadow than the shared default. */
+.photo-frame-stacked {
+    box-shadow: 0 14px 28px rgba(27, 28, 25, 0.16);
 }
 
 /* New candle-lighting entry sliding into the memorial list. */

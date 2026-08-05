@@ -202,7 +202,14 @@
   document.getElementById("lightbox-prev").addEventListener("click", showPrev);
   document.getElementById("lightbox-next").addEventListener("click", showNext);
   lightboxEl.addEventListener("click", (e) => {
-    if (e.target === lightboxEl) closeLightbox();
+    // Close on any click that isn't on the photo itself or a control button —
+    // not just clicks that land exactly on the outer backdrop. The image sits
+    // inside a padded wrapper div that visually reads as "around the photo"
+    // but isn't the lightboxEl itself, so a strict e.target === lightboxEl
+    // check misses clicks in that space (side padding, gap above/below, the
+    // counter/label text area).
+    if (e.target.closest("#lightbox-img, button")) return;
+    closeLightbox();
   });
   document.addEventListener("keydown", (e) => {
     if (lightboxEl.classList.contains("hidden")) return;
