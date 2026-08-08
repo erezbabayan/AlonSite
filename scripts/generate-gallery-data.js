@@ -2,12 +2,17 @@
 // Scans media/images/<category>/ (skipping media/images/thumbs/) and writes
 // js/gallery-data.js, a plain <script> file (no fetch/CORS issues when opened
 // via file://) exposing window.GALLERY_DATA = { categories: [{ key, label,
-// images: [{ full, thumb, alt }] }] }. Image paths are root-absolute (leading
-// "/") so the data works from pages/*.html, not just from the project root.
+// images: [{ full, thumb, alt, w, h }] }] }. Image paths are root-absolute
+// (leading "/") so the data works from pages/*.html, not just from the
+// project root. `w`/`h` are the thumbnail's real pixel dimensions (read via
+// macOS `sips` — same tool generate-thumbs.js already requires, so this
+// stays dependency-free): gallery.js uses the aspect ratio to lay out the
+// masonry grid without waiting for each image to load first.
 // Re-run after generate-thumbs.js whenever photos are added or removed.
 
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 
 const ROOT = path.join(__dirname, "..");
 const IMAGES_DIR = path.join(ROOT, "media", "images");
@@ -55,8 +60,21 @@ function toUrl(...parts) {
   return parts.map((p) => encodeURIComponent(p)).join("/");
 }
 
+function readDimensions(filePath) {
+  const out = execFileSync("sips", ["-g", "pixelWidth", "-g", "pixelHeight", filePath], {
+    encoding: "utf8",
+  });
+  const w = /pixelWidth:\s*(\d+)/.exec(out);
+  const h = /pixelHeight:\s*(\d+)/.exec(out);
+  if (!w || !h) throw new Error(`Could not read dimensions for ${filePath}`);
+  return { w: Number(w[1]), h: Number(h[1]) };
+}
+
+let dimsRead = 0;
+
 const categories = orderedDirs.map((category) => {
   const srcDir = path.join(IMAGES_DIR, category);
+  const thumbDir = path.join(IMAGES_DIR, "thumbs", category);
   const files = fs
     .readdirSync(srcDir, { withFileTypes: true })
     .filter((f) => f.isFile() && EXT_RE.test(f.name))
@@ -65,15 +83,21 @@ const categories = orderedDirs.map((category) => {
 
   const images = files.map((name) => {
     const thumbName = name.replace(EXT_RE, ".jpg");
+    const { w, h } = readDimensions(path.join(thumbDir, thumbName));
+    dimsRead++;
+    process.stdout.write(`\rReading photo dimensions... ${dimsRead}`);
     return {
       full: `/media/images/${toUrl(category)}/${toUrl(name)}`,
       thumb: `/media/images/thumbs/${toUrl(category)}/${toUrl(thumbName)}`,
       alt: `${category} - ${name.replace(EXT_RE, "")}`,
+      w,
+      h,
     };
   });
 
   return { key: slugify(category), label: category, images };
 });
+console.log();
 
 const totalImages = categories.reduce((sum, c) => sum + c.images.length, 0);
 

@@ -62,18 +62,91 @@
       activeKey === ALL_KEY
         ? `<span class="block pt-3 pb-0.5 text-[11px] font-label tracking-[0.08em] text-secondary/75 truncate">${img.categoryLabel}</span>`
         : "";
+    // aspect-ratio (from the real pixel dimensions gallery-data.js records
+    // per photo) reserves the frame's true height up front, so the layout
+    // pass below can measure accurate heights before any image has loaded.
+    const ratio = img.w && img.h ? `${img.w} / ${img.h}` : "3 / 4";
     return `
       <div class="masonry-item">
         <button data-index="${index}" class="gallery-thumb group relative block w-full">
           <span class="photo-frame block">
-            <span class="photo-frame-inner bg-surface-container-highest">
-              <img alt="${img.alt}" loading="lazy" class="w-full h-auto object-cover" src="${img.thumb}"/>
+            <span class="photo-frame-inner bg-surface-container-highest block" style="aspect-ratio: ${ratio};">
+              <img alt="${img.alt}" loading="lazy" class="w-full h-full object-cover" src="${img.thumb}"/>
             </span>
           </span>
           ${categoryTag}
         </button>
       </div>`;
   }
+
+  // ---------------------------------------------------------------------
+  // Masonry layout — real "shortest column first" packing (how Pinterest
+  // actually lays photos out), not CSS multi-column's height-balancing
+  // heuristic, which estimates column heights before photos have loaded
+  // and doesn't reliably re-balance once they have. Each photo's true
+  // height is known immediately (from `aspect-ratio` above, itself from
+  // the real pixel dimensions in gallery-data.js), so every item can be
+  // measured and placed in one pass with no layout shift and no risk of
+  // photos piling into one column while another sits empty.
+  // ---------------------------------------------------------------------
+
+  const GRID_GAP_X = 20; // px, matches the 1.25rem gap columns used to have
+  const GRID_GAP_Y = 28; // px, matches the 1.75rem margin-bottom items used to have
+  const LAYOUT_DEBOUNCE_MS = 150;
+
+  function columnsForWidth(width) {
+    if (width >= 1024) return 4;
+    if (width >= 768) return 3;
+    return 2;
+  }
+
+  function layoutMasonry() {
+    const items = Array.from(gridEl.querySelectorAll(".masonry-item"));
+    if (!items.length) {
+      gridEl.style.height = "0px";
+      return;
+    }
+
+    // Always use the viewport's normal column count, even when a category
+    // has fewer photos than that — a single photo should sit at one normal
+    // column's width, not stretch across every column just because the
+    // others have nothing to place in them.
+    const containerWidth = gridEl.clientWidth;
+    const columns = columnsForWidth(window.innerWidth);
+    const colWidth = (containerWidth - GRID_GAP_X * (columns - 1)) / columns;
+
+    // Pass 1: give every item its column width and measure its real
+    // rendered height (frame padding + aspect-ratio photo + category tag,
+    // whatever the current CSS says) — no manual duplication of those
+    // numbers here.
+    items.forEach((item) => {
+      item.style.position = "static";
+      item.style.width = `${colWidth}px`;
+    });
+    const heights = items.map((item) => item.getBoundingClientRect().height);
+
+    // Pass 2: shortest-column-first placement, RTL — column 0 sits at the
+    // visual right edge, matching how this grid always read before.
+    const columnHeights = new Array(columns).fill(0);
+    items.forEach((item, i) => {
+      let col = 0;
+      for (let c = 1; c < columns; c++) {
+        if (columnHeights[c] < columnHeights[col]) col = c;
+      }
+      item.style.position = "absolute";
+      item.style.top = `${columnHeights[col]}px`;
+      item.style.right = `${col * (colWidth + GRID_GAP_X)}px`;
+      columnHeights[col] += heights[i] + GRID_GAP_Y;
+    });
+
+    gridEl.style.height = `${Math.max(...columnHeights) - GRID_GAP_Y}px`;
+  }
+
+  let layoutResizeTimer = null;
+  window.addEventListener("resize", () => {
+    clearTimeout(layoutResizeTimer);
+    layoutResizeTimer = setTimeout(layoutMasonry, LAYOUT_DEBOUNCE_MS);
+  });
 
   function renderGrid() {
     visibleImages = activeKey === ALL_KEY ? flatImages : flatImages.filter((img) => img.categoryKey === activeKey);
@@ -82,6 +155,7 @@
 
     if (visibleImages.length === 0) {
       gridEl.innerHTML = "";
+      gridEl.style.height = "0px";
       emptyEl.classList.remove("hidden");
       return;
     }
@@ -98,6 +172,8 @@
         imgEl.addEventListener("load", () => imgEl.classList.add("loaded"));
       }
     });
+
+    layoutMasonry();
   }
 
   function renderAll() {

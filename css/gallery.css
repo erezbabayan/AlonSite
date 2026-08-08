@@ -1,21 +1,19 @@
 /* gallery.html — life-gallery page only. Loaded after css/shared.css. */
 
+/* True masonry: gallery.js measures each photo's real height (from its
+   aspect-ratio, itself from real pixel dimensions in gallery-data.js) and
+   places every item with a shortest-column-first pack — see layoutMasonry()
+   — rather than relying on CSS multi-column's height-balancing heuristic,
+   which estimates before photos load and doesn't reliably re-balance once
+   they have. position/width below are placeholders JS overwrites per item. */
 .masonry-grid {
-    column-count: 2;
-    column-gap: 1.25rem;
-    transition: opacity 300ms ease-out;
-}
-@media (min-width: 768px) {
-    .masonry-grid { column-count: 3; }
-}
-@media (min-width: 1024px) {
-    .masonry-grid { column-count: 4; }
+    position: relative;
+    transition: opacity 300ms ease-out, height 300ms ease-out;
 }
 .masonry-item {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 1.75rem;
-    break-inside: avoid;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .gallery-thumb {
