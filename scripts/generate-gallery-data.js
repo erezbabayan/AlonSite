@@ -28,8 +28,13 @@ const CATEGORY_ORDER = [
   "כללי",
 ];
 
+// "thumbs" holds generated thumbnails, not a category, and "og" holds only
+// the single Open Graph social-share image used in <meta> tags — neither is
+// a real photo category for the gallery.
+const NON_CATEGORY_DIRS = new Set(["thumbs", "og"]);
+
 function isCategoryDir(name) {
-  return name !== "thumbs" && !name.startsWith(".");
+  return !NON_CATEGORY_DIRS.has(name) && !name.startsWith(".");
 }
 
 const allDirs = fs

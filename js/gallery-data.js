@@ -2967,17 +2967,6 @@ window.GALLERY_DATA = {
           "alt": "כללי - 01 ספר תורה לזכר אלון (35)"
         }
       ]
-    },
-    {
-      "key": "og",
-      "label": "og",
-      "images": [
-        {
-          "full": "/media/images/og/alon-social-share.jpg",
-          "thumb": "/media/images/thumbs/og/alon-social-share.jpg",
-          "alt": "og - alon-social-share"
-        }
-      ]
     }
   ]
 };

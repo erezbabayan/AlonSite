@@ -100,7 +100,7 @@
 <h2 class="text-3xl font-headline font-bold text-primary">גלריית חיים</h2>
 </div>
 <p class="text-secondary font-body mb-10 max-w-2xl">כמו שהוא היום — הצצה מתוך גלריית התמונות המלאה, עם למעלה מ-560 תמונות.</p>
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5">
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-4 md:gap-5">
 <a class="photo-frame block" href="/pages/gallery.html">
 <span class="photo-frame-inner block aspect-square">
 <img alt="בבופור" class="w-full h-full object-cover" loading="lazy" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(20).jpg"/>
@@ -121,6 +121,11 @@
 <img alt="בר המצווה של אלון" class="w-full h-full object-cover" loading="lazy" src="/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(44).jpg"/>
 </span>
 </a>
+<a class="photo-frame block" href="/pages/gallery.html">
+<span class="photo-frame-inner block aspect-square">
+<img alt="כתבים של אלון - כתב יד מקורי, 1982" class="w-full h-full object-cover" loading="lazy" src="/media/images/thumbs/%D7%9B%D7%AA%D7%91%D7%99%D7%9D%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%95%D7%9F/20%20%206-7-1982.jpg"/>
+</span>
+</a>
 </div>
 <a class="inline-flex items-center gap-2 mt-8 text-accent-gold font-bold text-sm hover:opacity-80 transition-opacity" href="/pages/gallery.html">
             לגלריה המלאה <span class="material-symbols-outlined text-sm">arrow_left</span>
@@ -134,34 +139,15 @@
 <h2 class="text-3xl font-headline font-bold text-primary">מכתבים</h2>
 </div>
 <p class="text-secondary font-body mb-10 max-w-2xl">מילים שכתב אלון, ומכתבים שנשלחו אליו — עדות אישית לאיש שמאחורי התמונות.</p>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-<div class="md:col-span-4">
-<div class="max-w-xs mx-auto">
-<div class="photo-frame">
-<span class="photo-frame-inner block aspect-[3/4]">
-<img alt="כתבים של אלון - 20 6-7-1982" class="w-full h-full object-cover" loading="lazy" src="/media/images/thumbs/%D7%9B%D7%AA%D7%91%D7%99%D7%9D%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%95%D7%9F/20%20%206-7-1982.jpg"/>
-</span>
+<div class="max-w-xl mx-auto">
+<div class="bg-white rounded-lg p-6 md:p-7 shadow-[0_12px_26px_rgba(27,28,25,0.10)]">
+<p class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-secondary/60 mb-1" id="letter-preview-meta"></p>
+<h3 class="text-lg font-headline font-bold text-primary mb-2" id="letter-preview-title"></h3>
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-6" id="letter-preview-body"></p>
 </div>
-<div class="text-center mt-4">
-<p class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-accent-gold/80 mb-1.5">כתב יד מקורי · 1982</p>
-<p class="text-sm text-primary/80" style="font-family: 'Assistant', sans-serif; font-style: italic;">מתוך כתביו של אלון</p>
-</div>
-</div>
-</div>
-<div class="md:col-span-8">
-<div class="letter-card p-6 md:p-7">
-<p class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-secondary/60 mb-1">מכתב לדוגמה</p>
-<h3 class="text-lg font-headline font-bold text-primary mb-2">מכתב מטקס ההשבעה</h3>
-<p class="letter-body text-sm text-on-surface-variant line-clamp-3">שלום לכולם, רק רציתי לכתוב כמה מילים אחרי הטקס. היה מרגש לראות אתכם שם, וההרגשה שהתחלתי משהו חדש עדיין לא ממש שקעה אצלי. מתגעגע כבר עכשיו, אבל יודע שזו הדרך הנכונה בשבילי.</p>
-</div>
-<p class="flex items-center gap-2 text-xs text-secondary/60 mt-4" style="font-family: 'Assistant', sans-serif; font-style: italic;">
-<span class="material-symbols-outlined text-sm text-accent-gold not-italic">edit_note</span>
-                    דוגמה בלבד, עד שיעלו מכתביו האמיתיים של אלון.
-                </p>
 <a class="inline-flex items-center gap-2 mt-6 text-accent-gold font-bold text-sm hover:opacity-80 transition-opacity" href="/pages/letters.html">
-                    לכל המכתבים <span class="material-symbols-outlined text-sm">arrow_left</span>
+                    לכל 53 המכתבים <span class="material-symbols-outlined text-sm">arrow_left</span>
 </a>
-</div>
 </div>
 </div>
 </section>
@@ -284,5 +270,22 @@
 </form>
 </div>
 </div>
+<script src="/js/letters-data.js"></script>
+<script>
+  // Picks a different real letter to preview each visit, rather than
+  // always showing the same one.
+  (function () {
+    "use strict";
+    var letters = (window.LETTERS_DATA && window.LETTERS_DATA.letters) || [];
+    if (!letters.length) return;
+    var letter = letters[Math.floor(Math.random() * letters.length)];
+    var metaParts = [];
+    if (letter.from) metaParts.push(letter.from);
+    if (letter.to) metaParts.push("אל " + letter.to);
+    document.getElementById("letter-preview-meta").textContent = metaParts.join(" · ");
+    document.getElementById("letter-preview-title").textContent = letter.title;
+    document.getElementById("letter-preview-body").textContent = letter.body;
+  })();
+</script>
 <script src="/js/site.js"></script>
 </body></html>

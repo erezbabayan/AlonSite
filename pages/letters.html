@@ -74,23 +74,11 @@
 </div>
 </section>
 
-<!-- Featured original letter -->
-<section class="max-w-4xl mx-auto px-8 py-16">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-<div class="md:col-span-4">
-<div class="max-w-xs mx-auto">
-<div class="photo-frame">
-<span class="photo-frame-inner block aspect-[3/4]">
-<img alt="כתבים של אלון - 20 6-7-1982" class="w-full h-full object-cover" loading="lazy" src="/media/images/thumbs/%D7%9B%D7%AA%D7%91%D7%99%D7%9D%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%95%D7%9F/20%20%206-7-1982.jpg"/>
-</span>
-</div>
-<div class="text-center mt-4">
-<p class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-accent-gold/80 mb-1.5">כתב יד מקורי · 1982</p>
-<p class="text-sm text-primary/80" style="font-family: 'Assistant', sans-serif; font-style: italic;">מתוך כתביו של אלון</p>
-</div>
-</div>
-</div>
-</div>
+<!-- Featured line, in his own words -->
+<section class="max-w-3xl mx-auto px-8 py-16 text-center">
+<span class="block font-serif text-6xl text-accent-gold/70 leading-none select-none" aria-hidden="true">„</span>
+<p class="text-2xl md:text-[1.75rem] font-headline font-bold text-primary leading-relaxed my-5" id="featured-quote-text"></p>
+<p class="font-label text-xs uppercase tracking-[0.25em] text-secondary/70" id="featured-quote-byline"></p>
 </section>
 
 <!-- Category Filters -->
@@ -188,6 +176,26 @@
 </div>
 
 <script src="/js/letters-data.js"></script>
+<script>
+  // A short, real quote for the hero — picked at random on each visit so it
+  // isn't always the same line. Kept to a hand-picked pool (rather than any
+  // of the 53 letters at random) because most letters are full-length prose
+  // that would overflow this single-line quote treatment; these are the
+  // ones short and self-contained enough to read well here.
+  (function () {
+    "use strict";
+    var candidates = [
+      { quote: "כל דקה בצבא זו מצווה, ובקרבי — מצווה מן המובחר.", byline: "אלון, בשיחה עם אביו" },
+      { quote: "האחריות מאוד כבדה, עצם החשיבה על זה קשה. אבל המדינה חשובה לי והחובה של כל חייל היא לעשות את הטוב ביותר שהוא יכול.", byline: "אלון, בראיון עיתונאי" },
+      { quote: "עץ האלון מה חזק, חזק כמו ברק. הוא עבר תלאות רבות בימי המאורעות.", byline: "אלון, משיר שכתב ב־1986" },
+      { quote: "אלון היה ויהיה בעיני תמיד, סמל לאדם שכולו — לב, לב עיקש ונחוש, לב ישר ותמים, לב גאה — אך מעל לכל לב רגיש, פגיע ואוהב.", byline: "יאיר רובינשטיין, מפקד המחלקה שלו" },
+      { quote: "מי שרוצה להיות קצין — צריך לתת.", byline: "אלון, כפי שהיה אומר לחייליו" }
+    ];
+    var pick = candidates[Math.floor(Math.random() * candidates.length)];
+    document.getElementById("featured-quote-text").textContent = pick.quote;
+    document.getElementById("featured-quote-byline").textContent = pick.byline;
+  })();
+</script>
 <script src="/js/letters.js"></script>
 <script src="/js/site.js"></script>
 </body></html>
