@@ -36,7 +36,7 @@ There is no test suite, linter, or build/typecheck command in this repo.
 
 **Page-specific JS**: [js/gallery.js](js/gallery.js) (category filters + lightbox, reads `window.GALLERY_DATA`) and [js/letters.js](js/letters.js) (category filters + full-letter reader modal, reads `window.LETTERS_DATA`). Both follow the same pattern: render pills from category data, filter a flat list, open a modal/lightbox with prev/next + swipe + keyboard nav.
 
-**Data files**: [js/gallery-data.js](js/gallery-data.js) is auto-generated (see Commands above) — never hand-edit. [js/letters-data.js](js/letters-data.js) is currently mock/placeholder content, hand-maintained, meant to be replaced with real letters later.
+**Data files**: [js/gallery-data.js](js/gallery-data.js) is auto-generated (see Commands above) — never hand-edit. [js/letters-data.js](js/letters-data.js) holds the real letters/writings/eulogy articles (53 items), hand-maintained; it was generated from `content/letters-draft/02-letters-combined.md` (the source of truth for the raw, punctuation-cleaned text — regenerate from there rather than hand-editing `body` fields directly). Most items have no exact date in the source, so `date` (real ISO) is set only where the text states one explicitly; otherwise a free-text `dateLabel` carries whatever timing context exists (e.g. "בשבעה"), and the primary sort key is `order`, not `date`.
 
 **Backend** ([server.js](server.js)): a single dependency-free Node HTTP server. Serves static files with path-traversal protection, and exposes `GET/POST /api/candles` backed by `data/candles.json` (gitignored — runtime data, shared across all visitors, replacing what used to be a localStorage-only per-browser candle list). No database, no auth.
 
