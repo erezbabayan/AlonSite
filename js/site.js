@@ -458,28 +458,62 @@
   // instead of hardcoded so the page stays accurate on every future visit.
   // ---------------------------------------------------------------------
 
-  const DEATH_DATE = new Date(1997, 1, 4); // 4 בפברואר 1997
+  // Death: 4 Feb 1997 = 28 Shevat 5757 (תשנ״ז). Years-since counts
+  // completed Hebrew yahrzeits (כ״ח בשבט), not the Gregorian anniversary.
+  const DEATH_HEBREW_YEAR = 5757;
   const YAHRZEIT_HEBREW_MONTH = "Shevat";
-  const YAHRZEIT_HEBREW_DAY = "28";
+  const YAHRZEIT_HEBREW_DAY = 28;
   const YAHRZEIT_SEARCH_WINDOW_DAYS = 400; // comfortably more than one Hebrew year
   const MS_PER_DAY = 86400000;
+  const HEBREW_MONTH_ORDER = {
+    Tishri: 1,
+    Heshvan: 2,
+    Cheshvan: 2,
+    Kislev: 3,
+    Tevet: 4,
+    Shevat: 5,
+    Adar: 6,
+    "Adar I": 6,
+    "Adar II": 7,
+    Nisan: 8,
+    Iyar: 9,
+    Sivan: 10,
+    Tamuz: 11,
+    Tammuz: 11,
+    Av: 12,
+    Elul: 13,
+  };
 
-  function yearsSince(fromDate, now) {
-    let years = now.getFullYear() - fromDate.getFullYear();
-    const hadAnniversaryThisYear =
-      now.getMonth() > fromDate.getMonth() ||
-      (now.getMonth() === fromDate.getMonth() && now.getDate() >= fromDate.getDate());
-    if (!hadAnniversaryThisYear) years--;
-    return years;
+  function hebrewParts(date) {
+    const fmt = new Intl.DateTimeFormat("en-US-u-ca-hebrew", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+    const parts = fmt.formatToParts(date);
+    const day = Number(parts.find((p) => p.type === "day")?.value);
+    const month = parts.find((p) => p.type === "month")?.value || "";
+    const year = Number(parts.find((p) => p.type === "year")?.value);
+    return { day, month, year };
+  }
+
+  function yearsSinceHebrewYahrzeit(now) {
+    const { day, month, year } = hebrewParts(now);
+    if (!year || !month || !day) return null;
+    const monthOrder = HEBREW_MONTH_ORDER[month];
+    const shevatOrder = HEBREW_MONTH_ORDER[YAHRZEIT_HEBREW_MONTH];
+    const reachedYahrzeitThisYear =
+      monthOrder > shevatOrder ||
+      (monthOrder === shevatOrder && day >= YAHRZEIT_HEBREW_DAY);
+    let years = year - DEATH_HEBREW_YEAR;
+    if (!reachedYahrzeitThisYear) years--;
+    return Math.max(0, years);
   }
 
   function nextHebrewYahrzeit(now) {
-    const fmt = new Intl.DateTimeFormat("en-US-u-ca-hebrew", { day: "numeric", month: "long" });
     let d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     for (let i = 0; i < YAHRZEIT_SEARCH_WINDOW_DAYS; i++) {
-      const parts = fmt.formatToParts(d);
-      const day = parts.find((p) => p.type === "day")?.value;
-      const month = parts.find((p) => p.type === "month")?.value;
+      const { day, month } = hebrewParts(d);
       if (day === YAHRZEIT_HEBREW_DAY && month === YAHRZEIT_HEBREW_MONTH) return d;
       d = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1);
     }
@@ -491,7 +525,14 @@
 
     const yearsEl = document.getElementById("years-since-note");
     if (yearsEl) {
-      yearsEl.textContent = `${yearsSince(DEATH_DATE, now)} שנים בהם זכרו ממשיך ללוות אותנו`;
+      try {
+        const years = yearsSinceHebrewYahrzeit(now);
+        if (years != null) {
+          yearsEl.textContent = `${years} שנים שבהם זכרו ממשיך ללוות אותנו`;
+        }
+      } catch (e) {
+        // Keep the HTML fallback (currently 29) if Hebrew calendar isn't available.
+      }
     }
 
     const yahrzeitEl = document.getElementById("next-yahrzeit-note");
