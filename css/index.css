@@ -12,6 +12,12 @@
   gap: 0.35rem;
   position: relative;
   z-index: 10;
+  width: 100%;
+  max-width: min(40rem, calc(100% - min(19rem, 36vw)));
+  margin-inline-end: auto;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  align-self: flex-start;
 }
 
 #hero .hero-line {
@@ -57,35 +63,47 @@
   color: rgba(255, 255, 255, 0.92);
 }
 
+@font-face {
+  font-family: "Guttman Yad";
+  src: url("/AlonSite/media/fonts/GuttmanYad.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 #hero .hero-quote-block {
   position: absolute;
   z-index: 12;
-  top: clamp(7.5rem, 26vh, 13.5rem);
-  right: clamp(0.35rem, 2.2vw, 1.25rem);
+  top: auto;
+  bottom: clamp(5.5rem, 16vh, 8.5rem);
+  right: clamp(0.25rem, 1.2vw, 0.85rem);
   left: auto;
-  width: min(34rem, 46vw);
-  max-width: 46%;
+  width: min(17.5rem, 34vw);
+  max-width: 34%;
+  aspect-ratio: 1 / 1;
+  height: auto;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.22rem;
-  padding: 0.55rem 0.7rem 0.6rem;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.85rem 0.9rem;
   border: 1px solid rgba(0, 0, 0, 0.72);
   border-radius: 2px;
-  background: rgba(3, 25, 46, 0.34);
+  background: rgba(3, 25, 46, 0.42);
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 0.25),
     inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 #hero .hero-quote {
-  font-family: "Playpen Sans", "Assistant", cursive;
-  font-size: clamp(0.62rem, 1.05vw, 0.84rem);
-  font-weight: 700;
+  font-family: "Guttman Yad", "Playpen Sans", cursive;
+  font-size: clamp(0.72rem, 1.15vw, 0.92rem);
+  font-weight: 400;
   max-width: none;
   margin-top: 0 !important;
   text-align: right;
-  line-height: 1.4 !important;
+  line-height: 1.45 !important;
 }
 
 #hero .hero-bottom-block {
@@ -96,13 +114,14 @@
 @media (max-width: 767px) {
   #hero .hero-quote-block {
     position: static;
-    width: 100%;
-    max-width: 100%;
+    width: min(18rem, 92vw);
+    max-width: 92vw;
+    aspect-ratio: 1 / 1;
     margin: 0.75rem auto 0;
   }
 
   #hero .hero-quote {
-    font-size: clamp(0.68rem, 3.2vw, 0.82rem);
+    font-size: clamp(0.7rem, 3.4vw, 0.86rem);
   }
 }
 
@@ -122,11 +141,12 @@
 }
 
 #hero .hero-quote-source {
-  font-family: "Assistant", sans-serif;
-  font-size: clamp(0.68rem, 1.2vw, 0.82rem);
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
+  font-family: "Guttman Yad", "Playpen Sans", cursive;
+  font-size: clamp(0.62rem, 1vw, 0.78rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
   text-align: center;
+  margin-top: 0.2rem;
 }
 
 #hero .hero-meta-sep {
