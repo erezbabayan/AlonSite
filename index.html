@@ -24,7 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Playpen+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="/AlonSite/js/tailwind-config.js"></script>
 <link href="/AlonSite/css/shared.css" rel="stylesheet"/>
-<link href="/AlonSite/css/index.css" rel="stylesheet"/>
+<link href="/AlonSite/css/index.css?v=20260809c" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -77,31 +77,25 @@
 </nav>
 <main>
 <!-- Hero Section -->
-<section class="relative h-[90vh] flex flex-col justify-center pb-56 px-6 overflow-hidden" data-nav-section="home" id="hero">
+<section class="relative min-h-[90vh] flex flex-col justify-center pb-24 px-6" data-nav-section="home" id="hero">
 <div class="absolute inset-0 z-0">
 <img alt="אלון, סגן בחטיבת גולני, בבופור" class="w-full h-full object-cover object-[32%_45%]" src="/AlonSite/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
-<div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_42%,rgba(3,25,46,0.72),transparent_75%)]"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-[#eef0f2] via-transparent to-transparent"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-[#03192e]/85 via-[#03192e]/25 to-transparent"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-[#eef0f2] via-transparent to-transparent opacity-90"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_42%,rgba(3,25,46,0.78),transparent_75%)]"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#03192e]/90 via-[#03192e]/35 to-[#03192e]/45"></div>
 </div>
-<div class="relative z-10 w-full h-full flex flex-col items-center justify-center pt-20 md:pt-24 pb-10 px-4 md:px-8">
-<div class="hero-stack text-white text-center w-full max-w-5xl flex flex-col items-center gap-3 md:gap-4">
-<p class="font-label text-sm md:text-base uppercase tracking-[0.35em] font-bold drop-shadow-md">לזכרון עולם</p>
-<h1 class="hero-main-title font-headline font-black tracking-tight drop-shadow-xl">לזכרו של סגן אלון אברהם חי בביאן הי״ד</h1>
-<div class="w-16 h-px bg-accent-gold/50 my-1"></div>
-<p class="font-label text-lg md:text-xl lg:text-2xl font-bold drop-shadow-md">נפל ב-כ״ח בשבט תשנ״ז (4 בפברואר 1997)</p>
-<p class="font-label text-sm md:text-base font-semibold text-white/90 drop-shadow-md">בדרכו לפעילות מבצעית במוצב הבופור בלבנון, בדרכו להגנת יישובי הצפון</p>
-<p class="font-label text-sm md:text-base font-semibold text-white/90 drop-shadow-md">יליד ירושלים | בן 21 בנופלו</p>
-<p class="font-label text-sm md:text-base font-semibold text-white/90 drop-shadow-md" id="years-since-note">29 שנים שבהם זכרו ממשיך ללוות אותנו</p>
-<div class="w-full max-w-4xl mt-4 md:mt-6 space-y-2">
-<p class="hero-quote-line font-handwritten font-bold text-sm sm:text-base md:text-lg leading-snug drop-shadow-lg">
-                    אני חלק בלתי נפרד מהעם שלי ותחושת הכאב הפעם עמוקה יותר מכל פעם. איני יודע מהי הסיבה הספציפית, אולי זה הצבא, אולי מכלול של דברים אחרים, אך אין לכך חשיבות.
-                </p>
-<p class="hero-quote-line font-handwritten font-bold text-sm sm:text-base md:text-lg leading-snug drop-shadow-lg">
-                    העיקר שאני מרגיש שייך לעם ישראל. ברגעים הקשים האלו, ואני בטוח שביחד, ורק ורק ביחד, נוכל לכל אויב
-                </p>
-<p class="font-label text-xs md:text-sm font-bold text-white/80 drop-shadow-md">(מתוך מכתב של אלון לרב רפי פרץ)</p>
+<div class="relative z-10 w-full max-w-4xl mx-auto pt-24 pb-10">
+<div class="hero-stack text-white text-center">
+<p class="hero-line hero-kicker">לזכרון עולם</p>
+<h1 class="hero-line hero-title">לזכרו של סגן אלון אברהם חי בביאן הי״ד</h1>
+<p class="hero-line hero-date">נפל ב-כ״ח בשבט תשנ״ז (4 בפברואר 1997)</p>
+<p class="hero-line hero-detail">בדרכו לפעילות מבצעית במוצב הבופור בלבנון, בדרכו להגנת יישובי הצפון</p>
+<p class="hero-line hero-detail" id="years-since-note">29 שנים שבהם זכרו ממשיך ללוות אותנו</p>
+<p class="hero-line hero-quote">אני חלק בלתי נפרד מהעם שלי ותחושת הכאב הפעם עמוקה יותר מכל פעם. איני יודע מהי הסיבה הספציפית, אולי זה הצבא, אולי מכלול של דברים אחרים, אך אין לכך חשיבות. העיקר שאני מרגיש שייך לעם ישראל. ברגעים הקשים האלו, ואני בטוח שביחד, ורק ורק ביחד, נוכל לכל אויב</p>
+<p class="hero-line hero-quote-source">(מתוך מכתב של אלון לרב רפי פרץ)</p>
+<div class="hero-line hero-meta">
+<span>יליד ירושלים</span>
+<span class="hero-meta-sep">|</span>
+<span>בן 21 בנופלו</span>
 </div>
 </div>
 </div>
