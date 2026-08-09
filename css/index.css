@@ -7,6 +7,16 @@
   line-height: 1.2;
 }
 
+.hero-quote-line {
+  font-size: clamp(0.7rem, 1.55vw, 1.125rem);
+}
+
+@media (min-width: 900px) {
+  .hero-quote-line {
+    white-space: nowrap;
+  }
+}
+
 img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 /* Photo frame: this page's specific shadow depth + hover lift. */
