@@ -21,7 +21,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/AlonSite/media/icons/favicon-192.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/AlonSite/media/icons/favicon-180.png"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Playpen+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="/AlonSite/js/tailwind-config.js"></script>
 <link href="/AlonSite/css/shared.css" rel="stylesheet"/>
 <link href="/AlonSite/css/index.css" rel="stylesheet"/>
@@ -77,24 +77,29 @@
 </nav>
 <main>
 <!-- Hero Section -->
-<section class="relative h-[90vh] flex flex-col items-center justify-center pb-56 px-6 overflow-hidden" data-nav-section="home" id="hero">
+<section class="relative h-[90vh] flex flex-col justify-center pb-56 px-6 overflow-hidden" data-nav-section="home" id="hero">
 <div class="absolute inset-0 z-0">
 <img alt="אלון, סגן בחטיבת גולני, בבופור" class="w-full h-full object-cover object-[32%_45%]" src="/AlonSite/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
 <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_42%,rgba(3,25,46,0.72),transparent_75%)]"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-[#eef0f2] via-transparent to-transparent"></div>
+<div class="absolute inset-y-0 left-0 w-[55%] md:w-[48%] bg-gradient-to-r from-[#03192e]/75 via-[#03192e]/35 to-transparent pointer-events-none"></div>
 </div>
-<div class="relative z-10 text-center max-w-4xl text-white">
-<p class="font-label text-sm uppercase tracking-[0.4em] mb-4 text-white/90 drop-shadow-md">לזכר עולם</p>
-<h1 class="text-5xl md:text-7xl font-headline font-black mb-6 tracking-tight drop-shadow-xl">סגן אלון אברהם-חי בביאן ז״ל</h1>
-<div class="mt-10 flex flex-col items-center gap-2">
-<div class="w-16 h-px bg-accent-gold/50 mb-2"></div>
-<div class="font-label text-sm md:text-base tracking-wide text-white/85 max-w-3xl mx-auto leading-relaxed flex flex-col items-center gap-1.5">
-<p>נפל ב-כ״ח בשבט תשנ״ז (4 בפברואר 1997)</p>
-<p>בדרכו לפעילות מבצעית במוצב הבופור בלבנון</p>
-<p>בדרכו להגנת יישובי הצפון</p>
-<p>בגיל 21</p>
-<p>יליד ירושלים</p>
-<p id="years-since-note">29 שנים שבהם זכרו ממשיך ללוות אותנו</p>
+<div class="relative z-10 w-full max-w-7xl mx-auto h-full flex items-center">
+<div class="hero-memorial-panel text-white text-right max-w-[min(100%,28rem)] md:max-w-lg absolute left-4 md:left-10 top-1/2 -translate-y-[42%]">
+<p class="font-handwritten font-bold text-base md:text-lg leading-relaxed drop-shadow-lg mb-3">
+                    אני חלק בלתי נפרד מהעם שלי ותחושת הכאב הפעם עמוקה יותר מכל פעם. איני יודע מהי הסיבה הספציפית, אולי זה הצבא, אולי מכלול של דברים אחרים, אך אין לכך חשיבות. העיקר שאני מרגיש שייך לעם ישראל. ברגעים הקשים האלו, ואני בטוח שביחד, ורק ורק ביחד, נוכל לכל אויב
+                </p>
+<p class="font-label text-xs md:text-sm font-bold text-white/80 mb-8 drop-shadow-md">(מתוך מכתב של אלון לרב רפי פרץ)</p>
+<p class="font-label text-sm uppercase tracking-[0.4em] mb-3 text-white/90 drop-shadow-md font-bold">לזכר עולם</p>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-headline font-black mb-6 tracking-tight drop-shadow-xl">סגן אלון אברהם-חי בביאן ז״ל</h1>
+<div class="w-16 h-px bg-accent-gold/50 mb-4"></div>
+<div class="font-label tracking-wide text-white/90 leading-relaxed flex flex-col items-start gap-1.5 font-bold">
+<p class="text-lg md:text-xl lg:text-2xl font-bold">נפל ב-כ״ח בשבט תשנ״ז (4 בפברואר 1997)</p>
+<p class="text-sm md:text-base font-semibold text-white/85">בדרכו לפעילות מבצעית במוצב הבופור בלבנון</p>
+<p class="text-sm md:text-base font-semibold text-white/85">בדרכו להגנת יישובי הצפון</p>
+<p class="text-sm md:text-base font-semibold text-white/85">בגיל 21</p>
+<p class="text-sm md:text-base font-semibold text-white/85">יליד ירושלים</p>
+<p class="text-sm md:text-base font-semibold text-white/85" id="years-since-note">29 שנים שבהם זכרו ממשיך ללוות אותנו</p>
 </div>
 </div>
 </div>
@@ -300,6 +305,7 @@
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="/AlonSite/pages/gallery.html">גלריית תמונות</a>
 </div>
 <div class="text-xs font-label text-secondary text-center mt-4">© דף הנצחה לזכרו של אלון. לזכר עולם.</div>
+<div class="text-xs font-label text-secondary text-center">תודתנו לחברת HostWeb אחסון אתרים</div>
 </footer>
 <!-- FAB -->
 <div class="fixed bottom-8 left-8 z-50">

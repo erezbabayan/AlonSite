@@ -68,6 +68,7 @@ tailwind.config = {
         headline: ["Assistant", "sans-serif"],
         body: ["Assistant", "sans-serif"],
         label: ["Assistant", "sans-serif"],
+        handwritten: ["Playpen Sans", "Assistant", "cursive"],
       },
     },
   },
