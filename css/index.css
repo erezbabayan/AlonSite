@@ -13,11 +13,11 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: min(40rem, calc(100% - min(19rem, 36vw)));
-  margin-inline-end: auto;
-  margin-inline-start: 0;
-  padding-inline-start: 0;
-  align-self: flex-start;
+  max-width: min(42rem, calc(100% - min(18.5rem, 36vw) - 1rem));
+  margin-right: min(18.5rem, 36vw);
+  margin-left: auto;
+  align-self: stretch;
+  box-sizing: border-box;
 }
 
 #hero .hero-line {
