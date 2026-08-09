@@ -528,7 +528,7 @@
       try {
         const years = yearsSinceHebrewYahrzeit(now);
         if (years != null) {
-          yearsEl.textContent = `${years} שנים שבהם זכרו ממשיך ללוות אותנו`;
+          yearsEl.textContent = `${years} שנים לאסון המסוקים.`;
         }
       } catch (e) {
         // Keep the HTML fallback (currently 29) if Hebrew calendar isn't available.
