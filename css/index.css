@@ -58,16 +58,21 @@
 }
 
 #hero .hero-quote-block {
-  width: 100%;
-  max-width: min(52rem, 96vw);
-  margin-top: 0;
+  position: absolute;
+  z-index: 12;
+  top: clamp(7.5rem, 26vh, 13.5rem);
+  right: clamp(0.35rem, 2.2vw, 1.25rem);
+  left: auto;
+  width: min(34rem, 46vw);
+  max-width: 46%;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.28rem;
-  padding: 0.65rem 0.85rem 0.7rem;
+  gap: 0.22rem;
+  padding: 0.55rem 0.7rem 0.6rem;
   border: 1px solid rgba(0, 0, 0, 0.72);
   border-radius: 2px;
-  background: rgba(3, 25, 46, 0.28);
+  background: rgba(3, 25, 46, 0.34);
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 0.25),
     inset 0 0 0 1px rgba(255, 255, 255, 0.06);
@@ -75,25 +80,30 @@
 
 #hero .hero-quote {
   font-family: "Playpen Sans", "Assistant", cursive;
-  font-size: clamp(0.68rem, 1.25vw, 0.92rem);
+  font-size: clamp(0.62rem, 1.05vw, 0.84rem);
   font-weight: 700;
   max-width: none;
   margin-top: 0 !important;
-  text-align: justify;
-  text-align-last: right;
-}
-
-@media (min-width: 900px) {
-  #hero .hero-quote {
-    white-space: nowrap !important;
-    text-align: center;
-    text-align-last: center;
-  }
+  text-align: right;
+  line-height: 1.4 !important;
 }
 
 #hero .hero-bottom-block {
   width: 100%;
   padding-top: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  #hero .hero-quote-block {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0.75rem auto 0;
+  }
+
+  #hero .hero-quote {
+    font-size: clamp(0.68rem, 3.2vw, 0.82rem);
+  }
 }
 
 #hero .hero-meta {
