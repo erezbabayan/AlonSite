@@ -1,14 +1,25 @@
 /* index.html — home page only. Loaded after css/shared.css. */
 
 /* Hero name: always one centered line; scales to viewport width */
-.hero-main-title {
+.hero-main-title,
+.hero-bottom-title {
   white-space: nowrap;
   font-size: clamp(0.95rem, 3.8vw, 2.75rem);
   line-height: 1.2;
 }
 
 .hero-quote-line {
-  font-size: clamp(0.7rem, 1.55vw, 1.125rem);
+  font-size: clamp(0.65rem, 1.4vw, 1.05rem);
+}
+
+.hero-bottom-memorial {
+  text-align: justify;
+  text-align-last: center;
+}
+
+.hero-bottom-meta {
+  text-align: justify;
+  text-align-last: justify;
 }
 
 @media (min-width: 900px) {
