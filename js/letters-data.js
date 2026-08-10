@@ -168,9 +168,46 @@ window.LETTERS_DATA = {
       signature: ""
     },
     {
+      id: "wr-7",
+      title: "מכתב מאלון לרב רפי פרץ ראש המכינה הקדם צבאית עצמונה",
+      dateLabel: "מרץ 1996",
+      order: 7,
+      from: "אלון בביאן",
+      to: "הרב רפי פרץ והר\"מים, המכינה הקדם־צבאית עצמונה",
+      category: "writings",
+      body:
+        `לכ׳ הרב רפי והר"מים:
+
+המון זמן לא יצא לי לשבת איתכם ולשתף אתכם בהרגשותי ובסוג של היכולת וחוסר האונים, אך הפעם מרגיש אני כי אני חייב לשתף אתכם במה שעובר לי בראש בעקבות האירועים האחרונים.
+
+נאמר: "עת צרה היא ליעקב וממנה יוושע". אכן עת צרה גדולה מאוד לעמנו — המון פצועים ודם יהודי נשפך כמים. חסר אונים כנגד אותם מרצחים, ונדמה שהכל כבר לא נכון כשלעצמו והם יכולים לעשות כרצונם — אך לי בתוך ליבי שוכן "ממנה יוושע", ובזאת חפץ גאולה ורווח לעמי.
+
+אך למרות זאת, בימים שלפני יהיה טוב חיפשתי בנרות משהו נעים ומרגיע.
+
+אני יכול להגיד על עצמי שקשה לי לתפקד בימים כאלה כמו שצריך — והייתי אומר שאלו תחושות שאני עובר מתוך ואולי אפילו תחושת ייסורים. פתאום, ובבת אחת, איבדתי משהו ואולי שבר.
+
+אני עצוב מאוד על החורבן הגדול והמכה שחטף העם שלי, בלב ליבה של ארצנו, על כל ההשלכות — העצבות מכך, על כך שהאויב מצליח לפגוע.
+
+מצד שני אני "שמח" בהכרה הזו שלי — שאני באמת מרגיש כעת חלק מהעם. אולי תמיד בלבי פועמת שייכות לעם שלי, ותחושת הכאב הפעם עמוקה יותר מכל פעם. איני יודע מהי הסיבה המדויקת — אולי זה הצבא, אולי מפגש של דברים אחרים — אך אין לכך חשיבות. העיקר שאני מרגיש שייך לעמי בדרכיו הקשים השנה, ואני בטוח שביחד, ורק ורק ביחד, נוכל להם — לכל אויבנו.
+
+לסיום, רציתי לומר לכם, לנו ולכל עם ישראל: שנתאמץ, ורק ורק בשירות נוכל להמשיך להיות טובים וגם בטוחים וטובים יותר.
+
+מקווה לשמוע מכם בהקדם!
+
+בברכה רבה,
+אלון בביאן
+מ.א. 5168942
+בה"ד 1
+ענף גפן
+פל׳ ט׳
+צוות 3
+פ.ד. 02232`,
+      signature: ""
+    },
+    {
       id: "fam-0",
       title: "היחסים עם המשפחה",
-      order: 7,
+      order: 8,
       from: "המשפחה",
       to: "",
       category: "family",
@@ -189,7 +226,7 @@ window.LETTERS_DATA = {
     {
       id: "fam-1",
       title: "מכתב מאבא",
-      order: 8,
+      order: 9,
       from: "ראובן בביאן",
       to: "אלון",
       category: "family",
@@ -210,7 +247,7 @@ window.LETTERS_DATA = {
     {
       id: "fam-2",
       title: "מכתב מאמא",
-      order: 9,
+      order: 10,
       from: "חנה בביאן",
       to: "אלון",
       category: "family",
@@ -232,7 +269,7 @@ window.LETTERS_DATA = {
       id: "fam-3",
       title: "מכתב מתמר",
       dateLabel: "כשישה חודשים לאחר נפילתו",
-      order: 10,
+      order: 11,
       from: "תמר בביאן",
       to: "אלון",
       category: "family",
@@ -259,7 +296,7 @@ window.LETTERS_DATA = {
     {
       id: "fam-4",
       title: "מכתב מדקלה",
-      order: 11,
+      order: 12,
       from: "דקלה בביאן",
       to: "אלון",
       category: "family",
@@ -280,7 +317,7 @@ window.LETTERS_DATA = {
     {
       id: "fam-5",
       title: "מכתב מארז",
-      order: 12,
+      order: 13,
       from: "ארז בביאן",
       to: "אלון",
       category: "family",
@@ -297,7 +334,7 @@ window.LETTERS_DATA = {
     {
       id: "fam-6",
       title: "מכתב מתדהר",
-      order: 13,
+      order: 14,
       from: "תדהר בביאן",
       to: "אלון",
       category: "family",
@@ -308,7 +345,7 @@ window.LETTERS_DATA = {
     {
       id: "frn-1",
       title: "מכתב מאבי דישי, חבר ילדות",
-      order: 14,
+      order: 15,
       from: "אבי דישי",
       to: "אלון",
       category: "friends",
@@ -332,7 +369,7 @@ window.LETTERS_DATA = {
       id: "frn-2",
       title: "מכתב משי, חבר מהמכינה",
       dateLabel: "כשנה לאחר נפילתו",
-      order: 15,
+      order: 16,
       from: "שי ליאור",
       to: "אלון",
       category: "friends",
@@ -355,7 +392,7 @@ window.LETTERS_DATA = {
     {
       id: "frn-3",
       title: "מכתב מיהושע דוד",
-      order: 16,
+      order: 17,
       from: "יהושע דוד",
       to: "אלון",
       category: "friends",
@@ -374,7 +411,7 @@ window.LETTERS_DATA = {
     {
       id: "frn-4",
       title: "מכתב מדודו, חבר ואח",
-      order: 17,
+      order: 18,
       from: "דודו דוד",
       to: "אלון",
       category: "friends",
@@ -395,7 +432,7 @@ window.LETTERS_DATA = {
     {
       id: "frn-5",
       title: "מכתב מעינב",
-      order: 18,
+      order: 19,
       from: "עינב",
       to: "אלון",
       category: "friends",
@@ -424,7 +461,7 @@ window.LETTERS_DATA = {
     {
       id: "frn-6",
       title: "יתגדל ויתקדש שמיה רבא (שיר)",
-      order: 19,
+      order: 20,
       from: "שי נוישטטר",
       to: "אלון",
       category: "friends",
@@ -463,7 +500,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-1",
       title: "מכתב מאבי גבאי",
-      order: 20,
+      order: 21,
       from: "אבי גבאי",
       to: "אלון",
       category: "extended-family",
@@ -504,7 +541,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-2",
       title: "מכתב מאילה גת (שם טוב)",
-      order: 21,
+      order: 22,
       from: "אילה גת (שם טוב)",
       to: "אלון",
       category: "extended-family",
@@ -537,7 +574,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-3",
       title: "מכתב מהדודה אמירה",
-      order: 22,
+      order: 23,
       from: "אמירה מיארה",
       to: "אלון",
       category: "extended-family",
@@ -576,7 +613,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-4",
       title: "מכתב מבבא וסבתא",
-      order: 23,
+      order: 24,
       from: "בבא אליהו וסבתא עליזה",
       to: "אלון",
       category: "extended-family",
@@ -613,7 +650,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-5",
       title: "במה ניכר אדם",
-      order: 24,
+      order: 25,
       from: "בנות בני עקיבא",
       to: "אלון",
       category: "extended-family",
@@ -648,7 +685,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-6",
       title: "במה אברכך (שיר)",
-      order: 25,
+      order: 26,
       from: "דליה בביאן",
       to: "אלון",
       category: "extended-family",
@@ -679,7 +716,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-7",
       title: "לכל עץ יש שורשים",
-      order: 26,
+      order: 27,
       from: "דרור אריה",
       to: "משפחת בביאן",
       category: "extended-family",
@@ -714,7 +751,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-8",
       title: "מכתב מהדודה הדיה",
-      order: 27,
+      order: 28,
       from: "הדיה בביאן",
       to: "אלון",
       category: "extended-family",
@@ -741,7 +778,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-9",
       title: "מכתב מבן הדוד ישי",
-      order: 28,
+      order: 29,
       from: "ישי טחויליאן",
       to: "אלון",
       category: "extended-family",
@@ -778,7 +815,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-10",
       title: "מכתב מסיגלית",
-      order: 29,
+      order: 30,
       from: "סיגלית בביאן-חסידים",
       to: "אלון",
       category: "extended-family",
@@ -807,7 +844,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-11",
       title: "מכתב מעופר, הנין הראשון",
-      order: 30,
+      order: 31,
       from: "עופר בביאן",
       to: "אלון",
       category: "extended-family",
@@ -832,7 +869,7 @@ window.LETTERS_DATA = {
     {
       id: "ext-12",
       title: "אלוני - רק שלי",
-      order: 31,
+      order: 32,
       from: "ציונה בביאן",
       to: "אלון",
       category: "extended-family",
@@ -866,7 +903,7 @@ window.LETTERS_DATA = {
       id: "story-1",
       title: "הדרך לגולני ולבופור",
       date: "1997-02-04",
-      order: 32,
+      order: 33,
       from: "המשפחה (ככל הנראה אביו)",
       to: "",
       category: "story",
@@ -942,7 +979,7 @@ window.LETTERS_DATA = {
       id: "army-1",
       title: "מכתב מחייל מילואים שפגש אותו",
       date: "1997-01-22",
-      order: 33,
+      order: 34,
       from: "דניאל מכטה",
       to: "הורי אלון",
       category: "army",
@@ -969,7 +1006,7 @@ window.LETTERS_DATA = {
     {
       id: "army-2",
       title: "מכתב מהמג\"ד",
-      order: 34,
+      order: 35,
       from: "אלון פרידמן",
       to: "אלון",
       category: "army",
@@ -990,7 +1027,7 @@ window.LETTERS_DATA = {
     {
       id: "army-3",
       title: "דברי מח\"ט גולני",
-      order: 35,
+      order: 36,
       from: "ארז גרשטיין",
       to: "",
       category: "army",
@@ -1007,7 +1044,7 @@ window.LETTERS_DATA = {
     {
       id: "army-4",
       title: "מכתב מהמ\"פ הראשון",
-      order: 36,
+      order: 37,
       from: "ערן גרניט",
       to: "",
       category: "army",
@@ -1026,7 +1063,7 @@ window.LETTERS_DATA = {
     {
       id: "army-5",
       title: "מכתב מאם של חבר לקורס",
-      order: 37,
+      order: 38,
       from: "בינה עשת",
       to: "משפחת בביאן",
       category: "army",
@@ -1047,7 +1084,7 @@ window.LETTERS_DATA = {
     {
       id: "army-6",
       title: "זוכר אותך כל יום",
-      order: 38,
+      order: 39,
       from: "אבי עייש",
       to: "אלון",
       category: "army",
@@ -1066,7 +1103,7 @@ window.LETTERS_DATA = {
     {
       id: "army-7",
       title: "לעולם לא אשכח",
-      order: 39,
+      order: 40,
       from: "עדי סרדס",
       to: "",
       category: "army",
@@ -1091,7 +1128,7 @@ window.LETTERS_DATA = {
     {
       id: "army-8",
       title: "מכתב מחייל בבופור",
-      order: 40,
+      order: 41,
       from: "גיורא חזן",
       to: "משפחת בביאן",
       category: "army",
@@ -1113,7 +1150,7 @@ window.LETTERS_DATA = {
       id: "army-9",
       title: "מכתב הרמטכ\"ל למשפחה",
       dateLabel: "ממשרד הביטחון, לאחר נפילתו",
-      order: 41,
+      order: 42,
       from: "אמנון ליפקין-שחק, הרמטכ״ל",
       to: "המשפחה",
       category: "army",
@@ -1126,7 +1163,7 @@ window.LETTERS_DATA = {
     {
       id: "army-10",
       title: "האלון שלי ושל פלחי\"ק",
-      order: 42,
+      order: 43,
       from: "דורון אריאל, סגן",
       to: "אלון",
       category: "army",
@@ -1147,7 +1184,7 @@ window.LETTERS_DATA = {
     {
       id: "army-11",
       title: "לעולם לא אשכח אותך",
-      order: 43,
+      order: 44,
       from: "עזי",
       to: "אלון",
       category: "army",
@@ -1182,7 +1219,7 @@ window.LETTERS_DATA = {
     {
       id: "army-12",
       title: "מכתב מהמ\"פ בפלחי\"ק",
-      order: 44,
+      order: 45,
       from: "מיקל רבינו, רס״ן",
       to: "אלון",
       category: "army",
@@ -1211,7 +1248,7 @@ window.LETTERS_DATA = {
     {
       id: "army-13",
       title: "לב עיקש ונחוש",
-      order: 45,
+      order: 46,
       from: "יאיר רובינשטיין",
       to: "",
       category: "army",
@@ -1236,7 +1273,7 @@ window.LETTERS_DATA = {
     {
       id: "army-14",
       title: "מכתב מחברי הקורס",
-      order: 46,
+      order: 47,
       from: "צוות 3-א׳ \"גפן\", בה״ד 1",
       to: "אלון",
       category: "army",
@@ -1250,7 +1287,7 @@ window.LETTERS_DATA = {
       id: "art-1",
       title: "איש חסד, אחריות וכבוד",
       dateLabel: "במלאת השלושים לנפילתו",
-      order: 47,
+      order: 48,
       from: "הרב צבי רוזנר",
       to: "",
       category: "articles",
@@ -1281,7 +1318,7 @@ window.LETTERS_DATA = {
     {
       id: "art-2",
       title: "אספקטים בגבורה",
-      order: 48,
+      order: 49,
       from: "הרב רפי פרץ",
       to: "",
       category: "articles",
@@ -1323,7 +1360,7 @@ window.LETTERS_DATA = {
       id: "art-3",
       title: "הרהורים על אלון בלבנון",
       dateLabel: "ליל ההלוויה, שבט תשנ\"ז",
-      order: 49,
+      order: 50,
       from: "לא חתום בשם מפורש בטקסט המקור",
       to: "",
       category: "articles",
@@ -1360,7 +1397,7 @@ window.LETTERS_DATA = {
     {
       id: "art-4",
       title: "גיבור ובן חורין",
-      order: 50,
+      order: 51,
       from: "הרב צבי ליפשיץ",
       to: "",
       category: "articles",
@@ -1395,7 +1432,7 @@ window.LETTERS_DATA = {
     {
       id: "art-5",
       title: "מותר לשאול",
-      order: 51,
+      order: 52,
       from: "יוסף אלמליח",
       to: "",
       category: "articles",
@@ -1419,7 +1456,7 @@ window.LETTERS_DATA = {
       id: "art-6",
       title: "מתכונותיו של אלון",
       dateLabel: "בטקס השבעה",
-      order: 52,
+      order: 53,
       from: "הרב רפי פרץ",
       to: "",
       category: "articles",
@@ -1438,7 +1475,7 @@ window.LETTERS_DATA = {
     {
       id: "art-7",
       title: "עוז וגבורה בתהליך הגאולה",
-      order: 53,
+      order: 54,
       from: "הרב דוד שמחון",
       to: "",
       category: "articles",
