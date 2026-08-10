@@ -1,6 +1,160 @@
 /* index.html — home page only. Loaded after css/shared.css. */
 
+/* Hero: previous text size; full-bleed background photo */
+#hero .hero-bg-img {
+  filter: saturate(0.88) contrast(1.02) brightness(0.96);
+}
+
+#hero .hero-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: min(42rem, calc(100% - min(18.5rem, 36vw) - 1rem));
+  margin-right: min(18.5rem, 36vw);
+  margin-left: auto;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+#hero .hero-line {
+  position: static !important;
+  display: block;
+  float: none !important;
+  clear: both;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transform: none !important;
+  white-space: normal !important;
+  line-height: 1.35 !important;
+  text-shadow: 0 2px 10px rgba(3, 25, 46, 0.55);
+}
+
+#hero .hero-kicker {
+  font-family: "Assistant", sans-serif;
+  font-size: clamp(0.75rem, 1.6vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-top: 0 !important;
+}
+
+#hero .hero-title {
+  font-family: "Assistant", sans-serif;
+  font-size: clamp(1rem, 3.2vw, 1.85rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+#hero .hero-date {
+  font-family: "Assistant", sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+  font-weight: 800;
+}
+
+#hero .hero-detail {
+  font-family: "Assistant", sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@font-face {
+  font-family: "Guttman Yad";
+  src: url("/media/fonts/GuttmanYad.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+#hero .hero-quote-block {
+  position: absolute;
+  z-index: 12;
+  top: auto;
+  bottom: clamp(5.5rem, 16vh, 8.5rem);
+  right: clamp(0.25rem, 1.2vw, 0.85rem);
+  left: auto;
+  width: min(17.5rem, 34vw);
+  max-width: 34%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.72);
+  border-radius: 2px;
+  background: rgba(3, 25, 46, 0.42);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+#hero .hero-quote {
+  font-family: "Guttman Yad", "Playpen Sans", cursive;
+  font-size: clamp(0.72rem, 1.15vw, 0.92rem);
+  font-weight: 400;
+  max-width: none;
+  margin-top: 0 !important;
+  text-align: right;
+  line-height: 1.45 !important;
+}
+
+#hero .hero-bottom-block {
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  #hero .hero-quote-block {
+    position: static;
+    width: min(18rem, 92vw);
+    max-width: 92vw;
+    aspect-ratio: 1 / 1;
+    margin: 0.75rem auto 0;
+  }
+
+  #hero .hero-quote {
+    font-size: clamp(0.7rem, 3.4vw, 0.86rem);
+  }
+}
+
+#hero .hero-meta {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 26rem;
+  width: 100%;
+  margin-top: 0.55rem !important;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  font-family: "Assistant", sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-weight: 700;
+}
+
+#hero .hero-quote-source {
+  font-family: "Guttman Yad", "Playpen Sans", cursive;
+  font-size: clamp(0.62rem, 1vw, 0.78rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+#hero .hero-meta-sep {
+  opacity: 0.55;
+}
+
 img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
+#hero .hero-bg-img { filter: saturate(0.88) contrast(1.02) brightness(0.96); }
 
 /* Photo frame: this page's specific shadow depth + hover lift. */
 .photo-frame {
