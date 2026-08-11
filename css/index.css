@@ -5,6 +5,13 @@
   filter: saturate(0.88) contrast(1.02) brightness(0.96);
 }
 
+@media (min-width: 768px) {
+  #hero .hero-bg-img {
+    width: 108%;
+    max-width: none;
+  }
+}
+
 #hero .hero-stack {
   display: flex;
   flex-direction: column;
@@ -13,10 +20,10 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: min(42rem, calc(100% - min(18.5rem, 36vw) - 1rem));
-  margin-right: min(18.5rem, 36vw);
+  max-width: 42rem;
   margin-left: auto;
-  align-self: stretch;
+  margin-right: auto;
+  align-self: center;
   box-sizing: border-box;
 }
 
@@ -36,93 +43,73 @@
 
 #hero .hero-kicker {
   font-family: "Assistant", sans-serif;
-  font-size: clamp(0.75rem, 1.6vw, 0.95rem);
+  font-size: clamp(0.95rem, 1.9vw, 1.15rem);
   font-weight: 700;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
   margin-top: 0 !important;
+  margin-bottom: 0.4rem !important;
 }
 
 #hero .hero-title {
   font-family: "Assistant", sans-serif;
-  font-size: clamp(1rem, 3.2vw, 1.85rem);
-  font-weight: 900;
+  font-size: clamp(1.5rem, 4.3vw, 2.5rem);
+  font-weight: 600;
   letter-spacing: -0.01em;
+  margin-bottom: 0.3rem !important;
 }
 
 #hero .hero-date {
   font-family: "Assistant", sans-serif;
-  font-size: clamp(0.9rem, 2vw, 1.15rem);
-  font-weight: 800;
+  font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 #hero .hero-detail {
   font-family: "Assistant", sans-serif;
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-@font-face {
-  font-family: "Guttman Yad";
-  src: url("/media/fonts/GuttmanYad.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  font-size: clamp(0.9rem, 1.7vw, 1.1rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #hero .hero-quote-block {
-  position: absolute;
-  z-index: 12;
-  top: auto;
-  bottom: clamp(5.5rem, 16vh, 8.5rem);
-  right: clamp(0.25rem, 1.2vw, 0.85rem);
-  left: auto;
-  width: min(17.5rem, 34vw);
-  max-width: 34%;
-  aspect-ratio: 1 / 1;
-  height: auto;
-  margin: 0;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 34rem;
+  margin: 1.5rem auto 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.35rem;
-  padding: 0.85rem 0.9rem;
-  border: 1px solid rgba(0, 0, 0, 0.72);
-  border-radius: 2px;
-  background: rgba(3, 25, 46, 0.42);
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.25),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  align-items: center;
+  gap: 0.55rem;
+}
+
+#hero .hero-quote-block::before {
+  content: "";
+  display: block;
+  width: 2.75rem;
+  height: 1px;
+  margin-bottom: 0.35rem;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 #hero .hero-quote {
-  font-family: "Guttman Yad", "Playpen Sans", cursive;
-  font-size: clamp(0.72rem, 1.15vw, 0.92rem);
+  font-family: "Assistant", sans-serif;
+  font-style: italic;
+  font-size: clamp(0.95rem, 1.9vw, 1.2rem);
   font-weight: 400;
   max-width: none;
   margin-top: 0 !important;
-  text-align: right;
-  line-height: 1.45 !important;
+  text-align: center;
+  line-height: 1.7 !important;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 #hero .hero-bottom-block {
   width: 100%;
   padding-top: 0.5rem;
-}
-
-@media (max-width: 767px) {
-  #hero .hero-quote-block {
-    position: static;
-    width: min(18rem, 92vw);
-    max-width: 92vw;
-    aspect-ratio: 1 / 1;
-    margin: 0.75rem auto 0;
-  }
-
-  #hero .hero-quote {
-    font-size: clamp(0.7rem, 3.4vw, 0.86rem);
-  }
 }
 
 #hero .hero-meta {
@@ -141,12 +128,13 @@
 }
 
 #hero .hero-quote-source {
-  font-family: "Guttman Yad", "Playpen Sans", cursive;
-  font-size: clamp(0.62rem, 1vw, 0.78rem);
+  font-family: "Assistant", sans-serif;
+  font-size: clamp(0.75rem, 1.3vw, 0.9rem);
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.68);
   text-align: center;
-  margin-top: 0.2rem;
+  margin-top: 0.15rem !important;
 }
 
 #hero .hero-meta-sep {

@@ -69,15 +69,15 @@
 <p class="font-label text-sm uppercase tracking-[0.4em] mb-4 text-white/70">מתוך המכתבים</p>
 <h1 class="text-4xl md:text-5xl font-headline font-bold mb-6 gold-text">סיפורים על אלון</h1>
 <p class="text-lg text-white/85 font-body leading-relaxed">
-                קטעים קצרים על מי שהיה ומה שעשה — כפי שזכרו אותו המשפחה, החברים והמפקדים. לחיצה על סיפור פותחת את המכתב המלא.
+                קטעים קצרים על מי שהיה ומה שעשה — כפי שזכרו אותו המשפחה, החברים והמפקדים. לחיצה על סיפור פותחת את המכתב המלא, ומשם אפשר לדפדף בין כל הסיפורים בחצים או בהחלקה.
             </p>
 </div>
 </section>
 
 <!-- Stories list -->
-<section class="max-w-3xl mx-auto px-8 py-16">
+<section class="max-w-6xl mx-auto px-8 py-16">
 <p id="stories-count" class="text-center font-label text-xs tracking-[0.25em] uppercase text-secondary/70 mb-10"></p>
-<div class="flex flex-col gap-6" id="stories-list"></div>
+<div class="story-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="stories-list"></div>
 <p class="text-center mt-12">
 <a class="inline-flex items-center gap-2 text-accent-gold font-bold text-sm hover:opacity-80 transition-opacity" href="/pages/letters.html">
             לכל המכתבים <span class="material-symbols-outlined text-sm">arrow_left</span>
@@ -140,16 +140,19 @@
 <button id="story-reader-close" aria-label="סגור" class="absolute top-6 left-6 text-white/80 hover:text-accent-gold transition-colors">
 <span class="material-symbols-outlined text-4xl">close</span>
 </button>
-<div class="max-w-2xl w-full mx-auto flex flex-col items-center gap-5">
-<button type="button" id="story-reader-back" class="self-start inline-flex items-center gap-2 text-white/85 hover:text-accent-gold font-label text-sm tracking-wide transition-colors">
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-חזרה לסיפורים
+<button id="story-reader-prev" aria-label="הסיפור הקודם" class="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent-gold transition-colors">
+<span class="material-symbols-outlined text-5xl">chevron_right</span>
 </button>
+<button id="story-reader-next" aria-label="הסיפור הבא" class="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent-gold transition-colors">
+<span class="material-symbols-outlined text-5xl">chevron_left</span>
+</button>
+<div class="max-w-2xl w-full mx-auto flex flex-col items-center gap-5">
 <div class="w-full max-h-[70vh] overflow-y-auto p-8 md:p-10" id="story-reader-card">
 <h3 class="text-2xl font-headline font-bold text-primary mb-2" id="story-reader-title"></h3>
 <p class="font-label text-xs text-secondary/80 mb-6" id="story-reader-meta"></p>
 <div class="story-letter-body text-on-surface-variant text-lg" id="story-reader-body"></div>
 </div>
+<p id="story-reader-counter" dir="ltr" class="font-label text-white/80 text-xs tracking-wide"></p>
 </div>
 </div>
 
