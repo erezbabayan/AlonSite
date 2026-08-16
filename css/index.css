@@ -246,6 +246,11 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   text-align: center;
 }
 
+.life-spine-range {
+  margin: 0.7rem 0 0;
+  unicode-bidi: isolate;
+}
+
 .life-spine-stop {
   display: grid;
   grid-template-columns: 7.25rem 1.25rem minmax(0, 1fr);
