@@ -344,22 +344,25 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-body {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(15rem, 0.95fr);
+  grid-template-columns: minmax(15rem, 0.95fr) minmax(0, 1.25fr);
   column-gap: 1.4rem;
   row-gap: 0.7rem;
   align-items: start;
 }
 
-.life-spine-body .photo-frame {
-  grid-column: 2;
+.life-spine-media {
+  grid-column: 1;
   grid-row: 2 / 5;
+}
+
+.life-spine-body .photo-frame {
   margin: 0;
   max-width: none;
   width: 100%;
 }
 
 .life-spine-lead {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2;
   font-size: 1.15rem;
   font-style: italic;
@@ -369,7 +372,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-copy {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 3;
   display: grid;
   grid-template-columns: 1fr;
@@ -389,17 +392,25 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-quote {
-  margin: 0;
-  padding: 1.05rem 1.15rem;
-  background: #fbf9f4;
-  border-right: 3px solid #7C8CA0;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  background: none;
+  border: none;
 }
 
 .life-spine-quote p {
   margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.65;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.5;
   color: #1A2E44;
+}
+
+.life-spine-quote footer {
+  margin-top: 0.22rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #7C8CA0;
 }
 
 @media (max-width: 839px) {
@@ -425,6 +436,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     grid-template-columns: 1fr;
   }
 
+  .life-spine-media,
   .life-spine-body .photo-frame,
   .life-spine-lead,
   .life-spine-copy {
