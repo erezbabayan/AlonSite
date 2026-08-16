@@ -264,6 +264,29 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   text-align: center;
 }
 
+.life-spine-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.life-spine-heading-text {
+  text-align: center;
+}
+
+.life-spine-emblem {
+  display: block;
+  height: 4.5rem;
+  width: auto;
+  flex-shrink: 0;
+  filter: none;
+}
+
 .life-spine-range {
   display: flex;
   flex-direction: row;
@@ -365,23 +388,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   margin: 0;
   max-width: none;
   width: 100%;
-}
-
-.life-spine-media .photo-frame-inner {
-  position: relative;
-}
-
-.life-spine-media .photo-frame-inner::after {
-  content: "";
-  position: absolute;
-  right: 0.42rem;
-  bottom: 0.38rem;
-  width: 2.85rem;
-  height: 5.4rem;
-  background: url("/AlonSite/media/icons/dam-hamaccabim.png") center / contain no-repeat;
-  filter: drop-shadow(0 1px 2px rgba(26, 46, 68, 0.45));
-  pointer-events: none;
-  z-index: 4;
 }
 
 .life-spine-lead {
