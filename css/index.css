@@ -392,7 +392,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-quote {
-  margin: 0.55rem 0 0;
+  margin: 0.4rem 0 0;
   padding: 0;
   background: none;
   border: none;
@@ -400,16 +400,21 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-quote p {
   margin: 0;
-  font-size: 0.86rem;
+  padding: 0.4rem 0.55rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #1A2E44;
+  background: #fbf9f4;
+  outline: 1px solid #c5ccd4;
 }
 
 .life-spine-quote footer {
-  margin-top: 0.22rem;
-  font-size: 0.72rem;
-  font-weight: 600;
+  display: block;
+  margin-top: 0.28rem;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0;
   color: #7C8CA0;
 }
 
