@@ -340,6 +340,23 @@
 
     if (widget) widget.addEventListener("click", toggle);
 
+    // Pause the ambient song whenever a memorial video or audio clip plays
+    // (e.g. the videos/sounds section on the letters/sections hub), so the
+    // background music never overlaps a visitor's own recorded voice or
+    // footage. "play" doesn't bubble, so this listens in the capture phase.
+    document.addEventListener(
+      "play",
+      (e) => {
+        const el = e.target;
+        if (!(el instanceof HTMLMediaElement) || el === audio || audio.paused) return;
+        audio.pause();
+        audio.muted = true;
+        updateSongIcons(true);
+        persist();
+      },
+      true
+    );
+
     // Keep the resume point fresh so a navigation mid-song (or a closed tab
     // that gets restored) picks up close to where it actually was.
     let lastSaveAt = 0;
