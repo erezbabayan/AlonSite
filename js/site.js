@@ -648,5 +648,17 @@
     setupMemorialDates();
     setupRevealAnimations();
     setupHomeNavScrollSpy();
+    setupPortraitPhotoFocus();
   });
+
+  function setupPortraitPhotoFocus() {
+    document.querySelectorAll(".life-spine-media img").forEach((img) => {
+      const mark = () => {
+        if (!img.naturalWidth) return;
+        img.classList.toggle("is-portrait", img.naturalHeight > img.naturalWidth);
+      };
+      if (img.complete) mark();
+      else img.addEventListener("load", mark);
+    });
+  }
 })();
