@@ -316,26 +316,42 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   font-size: clamp(1.45rem, 2.4vw, 1.9rem);
   font-weight: 800;
   color: #1A2E44;
-  margin: 0 0 1rem;
+  margin: 0 0 0.35rem;
+  grid-column: 1 / -1;
+}
+
+.life-spine-body {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.95fr) minmax(0, 1.25fr);
+  column-gap: 1.4rem;
+  row-gap: 0.7rem;
+  align-items: start;
 }
 
 .life-spine-body .photo-frame {
-  margin-bottom: 1.15rem;
-  max-width: 36rem;
+  grid-column: 1;
+  grid-row: 2 / 5;
+  margin: 0;
+  max-width: none;
+  width: 100%;
 }
 
 .life-spine-lead {
+  grid-column: 2;
+  grid-row: 2;
   font-size: 1.15rem;
   font-style: italic;
   line-height: 1.7;
   color: #1A2E44;
-  margin: 0 0 1.15rem;
+  margin: 0;
 }
 
 .life-spine-copy {
+  grid-column: 2;
+  grid-row: 3;
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(14rem, 0.9fr);
-  gap: 1.35rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   align-items: start;
 }
 
@@ -388,5 +404,16 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
   .life-spine-copy {
     grid-template-columns: 1fr;
+  }
+
+  .life-spine-body {
+    grid-template-columns: 1fr;
+  }
+
+  .life-spine-body .photo-frame,
+  .life-spine-lead,
+  .life-spine-copy {
+    grid-column: 1;
+    grid-row: auto;
   }
 }
