@@ -229,3 +229,170 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
         opacity: 1;
     }
 }
+
+/* Year-spine life chapters */
+.life-spine {
+  padding: 5rem 1.5rem 6rem;
+}
+
+.life-spine-inner {
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.life-spine-intro {
+  max-width: 36rem;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.life-spine-intro-text {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #585f65;
+}
+
+.life-spine-stop {
+  display: grid;
+  grid-template-columns: 7.25rem 1.25rem minmax(0, 1fr);
+  column-gap: 1.15rem;
+  align-items: start;
+  margin-bottom: 3.25rem;
+}
+
+.life-spine-year {
+  padding-top: 0.15rem;
+  text-align: left;
+}
+
+.life-spine-date {
+  font-family: "Assistant", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #7C8CA0;
+  margin: 0;
+}
+
+.life-spine-hebrew {
+  margin: 0.28rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #585f65;
+}
+
+.life-spine-rail {
+  position: relative;
+  justify-self: center;
+  width: 0.7rem;
+  min-height: 100%;
+  align-self: stretch;
+}
+
+.life-spine-rail::before {
+  content: "";
+  position: absolute;
+  top: 0.45rem;
+  right: 50%;
+  transform: translateX(50%);
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: #1A2E44;
+}
+
+.life-spine-rail::after {
+  content: "";
+  position: absolute;
+  top: 1.35rem;
+  bottom: -3.25rem;
+  right: 50%;
+  width: 2px;
+  transform: translateX(50%);
+  background: #d5d8dc;
+}
+
+.life-spine-stop-last .life-spine-rail::after {
+  display: none;
+}
+
+.life-spine-title {
+  font-family: "Assistant", sans-serif;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  font-weight: 800;
+  color: #1A2E44;
+  margin: 0 0 1rem;
+}
+
+.life-spine-body .photo-frame {
+  margin-bottom: 1.15rem;
+}
+
+.life-spine-lead {
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #1A2E44;
+  margin: 0 0 1.15rem;
+}
+
+.life-spine-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(14rem, 0.9fr);
+  gap: 1.35rem;
+  align-items: start;
+}
+
+.life-spine-text p {
+  margin: 0 0 0.9rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #585f65;
+}
+
+.life-spine-text p:last-child {
+  margin-bottom: 0;
+}
+
+.life-spine-quote {
+  margin: 0;
+  padding: 1.05rem 1.15rem;
+  background: #fbf9f4;
+  border-right: 3px solid #7C8CA0;
+}
+
+.life-spine-quote p {
+  margin: 0 0 0.65rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #1A2E44;
+}
+
+.life-spine-quote footer {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #7C8CA0;
+}
+
+@media (max-width: 839px) {
+  .life-spine-stop {
+    grid-template-columns: 1fr;
+    row-gap: 0.55rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .life-spine-year {
+    text-align: right;
+  }
+
+  .life-spine-rail {
+    display: none;
+  }
+
+  .life-spine-copy {
+    grid-template-columns: 1fr;
+  }
+}
