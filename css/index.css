@@ -246,13 +246,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   text-align: center;
 }
 
-.life-spine-intro-text {
-  margin-top: 0.75rem;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #585f65;
-}
-
 .life-spine-stop {
   display: grid;
   grid-template-columns: 7.25rem 1.25rem minmax(0, 1fr);
@@ -328,6 +321,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-body .photo-frame {
   margin-bottom: 1.15rem;
+  max-width: 36rem;
 }
 
 .life-spine-lead {
