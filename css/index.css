@@ -374,17 +374,10 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-quote p {
-  margin: 0 0 0.65rem;
+  margin: 0;
   font-size: 1.02rem;
   line-height: 1.65;
   color: #1A2E44;
-}
-
-.life-spine-quote footer {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: #7C8CA0;
 }
 
 @media (max-width: 839px) {
