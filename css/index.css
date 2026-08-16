@@ -332,14 +332,14 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-body {
   display: grid;
-  grid-template-columns: minmax(15rem, 0.95fr) minmax(0, 1.25fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(15rem, 0.95fr);
   column-gap: 1.4rem;
   row-gap: 0.7rem;
   align-items: start;
 }
 
 .life-spine-body .photo-frame {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2 / 5;
   margin: 0;
   max-width: none;
@@ -347,7 +347,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-lead {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2;
   font-size: 1.15rem;
   font-style: italic;
@@ -357,7 +357,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-copy {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 3;
   display: grid;
   grid-template-columns: 1fr;
