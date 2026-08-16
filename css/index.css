@@ -215,6 +215,18 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 .crossfade-frame img:nth-child(3) {
     animation-delay: -8s;
 }
+.crossfade-frame:has(img:nth-child(4)) img {
+    animation-duration: 16s;
+}
+.crossfade-frame:has(img:nth-child(4)) img:nth-child(2) {
+    animation-delay: -4s;
+}
+.crossfade-frame:has(img:nth-child(4)) img:nth-child(3) {
+    animation-delay: -8s;
+}
+.crossfade-frame:has(img:nth-child(4)) img:nth-child(4) {
+    animation-delay: -12s;
+}
 @keyframes crossfade {
     0%, 25% { opacity: 1; }
     33.333%, 91.667% { opacity: 0; }
