@@ -367,6 +367,22 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   width: 100%;
 }
 
+.life-spine-media .photo-frame-inner {
+  position: relative;
+}
+
+.life-spine-media .photo-frame-inner::after {
+  content: "";
+  position: absolute;
+  right: 0.35rem;
+  bottom: 0.35rem;
+  width: 2.15rem;
+  height: 4.05rem;
+  background: url("/AlonSite/media/icons/dam-hamaccabim.png") center / contain no-repeat;
+  pointer-events: none;
+  z-index: 3;
+}
+
 .life-spine-lead {
   grid-column: 2;
   grid-row: 2;
