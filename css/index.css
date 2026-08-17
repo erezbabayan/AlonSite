@@ -221,21 +221,45 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 .crossfade-frame img:nth-child(3) {
     animation-delay: -8s;
 }
-.crossfade-frame:has(img:nth-child(4)) img {
+.crossfade-frame:has(> img:nth-child(4):last-child) img {
     animation-duration: 16s;
 }
-.crossfade-frame:has(img:nth-child(4)) img:nth-child(2) {
+.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(2) {
     animation-delay: -4s;
 }
-.crossfade-frame:has(img:nth-child(4)) img:nth-child(3) {
+.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(3) {
     animation-delay: -8s;
 }
-.crossfade-frame:has(img:nth-child(4)) img:nth-child(4) {
+.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(4) {
     animation-delay: -12s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img {
+    animation-name: crossfade-6;
+    animation-duration: 24s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(2) {
+    animation-delay: -4s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(3) {
+    animation-delay: -8s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(4) {
+    animation-delay: -12s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(5) {
+    animation-delay: -16s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(6) {
+    animation-delay: -20s;
 }
 @keyframes crossfade {
     0%, 25% { opacity: 1; }
     33.333%, 91.667% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes crossfade-6 {
+    0%, 12.5% { opacity: 1; }
+    16.666%, 95.833% { opacity: 0; }
     100% { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
