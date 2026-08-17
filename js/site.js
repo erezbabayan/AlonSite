@@ -12,26 +12,108 @@
 
   const CANDLES_PAGE_SIZE = 18; // cards per "show more" batch, fits 3 grid columns x 6 rows
   let visibleCandleCount = CANDLES_PAGE_SIZE;
+  const CANDLES_LOCAL_KEY = "alon-memorial-candles";
+
+  function siteRoot() {
+    const el = document.querySelector('script[src*="site.js"]');
+    if (el && el.src) {
+      return el.src.replace(/\/js\/site\.js(?:\?.*)?$/, "");
+    }
+    return "";
+  }
+
+  function readLocalCandles() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(CANDLES_LOCAL_KEY) || "[]");
+      return Array.isArray(raw) ? raw : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function writeLocalCandles(list) {
+    try {
+      localStorage.setItem(CANDLES_LOCAL_KEY, JSON.stringify(list));
+    } catch (e) {
+      /* private mode / quota */
+    }
+  }
+
+  function candleKey(candle) {
+    return [candle.date || "", candle.name || "", candle.message || ""].join("\n");
+  }
+
+  function mergeCandles(remote, local) {
+    const out = [];
+    const seen = {};
+    (remote || []).concat(local || []).forEach((candle) => {
+      if (!candle || !candle.name) return;
+      const key = candleKey(candle);
+      if (seen[key]) return;
+      seen[key] = true;
+      out.push(candle);
+    });
+    out.sort(function (a, b) {
+      return String(a.date || "").localeCompare(String(b.date || ""));
+    });
+    return out;
+  }
+
+  function fetchJsonArray(url) {
+    return fetch(url).then(function (res) {
+      if (!res.ok) throw new Error("request failed");
+      return res.json();
+    }).then(function (data) {
+      return Array.isArray(data) ? data : [];
+    });
+  }
 
   function fetchCandles() {
-    return fetch("/api/candles")
-      .then((res) => {
-        if (!res.ok) throw new Error("request failed");
-        return res.json();
+    const root = siteRoot();
+    return fetchJsonArray(root + "/api/candles")
+      .catch(function () {
+        return fetchJsonArray(root + "/api/candles.php");
       })
-      .then((data) => (Array.isArray(data) ? data : []))
-      .catch(() => []);
+      .catch(function () {
+        return [];
+      })
+      .then(function (remote) {
+        return mergeCandles(remote, readLocalCandles());
+      });
   }
 
   function postCandle(name, message) {
-    return fetch("/api/candles", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, message }),
-    }).then((res) => {
-      if (!res.ok) throw new Error("request failed");
-      return res.json();
-    });
+    const entry = { name: name, message: message, date: new Date().toISOString() };
+    const root = siteRoot();
+    const body = JSON.stringify({ name: name, message: message });
+    const headers = { "Content-Type": "application/json" };
+
+    function saveLocal(saved) {
+      const list = readLocalCandles();
+      list.push(saved);
+      writeLocalCandles(list);
+      return saved;
+    }
+
+    return fetch(root + "/api/candles", { method: "POST", headers: headers, body: body })
+      .then(function (res) {
+        if (!res.ok) throw new Error("request failed");
+        return res.json();
+      })
+      .catch(function () {
+        return fetch(root + "/api/candles.php", { method: "POST", headers: headers, body: body }).then(function (res) {
+          if (!res.ok) throw new Error("request failed");
+          return res.json();
+        });
+      })
+      .then(function (saved) {
+        const ok = saved && saved.name ? saved : entry;
+        saveLocal(ok);
+        return ok;
+      })
+      .catch(function () {
+        return saveLocal(entry);
+      });
   }
 
   function escapeHtml(str) {
