@@ -180,22 +180,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     animation: candle-in 1400ms ease-out;
 }
 
-/* A slow, quiet flicker for flame glyphs — never bouncy, just alive. */
-@keyframes flame-flicker {
-    0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
-    25% { transform: scale(1.05) translateY(-1px); opacity: 0.92; }
-    50% { transform: scale(0.97) translateY(0); opacity: 1; }
-    75% { transform: scale(1.03) translateY(-0.5px); opacity: 0.95; }
-}
-.flame-icon {
-    display: inline-block;
-    transform-origin: 50% 85%;
-    animation: flame-flicker 2600ms ease-in-out infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-    .flame-icon { animation: none; }
-}
-
 /* Photos quietly crossfading in one frame instead of a hard cut: each
    holds for ~3s, dissolves into the next over ~1s, on a 12s loop shared
    evenly across 3 images (4s each). Keyframe endpoints are equal (opacity 1
