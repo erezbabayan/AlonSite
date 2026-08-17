@@ -180,22 +180,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     animation: candle-in 1400ms ease-out;
 }
 
-/* A slow, quiet flicker for flame glyphs — never bouncy, just alive. */
-@keyframes flame-flicker {
-    0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
-    25% { transform: scale(1.05) translateY(-1px); opacity: 0.92; }
-    50% { transform: scale(0.97) translateY(0); opacity: 1; }
-    75% { transform: scale(1.03) translateY(-0.5px); opacity: 0.95; }
-}
-.flame-icon {
-    display: inline-block;
-    transform-origin: 50% 85%;
-    animation: flame-flicker 2600ms ease-in-out infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-    .flame-icon { animation: none; }
-}
-
 /* Photos quietly crossfading in one frame instead of a hard cut: each
    holds for ~3s, dissolves into the next over ~1s, on a 12s loop shared
    evenly across 3 images (4s each). Keyframe endpoints are equal (opacity 1
@@ -207,7 +191,13 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 32%;
+    transform-origin: center 32%;
     animation: crossfade 12s ease-in-out infinite;
+}
+.life-spine-media img.is-portrait {
+    object-position: center 18%;
+    transform-origin: center 18%;
 }
 .crossfade-frame img:nth-child(2) {
     animation-delay: -4s;
@@ -215,9 +205,45 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 .crossfade-frame img:nth-child(3) {
     animation-delay: -8s;
 }
+.crossfade-frame:has(> img:nth-child(4):last-child) img {
+    animation-duration: 16s;
+}
+.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(2) {
+    animation-delay: -4s;
+}
+.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(3) {
+    animation-delay: -8s;
+}
+.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(4) {
+    animation-delay: -12s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img {
+    animation-name: crossfade-6;
+    animation-duration: 24s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(2) {
+    animation-delay: -4s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(3) {
+    animation-delay: -8s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(4) {
+    animation-delay: -12s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(5) {
+    animation-delay: -16s;
+}
+.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(6) {
+    animation-delay: -20s;
+}
 @keyframes crossfade {
     0%, 25% { opacity: 1; }
     33.333%, 91.667% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes crossfade-6 {
+    0%, 12.5% { opacity: 1; }
+    16.666%, 95.833% { opacity: 0; }
     100% { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -244,6 +270,29 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   max-width: 36rem;
   margin: 0 auto 3.5rem;
   text-align: center;
+}
+
+.life-spine-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.life-spine-heading-text {
+  text-align: center;
+}
+
+.life-spine-emblem {
+  display: block;
+  height: 4.5rem;
+  width: auto;
+  flex-shrink: 0;
+  filter: none;
 }
 
 .life-spine-range {
@@ -332,22 +381,25 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-body {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(15rem, 0.95fr);
+  grid-template-columns: minmax(15rem, 0.95fr) minmax(0, 1.25fr);
   column-gap: 1.4rem;
   row-gap: 0.7rem;
   align-items: start;
 }
 
-.life-spine-body .photo-frame {
-  grid-column: 2;
+.life-spine-media {
+  grid-column: 1;
   grid-row: 2 / 5;
+}
+
+.life-spine-body .photo-frame {
   margin: 0;
   max-width: none;
   width: 100%;
 }
 
 .life-spine-lead {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2;
   font-size: 1.15rem;
   font-style: italic;
@@ -357,7 +409,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-copy {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 3;
   display: grid;
   grid-template-columns: 1fr;
@@ -377,17 +429,31 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-quote {
-  margin: 0;
-  padding: 1.05rem 1.15rem;
-  background: #fbf9f4;
-  border-right: 3px solid #7C8CA0;
+  margin: 0.45rem 0 0;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .life-spine-quote p {
   margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.65;
+  padding: 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.5;
   color: #1A2E44;
+  background: none;
+  outline: none;
+}
+
+.life-spine-quote footer {
+  display: block;
+  margin-top: 0.22rem;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #7C8CA0;
 }
 
 @media (max-width: 839px) {
@@ -413,6 +479,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     grid-template-columns: 1fr;
   }
 
+  .life-spine-media,
   .life-spine-body .photo-frame,
   .life-spine-lead,
   .life-spine-copy {
