@@ -152,3 +152,74 @@ body::before {
 .category-pill.active .pill-count {
     opacity: 0.65;
 }
+
+/* ---------------------------------------------------------------------
+   Memorial bouquet icon ("דם המכבים") — replaces the candle-flame glyph.
+   A slow, quiet pulse on each cluster of buds, a gentle sway on each
+   branch, and faint embers drifting up from the buds — alive, not bouncy.
+   --------------------------------------------------------------------- */
+.memorial-bouquet {
+    display: inline-block;
+    animation: mb-glow 2400ms ease-in-out infinite;
+}
+.memorial-bouquet .mb-bud,
+.memorial-bouquet .mb-branch,
+.memorial-bouquet .mb-ember {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+@keyframes mb-glow {
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(231, 162, 60, 0.3)); }
+    50% { filter: drop-shadow(0 0 7px rgba(231, 162, 60, 0.75)); }
+}
+@keyframes mb-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.18); opacity: 0.82; }
+}
+@keyframes mb-sway-a {
+    0%, 100% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
+}
+@keyframes mb-sway-b {
+    0%, 100% { transform: rotate(4deg); }
+    50% { transform: rotate(-4deg); }
+}
+@keyframes mb-ember {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-18px) scale(0.3); opacity: 0; }
+}
+.memorial-bouquet .mb-bud {
+    animation: mb-pulse 1600ms ease-in-out infinite;
+}
+.memorial-bouquet .mb-bud.mb-d2 { animation-duration: 1900ms; animation-delay: 400ms; }
+.memorial-bouquet .mb-bud.mb-d3 { animation-duration: 1400ms; animation-delay: 800ms; }
+.memorial-bouquet .mb-bud.mb-d4 { animation-duration: 1750ms; animation-delay: 1100ms; }
+.memorial-bouquet .mb-branch-a { animation: mb-sway-a 3400ms ease-in-out infinite; }
+.memorial-bouquet .mb-branch-b { animation: mb-sway-b 3100ms ease-in-out infinite; }
+.memorial-bouquet .mb-branch-c { animation: mb-sway-b 3800ms ease-in-out infinite; }
+.memorial-bouquet .mb-ember {
+    animation: mb-ember 1600ms ease-in infinite;
+}
+.memorial-bouquet .mb-e2 { animation-delay: 550ms; }
+.memorial-bouquet .mb-e3 { animation-delay: 1050ms; }
+@media (prefers-reduced-motion: reduce) {
+    .memorial-bouquet,
+    .memorial-bouquet .mb-bud,
+    .memorial-bouquet .mb-branch,
+    .memorial-bouquet .mb-ember {
+        animation: none;
+    }
+}
+
+/* Same idea, but for the real דם המכבים photo asset: held still (no
+   scale/sway) and just the same warm glow breathing as the SVG version. */
+.memorial-photo {
+    display: inline-block;
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+    animation: mb-glow 2400ms ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+    .memorial-photo { animation: none; }
+}

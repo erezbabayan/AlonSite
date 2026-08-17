@@ -1,23 +1,5 @@
 /* disaster.html — helicopter disaster page only. Loaded after css/shared.css. */
 
-/* A slow, quiet flicker for the eternal-flame glyph — never bouncy, just
-   alive. Mirrors css/index.css's .flame-icon (page-specific stylesheets
-   don't share rules, so it's duplicated here on purpose). */
-@keyframes flame-flicker {
-    0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
-    25% { transform: scale(1.05) translateY(-1px); opacity: 0.92; }
-    50% { transform: scale(0.97) translateY(0); opacity: 1; }
-    75% { transform: scale(1.03) translateY(-0.5px); opacity: 0.95; }
-}
-.flame-icon {
-    display: inline-block;
-    transform-origin: 50% 85%;
-    animation: flame-flicker 2600ms ease-in-out infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-    .flame-icon { animation: none; }
-}
-
 /* Names read as an engraved wall — a flowing text column rather than a grid
    of boxed cards, so short and long entries pack naturally per row. */
 .names-columns {

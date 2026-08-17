@@ -12,26 +12,108 @@
 
   const CANDLES_PAGE_SIZE = 18; // cards per "show more" batch, fits 3 grid columns x 6 rows
   let visibleCandleCount = CANDLES_PAGE_SIZE;
+  const CANDLES_LOCAL_KEY = "alon-memorial-candles";
+
+  function siteRoot() {
+    const el = document.querySelector('script[src*="site.js"]');
+    if (el && el.src) {
+      return el.src.replace(/\/js\/site\.js(?:\?.*)?$/, "");
+    }
+    return "";
+  }
+
+  function readLocalCandles() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(CANDLES_LOCAL_KEY) || "[]");
+      return Array.isArray(raw) ? raw : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function writeLocalCandles(list) {
+    try {
+      localStorage.setItem(CANDLES_LOCAL_KEY, JSON.stringify(list));
+    } catch (e) {
+      /* private mode / quota */
+    }
+  }
+
+  function candleKey(candle) {
+    return [candle.date || "", candle.name || "", candle.message || ""].join("\n");
+  }
+
+  function mergeCandles(remote, local) {
+    const out = [];
+    const seen = {};
+    (remote || []).concat(local || []).forEach((candle) => {
+      if (!candle || !candle.name) return;
+      const key = candleKey(candle);
+      if (seen[key]) return;
+      seen[key] = true;
+      out.push(candle);
+    });
+    out.sort(function (a, b) {
+      return String(a.date || "").localeCompare(String(b.date || ""));
+    });
+    return out;
+  }
+
+  function fetchJsonArray(url) {
+    return fetch(url).then(function (res) {
+      if (!res.ok) throw new Error("request failed");
+      return res.json();
+    }).then(function (data) {
+      return Array.isArray(data) ? data : [];
+    });
+  }
 
   function fetchCandles() {
-    return fetch("/api/candles")
-      .then((res) => {
-        if (!res.ok) throw new Error("request failed");
-        return res.json();
+    const root = siteRoot();
+    return fetchJsonArray(root + "/api/candles")
+      .catch(function () {
+        return fetchJsonArray(root + "/api/candles.php");
       })
-      .then((data) => (Array.isArray(data) ? data : []))
-      .catch(() => []);
+      .catch(function () {
+        return [];
+      })
+      .then(function (remote) {
+        return mergeCandles(remote, readLocalCandles());
+      });
   }
 
   function postCandle(name, message) {
-    return fetch("/api/candles", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, message }),
-    }).then((res) => {
-      if (!res.ok) throw new Error("request failed");
-      return res.json();
-    });
+    const entry = { name: name, message: message, date: new Date().toISOString() };
+    const root = siteRoot();
+    const body = JSON.stringify({ name: name, message: message });
+    const headers = { "Content-Type": "application/json" };
+
+    function saveLocal(saved) {
+      const list = readLocalCandles();
+      list.push(saved);
+      writeLocalCandles(list);
+      return saved;
+    }
+
+    return fetch(root + "/api/candles", { method: "POST", headers: headers, body: body })
+      .then(function (res) {
+        if (!res.ok) throw new Error("request failed");
+        return res.json();
+      })
+      .catch(function () {
+        return fetch(root + "/api/candles.php", { method: "POST", headers: headers, body: body }).then(function (res) {
+          if (!res.ok) throw new Error("request failed");
+          return res.json();
+        });
+      })
+      .then(function (saved) {
+        const ok = saved && saved.name ? saved : entry;
+        saveLocal(ok);
+        return ok;
+      })
+      .catch(function () {
+        return saveLocal(entry);
+      });
   }
 
   function escapeHtml(str) {
@@ -52,7 +134,7 @@
       <div class="candle-entry bg-surface-container-low rounded-lg p-6 h-full flex flex-col${isNewest ? " candle-entry-new" : ""}">
         <div class="flex justify-between items-baseline gap-4 mb-2">
           <span class="flex items-center gap-2 font-headline font-bold text-primary">
-            <span class="material-symbols-outlined flame-icon text-accent-gold text-base" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
+            <img src="/media/icons/dam-hamacabim.png" alt="דם המכבים" class="memorial-photo text-accent-gold text-xl"/>
             ${escapeHtml(candle.name)}
           </span>
           <span class="font-label text-xs text-secondary" dir="ltr">${formatDate(candle.date)}</span>
@@ -78,7 +160,7 @@
 
     if (candles.length === 0) {
       listEl.innerHTML =
-        '<p class="col-span-full text-center text-secondary font-body py-6">היו הראשונים להדליק כאן נר ולהשאיר מילה לזכרו.</p>';
+        '<p class="col-span-full text-center text-secondary font-body py-6">היו הראשונים להשאיר כאן זיכרון ומילה לזכרו.</p>';
       updateCandleLoadMoreButton(0, 0);
       return;
     }
@@ -133,7 +215,7 @@
         if (listEl) listEl.scrollIntoView({ behavior: "smooth", block: "center" });
       })
       .catch(() => {
-        window.alert("לא הצלחנו לשמור את הנר. נסו שוב בעוד רגע.");
+        window.alert("לא הצלחנו לשמור את הזיכרון. נסו שוב בעוד רגע.");
       })
       .then(() => {
         if (submitBtn) submitBtn.disabled = false;
@@ -229,21 +311,19 @@
   }
 
   // ---------------------------------------------------------------------
-  // Ambient background song (local file): autoplays muted on load (the only
-  // zero-click autoplay browsers allow), one click/scroll unmutes it. To keep
-  // it playing across page navigations (index <-> gallery are separate page
-  // loads, not one app), the current time and "has this visitor unmuted
-  // before" flag are persisted per tab, so the next page picks the song back
-  // up where it left off instead of restarting from silence.
+  // Ambient background song (local file): stays paused/muted until the
+  // visitor explicitly clicks the song widget — no autoplay on entry. To
+  // keep it playing across page navigations (index <-> gallery are separate
+  // page loads, not one app), the current time and "is this visitor playing
+  // it" flag are persisted per tab, so the next page picks the song back up
+  // where it left off instead of restarting from the beginning.
   // ---------------------------------------------------------------------
 
   const SONG_STATE_KEY = "alon-bibian-song-state";
+  // Playlist plays in order and loops back to the first track after the last.
+  const SONG_PLAYLIST = ["/audio/atzlenu-bagan.mp3", "/audio/tachzor.mp3"];
   const BG_AUDIO_VOLUME = 0.5;
   const SONG_SAVE_INTERVAL_MS = 1000; // how often timeupdate persists the resume point
-  // First interaction anywhere on the page unmutes the song — this is the
-  // closest thing to "automatic" that browsers allow on a visitor's very
-  // first page (audible autoplay with zero interaction is blocked outright).
-  const UNMUTE_TRIGGER_EVENTS = ["click", "touchstart", "keydown", "scroll", "wheel"];
 
   function loadSongState() {
     try {
@@ -275,8 +355,19 @@
     const state = loadSongState();
     audio.volume = BG_AUDIO_VOLUME;
 
+    let trackIndex =
+      Number.isInteger(state.track) && state.track >= 0 && state.track < SONG_PLAYLIST.length
+        ? state.track
+        : 0;
+    audio.src = SONG_PLAYLIST[trackIndex];
+
     function persist(extra) {
-      saveSongState({ time: audio.currentTime, unmuted: !audio.muted, ...extra });
+      saveSongState({
+        time: audio.currentTime,
+        playing: !audio.paused && !audio.muted,
+        track: trackIndex,
+        ...extra,
+      });
     }
 
     // Resume where the previous page left off instead of starting from 0,
@@ -290,55 +381,48 @@
       else audio.addEventListener("loadedmetadata", applyResume, { once: true });
     }
 
-    // Once a visitor has unmuted during this browsing session, later page
-    // loads on the same site try to resume unmuted right away — browsers
-    // allow that once a user has already interacted with audio on the
-    // origin. If the browser still blocks it, fall back to muted + the
-    // first-interaction listener below, same as a first-ever visit.
-    const wantsUnmuted = !!state.unmuted;
-    audio.muted = !wantsUnmuted;
-    const playAttempt = audio.play();
-    if (playAttempt && typeof playAttempt.catch === "function") {
-      playAttempt.catch(() => {
-        audio.muted = true;
-        updateSongIcons(true);
-      });
-    }
-    updateSongIcons(audio.muted);
+    // No autoplay: the song stays paused/muted on load. If the visitor was
+    // already playing it before navigating to this page, resume unmuted
+    // playback (browsers allow that once the origin has had a real
+    // interaction); otherwise stay silent until the widget is clicked.
+    audio.muted = true;
+    updateSongIcons(true);
 
     function attemptPlay() {
       const p = audio.play();
       if (p && typeof p.catch === "function") p.catch(() => {});
     }
 
-    function unmuteNow() {
-      if (audio.paused) attemptPlay();
+    if (state.playing) {
       audio.muted = false;
+      attemptPlay();
       updateSongIcons(false);
-      persist();
-    }
-
-    const autoUnmute = () => {
-      unmuteNow();
-      UNMUTE_TRIGGER_EVENTS.forEach((evt) => document.removeEventListener(evt, autoUnmute));
-    };
-    if (audio.muted) {
-      UNMUTE_TRIGGER_EVENTS.forEach((evt) => {
-        document.addEventListener(evt, autoUnmute, { once: true, passive: true });
-      });
     }
 
     function toggle() {
-      if (audio.paused) attemptPlay();
-      audio.muted = !audio.muted;
-      updateSongIcons(audio.muted);
+      if (audio.paused || audio.muted) {
+        attemptPlay();
+        audio.muted = false;
+        updateSongIcons(false);
+      } else {
+        audio.pause();
+        audio.muted = true;
+        updateSongIcons(true);
+      }
       persist();
-      // The widget itself counts as the "first interaction" too — don't let
-      // the page-wide listener immediately re-fire and flip it right back.
-      UNMUTE_TRIGGER_EVENTS.forEach((evt) => document.removeEventListener(evt, autoUnmute));
     }
 
     if (widget) widget.addEventListener("click", toggle);
+
+    // Advance to the next track in the playlist when one ends, looping back
+    // to the first track after the last.
+    audio.addEventListener("ended", () => {
+      trackIndex = (trackIndex + 1) % SONG_PLAYLIST.length;
+      audio.src = SONG_PLAYLIST[trackIndex];
+      audio.currentTime = 0;
+      attemptPlay();
+      persist({ time: 0 });
+    });
 
     // Pause the ambient song whenever a memorial video or audio clip plays
     // (e.g. the videos/sounds section on the letters/sections hub), so the
@@ -648,5 +732,17 @@
     setupMemorialDates();
     setupRevealAnimations();
     setupHomeNavScrollSpy();
+    setupPortraitPhotoFocus();
   });
+
+  function setupPortraitPhotoFocus() {
+    document.querySelectorAll(".life-spine-media img").forEach((img) => {
+      const mark = () => {
+        if (!img.naturalWidth) return;
+        img.classList.toggle("is-portrait", img.naturalHeight > img.naturalWidth);
+      };
+      if (img.complete) mark();
+      else img.addEventListener("load", mark);
+    });
+  }
 })();
