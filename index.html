@@ -79,7 +79,10 @@
 <!-- Hero Section -->
 <section class="relative h-[100svh] max-h-[100svh] overflow-hidden flex flex-col px-3 md:px-6" data-nav-section="home" id="hero">
 <div class="absolute inset-0 z-0 hero-bg">
-<img alt="אלון, סגן בחטיבת גולני, בבופור" class="hero-bg-img w-full h-full object-cover object-[38%_28%]" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
+<img alt="אלון, סגן בחטיבת גולני, בבופור" class="hero-bg-img hero-bg-img-active w-full h-full object-cover object-[38%_28%]" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg"/>
+<img alt="אלון בבופור" class="hero-bg-img w-full h-full object-cover object-[38%_28%]" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(20).jpg"/>
+<img alt="אלון בבופור" class="hero-bg-img w-full h-full object-cover object-[50%_35%]" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(39).jpg"/>
+<img alt="אלון בבופור" class="hero-bg-img w-full h-full object-cover object-[45%_25%]" src="/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(37).jpg"/>
 <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_42%,rgba(3,25,46,0.78),transparent_75%)]"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-[#03192e]/94 via-[#03192e]/30 to-[#03192e]/50"></div>
 </div>
@@ -92,8 +95,10 @@
 <p class="hero-line hero-detail" id="years-since-note">29 שנים לאסון המסוקים</p>
 <p class="hero-line hero-detail hero-remembrance">אלון-אותך לעולם ועד נזכור</p>
 <div class="hero-quote-block">
+<div class="hero-quote-text">
 <p class="hero-line hero-quote">"אני חלק בלתי נפרד מהעם שלי ותחושת הכאב הפעם עמוקה יותר מכל פעם. איני יודע מהי הסיבה הספציפית, אולי זה הצבא, אולי מכלול של דברים אחרים, אך אין לכך חשיבות. העיקר שאני מרגיש שייך לעם ישראל. ברגעים הקשים האלו, ואני בטוח שביחד, ורק ורק ביחד, נוכל לכל אויב"</p>
 <p class="hero-line hero-quote-source">מתוך מכתבו של אלון לרב רפי פרץ</p>
+</div>
 </div>
 </div>
 </div>
@@ -410,7 +415,7 @@
 </div>
 </section>
 </main>
-<footer class="w-full mt-20 bg-[#e6e9ec] py-12 px-8 flex flex-col items-center gap-6 rtl rounded-t-xl transition-all duration-300">
+<footer class="w-full mt-0 bg-[#e6e9ec] py-12 px-8 flex flex-col items-center gap-6 rtl rounded-t-xl transition-all duration-300">
 <div class="text-lg font-serif font-semibold text-[#1A2E44]">אלון אברהם-חי בביאן הי״ד</div>
 <div class="text-xs font-label text-secondary text-center mt-4">© דף הנצחה לזכרו של אלון. לזכר עולם.</div>
 <div class="text-xs font-label text-secondary text-center">תודתנו לחברת HostWeb אחסון אתרים</div>
@@ -456,4 +461,18 @@
 </div>
 </div>
 <script src="/js/site.js?v=20260817x"></script>
+<script>
+(function () {
+  var slides = document.querySelectorAll('#hero .hero-bg-img');
+  var quoteBlock = document.querySelector('#hero .hero-quote-text');
+  if (slides.length < 2) return;
+  var i = 0;
+  setInterval(function () {
+    slides[i].classList.remove('hero-bg-img-active');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('hero-bg-img-active');
+    if (quoteBlock) quoteBlock.classList.toggle('hero-quote-hidden', i >= 2);
+  }, 5000);
+})();
+</script>
 </body></html>
