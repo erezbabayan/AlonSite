@@ -3,6 +3,23 @@
 /* Hero: previous text size; full-bleed background photo */
 #hero .hero-bg-img {
   filter: saturate(0.88) contrast(1.02) brightness(0.96);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-out;
+}
+
+#hero .hero-bg-img-active {
+  opacity: 1;
+}
+
+#hero .hero-quote-text {
+  transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+}
+
+#hero .hero-quote-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (min-width: 768px) {

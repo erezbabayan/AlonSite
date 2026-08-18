@@ -6,16 +6,31 @@
     transition: box-shadow 400ms ease-out;
 }
 
-/* Letters read as kept keepsakes, not UI cards: warm parchment tone
-   instead of stark white, and a soft handwritten-pile tilt that settles
-   flat on hover/focus. */
+/* Letters read as kept keepsakes, not UI cards: warm parchment tone,
+   sitting on the surrounding surface-container-low grid the way the
+   design system's tonal-layering rule calls for (a lighter card on a
+   slightly deeper background) instead of a drop shadow doing the lifting. */
 .letter-card {
     position: relative;
     background: linear-gradient(180deg, #fffdf8 0%, #faf6ea 100%);
     border-radius: 0.4rem;
-    box-shadow: 0 14px 30px rgba(27, 28, 25, 0.08);
-    transition: transform 400ms ease-out, box-shadow 400ms ease-out;
+    box-shadow: inset 0 0 0 1px rgba(124, 140, 160, 0.14);
+    transition: transform 400ms ease-out, box-shadow 400ms ease-out, background-color 400ms ease-out;
     overflow: hidden;
+}
+/* A folded top corner, like a kept page — quiet nod to "this is a real
+   letter" without leaning on shadow for depth. */
+.letter-fold {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: linear-gradient(135deg, transparent 50%, rgba(124, 140, 160, 0.16) 50%);
+    pointer-events: none;
+}
+.letter-tag {
+    padding-block: 0.15rem;
 }
 .letter-body {
     font-family: "Assistant", sans-serif;
@@ -27,15 +42,10 @@
     font-style: italic;
     font-weight: 600;
 }
-/* Letters grid: a soft handwritten-pile tilt that settles flat on
-   hover/focus. */
-.letter-grid .letter-card:nth-child(3n+1) { transform: rotate(-0.4deg); }
-.letter-grid .letter-card:nth-child(3n+2) { transform: rotate(0.3deg); }
-.letter-grid .letter-card:nth-child(3n+3) { transform: rotate(-0.2deg); }
 .letter-grid .letter-card:hover,
 .letter-grid .letter-card:focus-within {
-    transform: rotate(0deg) translateY(-3px);
-    box-shadow: 0 24px 44px rgba(27, 28, 25, 0.14);
+    transform: translateY(-3px);
+    box-shadow: inset 0 0 0 1px rgba(124, 140, 160, 0.28), 0 20px 40px rgba(27, 28, 25, 0.06);
 }
 .line-clamp-5 {
     display: -webkit-box;
@@ -59,6 +69,7 @@
     opacity: 0;
     transform: scale(0.97) translateY(6px);
     transition: opacity 300ms ease-out, transform 300ms ease-out;
+    box-shadow: 0 20px 40px rgba(27, 28, 25, 0.14);
 }
 #reader-card.reader-card-visible {
     opacity: 1;
