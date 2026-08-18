@@ -78,3 +78,72 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+/* The two "where does this go" links under the letters preview card —
+   each reads as its own small destination card (icon + title + one-line
+   description of what's on the other side) instead of a bare text link,
+   so it's clear before the click where "כל 54 המכתבים" vs. "סיפורים על
+   אלון" actually leads. */
+.section-link-card {
+    transition: background-color 300ms ease-out, transform 300ms ease-out;
+}
+.section-link-card:hover,
+.section-link-card:focus-visible {
+    background-color: #dcdfe3;
+    transform: translateY(-2px);
+}
+.section-link-card .material-symbols-outlined:last-child {
+    transition: transform 300ms ease-out;
+}
+.section-link-card:hover .material-symbols-outlined:last-child {
+    transform: translateX(-3px);
+}
+@media (prefers-reduced-motion: reduce) {
+    .section-link-card,
+    .section-link-card .material-symbols-outlined:last-child {
+        transition: none;
+    }
+}
+
+/* Video thumbnails: give the poster frame a YouTube-style preview —
+   a centered play button sitting over the still frame, gone once playing. */
+.video-thumb {
+    position: relative;
+}
+.video-thumb video {
+    display: block;
+}
+.video-thumb-play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 9999px;
+    background: rgba(26, 46, 68, 0.72);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 300ms ease-out, background 300ms ease-out, opacity 300ms ease-out;
+}
+.video-thumb-play svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #fff;
+    margin-inline-start: 3px;
+}
+.video-thumb:hover .video-thumb-play {
+    transform: scale(1.08);
+    background: rgba(26, 46, 68, 0.88);
+}
+.video-thumb.is-playing .video-thumb-play {
+    opacity: 0;
+    pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    .video-thumb-play { transition: none; }
+}

@@ -82,9 +82,10 @@
     const dateText = formatDate(letter);
     return `
       <button data-index="${index}" class="letter-card text-right p-6 md:p-7 flex flex-col">
+        <span class="letter-fold" aria-hidden="true"></span>
         <div class="flex items-start justify-between gap-3 mb-4">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-accent-gold/10 text-accent-gold font-label text-[0.6rem] uppercase tracking-[0.16em] font-bold">${escapeHtml(categoryLabel(letter.category))}</span>
-          ${dateText ? `<span class="font-label text-xs text-secondary shrink-0 mt-1" dir="ltr">${escapeHtml(dateText)}</span>` : ""}
+          <span class="letter-tag font-label text-[0.62rem] uppercase tracking-[0.18em] font-bold text-accent-gold">${escapeHtml(categoryLabel(letter.category))}</span>
+          ${dateText ? `<span class="font-label text-xs text-secondary shrink-0 mt-0.5" dir="ltr">${escapeHtml(dateText)}</span>` : ""}
         </div>
         <h3 class="text-lg font-headline font-bold text-primary mb-2">${escapeHtml(letter.title)}</h3>
         ${meta}
