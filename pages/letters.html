@@ -88,21 +88,10 @@
 </div>
 </section>
 
-<!-- Letters Wheel -->
+<!-- Letters Grid -->
 <section class="max-w-7xl mx-auto px-8 py-16">
 <p id="letters-count" class="text-center font-label text-xs tracking-[0.25em] uppercase text-secondary/70 mb-10"></p>
-<div class="wheel-shell" id="wheel-shell">
-<button aria-label="סובבו למכתב הקודם" class="wheel-nav hidden sm:flex" id="wheel-prev">
-<span class="material-symbols-outlined text-2xl">chevron_right</span>
-</button>
-<div class="wheel-stage" id="wheel-stage">
-<div class="wheel-ring" id="wheel-ring"></div>
-</div>
-<button aria-label="סובבו למכתב הבא" class="wheel-nav hidden sm:flex" id="wheel-next">
-<span class="material-symbols-outlined text-2xl">chevron_left</span>
-</button>
-</div>
-<p class="text-center font-label text-xs tracking-wide text-secondary/60 mt-7">גררו לסובב את הגלגל, ולחצו על מכתב להגדלה ולקריאה מלאה</p>
+<div class="letter-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="letters-grid"></div>
 <div class="hidden text-center py-24 text-secondary font-body text-lg" id="letters-empty">
     לא נמצאו מכתבים בקטגוריה זו.
 </div>
@@ -170,8 +159,7 @@
 <span class="material-symbols-outlined text-5xl">chevron_left</span>
 </button>
 <div class="max-w-2xl w-full mx-auto flex flex-col items-center gap-5">
-<div class="reader-flip-stage w-full" id="reader-flip-stage">
-<div class="letter-card w-full overflow-y-auto p-8 md:p-10" id="reader-card">
+<div class="letter-card w-full max-h-[75vh] overflow-y-auto p-8 md:p-10" id="reader-card">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div>
 <p class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-secondary/60 mb-1" id="reader-category"></p>
@@ -180,9 +168,8 @@
 <span class="font-label text-xs text-secondary shrink-0 mt-1" dir="ltr" id="reader-date"></span>
 </div>
 <p class="font-label text-xs text-secondary/80 mb-6" id="reader-meta"></p>
-<div class="letter-body text-on-surface-variant text-base" id="reader-body"></div>
+<div class="letter-body text-on-surface-variant text-lg" id="reader-body"></div>
 <p class="letter-signature text-primary text-right mt-6" id="reader-signature"></p>
-</div>
 </div>
 <p id="reader-counter" dir="ltr" class="font-label text-white/80 text-xs tracking-wide"></p>
 </div>
