@@ -114,7 +114,36 @@ function serveStaticFile(req, res) {
       return;
     }
     var ext = path.extname(filePath).toLowerCase();
-    res.writeHead(200, { "Content-Type": MIME_TYPES[ext] || "application/octet-stream" });
+    var contentType = MIME_TYPES[ext] || "application/octet-stream";
+    var range = req.headers.range;
+
+    // Video/audio scrubbing relies on the browser being able to request
+    // arbitrary byte ranges; without 206 support, seeking is limited to
+    // whatever has already downloaded.
+    if (range) {
+      var match = /^bytes=(\d*)-(\d*)$/.exec(range);
+      var start = match && match[1] ? parseInt(match[1], 10) : 0;
+      var end = match && match[2] ? parseInt(match[2], 10) : stats.size - 1;
+      if (!match || start > end || end >= stats.size) {
+        res.writeHead(416, { "Content-Range": "bytes */" + stats.size });
+        res.end();
+        return;
+      }
+      res.writeHead(206, {
+        "Content-Type": contentType,
+        "Content-Length": end - start + 1,
+        "Content-Range": "bytes " + start + "-" + end + "/" + stats.size,
+        "Accept-Ranges": "bytes",
+      });
+      fs.createReadStream(filePath, { start: start, end: end }).pipe(res);
+      return;
+    }
+
+    res.writeHead(200, {
+      "Content-Type": contentType,
+      "Content-Length": stats.size,
+      "Accept-Ranges": "bytes",
+    });
     fs.createReadStream(filePath).pipe(res);
   });
 }
