@@ -3799,6 +3799,55 @@ window.GALLERY_DATA = {
           "alt": "הנצחה - 02 הנצחה (56)",
           "w": 637,
           "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(57).jpg",
+          "thumb": "/AlonSite/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(57).jpg",
+          "alt": "הנצחה - 02 הנצחה (57)",
+          "w": 667,
+          "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg",
+          "thumb": "/AlonSite/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg",
+          "alt": "הנצחה - 02 הנצחה (58)",
+          "w": 900,
+          "h": 840
+        },
+        {
+          "full": "/AlonSite/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(59).jpg",
+          "thumb": "/AlonSite/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(59).jpg",
+          "alt": "הנצחה - 02 הנצחה (59)",
+          "w": 900,
+          "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(60).jpg",
+          "thumb": "/AlonSite/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(60).jpg",
+          "alt": "הנצחה - 02 הנצחה (60)",
+          "w": 675,
+          "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(61).jpg",
+          "thumb": "/AlonSite/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(61).jpg",
+          "alt": "הנצחה - 02 הנצחה (61)",
+          "w": 675,
+          "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(62).jpg",
+          "thumb": "/AlonSite/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(62).jpg",
+          "alt": "הנצחה - 02 הנצחה (62)",
+          "w": 675,
+          "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(64).jpg",
+          "thumb": "/AlonSite/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(64).jpg",
+          "alt": "הנצחה - 02 הנצחה (64)",
+          "w": 900,
+          "h": 405
         }
       ]
     },
@@ -4029,6 +4078,13 @@ window.GALLERY_DATA = {
           "alt": "אתר הנצחה - 02 הנצחה (58)",
           "w": 631,
           "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(59).jpg",
+          "thumb": "/AlonSite/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(59).jpg",
+          "alt": "אתר הנצחה - 02 הנצחה (59)",
+          "w": 900,
+          "h": 405
         },
         {
           "full": "/AlonSite/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(6).jpg",
