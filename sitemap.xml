@@ -2,17 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alonb.com/</loc>
-  </url>
-  <url>
-    <loc>https://alonb.com/pages/disaster.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://alonb.com/pages/gallery.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alonb.com/pages/legacy.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alonb.com/pages/letters.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alonb.com/pages/stories.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://alonb.com/pages/sections.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alonb.com/pages/disaster.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
