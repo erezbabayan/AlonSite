@@ -424,19 +424,27 @@
       persist({ time: 0 });
     });
 
-    // Pause the ambient song whenever a memorial video or audio clip plays
-    // (e.g. the videos/sounds section on the letters/sections hub), so the
-    // background music never overlaps a visitor's own recorded voice or
-    // footage. "play" doesn't bubble, so this listens in the capture phase.
+    // Only one audio/video should ever play at a time. Whenever any media
+    // element starts playing, pause every other one on the page — the
+    // ambient song (with its own muted/icon/persist bookkeeping) and any
+    // memorial video or audio clip alike. "play" doesn't bubble, so this
+    // listens in the capture phase.
     document.addEventListener(
       "play",
       (e) => {
         const el = e.target;
-        if (!(el instanceof HTMLMediaElement) || el === audio || audio.paused) return;
-        audio.pause();
-        audio.muted = true;
-        updateSongIcons(true);
-        persist();
+        if (!(el instanceof HTMLMediaElement)) return;
+        document.querySelectorAll("audio, video").forEach((other) => {
+          if (other === el || other.paused) return;
+          if (other === audio) {
+            audio.pause();
+            audio.muted = true;
+            updateSongIcons(true);
+            persist();
+          } else {
+            other.pause();
+          }
+        });
       },
       true
     );
