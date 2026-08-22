@@ -48,7 +48,8 @@
 
     closeBtn.addEventListener("click", close);
     modal.addEventListener("click", (e) => {
-      if (e.target === modal) close();
+      if (e.target.closest("#legacy-video-frame, #legacy-video-close, #legacy-video-text")) return;
+      close();
     });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && !modal.classList.contains("hidden")) close();
@@ -124,7 +125,8 @@
 
     closeBtn.addEventListener("click", closeModal);
     modal.addEventListener("click", (e) => {
-      if (e.target === modal) closeModal();
+      if (e.target.closest("#legacy-modal-img, #legacy-modal-prev, #legacy-modal-next, #legacy-modal-close, #legacy-modal-text")) return;
+      closeModal();
     });
     document.addEventListener("keydown", (e) => {
       if (modal.classList.contains("hidden")) return;
