@@ -17,12 +17,6 @@
       const id = trigger.getAttribute("data-video-id");
       if (!id) return;
 
-      // Hand the stage over to the video: silence the ambient song through
-      // its own toggle so the nav icon and saved state stay in sync.
-      const songWidget = document.getElementById("song-widget");
-      const audio = document.getElementById("bg-audio");
-      if (songWidget && audio && !audio.paused && !audio.muted) songWidget.click();
-
       frame.src =
         "https://www.youtube-nocookie.com/embed/" +
         encodeURIComponent(id) +

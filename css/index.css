@@ -111,26 +111,22 @@
     font-family: "Assistant", sans-serif;
 }
 
+/* The column is centred, so weight hung under the text lifts it: the block
+   sits higher against the photograph without ever being pinned to the nav,
+   and the lift scales with the viewport instead of stranding the text at
+   the top of a tall screen. */
+@media (min-width: 900px) {
+    #hero .hero-panel-inner {
+        margin-bottom: clamp(1.5rem, 7vh, 4.5rem);
+    }
+}
+
 #hero .hero-kicker {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
     margin: 0 0 1.2rem;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.34em;
     color: #C9A34E;
-}
-
-/* The rule reads as a mark, not a border — it opens the line, it doesn't
-   fence anything off. */
-#hero .hero-kicker::before {
-    content: "";
-    display: block;
-    flex: none;
-    width: 1.75rem;
-    height: 2px;
-    background: currentColor;
 }
 
 #hero .hero-title {
@@ -175,7 +171,9 @@
 /* Reserves its own height so the panel never reflows when the quote fades
    out on the third slide. */
 #hero .hero-quote-block {
-    margin: 0;
+    /* Sits well below the memorial lines — the gap is what separates his
+       words from ours, so it grows with the room the panel has. */
+    margin: clamp(1.5rem, 8vh, 4.5rem) 0 0;
     padding: 0;
 }
 
@@ -230,6 +228,13 @@
     #hero .hero-remembrance { margin-bottom: 1.15rem; }
     #hero .hero-quote-text { padding: 1.05rem 1.2rem; }
     #hero .hero-quote { line-height: 1.72; }
+}
+
+/* Short enough that the lift and the quote's gap no longer fit: the whole
+   memorial text still has to land in one view, so they are what give. */
+@media (min-width: 900px) and (max-height: 660px) {
+    #hero .hero-panel-inner { margin-bottom: 0; }
+    #hero .hero-quote-block { margin-top: 1rem; }
 }
 
 img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }

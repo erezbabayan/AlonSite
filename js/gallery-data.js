@@ -3,4259 +3,4259 @@
 window.GALLERY_DATA = {
   "categories": [
     {
-      "key": "ילדות-ובגרות",
+      "key": "childhood",
       "label": "ילדות ובגרות",
       "images": [
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%203%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%203%20(10).jpg",
-          "alt": "ילדות ובגרות - 01 אלון בן 3 (10)",
+          "full": "/media/images/childhood/childhood-001.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-001.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 631
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%203%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%203%20(7).jpg",
-          "alt": "ילדות ובגרות - 01 אלון בן 3 (7)",
+          "full": "/media/images/childhood/childhood-002.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-002.jpg",
+          "alt": "ילדות ובגרות",
           "w": 626,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%91%D7%99%D7%A6%D7%99%D7%90%D7%94%20%D7%9E%D7%91%D7%99%D7%AA%20%D7%94%D7%97%D7%95%D7%9C%D7%99%D7%9D%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%91%D7%99%D7%A6%D7%99%D7%90%D7%94%20%D7%9E%D7%91%D7%99%D7%AA%20%D7%94%D7%97%D7%95%D7%9C%D7%99%D7%9D%20(1).jpg",
-          "alt": "ילדות ובגרות - 01 ביציאה מבית החולים (1)",
+          "full": "/media/images/childhood/childhood-003.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-003.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 615
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(11).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(11).jpg",
-          "alt": "ילדות ובגרות - 01 פסח 1994 גולן (11)",
+          "full": "/media/images/childhood/childhood-004.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-004.jpg",
+          "alt": "ילדות ובגרות",
           "w": 597,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(14).jpg",
-          "alt": "ילדות ובגרות - 01 פסח 1994 גולן (14)",
+          "full": "/media/images/childhood/childhood-005.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-005.jpg",
+          "alt": "ילדות ובגרות",
           "w": 593,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(4).jpg",
-          "alt": "ילדות ובגרות - 01 פסח 1994 גולן (4)",
+          "full": "/media/images/childhood/childhood-006.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-006.jpg",
+          "alt": "ילדות ובגרות",
           "w": 589,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/02%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/02%20(3).jpg",
-          "alt": "ילדות ובגרות - 02 (3)",
+          "full": "/media/images/childhood/childhood-007.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-007.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 635
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/02%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%206%20%D7%97%D7%95%D7%93%D7%A9%D7%99%D7%9D%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/02%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%206%20%D7%97%D7%95%D7%93%D7%A9%D7%99%D7%9D%20(7).jpg",
-          "alt": "ילדות ובגרות - 02 אלון בן 6 חודשים (7)",
+          "full": "/media/images/childhood/childhood-008.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-008.jpg",
+          "alt": "ילדות ובגרות",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%201994%20%D7%98%D7%99%D7%95%D7%9C%20%D7%A9%D7%A0%D7%AA%D7%99%20%D7%92%D7%95%D7%9C%D7%9F.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%201994%20%D7%98%D7%99%D7%95%D7%9C%20%D7%A9%D7%A0%D7%AA%D7%99%20%D7%92%D7%95%D7%9C%D7%9F.jpg",
-          "alt": "ילדות ובגרות - 03  1994 טיול שנתי גולן",
+          "full": "/media/images/childhood/childhood-009.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-009.jpg",
+          "alt": "ילדות ובגרות",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20(4).jpg",
-          "alt": "ילדות ובגרות - 03 (4)",
+          "full": "/media/images/childhood/childhood-010.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-010.jpg",
+          "alt": "ילדות ובגרות",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(1).jpg",
-          "alt": "ילדות ובגרות - 03 אלון בן שנה (1)",
+          "full": "/media/images/childhood/childhood-011.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-011.jpg",
+          "alt": "ילדות ובגרות",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(10).jpg",
-          "alt": "ילדות ובגרות - 03 אלון בן שנה (10)",
+          "full": "/media/images/childhood/childhood-012.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-012.jpg",
+          "alt": "ילדות ובגרות",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(12).jpg",
-          "alt": "ילדות ובגרות - 03 אלון בן שנה (12)",
+          "full": "/media/images/childhood/childhood-013.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-013.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(3).jpg",
-          "alt": "ילדות ובגרות - 03 אלון בן שנה (3)",
+          "full": "/media/images/childhood/childhood-014.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-014.jpg",
+          "alt": "ילדות ובגרות",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94%20(5).jpg",
-          "alt": "ילדות ובגרות - 03 אלון בן שנה (5)",
+          "full": "/media/images/childhood/childhood-015.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-015.jpg",
+          "alt": "ילדות ובגרות",
           "w": 631,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%97%D7%A0%D7%95%D7%9B%D7%94%20%D7%AA%D7%A9%D7%9C'%D7%98%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%97%D7%A0%D7%95%D7%9B%D7%94%20%D7%AA%D7%A9%D7%9C'%D7%98%20(2).jpg",
-          "alt": "ילדות ובגרות - 03 חנוכה תשל'ט (2)",
+          "full": "/media/images/childhood/childhood-016.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-016.jpg",
+          "alt": "ילדות ובגרות",
           "w": 620,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%97%D7%A0%D7%95%D7%9B%D7%94%20%D7%AA%D7%A9%D7%9C'%D7%98%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/03%20%D7%97%D7%A0%D7%95%D7%9B%D7%94%20%D7%AA%D7%A9%D7%9C'%D7%98%20(4).jpg",
-          "alt": "ילדות ובגרות - 03 חנוכה תשל'ט (4)",
+          "full": "/media/images/childhood/childhood-017.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-017.jpg",
+          "alt": "ילדות ובגרות",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%201990%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%9B%D7%AA%D7%94%20%D7%98.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%201990%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%9B%D7%AA%D7%94%20%D7%98.jpg",
-          "alt": "ילדות ובגרות - 04 1990 פורים כתה ט",
+          "full": "/media/images/childhood/childhood-018.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-018.jpg",
+          "alt": "ילדות ובגרות",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(1).jpg",
-          "alt": "ילדות ובגרות - 04 7-1994 סיני (1)",
+          "full": "/media/images/childhood/childhood-019.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-019.jpg",
+          "alt": "ילדות ובגרות",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(18).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(18).jpg",
-          "alt": "ילדות ובגרות - 04 7-1994 סיני (18)",
+          "full": "/media/images/childhood/childhood-020.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-020.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 598
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(2).jpg",
-          "alt": "ילדות ובגרות - 04 7-1994 סיני (2)",
+          "full": "/media/images/childhood/childhood-021.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-021.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 596
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(21).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(21).jpg",
-          "alt": "ילדות ובגרות - 04 7-1994 סיני (21)",
+          "full": "/media/images/childhood/childhood-022.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-022.jpg",
+          "alt": "ילדות ובגרות",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(24).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(24).jpg",
-          "alt": "ילדות ובגרות - 04 7-1994 סיני (24)",
+          "full": "/media/images/childhood/childhood-023.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-023.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 592
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(3).jpg",
-          "alt": "ילדות ובגרות - 04 7-1994 סיני (3)",
+          "full": "/media/images/childhood/childhood-024.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-024.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 595
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%2011.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%2011.jpg",
-          "alt": "ילדות ובגרות - 04 אלון בן 11",
+          "full": "/media/images/childhood/childhood-025.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-025.jpg",
+          "alt": "ילדות ובגרות",
           "w": 623,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%20%D7%A2%D7%9D%20%D7%93%D7%95%D7%93%20%D7%99%D7%95%D7%A1%D7%A3%20%D7%91%D7%91%D7%99%D7%94'%D7%9B.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%20%D7%A2%D7%9D%20%D7%93%D7%95%D7%93%20%D7%99%D7%95%D7%A1%D7%A3%20%D7%91%D7%91%D7%99%D7%94'%D7%9B.jpg",
-          "alt": "ילדות ובגרות - 04 עם דוד יוסף בביה'כ",
+          "full": "/media/images/childhood/childhood-026.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-026.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 637
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%201985.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%201985.jpg",
-          "alt": "ילדות ובגרות - 04 פורים 1985",
+          "full": "/media/images/childhood/childhood-027.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-027.jpg",
+          "alt": "ילדות ובגרות",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9C'%D7%98%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/04%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9C'%D7%98%20(2).jpg",
-          "alt": "ילדות ובגרות - 04 פורים תשל'ט (2)",
+          "full": "/media/images/childhood/childhood-028.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-028.jpg",
+          "alt": "ילדות ובגרות",
           "w": 636,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/05%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9B%D7%95%D7%AA%D7%9C%20%D7%91%D7%A8%20%D7%94%D7%9E%D7%A6%D7%95%D7%94%20%D7%A9%D7%9C%20%D7%90%D7%91%D7%99%20%D7%92%D7%91%D7%90%D7%99.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/05%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9B%D7%95%D7%AA%D7%9C%20%D7%91%D7%A8%20%D7%94%D7%9E%D7%A6%D7%95%D7%94%20%D7%A9%D7%9C%20%D7%90%D7%91%D7%99%20%D7%92%D7%91%D7%90%D7%99.jpg",
-          "alt": "ילדות ובגרות - 05 אלון בכותל בר המצוה של אבי גבאי",
+          "full": "/media/images/childhood/childhood-029.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-029.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 632
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/05%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%204%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/05%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%204%20(7).jpg",
-          "alt": "ילדות ובגרות - 05 אלון בן 4 (7)",
+          "full": "/media/images/childhood/childhood-030.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-030.jpg",
+          "alt": "ילדות ובגרות",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/06%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/06%20(2).jpg",
-          "alt": "ילדות ובגרות - 06 (2)",
+          "full": "/media/images/childhood/childhood-031.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-031.jpg",
+          "alt": "ילדות ובגרות",
           "w": 639,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/06%20(2)22.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/06%20(2)22.jpg",
-          "alt": "ילדות ובגרות - 06 (2)22",
+          "full": "/media/images/childhood/childhood-032.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-032.jpg",
+          "alt": "ילדות ובגרות",
           "w": 599,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/06%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/06%20(3).jpg",
-          "alt": "ילדות ובגרות - 06 (3)",
+          "full": "/media/images/childhood/childhood-033.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-033.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 704
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/07%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%204%20%D7%91%D7%92%D7%9F%20%D7%91%D7%99%D7%AA%20%D7%97%D7%95%D7%A8%D7%95%D7%9F%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/07%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%204%20%D7%91%D7%92%D7%9F%20%D7%91%D7%99%D7%AA%20%D7%97%D7%95%D7%A8%D7%95%D7%9F%20(2).jpg",
-          "alt": "ילדות ובגרות - 07 אלון בן 4 בגן בית חורון (2)",
+          "full": "/media/images/childhood/childhood-034.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-034.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 638
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/08%20(1)%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/08%20(1)%20(1).jpg",
-          "alt": "ילדות ובגרות - 08 (1) (1)",
+          "full": "/media/images/childhood/childhood-035.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-035.jpg",
+          "alt": "ילדות ובגרות",
           "w": 628,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/08%20(1)88.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/08%20(1)88.jpg",
-          "alt": "ילדות ובגרות - 08 (1)88",
+          "full": "/media/images/childhood/childhood-036.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-036.jpg",
+          "alt": "ילדות ובגרות",
           "w": 597,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/08%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/08%20(3).jpg",
-          "alt": "ילדות ובגרות - 08 (3)",
+          "full": "/media/images/childhood/childhood-037.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-037.jpg",
+          "alt": "ילדות ובגרות",
           "w": 596,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(4).jpg",
-          "alt": "ילדות ובגרות - 08 חופשה בצפון (4)",
+          "full": "/media/images/childhood/childhood-038.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-038.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 598
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/09%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/09%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D%20(2).jpg",
-          "alt": "ילדות ובגרות - 09 אלון בן שנתיים (2)",
+          "full": "/media/images/childhood/childhood-039.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-039.jpg",
+          "alt": "ילדות ובגרות",
           "w": 623,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20(1).jpg",
-          "alt": "ילדות ובגרות - 10 (1)",
+          "full": "/media/images/childhood/childhood-040.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-040.jpg",
+          "alt": "ילדות ובגרות",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20(6).jpg",
-          "alt": "ילדות ובגרות - 10 (6)",
+          "full": "/media/images/childhood/childhood-041.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-041.jpg",
+          "alt": "ילדות ובגרות",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20(7).jpg",
-          "alt": "ילדות ובגרות - 10 (7)",
+          "full": "/media/images/childhood/childhood-042.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-042.jpg",
+          "alt": "ילדות ובגרות",
           "w": 596,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%204%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%204%20(2).jpg",
-          "alt": "ילדות ובגרות - 10 אלון בן 4 (2)",
+          "full": "/media/images/childhood/childhood-043.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-043.jpg",
+          "alt": "ילדות ובגרות",
           "w": 605,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%204%20%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%204%20%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D%20(1).jpg",
-          "alt": "ילדות ובגרות - 10 אלון בן 4 תמי בת שנתיים (1)",
+          "full": "/media/images/childhood/childhood-044.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-044.jpg",
+          "alt": "ילדות ובגרות",
           "w": 626,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9C'%D7%97%20%D7%91%D7%A8%D7%9E%D7%9C%D7%94%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9C'%D7%97%20%D7%91%D7%A8%D7%9E%D7%9C%D7%94%20(2).jpg",
-          "alt": "ילדות ובגרות - 10 פורים תשל'ח ברמלה (2)",
+          "full": "/media/images/childhood/childhood-045.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-045.jpg",
+          "alt": "ילדות ובגרות",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9C'%D7%97%20%D7%91%D7%A8%D7%9E%D7%9C%D7%94%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/10%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9C'%D7%97%20%D7%91%D7%A8%D7%9E%D7%9C%D7%94%20(3).jpg",
-          "alt": "ילדות ובגרות - 10 פורים תשל'ח ברמלה (3)",
+          "full": "/media/images/childhood/childhood-046.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-046.jpg",
+          "alt": "ילדות ובגרות",
           "w": 623,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/11%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%203%20(11).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/11%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%203%20(11).jpg",
-          "alt": "ילדות ובגרות - 11 יום הולדת 3 (11)",
+          "full": "/media/images/childhood/childhood-047.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-047.jpg",
+          "alt": "ילדות ובגרות",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/11%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%203%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/11%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%203%20(14).jpg",
-          "alt": "ילדות ובגרות - 11 יום הולדת 3 (14)",
+          "full": "/media/images/childhood/childhood-048.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-048.jpg",
+          "alt": "ילדות ובגרות",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/12%20%201993%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/12%20%201993%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(3).jpg",
-          "alt": "ילדות ובגרות - 12  1993 פורים (3)",
+          "full": "/media/images/childhood/childhood-049.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-049.jpg",
+          "alt": "ילדות ובגרות",
           "w": 618,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/12%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/12%20(1).jpg",
-          "alt": "ילדות ובגרות - 12 (1)",
+          "full": "/media/images/childhood/childhood-050.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-050.jpg",
+          "alt": "ילדות ובגרות",
           "w": 649,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/12%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/12%20(2).jpg",
-          "alt": "ילדות ובגרות - 12 (2)",
+          "full": "/media/images/childhood/childhood-051.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-051.jpg",
+          "alt": "ילדות ובגרות",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/14%20%D7%98%D7%91%D7%A8%D7%99%D7%94%20%D7%A4%D7%A1%D7%97%20%D7%AA%D7%A9'%D7%9E.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/14%20%D7%98%D7%91%D7%A8%D7%99%D7%94%20%D7%A4%D7%A1%D7%97%20%D7%AA%D7%A9'%D7%9E.jpg",
-          "alt": "ילדות ובגרות - 14 טבריה פסח תש'מ",
+          "full": "/media/images/childhood/childhood-052.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-052.jpg",
+          "alt": "ילדות ובגרות",
           "w": 554,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/15%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%205%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/15%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%205%20(1).jpg",
-          "alt": "ילדות ובגרות - 15 אלון יום הולדת 5 (1)",
+          "full": "/media/images/childhood/childhood-053.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-053.jpg",
+          "alt": "ילדות ובגרות",
           "w": 637,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/17%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9E'%D7%90.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/17%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9E'%D7%90.jpg",
-          "alt": "ילדות ובגרות - 17 אלון פורים תשמ'א",
+          "full": "/media/images/childhood/childhood-054.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-054.jpg",
+          "alt": "ילדות ובגרות",
           "w": 709,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/19%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9E'%D7%90.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/19%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9E'%D7%90.jpg",
-          "alt": "ילדות ובגרות - 19 פורים תשמ'א",
+          "full": "/media/images/childhood/childhood-055.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-055.jpg",
+          "alt": "ילדות ובגרות",
           "w": 559,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1977%20%D7%9C'%D7%92%20%D7%91%D7%A2%D7%95%D7%9E%D7%A8.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1977%20%D7%9C'%D7%92%20%D7%91%D7%A2%D7%95%D7%9E%D7%A8.jpg",
-          "alt": "ילדות ובגרות - 1977 ל'ג בעומר",
+          "full": "/media/images/childhood/childhood-056.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-056.jpg",
+          "alt": "ילדות ובגרות",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1983%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1983%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(1).jpg",
-          "alt": "ילדות ובגרות - 1983 פורים (1)",
+          "full": "/media/images/childhood/childhood-057.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-057.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 709
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1983%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1983%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(2).jpg",
-          "alt": "ילדות ובגרות - 1983 פורים (2)",
+          "full": "/media/images/childhood/childhood-058.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-058.jpg",
+          "alt": "ילדות ובגרות",
           "w": 710,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1984%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1984%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(1).jpg",
-          "alt": "ילדות ובגרות - 1984 פורים (1)",
+          "full": "/media/images/childhood/childhood-059.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-059.jpg",
+          "alt": "ילדות ובגרות",
           "w": 617,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1984%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1984%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20(2).jpg",
-          "alt": "ילדות ובגרות - 1984 פורים (2)",
+          "full": "/media/images/childhood/childhood-060.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-060.jpg",
+          "alt": "ילדות ובגרות",
           "w": 619,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1985%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%93%D7%A7%D7%9C%D7%94%20%D7%9E%D7%99%D7%9E%D7%95%D7%A0%D7%94%20%D7%92%D7%9F%20%D7%A1%D7%90%D7%A7%D7%A8.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/1985%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%93%D7%A7%D7%9C%D7%94%20%D7%9E%D7%99%D7%9E%D7%95%D7%A0%D7%94%20%D7%92%D7%9F%20%D7%A1%D7%90%D7%A7%D7%A8.jpg",
-          "alt": "ילדות ובגרות - 1985 אלון ודקלה מימונה גן סאקר",
+          "full": "/media/images/childhood/childhood-061.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-061.jpg",
+          "alt": "ילדות ובגרות",
           "w": 641,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/21%20%D7%99%D7%95%D7%9D%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%91%D7%9B%D7%AA%D7%94%20%D7%90%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/21%20%D7%99%D7%95%D7%9D%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%91%D7%9B%D7%AA%D7%94%20%D7%90%20(2).jpg",
-          "alt": "ילדות ובגרות - 21 יום ראשון בכתה א (2)",
+          "full": "/media/images/childhood/childhood-062.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-062.jpg",
+          "alt": "ילדות ובגרות",
           "w": 644,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/21%20%D7%99%D7%95%D7%9D%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%91%D7%9B%D7%AA%D7%94%20%D7%90%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/21%20%D7%99%D7%95%D7%9D%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%91%D7%9B%D7%AA%D7%94%20%D7%90%20(3).jpg",
-          "alt": "ילדות ובגרות - 21 יום ראשון בכתה א (3)",
+          "full": "/media/images/childhood/childhood-063.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-063.jpg",
+          "alt": "ילדות ובגרות",
           "w": 604,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/22%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9E'%D7%91.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/22%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D%20%D7%AA%D7%A9%D7%9E'%D7%91.jpg",
-          "alt": "ילדות ובגרות - 22 פורים תשמ'ב",
+          "full": "/media/images/childhood/childhood-064.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-064.jpg",
+          "alt": "ילדות ובגרות",
           "w": 603,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/24%20%208-1982.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/24%20%208-1982.jpg",
-          "alt": "ילדות ובגרות - 24  8-1982",
+          "full": "/media/images/childhood/childhood-065.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-065.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 703
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/26%20%203-1982%20%D7%A2%D7%A8%D7%91%20%D7%9E%D7%A8%D7%95%D7%A7%D7%90%D7%99%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/26%20%203-1982%20%D7%A2%D7%A8%D7%91%20%D7%9E%D7%A8%D7%95%D7%A7%D7%90%D7%99%20(1).jpg",
-          "alt": "ילדות ובגרות - 26  3-1982 ערב מרוקאי (1)",
+          "full": "/media/images/childhood/childhood-066.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-066.jpg",
+          "alt": "ילדות ובגרות",
           "w": 640,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/26%20%203-1982%20%D7%A2%D7%A8%D7%91%20%D7%9E%D7%A8%D7%95%D7%A7%D7%90%D7%99%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/26%20%203-1982%20%D7%A2%D7%A8%D7%91%20%D7%9E%D7%A8%D7%95%D7%A7%D7%90%D7%99%20(2).jpg",
-          "alt": "ילדות ובגרות - 26  3-1982 ערב מרוקאי (2)",
+          "full": "/media/images/childhood/childhood-067.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-067.jpg",
+          "alt": "ילדות ובגרות",
           "w": 637,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/26%20%204-1982%20%D7%A4%D7%92%D7%99%D7%A9%D7%94%20%D7%A2%D7%9D%20%D7%90%D7%91%D7%90%20%D7%91%D7%A2%D7%99%D7%9F%20%D7%92%D7%91.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/26%20%204-1982%20%D7%A4%D7%92%D7%99%D7%A9%D7%94%20%D7%A2%D7%9D%20%D7%90%D7%91%D7%90%20%D7%91%D7%A2%D7%99%D7%9F%20%D7%92%D7%91.jpg",
-          "alt": "ילדות ובגרות - 26  4-1982 פגישה עם אבא בעין גב",
+          "full": "/media/images/childhood/childhood-068.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-068.jpg",
+          "alt": "ילדות ובגרות",
           "w": 599,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1982%20%D7%AA%D7%9C%20%D7%93%D7%9F.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1982%20%D7%AA%D7%9C%20%D7%93%D7%9F.jpg",
-          "alt": "ילדות ובגרות - 8-1982 תל דן",
+          "full": "/media/images/childhood/childhood-069.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-069.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 700
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1984%20%D7%91%D7%A1%D7%97%D7%A0%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1984%20%D7%91%D7%A1%D7%97%D7%A0%D7%94.jpg",
-          "alt": "ילדות ובגרות - 8-1984 בסחנה",
+          "full": "/media/images/childhood/childhood-070.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-070.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 622
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1984%20%D7%A1%D7%97%D7%A0%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1984%20%D7%A1%D7%97%D7%A0%D7%94.jpg",
-          "alt": "ילדות ובגרות - 8-1984 סחנה",
+          "full": "/media/images/childhood/childhood-071.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-071.jpg",
+          "alt": "ילדות ובגרות",
           "w": 585,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1986%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%90%D7%A8%D7%96%20%D7%91%D7%A1%D7%97%D7%A0%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1986%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%90%D7%A8%D7%96%20%D7%91%D7%A1%D7%97%D7%A0%D7%94.jpg",
-          "alt": "ילדות ובגרות - 8-1986 אלון וארז בסחנה",
+          "full": "/media/images/childhood/childhood-072.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-072.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 602
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1986%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%AA%D7%9E%D7%A8%20%D7%91%D7%A1%D7%97%D7%A0%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1986%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%AA%D7%9E%D7%A8%20%D7%91%D7%A1%D7%97%D7%A0%D7%94.jpg",
-          "alt": "ילדות ובגרות - 8-1986 אלון ותמר בסחנה",
+          "full": "/media/images/childhood/childhood-073.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-073.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 597
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1992%20%D7%91%D7%9B%D7%A0%D7%A8%D7%AA%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1992%20%D7%91%D7%9B%D7%A0%D7%A8%D7%AA%20(2).jpg",
-          "alt": "ילדות ובגרות - 8-1992 בכנרת (2)",
+          "full": "/media/images/childhood/childhood-074.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-074.jpg",
+          "alt": "ילדות ובגרות",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1992%20%D7%91%D7%9B%D7%A0%D7%A8%D7%AA.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/8-1992%20%D7%91%D7%9B%D7%A0%D7%A8%D7%AA.jpg",
-          "alt": "ילדות ובגרות - 8-1992 בכנרת",
+          "full": "/media/images/childhood/childhood-075.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-075.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 596
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(101).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(101).jpg",
-          "alt": "ילדות ובגרות - אלון (101)",
+          "full": "/media/images/childhood/childhood-076.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-076.jpg",
+          "alt": "ילדות ובגרות",
           "w": 626,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(103).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(103).jpg",
-          "alt": "ילדות ובגרות - אלון (103)",
+          "full": "/media/images/childhood/childhood-077.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-077.jpg",
+          "alt": "ילדות ובגרות",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(105).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(105).jpg",
-          "alt": "ילדות ובגרות - אלון (105)",
+          "full": "/media/images/childhood/childhood-078.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-078.jpg",
+          "alt": "ילדות ובגרות",
           "w": 597,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(106).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(106).jpg",
-          "alt": "ילדות ובגרות - אלון (106)",
+          "full": "/media/images/childhood/childhood-079.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-079.jpg",
+          "alt": "ילדות ובגרות",
           "w": 605,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(107).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(107).jpg",
-          "alt": "ילדות ובגרות - אלון (107)",
+          "full": "/media/images/childhood/childhood-080.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-080.jpg",
+          "alt": "ילדות ובגרות",
           "w": 599,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(109).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(109).jpg",
-          "alt": "ילדות ובגרות - אלון (109)",
+          "full": "/media/images/childhood/childhood-081.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-081.jpg",
+          "alt": "ילדות ובגרות",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(112).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(112).jpg",
-          "alt": "ילדות ובגרות - אלון (112)",
+          "full": "/media/images/childhood/childhood-082.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-082.jpg",
+          "alt": "ילדות ובגרות",
           "w": 597,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(134).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(134).jpg",
-          "alt": "ילדות ובגרות - אלון (134)",
+          "full": "/media/images/childhood/childhood-083.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-083.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 592
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(138).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(138).jpg",
-          "alt": "ילדות ובגרות - אלון (138)",
+          "full": "/media/images/childhood/childhood-084.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-084.jpg",
+          "alt": "ילדות ובגרות",
           "w": 588,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(139).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(139).jpg",
-          "alt": "ילדות ובגרות - אלון (139)",
+          "full": "/media/images/childhood/childhood-085.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-085.jpg",
+          "alt": "ילדות ובגרות",
           "w": 602,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(148).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(148).jpg",
-          "alt": "ילדות ובגרות - אלון (148)",
+          "full": "/media/images/childhood/childhood-086.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-086.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 598
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(151).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(151).jpg",
-          "alt": "ילדות ובגרות - אלון (151)",
+          "full": "/media/images/childhood/childhood-087.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-087.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 597
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(152).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(152).jpg",
-          "alt": "ילדות ובגרות - אלון (152)",
+          "full": "/media/images/childhood/childhood-088.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-088.jpg",
+          "alt": "ילדות ובגרות",
           "w": 601,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(157).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(157).jpg",
-          "alt": "ילדות ובגרות - אלון (157)",
+          "full": "/media/images/childhood/childhood-089.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-089.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 613
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(159).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(159).jpg",
-          "alt": "ילדות ובגרות - אלון (159)",
+          "full": "/media/images/childhood/childhood-090.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-090.jpg",
+          "alt": "ילדות ובגרות",
           "w": 622,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(160).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(160).jpg",
-          "alt": "ילדות ובגרות - אלון (160)",
+          "full": "/media/images/childhood/childhood-091.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-091.jpg",
+          "alt": "ילדות ובגרות",
           "w": 620,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(161).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(161).jpg",
-          "alt": "ילדות ובגרות - אלון (161)",
+          "full": "/media/images/childhood/childhood-092.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-092.jpg",
+          "alt": "ילדות ובגרות",
           "w": 618,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(164).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(164).jpg",
-          "alt": "ילדות ובגרות - אלון (164)",
+          "full": "/media/images/childhood/childhood-093.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-093.jpg",
+          "alt": "ילדות ובגרות",
           "w": 567,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(166).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(166).jpg",
-          "alt": "ילדות ובגרות - אלון (166)",
+          "full": "/media/images/childhood/childhood-094.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-094.jpg",
+          "alt": "ילדות ובגרות",
           "w": 597,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(173).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(173).jpg",
-          "alt": "ילדות ובגרות - אלון (173)",
+          "full": "/media/images/childhood/childhood-095.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-095.jpg",
+          "alt": "ילדות ובגרות",
           "w": 625,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(178).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(178).jpg",
-          "alt": "ילדות ובגרות - אלון (178)",
+          "full": "/media/images/childhood/childhood-096.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-096.jpg",
+          "alt": "ילדות ובגרות",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(179).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(179).jpg",
-          "alt": "ילדות ובגרות - אלון (179)",
+          "full": "/media/images/childhood/childhood-097.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-097.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 627
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(180).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(180).jpg",
-          "alt": "ילדות ובגרות - אלון (180)",
+          "full": "/media/images/childhood/childhood-098.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-098.jpg",
+          "alt": "ילדות ובגרות",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(181).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(181).jpg",
-          "alt": "ילדות ובגרות - אלון (181)",
+          "full": "/media/images/childhood/childhood-099.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-099.jpg",
+          "alt": "ילדות ובגרות",
           "w": 630,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(182).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(182).jpg",
-          "alt": "ילדות ובגרות - אלון (182)",
+          "full": "/media/images/childhood/childhood-100.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-100.jpg",
+          "alt": "ילדות ובגרות",
           "w": 639,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(185).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(185).jpg",
-          "alt": "ילדות ובגרות - אלון (185)",
+          "full": "/media/images/childhood/childhood-101.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-101.jpg",
+          "alt": "ילדות ובגרות",
           "w": 600,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(194).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(194).jpg",
-          "alt": "ילדות ובגרות - אלון (194)",
+          "full": "/media/images/childhood/childhood-102.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-102.jpg",
+          "alt": "ילדות ובגרות",
           "w": 601,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(197).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(197).jpg",
-          "alt": "ילדות ובגרות - אלון (197)",
+          "full": "/media/images/childhood/childhood-103.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-103.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 631
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(207).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(207).jpg",
-          "alt": "ילדות ובגרות - אלון (207)",
+          "full": "/media/images/childhood/childhood-104.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-104.jpg",
+          "alt": "ילדות ובגרות",
           "w": 600,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(208).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(208).jpg",
-          "alt": "ילדות ובגרות - אלון (208)",
+          "full": "/media/images/childhood/childhood-105.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-105.jpg",
+          "alt": "ילדות ובגרות",
           "w": 601,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(209).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(209).jpg",
-          "alt": "ילדות ובגרות - אלון (209)",
+          "full": "/media/images/childhood/childhood-106.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-106.jpg",
+          "alt": "ילדות ובגרות",
           "w": 605,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(32).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(32).jpg",
-          "alt": "ילדות ובגרות - אלון (32)",
+          "full": "/media/images/childhood/childhood-107.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-107.jpg",
+          "alt": "ילדות ובגרות",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(52).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(52).jpg",
-          "alt": "ילדות ובגרות - אלון (52)",
+          "full": "/media/images/childhood/childhood-108.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-108.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 602
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(53).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(53).jpg",
-          "alt": "ילדות ובגרות - אלון (53)",
+          "full": "/media/images/childhood/childhood-109.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-109.jpg",
+          "alt": "ילדות ובגרות",
           "w": 602,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(54).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(54).jpg",
-          "alt": "ילדות ובגרות - אלון (54)",
+          "full": "/media/images/childhood/childhood-110.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-110.jpg",
+          "alt": "ילדות ובגרות",
           "w": 596,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(64).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(64).jpg",
-          "alt": "ילדות ובגרות - אלון (64)",
+          "full": "/media/images/childhood/childhood-111.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-111.jpg",
+          "alt": "ילדות ובגרות",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(65).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(65).jpg",
-          "alt": "ילדות ובגרות - אלון (65)",
+          "full": "/media/images/childhood/childhood-112.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-112.jpg",
+          "alt": "ילדות ובגרות",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(77).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(77).jpg",
-          "alt": "ילדות ובגרות - אלון (77)",
+          "full": "/media/images/childhood/childhood-113.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-113.jpg",
+          "alt": "ילדות ובגרות",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(78).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(78).jpg",
-          "alt": "ילדות ובגרות - אלון (78)",
+          "full": "/media/images/childhood/childhood-114.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-114.jpg",
+          "alt": "ילדות ובגרות",
           "w": 631,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(79).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(79).jpg",
-          "alt": "ילדות ובגרות - אלון (79)",
+          "full": "/media/images/childhood/childhood-115.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-115.jpg",
+          "alt": "ילדות ובגרות",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(85).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(85).jpg",
-          "alt": "ילדות ובגרות - אלון (85)",
+          "full": "/media/images/childhood/childhood-116.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-116.jpg",
+          "alt": "ילדות ובגרות",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(88).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(88).jpg",
-          "alt": "ילדות ובגרות - אלון (88)",
+          "full": "/media/images/childhood/childhood-117.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-117.jpg",
+          "alt": "ילדות ובגרות",
           "w": 601,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(89).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(89).jpg",
-          "alt": "ילדות ובגרות - אלון (89)",
+          "full": "/media/images/childhood/childhood-118.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-118.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 621
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(9).jpg",
-          "alt": "ילדות ובגרות - אלון (9)",
+          "full": "/media/images/childhood/childhood-119.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-119.jpg",
+          "alt": "ילדות ובגרות",
           "w": 630,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(90).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(90).jpg",
-          "alt": "ילדות ובגרות - אלון (90)",
+          "full": "/media/images/childhood/childhood-120.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-120.jpg",
+          "alt": "ילדות ובגרות",
           "w": 617,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(92).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(92).jpg",
-          "alt": "ילדות ובגרות - אלון (92)",
+          "full": "/media/images/childhood/childhood-121.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-121.jpg",
+          "alt": "ילדות ובגרות",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(93).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(93).jpg",
-          "alt": "ילדות ובגרות - אלון (93)",
+          "full": "/media/images/childhood/childhood-122.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-122.jpg",
+          "alt": "ילדות ובגרות",
           "w": 608,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(94).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(94).jpg",
-          "alt": "ילדות ובגרות - אלון (94)",
+          "full": "/media/images/childhood/childhood-123.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-123.jpg",
+          "alt": "ילדות ובגרות",
           "w": 617,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(95).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20(95).jpg",
-          "alt": "ילדות ובגרות - אלון (95)",
+          "full": "/media/images/childhood/childhood-124.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-124.jpg",
+          "alt": "ילדות ובגרות",
           "w": 619,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%201986.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%201986.jpg",
-          "alt": "ילדות ובגרות - אלון 1986",
+          "full": "/media/images/childhood/childhood-125.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-125.jpg",
+          "alt": "ילדות ובגרות",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%205%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%205%20(2).jpg",
-          "alt": "ילדות ובגרות - אלון בן 5 (2)",
+          "full": "/media/images/childhood/childhood-126.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-126.jpg",
+          "alt": "ילדות ובגרות",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%205%20%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%204.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%205%20%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%204.jpg",
-          "alt": "ילדות ובגרות - אלון בן 5 תמי בת 4",
+          "full": "/media/images/childhood/childhood-127.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-127.jpg",
+          "alt": "ילדות ובגרות",
           "w": 647,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%205.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%205.jpg",
-          "alt": "ילדות ובגרות - אלון בן 5",
+          "full": "/media/images/childhood/childhood-128.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-128.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 634
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%206%20%D7%9E%D7%A7%D7%91%D7%9C%20%D7%A1%D7%99%D7%93%D7%95%D7%A8%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%206%20%D7%9E%D7%A7%D7%91%D7%9C%20%D7%A1%D7%99%D7%93%D7%95%D7%A8%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F.jpg",
-          "alt": "ילדות ובגרות - אלון בן 6 מקבל סידור ראשון",
+          "full": "/media/images/childhood/childhood-129.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-129.jpg",
+          "alt": "ילדות ובגרות",
           "w": 602,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%208%20%D7%AA%D7%9E%D7%A8%20%D7%91%D7%AA%206%20%D7%93%D7%99%D7%A7%D7%9C%D7%94%20%D7%91%D7%AA%203%20%D7%90%D7%A8%D7%96%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%208%20%D7%AA%D7%9E%D7%A8%20%D7%91%D7%AA%206%20%D7%93%D7%99%D7%A7%D7%9C%D7%94%20%D7%91%D7%AA%203%20%D7%90%D7%A8%D7%96%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%94.jpg",
-          "alt": "ילדות ובגרות - אלון בן 8 תמר בת 6 דיקלה בת 3 ארז בן שנה",
+          "full": "/media/images/childhood/childhood-130.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-130.jpg",
+          "alt": "ילדות ובגרות",
           "w": 647,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%209%20%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%208%20%D7%93%D7%99%D7%A7%D7%94%20%D7%91%D7%AA%204%20%D7%90%D7%A8%D7%96%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%9F%209%20%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%208%20%D7%93%D7%99%D7%A7%D7%94%20%D7%91%D7%AA%204%20%D7%90%D7%A8%D7%96%20%D7%91%D7%9F%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D.jpg",
-          "alt": "ילדות ובגרות - אלון בן 9 תמי בת 8 דיקה בת 4 ארז בן שנתיים",
+          "full": "/media/images/childhood/childhood-131.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-131.jpg",
+          "alt": "ילדות ובגרות",
           "w": 600,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(24).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(24).jpg",
-          "alt": "ילדות ובגרות - אלון צבא (24)",
+          "full": "/media/images/childhood/childhood-132.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-132.jpg",
+          "alt": "ילדות ובגרות",
           "w": 638,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%99%D7%93%D7%94%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%99%D7%93%D7%94%20(1).jpg",
-          "alt": "ילדות ובגרות - אלון תמונות לידה (1)",
+          "full": "/media/images/childhood/childhood-133.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-133.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 574
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%99%D7%93%D7%94%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%99%D7%93%D7%94%20(4).jpg",
-          "alt": "ילדות ובגרות - אלון תמונות לידה (4)",
+          "full": "/media/images/childhood/childhood-134.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-134.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 565
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%99%D7%93%D7%94%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%90%D7%9C%D7%95%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%99%D7%93%D7%94%20(6).jpg",
-          "alt": "ילדות ובגרות - אלון תמונות לידה (6)",
+          "full": "/media/images/childhood/childhood-135.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-135.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 574
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%97%D7%A0%D7%95%D7%9B%D7%94%20%D7%AA%D7%A9'%D7%9E.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%97%D7%A0%D7%95%D7%9B%D7%94%20%D7%AA%D7%A9'%D7%9E.jpg",
-          "alt": "ילדות ובגרות - חנוכה תש'מ",
+          "full": "/media/images/childhood/childhood-136.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-136.jpg",
+          "alt": "ילדות ובגרות",
           "w": 623,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%97%D7%A0%D7%95%D7%9B%D7%94%20%D7%AA%D7%A9%D7%9E'%D7%90%20%D7%92%D7%9F%20%D7%90%D7%94%D7%95%D7%91%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%97%D7%A0%D7%95%D7%9B%D7%94%20%D7%AA%D7%A9%D7%9E'%D7%90%20%D7%92%D7%9F%20%D7%90%D7%94%D7%95%D7%91%D7%94.jpg",
-          "alt": "ילדות ובגרות - חנוכה תשמ'א גן אהובה",
+          "full": "/media/images/childhood/childhood-137.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-137.jpg",
+          "alt": "ילדות ובגרות",
           "w": 538,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(1).jpg",
-          "alt": "ילדות ובגרות - יומני_הראשון_(1)",
+          "full": "/media/images/childhood/childhood-138.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-138.jpg",
+          "alt": "ילדות ובגרות",
           "w": 616,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(14).jpg",
-          "alt": "ילדות ובגרות - יומני_הראשון_(14)",
+          "full": "/media/images/childhood/childhood-139.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-139.jpg",
+          "alt": "ילדות ובגרות",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(15).jpg",
-          "alt": "ילדות ובגרות - יומני_הראשון_(15)",
+          "full": "/media/images/childhood/childhood-140.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-140.jpg",
+          "alt": "ילדות ובגרות",
           "w": 630,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(16).jpg",
-          "alt": "ילדות ובגרות - יומני_הראשון_(16)",
+          "full": "/media/images/childhood/childhood-141.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-141.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 631
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(17).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(17).jpg",
-          "alt": "ילדות ובגרות - יומני_הראשון_(17)",
+          "full": "/media/images/childhood/childhood-142.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-142.jpg",
+          "alt": "ילדות ובגרות",
           "w": 641,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(2).jpg",
-          "alt": "ילדות ובגרות - יומני_הראשון_(2)",
+          "full": "/media/images/childhood/childhood-143.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-143.jpg",
+          "alt": "ילדות ובגרות",
           "w": 647,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(4).jpg",
-          "alt": "ילדות ובגרות - יומני_הראשון_(4)",
+          "full": "/media/images/childhood/childhood-144.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-144.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 647
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(6).jpg",
-          "alt": "ילדות ובגרות - יומני_הראשון_(6)",
+          "full": "/media/images/childhood/childhood-145.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-145.jpg",
+          "alt": "ילדות ובגרות",
           "w": 900,
           "h": 629
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%99%D7%95%D7%9E%D7%A0%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F_(9).jpg",
-          "alt": "ילדות ובגרות - יומני_הראשון_(9)",
+          "full": "/media/images/childhood/childhood-146.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-146.jpg",
+          "alt": "ילדות ובגרות",
           "w": 644,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D%20(2).jpg",
-          "alt": "ילדות ובגרות - תמי בת שנתיים (2)",
+          "full": "/media/images/childhood/childhood-147.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-147.jpg",
+          "alt": "ילדות ובגרות",
           "w": 630,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D.jpg",
-          "thumb": "/media/images/thumbs/%D7%99%D7%9C%D7%93%D7%95%D7%AA%20%D7%95%D7%91%D7%92%D7%A8%D7%95%D7%AA/%D7%AA%D7%9E%D7%99%20%D7%91%D7%AA%20%D7%A9%D7%A0%D7%AA%D7%99%D7%99%D7%9D.jpg",
-          "alt": "ילדות ובגרות - תמי בת שנתיים",
+          "full": "/media/images/childhood/childhood-148.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-148.jpg",
+          "alt": "ילדות ובגרות",
           "w": 628,
           "h": 900
         }
       ]
     },
     {
-      "key": "בר-מצווה-אלון",
+      "key": "bar-mitzvah",
       "label": "בר מצווה אלון",
       "images": [
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(24).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(24).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (24)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-001.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-001.jpg",
+          "alt": "בר מצווה אלון",
           "w": 607,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(29).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(29).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (29)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-002.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-002.jpg",
+          "alt": "בר מצווה אלון",
           "w": 607,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(38).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(38).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (38)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-003.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-003.jpg",
+          "alt": "בר מצווה אלון",
           "w": 608,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(39).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(39).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (39)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-004.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-004.jpg",
+          "alt": "בר מצווה אלון",
           "w": 610,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(43).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(43).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (43)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-005.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-005.jpg",
+          "alt": "בר מצווה אלון",
           "w": 609,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(44).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(44).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (44)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-006.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-006.jpg",
+          "alt": "בר מצווה אלון",
           "w": 606,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(45).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(45).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (45)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-007.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-007.jpg",
+          "alt": "בר מצווה אלון",
           "w": 608,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(49).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(49).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (49)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-008.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-008.jpg",
+          "alt": "בר מצווה אלון",
           "w": 603,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(50).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(50).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (50)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-009.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-009.jpg",
+          "alt": "בר מצווה אלון",
           "w": 603,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(54).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(54).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (54)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-010.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-010.jpg",
+          "alt": "בר מצווה אלון",
           "w": 609,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(6).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (6)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-011.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-011.jpg",
+          "alt": "בר מצווה אלון",
           "w": 900,
           "h": 612
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/01%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F%20(7).jpg",
-          "alt": "בר מצווה אלון - 01 בר מצוה אלון (7)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-012.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-012.jpg",
+          "alt": "בר מצווה אלון",
           "w": 900,
           "h": 613
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(1)%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(1)%20(1).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (1) (1)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-013.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-013.jpg",
+          "alt": "בר מצווה אלון",
           "w": 612,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(12).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (12)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-014.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-014.jpg",
+          "alt": "בר מצווה אלון",
           "w": 900,
           "h": 611
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(13).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (13)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-015.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-015.jpg",
+          "alt": "בר מצווה אלון",
           "w": 613,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(14).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (14)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-016.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-016.jpg",
+          "alt": "בר מצווה אלון",
           "w": 613,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(15).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (15)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-017.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-017.jpg",
+          "alt": "בר מצווה אלון",
           "w": 613,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(16).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (16)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-018.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-018.jpg",
+          "alt": "בר מצווה אלון",
           "w": 612,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(17).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(17).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (17)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-019.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-019.jpg",
+          "alt": "בר מצווה אלון",
           "w": 900,
           "h": 611
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(19).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(19).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (19)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-020.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-020.jpg",
+          "alt": "בר מצווה אלון",
           "w": 900,
           "h": 610
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(2).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (2)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-021.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-021.jpg",
+          "alt": "בר מצווה אלון",
           "w": 611,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(22).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(22).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (22)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-022.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-022.jpg",
+          "alt": "בר מצווה אלון",
           "w": 900,
           "h": 609
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(25).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(25).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (25)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-023.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-023.jpg",
+          "alt": "בר מצווה אלון",
           "w": 609,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(26).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(26).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (26)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-024.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-024.jpg",
+          "alt": "בר מצווה אלון",
           "w": 608,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(28).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(28).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (28)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-025.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-025.jpg",
+          "alt": "בר מצווה אלון",
           "w": 610,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(29).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(29).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (29)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-026.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-026.jpg",
+          "alt": "בר מצווה אלון",
           "w": 610,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(3).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (3)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-027.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-027.jpg",
+          "alt": "בר מצווה אלון",
           "w": 611,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(32).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(32).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (32)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-028.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-028.jpg",
+          "alt": "בר מצווה אלון",
           "w": 611,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(38).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(38).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (38)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-029.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-029.jpg",
+          "alt": "בר מצווה אלון",
           "w": 612,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(44).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(44).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (44)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-030.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-030.jpg",
+          "alt": "בר מצווה אלון",
           "w": 610,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(47).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(47).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (47)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-031.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-031.jpg",
+          "alt": "בר מצווה אלון",
           "w": 604,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(48).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(48).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (48)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-032.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-032.jpg",
+          "alt": "בר מצווה אלון",
           "w": 608,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(5)%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(5)%20(1).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (5) (1)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-033.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-033.jpg",
+          "alt": "בר מצווה אלון",
           "w": 900,
           "h": 611
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(53).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(53).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (53)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-034.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-034.jpg",
+          "alt": "בר מצווה אלון",
           "w": 900,
           "h": 608
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(56).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(56).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (56)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-035.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-035.jpg",
+          "alt": "בר מצווה אלון",
           "w": 607,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(57).jpg",
-          "thumb": "/media/images/thumbs/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%95%D7%94%20%D7%90%D7%9C%D7%95%D7%9F/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(57).jpg",
-          "alt": "בר מצווה אלון - אלון בר מצוה (57)",
+          "full": "/media/images/bar-mitzvah/bar-mitzvah-036.jpg",
+          "thumb": "/media/images/thumbs/bar-mitzvah/bar-mitzvah-036.jpg",
+          "alt": "בר מצווה אלון",
           "w": 609,
           "h": 900
         }
       ]
     },
     {
-      "key": "חברים",
+      "key": "friends",
       "label": "חברים",
       "images": [
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F.jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F.jpg",
-          "alt": "חברים - 01  פסח 1994 גולן",
+          "full": "/media/images/friends/friends-001.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-001.jpg",
+          "alt": "חברים",
           "w": 599,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(1).jpg",
-          "alt": "חברים - 01 פסח 1994 גולן (1)",
+          "full": "/media/images/friends/friends-002.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-002.jpg",
+          "alt": "חברים",
           "w": 900,
           "h": 598
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(12).jpg",
-          "alt": "חברים - 01 פסח 1994 גולן (12)",
+          "full": "/media/images/friends/friends-003.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-003.jpg",
+          "alt": "חברים",
           "w": 900,
           "h": 588
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(13).jpg",
-          "alt": "חברים - 01 פסח 1994 גולן (13)",
+          "full": "/media/images/friends/friends-004.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-004.jpg",
+          "alt": "חברים",
           "w": 597,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(19).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(19).jpg",
-          "alt": "חברים - 01 פסח 1994 גולן (19)",
+          "full": "/media/images/friends/friends-005.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-005.jpg",
+          "alt": "חברים",
           "w": 597,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(2).jpg",
-          "alt": "חברים - 01 פסח 1994 גולן (2)",
+          "full": "/media/images/friends/friends-006.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-006.jpg",
+          "alt": "חברים",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/01%20%D7%A4%D7%A1%D7%97%201994%20%D7%92%D7%95%D7%9C%D7%9F%20(9).jpg",
-          "alt": "חברים - 01 פסח 1994 גולן (9)",
+          "full": "/media/images/friends/friends-007.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-007.jpg",
+          "alt": "חברים",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/02%20%20%D7%A4%D7%A1%D7%97%201994%20%D7%A1%D7%97%D7%A0%D7%94%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/02%20%20%D7%A4%D7%A1%D7%97%201994%20%D7%A1%D7%97%D7%A0%D7%94%20(1).jpg",
-          "alt": "חברים - 02  פסח 1994 סחנה (1)",
+          "full": "/media/images/friends/friends-008.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-008.jpg",
+          "alt": "חברים",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/02%20%20%D7%A4%D7%A1%D7%97%201994%20%D7%A1%D7%97%D7%A0%D7%94%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/02%20%20%D7%A4%D7%A1%D7%97%201994%20%D7%A1%D7%97%D7%A0%D7%94%20(3).jpg",
-          "alt": "חברים - 02  פסח 1994 סחנה (3)",
+          "full": "/media/images/friends/friends-009.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-009.jpg",
+          "alt": "חברים",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/02%201992%20%D7%9E%D7%92%D7%9E%D7%AA%20%D7%90%D7%9C%D7%A7%D7%98%D7%A8%D7%95%D7%A0%D7%99%D7%A7%D7%94%20%D7%99'%D7%91.jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/02%201992%20%D7%9E%D7%92%D7%9E%D7%AA%20%D7%90%D7%9C%D7%A7%D7%98%D7%A8%D7%95%D7%A0%D7%99%D7%A7%D7%94%20%D7%99'%D7%91.jpg",
-          "alt": "חברים - 02 1992 מגמת אלקטרוניקה י'ב",
+          "full": "/media/images/friends/friends-010.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-010.jpg",
+          "alt": "חברים",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20%201994%20%D7%98%D7%99%D7%95%D7%9C%20%D7%A9%D7%A0%D7%AA%D7%99%20%D7%92%D7%95%D7%9C%D7%9F%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20%201994%20%D7%98%D7%99%D7%95%D7%9C%20%D7%A9%D7%A0%D7%AA%D7%99%20%D7%92%D7%95%D7%9C%D7%9F%20(1).jpg",
-          "alt": "חברים - 03  1994 טיול שנתי גולן (1)",
+          "full": "/media/images/friends/friends-011.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-011.jpg",
+          "alt": "חברים",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(1).jpg",
-          "alt": "חברים - 03 (1)",
+          "full": "/media/images/friends/friends-012.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-012.jpg",
+          "alt": "חברים",
           "w": 601,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(2).jpg",
-          "alt": "חברים - 03 (2)",
+          "full": "/media/images/friends/friends-013.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-013.jpg",
+          "alt": "חברים",
           "w": 900,
           "h": 611
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(5).jpg",
-          "alt": "חברים - 03 (5)",
+          "full": "/media/images/friends/friends-014.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-014.jpg",
+          "alt": "חברים",
           "w": 900,
           "h": 591
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(6).jpg",
-          "alt": "חברים - 03 (6)",
+          "full": "/media/images/friends/friends-015.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-015.jpg",
+          "alt": "חברים",
           "w": 900,
           "h": 591
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/03%20(7).jpg",
-          "alt": "חברים - 03 (7)",
+          "full": "/media/images/friends/friends-016.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-016.jpg",
+          "alt": "חברים",
           "w": 589,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(10).jpg",
-          "alt": "חברים - 04 7-1994 סיני (10)",
+          "full": "/media/images/friends/friends-017.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-017.jpg",
+          "alt": "חברים",
           "w": 900,
           "h": 598
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(13).jpg",
-          "alt": "חברים - 04 7-1994 סיני (13)",
+          "full": "/media/images/friends/friends-018.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-018.jpg",
+          "alt": "חברים",
           "w": 900,
           "h": 595
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/04%207-1994%20%D7%A1%D7%99%D7%A0%D7%99%20(8).jpg",
-          "alt": "חברים - 04 7-1994 סיני (8)",
+          "full": "/media/images/friends/friends-019.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-019.jpg",
+          "alt": "חברים",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%20%D7%A2%D7%A6%D7%9E%D7%95%D7%A0%D7%94%20%D7%9E%D7%A1%D7%99%D7%91%D7%AA%20%D7%A1%D7%99%D7%95%D7%9D%201994.jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%20%D7%A2%D7%A6%D7%9E%D7%95%D7%A0%D7%94%20%D7%9E%D7%A1%D7%99%D7%91%D7%AA%20%D7%A1%D7%99%D7%95%D7%9D%201994.jpg",
-          "alt": "חברים - 05  עצמונה מסיבת סיום 1994",
+          "full": "/media/images/friends/friends-020.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-020.jpg",
+          "alt": "חברים",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%D7%A9%D7%A2%D7%95%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%91%D7%9E%D7%9B%D7%99%D7%A0%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/05%20%D7%A9%D7%A2%D7%95%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%91%D7%9E%D7%9B%D7%99%D7%A0%D7%94.jpg",
-          "alt": "חברים - 05 שעור תורה במכינה",
+          "full": "/media/images/friends/friends-021.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-021.jpg",
+          "alt": "חברים",
           "w": 602,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/06%20(11).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/06%20(11).jpg",
-          "alt": "חברים - 06 (11)",
+          "full": "/media/images/friends/friends-022.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-022.jpg",
+          "alt": "חברים",
           "w": 599,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/11%20%D7%9B%D7%AA%D7%94%20%D7%99%20%20%D7%97%D7%96%D7%99%20%D7%95%D7%94%D7%91%D7%A0%D7%99%D7%9D.jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/11%20%D7%9B%D7%AA%D7%94%20%D7%99%20%20%D7%97%D7%96%D7%99%20%D7%95%D7%94%D7%91%D7%A0%D7%99%D7%9D.jpg",
-          "alt": "חברים - 11 כתה י  חזי והבנים",
+          "full": "/media/images/friends/friends-023.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-023.jpg",
+          "alt": "חברים",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/15%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%205%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/15%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%205%20(10).jpg",
-          "alt": "חברים - 15 אלון יום הולדת 5 (10)",
+          "full": "/media/images/friends/friends-024.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-024.jpg",
+          "alt": "חברים",
           "w": 571,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/18.jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/18.jpg",
-          "alt": "חברים - 18",
+          "full": "/media/images/friends/friends-025.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-025.jpg",
+          "alt": "חברים",
           "w": 900,
           "h": 591
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/1995%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%AA%D7%9E%D7%99%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/1995%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%AA%D7%9E%D7%99%20(2).jpg",
-          "alt": "חברים - 1995 יום הולדת תמי (2)",
+          "full": "/media/images/friends/friends-026.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-026.jpg",
+          "alt": "חברים",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(114).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(114).jpg",
-          "alt": "חברים - אלון (114)",
+          "full": "/media/images/friends/friends-027.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-027.jpg",
+          "alt": "חברים",
           "w": 620,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(124).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(124).jpg",
-          "alt": "חברים - אלון (124)",
+          "full": "/media/images/friends/friends-028.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-028.jpg",
+          "alt": "חברים",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(125).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(125).jpg",
-          "alt": "חברים - אלון (125)",
+          "full": "/media/images/friends/friends-029.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-029.jpg",
+          "alt": "חברים",
           "w": 900,
           "h": 592
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(127).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(127).jpg",
-          "alt": "חברים - אלון (127)",
+          "full": "/media/images/friends/friends-030.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-030.jpg",
+          "alt": "חברים",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(128).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(128).jpg",
-          "alt": "חברים - אלון (128)",
+          "full": "/media/images/friends/friends-031.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-031.jpg",
+          "alt": "חברים",
           "w": 599,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(149).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(149).jpg",
-          "alt": "חברים - אלון (149)",
+          "full": "/media/images/friends/friends-032.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-032.jpg",
+          "alt": "חברים",
           "w": 614,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(155).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(155).jpg",
-          "alt": "חברים - אלון (155)",
+          "full": "/media/images/friends/friends-033.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-033.jpg",
+          "alt": "חברים",
           "w": 616,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(162).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(162).jpg",
-          "alt": "חברים - אלון (162)",
+          "full": "/media/images/friends/friends-034.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-034.jpg",
+          "alt": "חברים",
           "w": 701,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(183).jpg",
-          "thumb": "/media/images/thumbs/%D7%97%D7%91%D7%A8%D7%99%D7%9D/%D7%90%D7%9C%D7%95%D7%9F%20(183).jpg",
-          "alt": "חברים - אלון (183)",
+          "full": "/media/images/friends/friends-035.jpg",
+          "thumb": "/media/images/thumbs/friends/friends-035.jpg",
+          "alt": "חברים",
           "w": 638,
           "h": 900
         }
       ]
     },
     {
-      "key": "צבא",
+      "key": "army",
       "label": "צבא",
       "images": [
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20(20).jpg",
-          "alt": "צבא - 01 (20)",
+          "full": "/media/images/army/army-001.jpg",
+          "thumb": "/media/images/thumbs/army/army-001.jpg",
+          "alt": "צבא",
           "w": 628,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20(4).jpg",
-          "alt": "צבא - 01 (4)",
+          "full": "/media/images/army/army-002.jpg",
+          "thumb": "/media/images/thumbs/army/army-002.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 627
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20(5).jpg",
-          "alt": "צבא - 01 (5)",
+          "full": "/media/images/army/army-003.jpg",
+          "thumb": "/media/images/thumbs/army/army-003.jpg",
+          "alt": "צבא",
           "w": 626,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20(6).jpg",
-          "alt": "צבא - 01 (6)",
+          "full": "/media/images/army/army-004.jpg",
+          "thumb": "/media/images/thumbs/army/army-004.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20(7).jpg",
-          "alt": "צבא - 01 (7)",
+          "full": "/media/images/army/army-005.jpg",
+          "thumb": "/media/images/thumbs/army/army-005.jpg",
+          "alt": "צבא",
           "w": 628,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20(8).jpg",
-          "alt": "צבא - 01 (8)",
+          "full": "/media/images/army/army-006.jpg",
+          "thumb": "/media/images/thumbs/army/army-006.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 626
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20(9).jpg",
-          "alt": "צבא - 01 (9)",
+          "full": "/media/images/army/army-007.jpg",
+          "thumb": "/media/images/thumbs/army/army-007.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(1).jpg",
-          "alt": "צבא - 01 קורס קצינים (1)",
+          "full": "/media/images/army/army-008.jpg",
+          "thumb": "/media/images/thumbs/army/army-008.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 592
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(10).jpg",
-          "alt": "צבא - 01 קורס קצינים (10)",
+          "full": "/media/images/army/army-009.jpg",
+          "thumb": "/media/images/thumbs/army/army-009.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 592
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(11).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(11).jpg",
-          "alt": "צבא - 01 קורס קצינים (11)",
+          "full": "/media/images/army/army-010.jpg",
+          "thumb": "/media/images/thumbs/army/army-010.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(12).jpg",
-          "alt": "צבא - 01 קורס קצינים (12)",
+          "full": "/media/images/army/army-011.jpg",
+          "thumb": "/media/images/thumbs/army/army-011.jpg",
+          "alt": "צבא",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(13).jpg",
-          "alt": "צבא - 01 קורס קצינים (13)",
+          "full": "/media/images/army/army-012.jpg",
+          "thumb": "/media/images/thumbs/army/army-012.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 586
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(14).jpg",
-          "alt": "צבא - 01 קורס קצינים (14)",
+          "full": "/media/images/army/army-013.jpg",
+          "thumb": "/media/images/thumbs/army/army-013.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(15).jpg",
-          "alt": "צבא - 01 קורס קצינים (15)",
+          "full": "/media/images/army/army-014.jpg",
+          "thumb": "/media/images/thumbs/army/army-014.jpg",
+          "alt": "צבא",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(16).jpg",
-          "alt": "צבא - 01 קורס קצינים (16)",
+          "full": "/media/images/army/army-015.jpg",
+          "thumb": "/media/images/thumbs/army/army-015.jpg",
+          "alt": "צבא",
           "w": 599,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(17).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(17).jpg",
-          "alt": "צבא - 01 קורס קצינים (17)",
+          "full": "/media/images/army/army-016.jpg",
+          "thumb": "/media/images/thumbs/army/army-016.jpg",
+          "alt": "צבא",
           "w": 593,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(2).jpg",
-          "alt": "צבא - 01 קורס קצינים (2)",
+          "full": "/media/images/army/army-017.jpg",
+          "thumb": "/media/images/thumbs/army/army-017.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(3).jpg",
-          "alt": "צבא - 01 קורס קצינים (3)",
+          "full": "/media/images/army/army-018.jpg",
+          "thumb": "/media/images/thumbs/army/army-018.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(5).jpg",
-          "alt": "צבא - 01 קורס קצינים (5)",
+          "full": "/media/images/army/army-019.jpg",
+          "thumb": "/media/images/thumbs/army/army-019.jpg",
+          "alt": "צבא",
           "w": 596,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(6).jpg",
-          "alt": "צבא - 01 קורס קצינים (6)",
+          "full": "/media/images/army/army-020.jpg",
+          "thumb": "/media/images/thumbs/army/army-020.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(7).jpg",
-          "alt": "צבא - 01 קורס קצינים (7)",
+          "full": "/media/images/army/army-021.jpg",
+          "thumb": "/media/images/thumbs/army/army-021.jpg",
+          "alt": "צבא",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(8).jpg",
-          "alt": "צבא - 01 קורס קצינים (8)",
+          "full": "/media/images/army/army-022.jpg",
+          "thumb": "/media/images/thumbs/army/army-022.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/01%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(9).jpg",
-          "alt": "צבא - 01 קורס קצינים (9)",
+          "full": "/media/images/army/army-023.jpg",
+          "thumb": "/media/images/thumbs/army/army-023.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 592
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(12).jpg",
-          "alt": "צבא - 02 בופור (12)",
+          "full": "/media/images/army/army-024.jpg",
+          "thumb": "/media/images/thumbs/army/army-024.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(17).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(17).jpg",
-          "alt": "צבא - 02 בופור (17)",
+          "full": "/media/images/army/army-025.jpg",
+          "thumb": "/media/images/thumbs/army/army-025.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 599
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(18).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(18).jpg",
-          "alt": "צבא - 02 בופור (18)",
+          "full": "/media/images/army/army-026.jpg",
+          "thumb": "/media/images/thumbs/army/army-026.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 593
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(19).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(19).jpg",
-          "alt": "צבא - 02 בופור (19)",
+          "full": "/media/images/army/army-027.jpg",
+          "thumb": "/media/images/thumbs/army/army-027.jpg",
+          "alt": "צבא",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(2).jpg",
-          "alt": "צבא - 02 בופור (2)",
+          "full": "/media/images/army/army-028.jpg",
+          "thumb": "/media/images/thumbs/army/army-028.jpg",
+          "alt": "צבא",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(20).jpg",
-          "alt": "צבא - 02 בופור (20)",
+          "full": "/media/images/army/army-029.jpg",
+          "thumb": "/media/images/thumbs/army/army-029.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(21).jpg",
-          "alt": "צבא - 02 בופור (21)",
+          "full": "/media/images/army/army-030.jpg",
+          "thumb": "/media/images/thumbs/army/army-030.jpg",
+          "alt": "צבא",
           "w": 604,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(27).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(27).jpg",
-          "alt": "צבא - 02 בופור (27)",
+          "full": "/media/images/army/army-031.jpg",
+          "thumb": "/media/images/thumbs/army/army-031.jpg",
+          "alt": "צבא",
           "w": 602,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(28).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(28).jpg",
-          "alt": "צבא - 02 בופור (28)",
+          "full": "/media/images/army/army-032.jpg",
+          "thumb": "/media/images/thumbs/army/army-032.jpg",
+          "alt": "צבא",
           "w": 597,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(33).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(33).jpg",
-          "alt": "צבא - 02 בופור (33)",
+          "full": "/media/images/army/army-033.jpg",
+          "thumb": "/media/images/thumbs/army/army-033.jpg",
+          "alt": "צבא",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(34).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(34).jpg",
-          "alt": "צבא - 02 בופור (34)",
+          "full": "/media/images/army/army-034.jpg",
+          "thumb": "/media/images/thumbs/army/army-034.jpg",
+          "alt": "צבא",
           "w": 599,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(37).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(37).jpg",
-          "alt": "צבא - 02 בופור (37)",
+          "full": "/media/images/army/army-035.jpg",
+          "thumb": "/media/images/thumbs/army/army-035.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 604
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(39).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(39).jpg",
-          "alt": "צבא - 02 בופור (39)",
+          "full": "/media/images/army/army-036.jpg",
+          "thumb": "/media/images/thumbs/army/army-036.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 600
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(4).jpg",
-          "alt": "צבא - 02 בופור (4)",
+          "full": "/media/images/army/army-037.jpg",
+          "thumb": "/media/images/thumbs/army/army-037.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(40).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(40).jpg",
-          "alt": "צבא - 02 בופור (40)",
+          "full": "/media/images/army/army-038.jpg",
+          "thumb": "/media/images/thumbs/army/army-038.jpg",
+          "alt": "צבא",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(5).jpg",
-          "alt": "צבא - 02 בופור (5)",
+          "full": "/media/images/army/army-039.jpg",
+          "thumb": "/media/images/thumbs/army/army-039.jpg",
+          "alt": "צבא",
           "w": 601,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%91%D7%95%D7%A4%D7%95%D7%A8%20(8).jpg",
-          "alt": "צבא - 02 בופור (8)",
+          "full": "/media/images/army/army-040.jpg",
+          "thumb": "/media/images/thumbs/army/army-040.jpg",
+          "alt": "צבא",
           "w": 599,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(1).jpg",
-          "alt": "צבא - 02 השבעה (1)",
+          "full": "/media/images/army/army-041.jpg",
+          "thumb": "/media/images/thumbs/army/army-041.jpg",
+          "alt": "צבא",
           "w": 587,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(4).jpg",
-          "alt": "צבא - 02 השבעה (4)",
+          "full": "/media/images/army/army-042.jpg",
+          "thumb": "/media/images/thumbs/army/army-042.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(5).jpg",
-          "alt": "צבא - 02 השבעה (5)",
+          "full": "/media/images/army/army-043.jpg",
+          "thumb": "/media/images/thumbs/army/army-043.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(6).jpg",
-          "alt": "צבא - 02 השבעה (6)",
+          "full": "/media/images/army/army-044.jpg",
+          "thumb": "/media/images/thumbs/army/army-044.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/02%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20(7).jpg",
-          "alt": "צבא - 02 השבעה (7)",
+          "full": "/media/images/army/army-045.jpg",
+          "thumb": "/media/images/thumbs/army/army-045.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/03%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/03%20(8).jpg",
-          "alt": "צבא - 03 (8)",
+          "full": "/media/images/army/army-046.jpg",
+          "thumb": "/media/images/thumbs/army/army-046.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 591
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/03%20(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/03%20(9).jpg",
-          "alt": "צבא - 03 (9)",
+          "full": "/media/images/army/army-047.jpg",
+          "thumb": "/media/images/thumbs/army/army-047.jpg",
+          "alt": "צבא",
           "w": 593,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/03%20%D7%92'%D7%96%D7%99%D7%9F.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/03%20%D7%92'%D7%96%D7%99%D7%9F.jpg",
-          "alt": "צבא - 03 ג'זין",
+          "full": "/media/images/army/army-048.jpg",
+          "thumb": "/media/images/thumbs/army/army-048.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 591
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/04%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/04%20(7).jpg",
-          "alt": "צבא - 04 (7)",
+          "full": "/media/images/army/army-049.jpg",
+          "thumb": "/media/images/thumbs/army/army-049.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 598
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/04%20%D7%91%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/04%20%D7%91%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20(1).jpg",
-          "alt": "צבא - 04 במסלול (1)",
+          "full": "/media/images/army/army-050.jpg",
+          "thumb": "/media/images/thumbs/army/army-050.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 594
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/04%20%D7%A8%D7%99%D7%99%D7%97%D7%9F.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/04%20%D7%A8%D7%99%D7%99%D7%97%D7%9F.jpg",
-          "alt": "צבא - 04 רייחן",
+          "full": "/media/images/army/army-051.jpg",
+          "thumb": "/media/images/thumbs/army/army-051.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 588
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/05%20%D7%90%D7%9C%D7%99%D7%94%D7%95%20%D7%96%D7%A8%D7%A7%D7%95%D7%91%20%D7%99%D7%A8%D7%99%D7%91%20%D7%93%D7%9F%20%D7%95%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A9%D7%A2%D7%A8%20%D7%94%D7%A2%D7%92%D7%9C%20%D7%9C%D7%99%D7%93%20%D7%A7.%D7%A9%D7%9E%D7%95%D7%A0%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/05%20%D7%90%D7%9C%D7%99%D7%94%D7%95%20%D7%96%D7%A8%D7%A7%D7%95%D7%91%20%D7%99%D7%A8%D7%99%D7%91%20%D7%93%D7%9F%20%D7%95%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A9%D7%A2%D7%A8%20%D7%94%D7%A2%D7%92%D7%9C%20%D7%9C%D7%99%D7%93%20%D7%A7.%D7%A9%D7%9E%D7%95%D7%A0%D7%94.jpg",
-          "alt": "צבא - 05 אליהו זרקוב יריב דן ואלון בשער העגל ליד ק.שמונה",
+          "full": "/media/images/army/army-052.jpg",
+          "thumb": "/media/images/thumbs/army/army-052.jpg",
+          "alt": "צבא",
           "w": 596,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(1).jpg",
-          "alt": "צבא - 07  השבעה צומת גולני (1)",
+          "full": "/media/images/army/army-053.jpg",
+          "thumb": "/media/images/thumbs/army/army-053.jpg",
+          "alt": "צבא",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(6).jpg",
-          "alt": "צבא - 07  השבעה צומת גולני (6)",
+          "full": "/media/images/army/army-054.jpg",
+          "thumb": "/media/images/thumbs/army/army-054.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A0%D7%99%D7%95%D7%95%D7%98%D7%99%D7%9D%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A0%D7%99%D7%95%D7%95%D7%98%D7%99%D7%9D%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(2).jpg",
-          "alt": "צבא - 07 אלון בניווטים בצפון (2)",
+          "full": "/media/images/army/army-055.jpg",
+          "thumb": "/media/images/thumbs/army/army-055.jpg",
+          "alt": "צבא",
           "w": 586,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(10).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (10)",
+          "full": "/media/images/army/army-056.jpg",
+          "thumb": "/media/images/thumbs/army/army-056.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(11).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(11).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (11)",
+          "full": "/media/images/army/army-057.jpg",
+          "thumb": "/media/images/thumbs/army/army-057.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(14).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (14)",
+          "full": "/media/images/army/army-058.jpg",
+          "thumb": "/media/images/thumbs/army/army-058.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(15).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (15)",
+          "full": "/media/images/army/army-059.jpg",
+          "thumb": "/media/images/thumbs/army/army-059.jpg",
+          "alt": "צבא",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(16).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (16)",
+          "full": "/media/images/army/army-060.jpg",
+          "thumb": "/media/images/thumbs/army/army-060.jpg",
+          "alt": "צבא",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(17).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(17).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (17)",
+          "full": "/media/images/army/army-061.jpg",
+          "thumb": "/media/images/thumbs/army/army-061.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(18).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(18).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (18)",
+          "full": "/media/images/army/army-062.jpg",
+          "thumb": "/media/images/thumbs/army/army-062.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 593
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(4).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (4)",
+          "full": "/media/images/army/army-063.jpg",
+          "thumb": "/media/images/thumbs/army/army-063.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(5).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (5)",
+          "full": "/media/images/army/army-064.jpg",
+          "thumb": "/media/images/thumbs/army/army-064.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(7).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (7)",
+          "full": "/media/images/army/army-065.jpg",
+          "thumb": "/media/images/thumbs/army/army-065.jpg",
+          "alt": "צבא",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/07%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99%20(8).jpg",
-          "alt": "צבא - 07 השבעה צומת גולני (8)",
+          "full": "/media/images/army/army-066.jpg",
+          "thumb": "/media/images/thumbs/army/army-066.jpg",
+          "alt": "צבא",
           "w": 593,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(1).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (1)",
+          "full": "/media/images/army/army-067.jpg",
+          "thumb": "/media/images/thumbs/army/army-067.jpg",
+          "alt": "צבא",
           "w": 563,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(10).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (10)",
+          "full": "/media/images/army/army-068.jpg",
+          "thumb": "/media/images/thumbs/army/army-068.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 594
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(11).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(11).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (11)",
+          "full": "/media/images/army/army-069.jpg",
+          "thumb": "/media/images/thumbs/army/army-069.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(12).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (12)",
+          "full": "/media/images/army/army-070.jpg",
+          "thumb": "/media/images/thumbs/army/army-070.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 586
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(13).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (13)",
+          "full": "/media/images/army/army-071.jpg",
+          "thumb": "/media/images/thumbs/army/army-071.jpg",
+          "alt": "צבא",
           "w": 584,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(14).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (14)",
+          "full": "/media/images/army/army-072.jpg",
+          "thumb": "/media/images/thumbs/army/army-072.jpg",
+          "alt": "צבא",
           "w": 587,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(15).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (15)",
+          "full": "/media/images/army/army-073.jpg",
+          "thumb": "/media/images/thumbs/army/army-073.jpg",
+          "alt": "צבא",
           "w": 589,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(16).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (16)",
+          "full": "/media/images/army/army-074.jpg",
+          "thumb": "/media/images/thumbs/army/army-074.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 587
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(18).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(18).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (18)",
+          "full": "/media/images/army/army-075.jpg",
+          "thumb": "/media/images/thumbs/army/army-075.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 588
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(2).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (2)",
+          "full": "/media/images/army/army-076.jpg",
+          "thumb": "/media/images/thumbs/army/army-076.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(20).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (20)",
+          "full": "/media/images/army/army-077.jpg",
+          "thumb": "/media/images/thumbs/army/army-077.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 588
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(21).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(21).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (21)",
+          "full": "/media/images/army/army-078.jpg",
+          "thumb": "/media/images/thumbs/army/army-078.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 588
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(3).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (3)",
+          "full": "/media/images/army/army-079.jpg",
+          "thumb": "/media/images/thumbs/army/army-079.jpg",
+          "alt": "צבא",
           "w": 585,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(4).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (4)",
+          "full": "/media/images/army/army-080.jpg",
+          "thumb": "/media/images/thumbs/army/army-080.jpg",
+          "alt": "צבא",
           "w": 588,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(6).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (6)",
+          "full": "/media/images/army/army-081.jpg",
+          "thumb": "/media/images/thumbs/army/army-081.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 590
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(7).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (7)",
+          "full": "/media/images/army/army-082.jpg",
+          "thumb": "/media/images/thumbs/army/army-082.jpg",
+          "alt": "צבא",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(8).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (8)",
+          "full": "/media/images/army/army-083.jpg",
+          "thumb": "/media/images/thumbs/army/army-083.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 585
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20%201996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D%20(9).jpg",
-          "alt": "צבא - 08  1996 סיום קורס סמלים (9)",
+          "full": "/media/images/army/army-084.jpg",
+          "thumb": "/media/images/thumbs/army/army-084.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 600
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20(1).jpg",
-          "alt": "צבא - 08 (1)",
+          "full": "/media/images/army/army-085.jpg",
+          "thumb": "/media/images/thumbs/army/army-085.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20(2).jpg",
-          "alt": "צבא - 08 (2)",
+          "full": "/media/images/army/army-086.jpg",
+          "thumb": "/media/images/thumbs/army/army-086.jpg",
+          "alt": "צבא",
           "w": 593,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20(3)%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20(3)%20(1).jpg",
-          "alt": "צבא - 08 (3) (1)",
+          "full": "/media/images/army/army-087.jpg",
+          "thumb": "/media/images/thumbs/army/army-087.jpg",
+          "alt": "צבא",
           "w": 597,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20(4).jpg",
-          "alt": "צבא - 08 (4)",
+          "full": "/media/images/army/army-088.jpg",
+          "thumb": "/media/images/thumbs/army/army-088.jpg",
+          "alt": "צבא",
           "w": 590,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/08%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/08%20(5).jpg",
-          "alt": "צבא - 08 (5)",
+          "full": "/media/images/army/army-089.jpg",
+          "thumb": "/media/images/thumbs/army/army-089.jpg",
+          "alt": "צבא",
           "w": 605,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(10).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (10)",
+          "full": "/media/images/army/army-090.jpg",
+          "thumb": "/media/images/thumbs/army/army-090.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(11).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(11).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (11)",
+          "full": "/media/images/army/army-091.jpg",
+          "thumb": "/media/images/thumbs/army/army-091.jpg",
+          "alt": "צבא",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(12).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (12)",
+          "full": "/media/images/army/army-092.jpg",
+          "thumb": "/media/images/thumbs/army/army-092.jpg",
+          "alt": "צבא",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(13).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (13)",
+          "full": "/media/images/army/army-093.jpg",
+          "thumb": "/media/images/thumbs/army/army-093.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 631
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(14).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (14)",
+          "full": "/media/images/army/army-094.jpg",
+          "thumb": "/media/images/thumbs/army/army-094.jpg",
+          "alt": "צבא",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(16).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (16)",
+          "full": "/media/images/army/army-095.jpg",
+          "thumb": "/media/images/thumbs/army/army-095.jpg",
+          "alt": "צבא",
           "w": 631,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(18).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(18).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (18)",
+          "full": "/media/images/army/army-096.jpg",
+          "thumb": "/media/images/thumbs/army/army-096.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 631
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(20).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (20)",
+          "full": "/media/images/army/army-097.jpg",
+          "thumb": "/media/images/thumbs/army/army-097.jpg",
+          "alt": "צבא",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(21).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(21).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (21)",
+          "full": "/media/images/army/army-098.jpg",
+          "thumb": "/media/images/thumbs/army/army-098.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 632
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(32).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(32).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (32)",
+          "full": "/media/images/army/army-099.jpg",
+          "thumb": "/media/images/thumbs/army/army-099.jpg",
+          "alt": "צבא",
           "w": 636,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(33).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(33).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (33)",
+          "full": "/media/images/army/army-100.jpg",
+          "thumb": "/media/images/thumbs/army/army-100.jpg",
+          "alt": "צבא",
           "w": 624,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(34).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(34).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (34)",
+          "full": "/media/images/army/army-101.jpg",
+          "thumb": "/media/images/thumbs/army/army-101.jpg",
+          "alt": "צבא",
           "w": 627,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(35).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(35).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (35)",
+          "full": "/media/images/army/army-102.jpg",
+          "thumb": "/media/images/thumbs/army/army-102.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 637
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(36).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(36).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (36)",
+          "full": "/media/images/army/army-103.jpg",
+          "thumb": "/media/images/thumbs/army/army-103.jpg",
+          "alt": "צבא",
           "w": 636,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(37).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(37).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (37)",
+          "full": "/media/images/army/army-104.jpg",
+          "thumb": "/media/images/thumbs/army/army-104.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(38).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(38).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (38)",
+          "full": "/media/images/army/army-105.jpg",
+          "thumb": "/media/images/thumbs/army/army-105.jpg",
+          "alt": "צבא",
           "w": 596,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(4).jpg",
-          "alt": "צבא - 09 סיום קורס קצינים (4)",
+          "full": "/media/images/army/army-106.jpg",
+          "thumb": "/media/images/thumbs/army/army-106.jpg",
+          "alt": "צבא",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/09.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/09.jpg",
-          "alt": "צבא - 09",
+          "full": "/media/images/army/army-107.jpg",
+          "thumb": "/media/images/thumbs/army/army-107.jpg",
+          "alt": "צבא",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/10%20%20%D7%91%D7%99%D7%A1%D7%9C'%D7%97%20%D7%90%D7%99%D7%9E%D7%95%D7%9F%20%D7%9E%D7%AA%D7%A7%D7%93%D7%9D%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/10%20%20%D7%91%D7%99%D7%A1%D7%9C'%D7%97%20%D7%90%D7%99%D7%9E%D7%95%D7%9F%20%D7%9E%D7%AA%D7%A7%D7%93%D7%9D%20(1).jpg",
-          "alt": "צבא - 10  ביסל'ח אימון מתקדם (1)",
+          "full": "/media/images/army/army-108.jpg",
+          "thumb": "/media/images/thumbs/army/army-108.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 636
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/10%20%20%D7%91%D7%99%D7%A1%D7%9C'%D7%97%20%D7%90%D7%99%D7%9E%D7%95%D7%9F%20%D7%9E%D7%AA%D7%A7%D7%93%D7%9D%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/10%20%20%D7%91%D7%99%D7%A1%D7%9C'%D7%97%20%D7%90%D7%99%D7%9E%D7%95%D7%9F%20%D7%9E%D7%AA%D7%A7%D7%93%D7%9D%20(15).jpg",
-          "alt": "צבא - 10  ביסל'ח אימון מתקדם (15)",
+          "full": "/media/images/army/army-109.jpg",
+          "thumb": "/media/images/thumbs/army/army-109.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 638
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/10-1996.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/10-1996.jpg",
-          "alt": "צבא - 10-1996",
+          "full": "/media/images/army/army-110.jpg",
+          "thumb": "/media/images/thumbs/army/army-110.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 586
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/11%20%208-1995%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/11%20%208-1995%20(3).jpg",
-          "alt": "צבא - 11  8-1995 (3)",
+          "full": "/media/images/army/army-111.jpg",
+          "thumb": "/media/images/thumbs/army/army-111.jpg",
+          "alt": "צבא",
           "w": 587,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/11%20%208-1995%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/11%20%208-1995%20(4).jpg",
-          "alt": "צבא - 11  8-1995 (4)",
+          "full": "/media/images/army/army-112.jpg",
+          "thumb": "/media/images/thumbs/army/army-112.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/12%20%20%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/12%20%20%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94%20(1).jpg",
-          "alt": "צבא - 12  עיישיה (1)",
+          "full": "/media/images/army/army-113.jpg",
+          "thumb": "/media/images/thumbs/army/army-113.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 593
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/12%20%20%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/12%20%20%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94%20(3).jpg",
-          "alt": "צבא - 12  עיישיה (3)",
+          "full": "/media/images/army/army-114.jpg",
+          "thumb": "/media/images/thumbs/army/army-114.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/12%20%20%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/12%20%20%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94%20(4).jpg",
-          "alt": "צבא - 12  עיישיה (4)",
+          "full": "/media/images/army/army-115.jpg",
+          "thumb": "/media/images/thumbs/army/army-115.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 590
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/13%20%20%D7%97%D7%96%D7%A8%D7%94%20%D7%9E%D7%9E%D7%90%D7%A8%D7%91%2036.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/13%20%20%D7%97%D7%96%D7%A8%D7%94%20%D7%9E%D7%9E%D7%90%D7%A8%D7%91%2036.jpg",
-          "alt": "צבא - 13  חזרה ממארב 36",
+          "full": "/media/images/army/army-116.jpg",
+          "thumb": "/media/images/thumbs/army/army-116.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/13%20%D7%92'%D7%96%D7%99%D7%9F.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/13%20%D7%92'%D7%96%D7%99%D7%9F.jpg",
-          "alt": "צבא - 13 ג'זין",
+          "full": "/media/images/army/army-117.jpg",
+          "thumb": "/media/images/thumbs/army/army-117.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 593
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/13%20%D7%9E%D7%95%D7%A6%D7%91%20%D7%93%D7%9E%D7%A9%D7%A7%D7%99%D7%99%D7%94%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/13%20%D7%9E%D7%95%D7%A6%D7%91%20%D7%93%D7%9E%D7%A9%D7%A7%D7%99%D7%99%D7%94%20(1).jpg",
-          "alt": "צבא - 13 מוצב דמשקייה (1)",
+          "full": "/media/images/army/army-118.jpg",
+          "thumb": "/media/images/thumbs/army/army-118.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 586
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/13%20%D7%9E%D7%95%D7%A6%D7%91%20%D7%93%D7%9E%D7%A9%D7%A7%D7%99%D7%99%D7%94%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/13%20%D7%9E%D7%95%D7%A6%D7%91%20%D7%93%D7%9E%D7%A9%D7%A7%D7%99%D7%99%D7%94%20(2).jpg",
-          "alt": "צבא - 13 מוצב דמשקייה (2)",
+          "full": "/media/images/army/army-119.jpg",
+          "thumb": "/media/images/thumbs/army/army-119.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 593
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/13%20%D7%9E%D7%95%D7%A6%D7%91%20%D7%93%D7%9E%D7%A9%D7%A7%D7%99%D7%99%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/13%20%D7%9E%D7%95%D7%A6%D7%91%20%D7%93%D7%9E%D7%A9%D7%A7%D7%99%D7%99%D7%94.jpg",
-          "alt": "צבא - 13 מוצב דמשקייה",
+          "full": "/media/images/army/army-120.jpg",
+          "thumb": "/media/images/thumbs/army/army-120.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 592
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/14%20%D7%9E%D7%97%D7%9C%D7%A7%D7%94%203%20%D7%91%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/14%20%D7%9E%D7%97%D7%9C%D7%A7%D7%94%203%20%D7%91%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94%20(2).jpg",
-          "alt": "צבא - 14 מחלקה 3 בעיישיה (2)",
+          "full": "/media/images/army/army-121.jpg",
+          "thumb": "/media/images/thumbs/army/army-121.jpg",
+          "alt": "צבא",
           "w": 596,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/17%20%20%D7%91%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/17%20%20%D7%91%D7%A2%D7%99%D7%99%D7%A9%D7%99%D7%94.jpg",
-          "alt": "צבא - 17  בעיישיה",
+          "full": "/media/images/army/army-122.jpg",
+          "thumb": "/media/images/thumbs/army/army-122.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 597
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/17%20%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/17%20%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D.jpg",
-          "alt": "צבא - 17  קורס קצינים",
+          "full": "/media/images/army/army-123.jpg",
+          "thumb": "/media/images/thumbs/army/army-123.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/1994%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/1994%20%D7%94%D7%A9%D7%91%D7%A2%D7%94%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A6%D7%95%D7%9E%D7%AA%20%D7%92%D7%95%D7%9C%D7%A0%D7%99.jpg",
-          "alt": "צבא - 1994 השבעה של אלון בצומת גולני",
+          "full": "/media/images/army/army-124.jpg",
+          "thumb": "/media/images/thumbs/army/army-124.jpg",
+          "alt": "צבא",
           "w": 593,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/1995%20%D7%A4%D7%A1%D7%97%20%D7%91%D7%A0%D7%99%D7%95%D7%95%D7%98%D7%99%D7%9D%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/1995%20%D7%A4%D7%A1%D7%97%20%D7%91%D7%A0%D7%99%D7%95%D7%95%D7%98%D7%99%D7%9D%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F.jpg",
-          "alt": "צבא - 1995 פסח בניווטים בצפון",
+          "full": "/media/images/army/army-125.jpg",
+          "thumb": "/media/images/thumbs/army/army-125.jpg",
+          "alt": "צבא",
           "w": 589,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/1996%20%D7%98%D7%A7%D7%A1%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/1996%20%D7%98%D7%A7%D7%A1%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(1).jpg",
-          "alt": "צבא - 1996 טקס סיום קורס קצינים (1)",
+          "full": "/media/images/army/army-126.jpg",
+          "thumb": "/media/images/thumbs/army/army-126.jpg",
+          "alt": "צבא",
           "w": 638,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/1996%20%D7%98%D7%A7%D7%A1%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/1996%20%D7%98%D7%A7%D7%A1%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D%20(2).jpg",
-          "alt": "צבא - 1996 טקס סיום קורס קצינים (2)",
+          "full": "/media/images/army/army-127.jpg",
+          "thumb": "/media/images/thumbs/army/army-127.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 642
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/1996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/1996%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A1%D7%9E%D7%9C%D7%99%D7%9D.jpg",
-          "alt": "צבא - 1996 סיום קורס סמלים",
+          "full": "/media/images/army/army-128.jpg",
+          "thumb": "/media/images/thumbs/army/army-128.jpg",
+          "alt": "צבא",
           "w": 586,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/8-1995.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/8-1995.jpg",
-          "alt": "צבא - 8-1995",
+          "full": "/media/images/army/army-129.jpg",
+          "thumb": "/media/images/thumbs/army/army-129.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 591
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(108).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(108).jpg",
-          "alt": "צבא - אלון (108)",
+          "full": "/media/images/army/army-130.jpg",
+          "thumb": "/media/images/thumbs/army/army-130.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 588
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(113).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(113).jpg",
-          "alt": "צבא - אלון (113)",
+          "full": "/media/images/army/army-131.jpg",
+          "thumb": "/media/images/thumbs/army/army-131.jpg",
+          "alt": "צבא",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(177).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(177).jpg",
-          "alt": "צבא - אלון (177)",
+          "full": "/media/images/army/army-132.jpg",
+          "thumb": "/media/images/thumbs/army/army-132.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(18).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(18).jpg",
-          "alt": "צבא - אלון (18)",
+          "full": "/media/images/army/army-133.jpg",
+          "thumb": "/media/images/thumbs/army/army-133.jpg",
+          "alt": "צבא",
           "w": 587,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(19).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(19).jpg",
-          "alt": "צבא - אלון (19)",
+          "full": "/media/images/army/army-134.jpg",
+          "thumb": "/media/images/thumbs/army/army-134.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 589
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(195).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(195).jpg",
-          "alt": "צבא - אלון (195)",
+          "full": "/media/images/army/army-135.jpg",
+          "thumb": "/media/images/thumbs/army/army-135.jpg",
+          "alt": "צבא",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(196).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(196).jpg",
-          "alt": "צבא - אלון (196)",
+          "full": "/media/images/army/army-136.jpg",
+          "thumb": "/media/images/thumbs/army/army-136.jpg",
+          "alt": "צבא",
           "w": 588,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(20).jpg",
-          "alt": "צבא - אלון (20)",
+          "full": "/media/images/army/army-137.jpg",
+          "thumb": "/media/images/thumbs/army/army-137.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 590
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(21).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(21).jpg",
-          "alt": "צבא - אלון (21)",
+          "full": "/media/images/army/army-138.jpg",
+          "thumb": "/media/images/thumbs/army/army-138.jpg",
+          "alt": "צבא",
           "w": 582,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(22).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(22).jpg",
-          "alt": "צבא - אלון (22)",
+          "full": "/media/images/army/army-139.jpg",
+          "thumb": "/media/images/thumbs/army/army-139.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 585
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(36).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(36).jpg",
-          "alt": "צבא - אלון (36)",
+          "full": "/media/images/army/army-140.jpg",
+          "thumb": "/media/images/thumbs/army/army-140.jpg",
+          "alt": "צבא",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(41).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(41).jpg",
-          "alt": "צבא - אלון (41)",
+          "full": "/media/images/army/army-141.jpg",
+          "thumb": "/media/images/thumbs/army/army-141.jpg",
+          "alt": "צבא",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(42).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(42).jpg",
-          "alt": "צבא - אלון (42)",
+          "full": "/media/images/army/army-142.jpg",
+          "thumb": "/media/images/thumbs/army/army-142.jpg",
+          "alt": "צבא",
           "w": 632,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(43).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(43).jpg",
-          "alt": "צבא - אלון (43)",
+          "full": "/media/images/army/army-143.jpg",
+          "thumb": "/media/images/thumbs/army/army-143.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 635
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(87).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20(87).jpg",
-          "alt": "צבא - אלון (87)",
+          "full": "/media/images/army/army-144.jpg",
+          "thumb": "/media/images/thumbs/army/army-144.jpg",
+          "alt": "צבא",
           "w": 591,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(12).jpg",
-          "alt": "צבא - אלון צבא (12)",
+          "full": "/media/images/army/army-145.jpg",
+          "thumb": "/media/images/thumbs/army/army-145.jpg",
+          "alt": "צבא",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(13).jpg",
-          "alt": "צבא - אלון צבא (13)",
+          "full": "/media/images/army/army-146.jpg",
+          "thumb": "/media/images/thumbs/army/army-146.jpg",
+          "alt": "צבא",
           "w": 681,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(14).jpg",
-          "alt": "צבא - אלון צבא (14)",
+          "full": "/media/images/army/army-147.jpg",
+          "thumb": "/media/images/thumbs/army/army-147.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 591
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(15).jpg",
-          "alt": "צבא - אלון צבא (15)",
+          "full": "/media/images/army/army-148.jpg",
+          "thumb": "/media/images/thumbs/army/army-148.jpg",
+          "alt": "צבא",
           "w": 607,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(16).jpg",
-          "alt": "צבא - אלון צבא (16)",
+          "full": "/media/images/army/army-149.jpg",
+          "thumb": "/media/images/thumbs/army/army-149.jpg",
+          "alt": "צבא",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(19).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(19).jpg",
-          "alt": "צבא - אלון צבא (19)",
+          "full": "/media/images/army/army-150.jpg",
+          "thumb": "/media/images/thumbs/army/army-150.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 610
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(20).jpg",
-          "alt": "צבא - אלון צבא (20)",
+          "full": "/media/images/army/army-151.jpg",
+          "thumb": "/media/images/thumbs/army/army-151.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 635
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(21).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(21).jpg",
-          "alt": "צבא - אלון צבא (21)",
+          "full": "/media/images/army/army-152.jpg",
+          "thumb": "/media/images/thumbs/army/army-152.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 635
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(22).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(22).jpg",
-          "alt": "צבא - אלון צבא (22)",
+          "full": "/media/images/army/army-153.jpg",
+          "thumb": "/media/images/thumbs/army/army-153.jpg",
+          "alt": "צבא",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(23).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(23).jpg",
-          "alt": "צבא - אלון צבא (23)",
+          "full": "/media/images/army/army-154.jpg",
+          "thumb": "/media/images/thumbs/army/army-154.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 635
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(26).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(26).jpg",
-          "alt": "צבא - אלון צבא (26)",
+          "full": "/media/images/army/army-155.jpg",
+          "thumb": "/media/images/thumbs/army/army-155.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(27).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(27).jpg",
-          "alt": "צבא - אלון צבא (27)",
+          "full": "/media/images/army/army-156.jpg",
+          "thumb": "/media/images/thumbs/army/army-156.jpg",
+          "alt": "צבא",
           "w": 637,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(28).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(28).jpg",
-          "alt": "צבא - אלון צבא (28)",
+          "full": "/media/images/army/army-157.jpg",
+          "thumb": "/media/images/thumbs/army/army-157.jpg",
+          "alt": "צבא",
           "w": 638,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(29).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(29).jpg",
-          "alt": "צבא - אלון צבא (29)",
+          "full": "/media/images/army/army-158.jpg",
+          "thumb": "/media/images/thumbs/army/army-158.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 635
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(30).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(30).jpg",
-          "alt": "צבא - אלון צבא (30)",
+          "full": "/media/images/army/army-159.jpg",
+          "thumb": "/media/images/thumbs/army/army-159.jpg",
+          "alt": "צבא",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(31).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(31).jpg",
-          "alt": "צבא - אלון צבא (31)",
+          "full": "/media/images/army/army-160.jpg",
+          "thumb": "/media/images/thumbs/army/army-160.jpg",
+          "alt": "צבא",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(32).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(32).jpg",
-          "alt": "צבא - אלון צבא (32)",
+          "full": "/media/images/army/army-161.jpg",
+          "thumb": "/media/images/thumbs/army/army-161.jpg",
+          "alt": "צבא",
           "w": 636,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(33).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(33).jpg",
-          "alt": "צבא - אלון צבא (33)",
+          "full": "/media/images/army/army-162.jpg",
+          "thumb": "/media/images/thumbs/army/army-162.jpg",
+          "alt": "צבא",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(34).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(34).jpg",
-          "alt": "צבא - אלון צבא (34)",
+          "full": "/media/images/army/army-163.jpg",
+          "thumb": "/media/images/thumbs/army/army-163.jpg",
+          "alt": "צבא",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(35).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(35).jpg",
-          "alt": "צבא - אלון צבא (35)",
+          "full": "/media/images/army/army-164.jpg",
+          "thumb": "/media/images/thumbs/army/army-164.jpg",
+          "alt": "צבא",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(36).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(36).jpg",
-          "alt": "צבא - אלון צבא (36)",
+          "full": "/media/images/army/army-165.jpg",
+          "thumb": "/media/images/thumbs/army/army-165.jpg",
+          "alt": "צבא",
           "w": 628,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(37).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(37).jpg",
-          "alt": "צבא - אלון צבא (37)",
+          "full": "/media/images/army/army-166.jpg",
+          "thumb": "/media/images/thumbs/army/army-166.jpg",
+          "alt": "צבא",
           "w": 627,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(38).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(38).jpg",
-          "alt": "צבא - אלון צבא (38)",
+          "full": "/media/images/army/army-167.jpg",
+          "thumb": "/media/images/thumbs/army/army-167.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 632
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(39).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(39).jpg",
-          "alt": "צבא - אלון צבא (39)",
+          "full": "/media/images/army/army-168.jpg",
+          "thumb": "/media/images/thumbs/army/army-168.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 633
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(40).jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(40).jpg",
-          "alt": "צבא - אלון צבא (40)",
+          "full": "/media/images/army/army-169.jpg",
+          "thumb": "/media/images/thumbs/army/army-169.jpg",
+          "alt": "צבא",
           "w": 636,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%98%D7%A7%D7%A1%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%98%D7%99%D7%A8%D7%95%D7%A0%D7%95%D7%AA%20%D7%A7%D7%91%D7%9C%D7%AA%20%D7%9B%D7%95%D7%9E%D7%AA%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%98%D7%A7%D7%A1%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%98%D7%99%D7%A8%D7%95%D7%A0%D7%95%D7%AA%20%D7%A7%D7%91%D7%9C%D7%AA%20%D7%9B%D7%95%D7%9E%D7%AA%D7%94.jpg",
-          "alt": "צבא - טקס סיום טירונות קבלת כומתה",
+          "full": "/media/images/army/army-170.jpg",
+          "thumb": "/media/images/thumbs/army/army-170.jpg",
+          "alt": "צבא",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A6%D7%91%D7%90/%D7%AA%D7%9E%D7%95%D7%A0%D7%94%20%D7%9E%D7%A1%D7%92%D7%A8%D7%AA%20%D7%96%D7%9B%D7%95%D7%9B%D7%99%D7%AA.jpg",
-          "thumb": "/media/images/thumbs/%D7%A6%D7%91%D7%90/%D7%AA%D7%9E%D7%95%D7%A0%D7%94%20%D7%9E%D7%A1%D7%92%D7%A8%D7%AA%20%D7%96%D7%9B%D7%95%D7%9B%D7%99%D7%AA.jpg",
-          "alt": "צבא - תמונה מסגרת זכוכית",
+          "full": "/media/images/army/army-171.jpg",
+          "thumb": "/media/images/thumbs/army/army-171.jpg",
+          "alt": "צבא",
           "w": 900,
           "h": 660
         }
       ]
     },
     {
-      "key": "משפחה",
+      "key": "family",
       "label": "משפחה",
       "images": [
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/01%20%D7%91%D7%A8%D7%99%D7%AA%20%D7%90%D7%A8%D7%96%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/01%20%D7%91%D7%A8%D7%99%D7%AA%20%D7%90%D7%A8%D7%96%20(1).jpg",
-          "alt": "משפחה - 01 ברית ארז (1)",
+          "full": "/media/images/family/family-001.jpg",
+          "thumb": "/media/images/thumbs/family/family-001.jpg",
+          "alt": "משפחה",
           "w": 602,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/01%20%D7%91%D7%A8%D7%99%D7%AA%20%D7%90%D7%A8%D7%96%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/01%20%D7%91%D7%A8%D7%99%D7%AA%20%D7%90%D7%A8%D7%96%20(2).jpg",
-          "alt": "משפחה - 01 ברית ארז (2)",
+          "full": "/media/images/family/family-002.jpg",
+          "thumb": "/media/images/thumbs/family/family-002.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 601
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(10).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (10)",
+          "full": "/media/images/family/family-003.jpg",
+          "thumb": "/media/images/thumbs/family/family-003.jpg",
+          "alt": "משפחה",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(12).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (12)",
+          "full": "/media/images/family/family-004.jpg",
+          "thumb": "/media/images/thumbs/family/family-004.jpg",
+          "alt": "משפחה",
           "w": 632,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(13).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (13)",
+          "full": "/media/images/family/family-005.jpg",
+          "thumb": "/media/images/thumbs/family/family-005.jpg",
+          "alt": "משפחה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(14).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (14)",
+          "full": "/media/images/family/family-006.jpg",
+          "thumb": "/media/images/thumbs/family/family-006.jpg",
+          "alt": "משפחה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(15).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (15)",
+          "full": "/media/images/family/family-007.jpg",
+          "thumb": "/media/images/thumbs/family/family-007.jpg",
+          "alt": "משפחה",
           "w": 632,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(16).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (16)",
+          "full": "/media/images/family/family-008.jpg",
+          "thumb": "/media/images/thumbs/family/family-008.jpg",
+          "alt": "משפחה",
           "w": 638,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(17).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(17).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (17)",
+          "full": "/media/images/family/family-009.jpg",
+          "thumb": "/media/images/thumbs/family/family-009.jpg",
+          "alt": "משפחה",
           "w": 631,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(18).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(18).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (18)",
+          "full": "/media/images/family/family-010.jpg",
+          "thumb": "/media/images/thumbs/family/family-010.jpg",
+          "alt": "משפחה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(2).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (2)",
+          "full": "/media/images/family/family-011.jpg",
+          "thumb": "/media/images/thumbs/family/family-011.jpg",
+          "alt": "משפחה",
           "w": 631,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(20).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (20)",
+          "full": "/media/images/family/family-012.jpg",
+          "thumb": "/media/images/thumbs/family/family-012.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 631
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(21).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(21).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (21)",
+          "full": "/media/images/family/family-013.jpg",
+          "thumb": "/media/images/thumbs/family/family-013.jpg",
+          "alt": "משפחה",
           "w": 630,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(22).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(22).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (22)",
+          "full": "/media/images/family/family-014.jpg",
+          "thumb": "/media/images/thumbs/family/family-014.jpg",
+          "alt": "משפחה",
           "w": 631,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(27).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(27).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (27)",
+          "full": "/media/images/family/family-015.jpg",
+          "thumb": "/media/images/thumbs/family/family-015.jpg",
+          "alt": "משפחה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(28).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(28).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (28)",
+          "full": "/media/images/family/family-016.jpg",
+          "thumb": "/media/images/thumbs/family/family-016.jpg",
+          "alt": "משפחה",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(29).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(29).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (29)",
+          "full": "/media/images/family/family-017.jpg",
+          "thumb": "/media/images/thumbs/family/family-017.jpg",
+          "alt": "משפחה",
           "w": 637,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(3).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (3)",
+          "full": "/media/images/family/family-018.jpg",
+          "thumb": "/media/images/thumbs/family/family-018.jpg",
+          "alt": "משפחה",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(30).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(30).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (30)",
+          "full": "/media/images/family/family-019.jpg",
+          "thumb": "/media/images/thumbs/family/family-019.jpg",
+          "alt": "משפחה",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(4).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (4)",
+          "full": "/media/images/family/family-020.jpg",
+          "thumb": "/media/images/thumbs/family/family-020.jpg",
+          "alt": "משפחה",
           "w": 632,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(41).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(41).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (41)",
+          "full": "/media/images/family/family-021.jpg",
+          "thumb": "/media/images/thumbs/family/family-021.jpg",
+          "alt": "משפחה",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(43).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(43).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (43)",
+          "full": "/media/images/family/family-022.jpg",
+          "thumb": "/media/images/thumbs/family/family-022.jpg",
+          "alt": "משפחה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(47).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(47).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (47)",
+          "full": "/media/images/family/family-023.jpg",
+          "thumb": "/media/images/thumbs/family/family-023.jpg",
+          "alt": "משפחה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(48).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(48).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (48)",
+          "full": "/media/images/family/family-024.jpg",
+          "thumb": "/media/images/thumbs/family/family-024.jpg",
+          "alt": "משפחה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(5).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (5)",
+          "full": "/media/images/family/family-025.jpg",
+          "thumb": "/media/images/thumbs/family/family-025.jpg",
+          "alt": "משפחה",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(57).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(57).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (57)",
+          "full": "/media/images/family/family-026.jpg",
+          "thumb": "/media/images/thumbs/family/family-026.jpg",
+          "alt": "משפחה",
           "w": 631,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(58).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(58).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (58)",
+          "full": "/media/images/family/family-027.jpg",
+          "thumb": "/media/images/thumbs/family/family-027.jpg",
+          "alt": "משפחה",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(59).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(59).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (59)",
+          "full": "/media/images/family/family-028.jpg",
+          "thumb": "/media/images/thumbs/family/family-028.jpg",
+          "alt": "משפחה",
           "w": 626,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(72).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/03%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(72).jpg",
-          "alt": "משפחה - 03 בר מצוה ארז (72)",
+          "full": "/media/images/family/family-029.jpg",
+          "thumb": "/media/images/thumbs/family/family-029.jpg",
+          "alt": "משפחה",
           "w": 639,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(1).jpg",
-          "alt": "משפחה - 04 (1)",
+          "full": "/media/images/family/family-030.jpg",
+          "thumb": "/media/images/thumbs/family/family-030.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(2).jpg",
-          "alt": "משפחה - 04 (2)",
+          "full": "/media/images/family/family-031.jpg",
+          "thumb": "/media/images/thumbs/family/family-031.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(3).jpg",
-          "alt": "משפחה - 04 (3)",
+          "full": "/media/images/family/family-032.jpg",
+          "thumb": "/media/images/thumbs/family/family-032.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 631
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(4).jpg",
-          "alt": "משפחה - 04 (4)",
+          "full": "/media/images/family/family-033.jpg",
+          "thumb": "/media/images/thumbs/family/family-033.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(5).jpg",
-          "alt": "משפחה - 04 (5)",
+          "full": "/media/images/family/family-034.jpg",
+          "thumb": "/media/images/thumbs/family/family-034.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 629
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/04%20(6).jpg",
-          "alt": "משפחה - 04 (6)",
+          "full": "/media/images/family/family-035.jpg",
+          "thumb": "/media/images/thumbs/family/family-035.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/06%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/06%20(10).jpg",
-          "alt": "משפחה - 06 (10)",
+          "full": "/media/images/family/family-036.jpg",
+          "thumb": "/media/images/thumbs/family/family-036.jpg",
+          "alt": "משפחה",
           "w": 596,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20(2)%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20(2)%20(1).jpg",
-          "alt": "משפחה - 08 (2) (1)",
+          "full": "/media/images/family/family-037.jpg",
+          "thumb": "/media/images/thumbs/family/family-037.jpg",
+          "alt": "משפחה",
           "w": 592,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(1).jpg",
-          "alt": "משפחה - 08 חופשה בצפון (1)",
+          "full": "/media/images/family/family-038.jpg",
+          "thumb": "/media/images/thumbs/family/family-038.jpg",
+          "alt": "משפחה",
           "w": 603,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(2).jpg",
-          "alt": "משפחה - 08 חופשה בצפון (2)",
+          "full": "/media/images/family/family-039.jpg",
+          "thumb": "/media/images/thumbs/family/family-039.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 602
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(3).jpg",
-          "alt": "משפחה - 08 חופשה בצפון (3)",
+          "full": "/media/images/family/family-040.jpg",
+          "thumb": "/media/images/thumbs/family/family-040.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 598
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(5).jpg",
-          "alt": "משפחה - 08 חופשה בצפון (5)",
+          "full": "/media/images/family/family-041.jpg",
+          "thumb": "/media/images/thumbs/family/family-041.jpg",
+          "alt": "משפחה",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/08%20%D7%97%D7%95%D7%A4%D7%A9%D7%94%20%D7%91%D7%A6%D7%A4%D7%95%D7%9F%20(6).jpg",
-          "alt": "משפחה - 08 חופשה בצפון (6)",
+          "full": "/media/images/family/family-042.jpg",
+          "thumb": "/media/images/thumbs/family/family-042.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 597
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1980%20%D7%97%D7%95%D7%A8%D7%A3.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1980%20%D7%97%D7%95%D7%A8%D7%A3.jpg",
-          "alt": "משפחה - 1980 חורף",
+          "full": "/media/images/family/family-043.jpg",
+          "thumb": "/media/images/thumbs/family/family-043.jpg",
+          "alt": "משפחה",
           "w": 612,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1980%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%A6%D7%99%D7%95%D7%A0%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1980%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%A6%D7%99%D7%95%D7%A0%D7%94.jpg",
-          "alt": "משפחה - 1980 יום הולדת ציונה",
+          "full": "/media/images/family/family-044.jpg",
+          "thumb": "/media/images/thumbs/family/family-044.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 631
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1981%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1981%20%D7%A4%D7%95%D7%A8%D7%99%D7%9D.jpg",
-          "alt": "משפחה - 1981 פורים",
+          "full": "/media/images/family/family-045.jpg",
+          "thumb": "/media/images/thumbs/family/family-045.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 642
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1983%20%20%D7%90%D7%A6%D7%9C%20%D7%93%D7%95%D7%93%D7%94%20%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1983%20%20%D7%90%D7%A6%D7%9C%20%D7%93%D7%95%D7%93%D7%94%20%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94.jpg",
-          "alt": "משפחה - 1983  אצל דודה ויקטוריה",
+          "full": "/media/images/family/family-046.jpg",
+          "thumb": "/media/images/thumbs/family/family-046.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 708
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%92%D7%9F%20%D7%97%D7%9E%D7%99%D7%A9%D7%94%20%D7%A2%D7%A9%D7%A8.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%92%D7%9F%20%D7%97%D7%9E%D7%99%D7%A9%D7%94%20%D7%A2%D7%A9%D7%A8.jpg",
-          "alt": "משפחה - 1984 גן חמישה עשר",
+          "full": "/media/images/family/family-047.jpg",
+          "thumb": "/media/images/thumbs/family/family-047.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 635
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%92%D7%9F%20%D7%97%D7%9E%D7%A9%20%D7%A2%D7%A9%D7%A8%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%92%D7%9F%20%D7%97%D7%9E%D7%A9%20%D7%A2%D7%A9%D7%A8%D7%94.jpg",
-          "alt": "משפחה - 1984 גן חמש עשרה",
+          "full": "/media/images/family/family-048.jpg",
+          "thumb": "/media/images/thumbs/family/family-048.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 633
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D%20(2).jpg",
-          "alt": "משפחה - 1984 יום הולדת לילדים (2)",
+          "full": "/media/images/family/family-049.jpg",
+          "thumb": "/media/images/thumbs/family/family-049.jpg",
+          "alt": "משפחה",
           "w": 646,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D.jpg",
-          "alt": "משפחה - 1984 יום הולדת לילדים",
+          "full": "/media/images/family/family-050.jpg",
+          "thumb": "/media/images/thumbs/family/family-050.jpg",
+          "alt": "משפחה",
           "w": 643,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%9E%D7%99%D7%9E%D7%95%D7%A0%D7%94%20%D7%92%D7%9F%20%D7%A1%D7%90%D7%A7%D7%A8.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1984%20%D7%9E%D7%99%D7%9E%D7%95%D7%A0%D7%94%20%D7%92%D7%9F%20%D7%A1%D7%90%D7%A7%D7%A8.jpg",
-          "alt": "משפחה - 1984 מימונה גן סאקר",
+          "full": "/media/images/family/family-051.jpg",
+          "thumb": "/media/images/thumbs/family/family-051.jpg",
+          "alt": "משפחה",
           "w": 645,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1986%20%D7%90%D7%9E%D7%90%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%90%D7%A8%D7%96%20%D7%91%D7%A9%D7%A2%D7%95%D7%A8%20%D7%A6%D7%99%D7%95%D7%A8.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1986%20%D7%90%D7%9E%D7%90%20%D7%90%D7%9C%D7%95%D7%9F%20%D7%95%D7%90%D7%A8%D7%96%20%D7%91%D7%A9%D7%A2%D7%95%D7%A8%20%D7%A6%D7%99%D7%95%D7%A8.jpg",
-          "alt": "משפחה - 1986 אמא אלון וארז בשעור ציור",
+          "full": "/media/images/family/family-052.jpg",
+          "thumb": "/media/images/thumbs/family/family-052.jpg",
+          "alt": "משפחה",
           "w": 600,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1995%20%D7%91%D7%A8%D7%99%D7%AA%20%D7%9E%D7%99%D7%9C%D7%94%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%A2%D7%93.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1995%20%D7%91%D7%A8%D7%99%D7%AA%20%D7%9E%D7%99%D7%9C%D7%94%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%A2%D7%93.jpg",
-          "alt": "משפחה - 1995 ברית מילה של אלעד",
+          "full": "/media/images/family/family-053.jpg",
+          "thumb": "/media/images/thumbs/family/family-053.jpg",
+          "alt": "משפחה",
           "w": 601,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1995%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%AA%D7%9E%D7%99%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/1995%20%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%20%D7%AA%D7%9E%D7%99%20(1).jpg",
-          "alt": "משפחה - 1995 יום הולדת תמי (1)",
+          "full": "/media/images/family/family-054.jpg",
+          "thumb": "/media/images/thumbs/family/family-054.jpg",
+          "alt": "משפחה",
           "w": 589,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/31-8-1995%20%D7%97%D7%AA%D7%95%D7%A0%D7%AA%20%D7%99%D7%A2%D7%A7%D7%91%20%D7%95%D7%A1%D7%99%D7%92%D7%9C%D7%99%D7%AA.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/31-8-1995%20%D7%97%D7%AA%D7%95%D7%A0%D7%AA%20%D7%99%D7%A2%D7%A7%D7%91%20%D7%95%D7%A1%D7%99%D7%92%D7%9C%D7%99%D7%AA.jpg",
-          "alt": "משפחה - 31-8-1995 חתונת יעקב וסיגלית",
+          "full": "/media/images/family/family-055.jpg",
+          "thumb": "/media/images/thumbs/family/family-055.jpg",
+          "alt": "משפחה",
           "w": 633,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(110).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(110).jpg",
-          "alt": "משפחה - אלון (110)",
+          "full": "/media/images/family/family-056.jpg",
+          "thumb": "/media/images/thumbs/family/family-056.jpg",
+          "alt": "משפחה",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(111).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(111).jpg",
-          "alt": "משפחה - אלון (111)",
+          "full": "/media/images/family/family-057.jpg",
+          "thumb": "/media/images/thumbs/family/family-057.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 597
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(122).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(122).jpg",
-          "alt": "משפחה - אלון (122)",
+          "full": "/media/images/family/family-058.jpg",
+          "thumb": "/media/images/thumbs/family/family-058.jpg",
+          "alt": "משפחה",
           "w": 608,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(123).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(123).jpg",
-          "alt": "משפחה - אלון (123)",
+          "full": "/media/images/family/family-059.jpg",
+          "thumb": "/media/images/thumbs/family/family-059.jpg",
+          "alt": "משפחה",
           "w": 608,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(129).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(129).jpg",
-          "alt": "משפחה - אלון (129)",
+          "full": "/media/images/family/family-060.jpg",
+          "thumb": "/media/images/thumbs/family/family-060.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 600
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(13).jpg",
-          "alt": "משפחה - אלון (13)",
+          "full": "/media/images/family/family-061.jpg",
+          "thumb": "/media/images/thumbs/family/family-061.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 637
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(133).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(133).jpg",
-          "alt": "משפחה - אלון (133)",
+          "full": "/media/images/family/family-062.jpg",
+          "thumb": "/media/images/thumbs/family/family-062.jpg",
+          "alt": "משפחה",
           "w": 608,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(142).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(142).jpg",
-          "alt": "משפחה - אלון (142)",
+          "full": "/media/images/family/family-063.jpg",
+          "thumb": "/media/images/thumbs/family/family-063.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 629
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(143).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(143).jpg",
-          "alt": "משפחה - אלון (143)",
+          "full": "/media/images/family/family-064.jpg",
+          "thumb": "/media/images/thumbs/family/family-064.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 624
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(154).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(154).jpg",
-          "alt": "משפחה - אלון (154)",
+          "full": "/media/images/family/family-065.jpg",
+          "thumb": "/media/images/thumbs/family/family-065.jpg",
+          "alt": "משפחה",
           "w": 601,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(165).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(165).jpg",
-          "alt": "משפחה - אלון (165)",
+          "full": "/media/images/family/family-066.jpg",
+          "thumb": "/media/images/thumbs/family/family-066.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 707
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(17).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(17).jpg",
-          "alt": "משפחה - אלון (17)",
+          "full": "/media/images/family/family-067.jpg",
+          "thumb": "/media/images/thumbs/family/family-067.jpg",
+          "alt": "משפחה",
           "w": 646,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(191).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(191).jpg",
-          "alt": "משפחה - אלון (191)",
+          "full": "/media/images/family/family-068.jpg",
+          "thumb": "/media/images/thumbs/family/family-068.jpg",
+          "alt": "משפחה",
           "w": 593,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(206).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(206).jpg",
-          "alt": "משפחה - אלון (206)",
+          "full": "/media/images/family/family-069.jpg",
+          "thumb": "/media/images/thumbs/family/family-069.jpg",
+          "alt": "משפחה",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(27).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(27).jpg",
-          "alt": "משפחה - אלון (27)",
+          "full": "/media/images/family/family-070.jpg",
+          "thumb": "/media/images/thumbs/family/family-070.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 649
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(3).jpg",
-          "alt": "משפחה - אלון (3)",
+          "full": "/media/images/family/family-071.jpg",
+          "thumb": "/media/images/thumbs/family/family-071.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 620
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(33).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(33).jpg",
-          "alt": "משפחה - אלון (33)",
+          "full": "/media/images/family/family-072.jpg",
+          "thumb": "/media/images/thumbs/family/family-072.jpg",
+          "alt": "משפחה",
           "w": 594,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(34).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(34).jpg",
-          "alt": "משפחה - אלון (34)",
+          "full": "/media/images/family/family-073.jpg",
+          "thumb": "/media/images/thumbs/family/family-073.jpg",
+          "alt": "משפחה",
           "w": 619,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(39).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(39).jpg",
-          "alt": "משפחה - אלון (39)",
+          "full": "/media/images/family/family-074.jpg",
+          "thumb": "/media/images/thumbs/family/family-074.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 628
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(4).jpg",
-          "alt": "משפחה - אלון (4)",
+          "full": "/media/images/family/family-075.jpg",
+          "thumb": "/media/images/thumbs/family/family-075.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 623
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(45).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(45).jpg",
-          "alt": "משפחה - אלון (45)",
+          "full": "/media/images/family/family-076.jpg",
+          "thumb": "/media/images/thumbs/family/family-076.jpg",
+          "alt": "משפחה",
           "w": 638,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(46).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(46).jpg",
-          "alt": "משפחה - אלון (46)",
+          "full": "/media/images/family/family-077.jpg",
+          "thumb": "/media/images/thumbs/family/family-077.jpg",
+          "alt": "משפחה",
           "w": 603,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(49).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(49).jpg",
-          "alt": "משפחה - אלון (49)",
+          "full": "/media/images/family/family-078.jpg",
+          "thumb": "/media/images/thumbs/family/family-078.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 600
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(5).jpg",
-          "alt": "משפחה - אלון (5)",
+          "full": "/media/images/family/family-079.jpg",
+          "thumb": "/media/images/thumbs/family/family-079.jpg",
+          "alt": "משפחה",
           "w": 596,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(51).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(51).jpg",
-          "alt": "משפחה - אלון (51)",
+          "full": "/media/images/family/family-080.jpg",
+          "thumb": "/media/images/thumbs/family/family-080.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 597
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(56).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(56).jpg",
-          "alt": "משפחה - אלון (56)",
+          "full": "/media/images/family/family-081.jpg",
+          "thumb": "/media/images/thumbs/family/family-081.jpg",
+          "alt": "משפחה",
           "w": 603,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(59).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(59).jpg",
-          "alt": "משפחה - אלון (59)",
+          "full": "/media/images/family/family-082.jpg",
+          "thumb": "/media/images/thumbs/family/family-082.jpg",
+          "alt": "משפחה",
           "w": 632,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(67).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(67).jpg",
-          "alt": "משפחה - אלון (67)",
+          "full": "/media/images/family/family-083.jpg",
+          "thumb": "/media/images/thumbs/family/family-083.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 601
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(7).jpg",
-          "alt": "משפחה - אלון (7)",
+          "full": "/media/images/family/family-084.jpg",
+          "thumb": "/media/images/thumbs/family/family-084.jpg",
+          "alt": "משפחה",
           "w": 639,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(71).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(71).jpg",
-          "alt": "משפחה - אלון (71)",
+          "full": "/media/images/family/family-085.jpg",
+          "thumb": "/media/images/thumbs/family/family-085.jpg",
+          "alt": "משפחה",
           "w": 645,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(72).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(72).jpg",
-          "alt": "משפחה - אלון (72)",
+          "full": "/media/images/family/family-086.jpg",
+          "thumb": "/media/images/thumbs/family/family-086.jpg",
+          "alt": "משפחה",
           "w": 603,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(73).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(73).jpg",
-          "alt": "משפחה - אלון (73)",
+          "full": "/media/images/family/family-087.jpg",
+          "thumb": "/media/images/thumbs/family/family-087.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 637
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(8).jpg",
-          "alt": "משפחה - אלון (8)",
+          "full": "/media/images/family/family-088.jpg",
+          "thumb": "/media/images/thumbs/family/family-088.jpg",
+          "alt": "משפחה",
           "w": 643,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(80).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(80).jpg",
-          "alt": "משפחה - אלון (80)",
+          "full": "/media/images/family/family-089.jpg",
+          "thumb": "/media/images/thumbs/family/family-089.jpg",
+          "alt": "משפחה",
           "w": 603,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(84).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20(84).jpg",
-          "alt": "משפחה - אלון (84)",
+          "full": "/media/images/family/family-090.jpg",
+          "thumb": "/media/images/thumbs/family/family-090.jpg",
+          "alt": "משפחה",
           "w": 602,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(1).jpg",
-          "alt": "משפחה - אלון בר מצוה (1)",
+          "full": "/media/images/family/family-091.jpg",
+          "thumb": "/media/images/thumbs/family/family-091.jpg",
+          "alt": "משפחה",
           "w": 611,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(2)%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(2)%20(1).jpg",
-          "alt": "משפחה - אלון בר מצוה (2) (1)",
+          "full": "/media/images/family/family-092.jpg",
+          "thumb": "/media/images/thumbs/family/family-092.jpg",
+          "alt": "משפחה",
           "w": 611,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(3)%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(3)%20(1).jpg",
-          "alt": "משפחה - אלון בר מצוה (3) (1)",
+          "full": "/media/images/family/family-093.jpg",
+          "thumb": "/media/images/thumbs/family/family-093.jpg",
+          "alt": "משפחה",
           "w": 610,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(4).jpg",
-          "alt": "משפחה - אלון בר מצוה (4)",
+          "full": "/media/images/family/family-094.jpg",
+          "thumb": "/media/images/thumbs/family/family-094.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 612
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20(5).jpg",
-          "alt": "משפחה - אלון בר מצוה (5)",
+          "full": "/media/images/family/family-095.jpg",
+          "thumb": "/media/images/thumbs/family/family-095.jpg",
+          "alt": "משפחה",
           "w": 900,
           "h": 611
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(25).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%9C%D7%95%D7%9F%20%D7%A6%D7%91%D7%90%20(25).jpg",
-          "alt": "משפחה - אלון צבא (25)",
+          "full": "/media/images/family/family-096.jpg",
+          "thumb": "/media/images/thumbs/family/family-096.jpg",
+          "alt": "משפחה",
           "w": 631,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%A8%D7%96%20%D7%9B%D7%AA%D7%94%20%D7%90%20%D7%A2%D7%9D%20%D7%90%D7%9C%D7%95%D7%9F.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%90%D7%A8%D7%96%20%D7%9B%D7%AA%D7%94%20%D7%90%20%D7%A2%D7%9D%20%D7%90%D7%9C%D7%95%D7%9F.jpg",
-          "alt": "משפחה - ארז כתה א עם אלון",
+          "full": "/media/images/family/family-097.jpg",
+          "thumb": "/media/images/thumbs/family/family-097.jpg",
+          "alt": "משפחה",
           "w": 628,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(108).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(108).jpg",
-          "alt": "משפחה - בר מצוה ארז (108)",
+          "full": "/media/images/family/family-098.jpg",
+          "thumb": "/media/images/thumbs/family/family-098.jpg",
+          "alt": "משפחה",
           "w": 627,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(71).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(71).jpg",
-          "alt": "משפחה - בר מצוה ארז (71)",
+          "full": "/media/images/family/family-099.jpg",
+          "thumb": "/media/images/thumbs/family/family-099.jpg",
+          "alt": "משפחה",
           "w": 627,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(83).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%20%D7%9E%D7%A6%D7%95%D7%94%20%D7%90%D7%A8%D7%96%20(83).jpg",
-          "alt": "משפחה - בר מצוה ארז (83)",
+          "full": "/media/images/family/family-100.jpg",
+          "thumb": "/media/images/thumbs/family/family-100.jpg",
+          "alt": "משפחה",
           "w": 628,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%D7%99%D7%AA%20%D7%AA%D7%93%D7%94%D7%A8%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%D7%99%D7%AA%20%D7%AA%D7%93%D7%94%D7%A8%20(3).jpg",
-          "alt": "משפחה - ברית תדהר (3)",
+          "full": "/media/images/family/family-101.jpg",
+          "thumb": "/media/images/thumbs/family/family-101.jpg",
+          "alt": "משפחה",
           "w": 598,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%D7%99%D7%AA%20%D7%AA%D7%93%D7%94%D7%A8%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%91%D7%A8%D7%99%D7%AA%20%D7%AA%D7%93%D7%94%D7%A8%20(4).jpg",
-          "alt": "משפחה - ברית תדהר (4)",
+          "full": "/media/images/family/family-102.jpg",
+          "thumb": "/media/images/thumbs/family/family-102.jpg",
+          "alt": "משפחה",
           "w": 595,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%2012%20%D7%91%D7%A0%D7%95%D7%A4%D7%A9%20%D7%91%D7%98%D7%91%D7%A8%D7%99%D7%94.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%99%D7%95%D7%9D%20%D7%94%D7%95%D7%9C%D7%93%D7%AA%2012%20%D7%91%D7%A0%D7%95%D7%A4%D7%A9%20%D7%91%D7%98%D7%91%D7%A8%D7%99%D7%94.jpg",
-          "alt": "משפחה - יום הולדת 12 בנופש בטבריה",
+          "full": "/media/images/family/family-103.jpg",
+          "thumb": "/media/images/thumbs/family/family-103.jpg",
+          "alt": "משפחה",
           "w": 617,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%A4%D7%95%D7%A8%D7%99%D7%9D%201984.jpg",
-          "thumb": "/media/images/thumbs/%D7%9E%D7%A9%D7%A4%D7%97%D7%94/%D7%A4%D7%95%D7%A8%D7%99%D7%9D%201984.jpg",
-          "alt": "משפחה - פורים 1984",
+          "full": "/media/images/family/family-104.jpg",
+          "thumb": "/media/images/thumbs/family/family-104.jpg",
+          "alt": "משפחה",
           "w": 619,
           "h": 900
         }
       ]
     },
     {
-      "key": "כתבים-של-אלון",
+      "key": "writings",
       "label": "כתבים של אלון",
       "images": [
         {
-          "full": "/media/images/%D7%9B%D7%AA%D7%91%D7%99%D7%9D%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%95%D7%9F/20%20%206-7-1982.jpg",
-          "thumb": "/media/images/thumbs/%D7%9B%D7%AA%D7%91%D7%99%D7%9D%20%D7%A9%D7%9C%20%D7%90%D7%9C%D7%95%D7%9F/20%20%206-7-1982.jpg",
-          "alt": "כתבים של אלון - 20  6-7-1982",
+          "full": "/media/images/writings/writings-001.jpg",
+          "thumb": "/media/images/thumbs/writings/writings-001.jpg",
+          "alt": "כתבים של אלון",
           "w": 605,
           "h": 900
         }
       ]
     },
     {
-      "key": "הלוויה",
+      "key": "funeral",
       "label": "הלוויה",
       "images": [
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(1).jpg",
-          "alt": "הלוויה - 01 הלויה (1)",
+          "full": "/media/images/funeral/funeral-001.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-001.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 627
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(10).jpg",
-          "alt": "הלוויה - 01 הלויה (10)",
+          "full": "/media/images/funeral/funeral-002.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-002.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 626
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(11).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(11).jpg",
-          "alt": "הלוויה - 01 הלויה (11)",
+          "full": "/media/images/funeral/funeral-003.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-003.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(12).jpg",
-          "alt": "הלוויה - 01 הלויה (12)",
+          "full": "/media/images/funeral/funeral-004.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-004.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 625
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(13).jpg",
-          "alt": "הלוויה - 01 הלויה (13)",
+          "full": "/media/images/funeral/funeral-005.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-005.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 620
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(14).jpg",
-          "alt": "הלוויה - 01 הלויה (14)",
+          "full": "/media/images/funeral/funeral-006.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-006.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 625
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(15).jpg",
-          "alt": "הלוויה - 01 הלויה (15)",
+          "full": "/media/images/funeral/funeral-007.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-007.jpg",
+          "alt": "הלוויה",
           "w": 630,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(16).jpg",
-          "alt": "הלוויה - 01 הלויה (16)",
+          "full": "/media/images/funeral/funeral-008.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-008.jpg",
+          "alt": "הלוויה",
           "w": 630,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(17).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(17).jpg",
-          "alt": "הלוויה - 01 הלויה (17)",
+          "full": "/media/images/funeral/funeral-009.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-009.jpg",
+          "alt": "הלוויה",
           "w": 625,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(18).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(18).jpg",
-          "alt": "הלוויה - 01 הלויה (18)",
+          "full": "/media/images/funeral/funeral-010.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-010.jpg",
+          "alt": "הלוויה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(19).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(19).jpg",
-          "alt": "הלוויה - 01 הלויה (19)",
+          "full": "/media/images/funeral/funeral-011.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-011.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 624
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(2).jpg",
-          "alt": "הלוויה - 01 הלויה (2)",
+          "full": "/media/images/funeral/funeral-012.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-012.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 627
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(20).jpg",
-          "alt": "הלוויה - 01 הלויה (20)",
+          "full": "/media/images/funeral/funeral-013.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-013.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 626
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(21).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(21).jpg",
-          "alt": "הלוויה - 01 הלויה (21)",
+          "full": "/media/images/funeral/funeral-014.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-014.jpg",
+          "alt": "הלוויה",
           "w": 627,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(22).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(22).jpg",
-          "alt": "הלוויה - 01 הלויה (22)",
+          "full": "/media/images/funeral/funeral-015.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-015.jpg",
+          "alt": "הלוויה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(23).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(23).jpg",
-          "alt": "הלוויה - 01 הלויה (23)",
+          "full": "/media/images/funeral/funeral-016.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-016.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 628
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(24).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(24).jpg",
-          "alt": "הלוויה - 01 הלויה (24)",
+          "full": "/media/images/funeral/funeral-017.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-017.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 626
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(25).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(25).jpg",
-          "alt": "הלוויה - 01 הלויה (25)",
+          "full": "/media/images/funeral/funeral-018.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-018.jpg",
+          "alt": "הלוויה",
           "w": 625,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(26).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(26).jpg",
-          "alt": "הלוויה - 01 הלויה (26)",
+          "full": "/media/images/funeral/funeral-019.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-019.jpg",
+          "alt": "הלוויה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(27).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(27).jpg",
-          "alt": "הלוויה - 01 הלויה (27)",
+          "full": "/media/images/funeral/funeral-020.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-020.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 631
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(28).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(28).jpg",
-          "alt": "הלוויה - 01 הלויה (28)",
+          "full": "/media/images/funeral/funeral-021.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-021.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 628
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(29).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(29).jpg",
-          "alt": "הלוויה - 01 הלויה (29)",
+          "full": "/media/images/funeral/funeral-022.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-022.jpg",
+          "alt": "הלוויה",
           "w": 629,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(3).jpg",
-          "alt": "הלוויה - 01 הלויה (3)",
+          "full": "/media/images/funeral/funeral-023.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-023.jpg",
+          "alt": "הלוויה",
           "w": 626,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(4).jpg",
-          "alt": "הלוויה - 01 הלויה (4)",
+          "full": "/media/images/funeral/funeral-024.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-024.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 627
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(5).jpg",
-          "alt": "הלוויה - 01 הלויה (5)",
+          "full": "/media/images/funeral/funeral-025.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-025.jpg",
+          "alt": "הלוויה",
           "w": 626,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(6).jpg",
-          "alt": "הלוויה - 01 הלויה (6)",
+          "full": "/media/images/funeral/funeral-026.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-026.jpg",
+          "alt": "הלוויה",
           "w": 627,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(7).jpg",
-          "alt": "הלוויה - 01 הלויה (7)",
+          "full": "/media/images/funeral/funeral-027.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-027.jpg",
+          "alt": "הלוויה",
           "w": 625,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(8).jpg",
-          "alt": "הלוויה - 01 הלויה (8)",
+          "full": "/media/images/funeral/funeral-028.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-028.jpg",
+          "alt": "הלוויה",
           "w": 900,
           "h": 626
         },
         {
-          "full": "/media/images/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%9C%D7%95%D7%95%D7%99%D7%94/01%20%D7%94%D7%9C%D7%95%D7%99%D7%94%20(9).jpg",
-          "alt": "הלוויה - 01 הלויה (9)",
+          "full": "/media/images/funeral/funeral-029.jpg",
+          "thumb": "/media/images/thumbs/funeral/funeral-029.jpg",
+          "alt": "הלוויה",
           "w": 624,
           "h": 900
         }
       ]
     },
     {
-      "key": "הנצחה",
+      "key": "commemoration",
       "label": "הנצחה",
       "images": [
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(2).jpg",
-          "alt": "הנצחה - 01 ספר תורה לזכר אלון (2)",
+          "full": "/media/images/commemoration/commemoration-001.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-001.jpg",
+          "alt": "הנצחה",
           "w": 637,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(30).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(30).jpg",
-          "alt": "הנצחה - 01 ספר תורה לזכר אלון (30)",
+          "full": "/media/images/commemoration/commemoration-002.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-002.jpg",
+          "alt": "הנצחה",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(32).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(32).jpg",
-          "alt": "הנצחה - 01 ספר תורה לזכר אלון (32)",
+          "full": "/media/images/commemoration/commemoration-003.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-003.jpg",
+          "alt": "הנצחה",
           "w": 640,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(22).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(22).jpg",
-          "alt": "הנצחה - 02 הנצחה (22)",
+          "full": "/media/images/commemoration/commemoration-004.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-004.jpg",
+          "alt": "הנצחה",
           "w": 900,
           "h": 632
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(23).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(23).jpg",
-          "alt": "הנצחה - 02 הנצחה (23)",
+          "full": "/media/images/commemoration/commemoration-005.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-005.jpg",
+          "alt": "הנצחה",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(24).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(24).jpg",
-          "alt": "הנצחה - 02 הנצחה (24)",
+          "full": "/media/images/commemoration/commemoration-006.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-006.jpg",
+          "alt": "הנצחה",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(25).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(25).jpg",
-          "alt": "הנצחה - 02 הנצחה (25)",
+          "full": "/media/images/commemoration/commemoration-007.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-007.jpg",
+          "alt": "הנצחה",
           "w": 634,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(26).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(26).jpg",
-          "alt": "הנצחה - 02 הנצחה (26)",
+          "full": "/media/images/commemoration/commemoration-008.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-008.jpg",
+          "alt": "הנצחה",
           "w": 636,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(41).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(41).jpg",
-          "alt": "הנצחה - 02 הנצחה (41)",
+          "full": "/media/images/commemoration/commemoration-009.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-009.jpg",
+          "alt": "הנצחה",
           "w": 900,
           "h": 634
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(42).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(42).jpg",
-          "alt": "הנצחה - 02 הנצחה (42)",
+          "full": "/media/images/commemoration/commemoration-010.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-010.jpg",
+          "alt": "הנצחה",
           "w": 639,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(44).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(44).jpg",
-          "alt": "הנצחה - 02 הנצחה (44)",
+          "full": "/media/images/commemoration/commemoration-011.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-011.jpg",
+          "alt": "הנצחה",
           "w": 637,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(56).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(56).jpg",
-          "alt": "הנצחה - 02 הנצחה (56)",
+          "full": "/media/images/commemoration/commemoration-012.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-012.jpg",
+          "alt": "הנצחה",
           "w": 637,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(57).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(57).jpg",
-          "alt": "הנצחה - 02 הנצחה (57)",
+          "full": "/media/images/commemoration/commemoration-013.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-013.jpg",
+          "alt": "הנצחה",
           "w": 667,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg",
-          "alt": "הנצחה - 02 הנצחה (58)",
+          "full": "/media/images/commemoration/commemoration-014.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-014.jpg",
+          "alt": "הנצחה",
           "w": 900,
           "h": 840
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(59).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(59).jpg",
-          "alt": "הנצחה - 02 הנצחה (59)",
+          "full": "/media/images/commemoration/commemoration-015.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-015.jpg",
+          "alt": "הנצחה",
           "w": 900,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(60).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(60).jpg",
-          "alt": "הנצחה - 02 הנצחה (60)",
+          "full": "/media/images/commemoration/commemoration-016.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-016.jpg",
+          "alt": "הנצחה",
           "w": 675,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(61).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(61).jpg",
-          "alt": "הנצחה - 02 הנצחה (61)",
+          "full": "/media/images/commemoration/commemoration-017.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-017.jpg",
+          "alt": "הנצחה",
           "w": 675,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(62).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(62).jpg",
-          "alt": "הנצחה - 02 הנצחה (62)",
+          "full": "/media/images/commemoration/commemoration-018.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-018.jpg",
+          "alt": "הנצחה",
           "w": 675,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(64).jpg",
-          "thumb": "/media/images/thumbs/%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(64).jpg",
-          "alt": "הנצחה - 02 הנצחה (64)",
+          "full": "/media/images/commemoration/commemoration-019.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-019.jpg",
+          "alt": "הנצחה",
           "w": 900,
           "h": 405
         }
       ]
     },
     {
-      "key": "אתר-הנצחה",
+      "key": "memorial-site",
       "label": "אתר הנצחה",
       "images": [
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(1).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(1).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (1)",
+          "full": "/media/images/memorial-site/memorial-site-001.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-001.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 641
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(10).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (10)",
+          "full": "/media/images/memorial-site/memorial-site-002.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-002.jpg",
+          "alt": "אתר הנצחה",
           "w": 635,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(11).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(11).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (11)",
+          "full": "/media/images/memorial-site/memorial-site-003.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-003.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 627
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(12).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(12).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (12)",
+          "full": "/media/images/memorial-site/memorial-site-004.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-004.jpg",
+          "alt": "אתר הנצחה",
           "w": 624,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(13).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (13)",
+          "full": "/media/images/memorial-site/memorial-site-005.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-005.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 630
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(14).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (14)",
+          "full": "/media/images/memorial-site/memorial-site-006.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-006.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 506
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(15).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (15)",
+          "full": "/media/images/memorial-site/memorial-site-007.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-007.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 506
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(16).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (16)",
+          "full": "/media/images/memorial-site/memorial-site-008.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-008.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 506
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(17).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(17).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (17)",
+          "full": "/media/images/memorial-site/memorial-site-009.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-009.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 506
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(18).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(18).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (18)",
+          "full": "/media/images/memorial-site/memorial-site-010.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-010.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 675
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(19).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(19).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (19)",
+          "full": "/media/images/memorial-site/memorial-site-011.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-011.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 619
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(2).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(2).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (2)",
+          "full": "/media/images/memorial-site/memorial-site-012.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-012.jpg",
+          "alt": "אתר הנצחה",
           "w": 637,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(20).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (20)",
+          "full": "/media/images/memorial-site/memorial-site-013.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-013.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 675
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(21).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(21).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (21)",
+          "full": "/media/images/memorial-site/memorial-site-014.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-014.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 675
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(22).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(22).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (22)",
+          "full": "/media/images/memorial-site/memorial-site-015.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-015.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 415
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(23).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(23).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (23)",
+          "full": "/media/images/memorial-site/memorial-site-016.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-016.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 415
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(24).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(24).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (24)",
+          "full": "/media/images/memorial-site/memorial-site-017.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-017.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 600
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(25).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(25).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (25)",
+          "full": "/media/images/memorial-site/memorial-site-018.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-018.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 505
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(26).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(26).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (26)",
+          "full": "/media/images/memorial-site/memorial-site-019.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-019.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 541
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(27).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(27).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (27)",
+          "full": "/media/images/memorial-site/memorial-site-020.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-020.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 600
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(28).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(28).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (28)",
+          "full": "/media/images/memorial-site/memorial-site-021.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-021.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 673
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(29).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(29).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (29)",
+          "full": "/media/images/memorial-site/memorial-site-022.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-022.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 675
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(3).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(3).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (3)",
+          "full": "/media/images/memorial-site/memorial-site-023.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-023.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 637
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(30).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(30).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (30)",
+          "full": "/media/images/memorial-site/memorial-site-024.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-024.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 675
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(31).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(31).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (31)",
+          "full": "/media/images/memorial-site/memorial-site-025.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-025.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 506
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(32).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(32).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (32)",
+          "full": "/media/images/memorial-site/memorial-site-026.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-026.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 506
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(33).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(33).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (33)",
+          "full": "/media/images/memorial-site/memorial-site-027.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-027.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 506
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(34).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(34).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (34)",
+          "full": "/media/images/memorial-site/memorial-site-028.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-028.jpg",
+          "alt": "אתר הנצחה",
           "w": 464,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(35).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(35).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (35)",
+          "full": "/media/images/memorial-site/memorial-site-029.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-029.jpg",
+          "alt": "אתר הנצחה",
           "w": 675,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(4).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(4).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (4)",
+          "full": "/media/images/memorial-site/memorial-site-030.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-030.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 639
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(5).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (5)",
+          "full": "/media/images/memorial-site/memorial-site-031.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-031.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 620
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (58)",
+          "full": "/media/images/memorial-site/memorial-site-032.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-032.jpg",
+          "alt": "אתר הנצחה",
           "w": 631,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(59).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(59).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (59)",
+          "full": "/media/images/memorial-site/memorial-site-033.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-033.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 405
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(6).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(6).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (6)",
+          "full": "/media/images/memorial-site/memorial-site-034.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-034.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 638
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(7).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (7)",
+          "full": "/media/images/memorial-site/memorial-site-035.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-035.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 638
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(8).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(8).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (8)",
+          "full": "/media/images/memorial-site/memorial-site-036.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-036.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 637
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(9).jpg",
-          "alt": "אתר הנצחה - 02 הנצחה (9)",
+          "full": "/media/images/memorial-site/memorial-site-037.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-037.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 638
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/14%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%AA%D7%A2%D7%9C%D7%AA%20%D7%94%D7%9E%D7%99%D7%9D).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/14%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%AA%D7%A2%D7%9C%D7%AA%20%D7%94%D7%9E%D7%99%D7%9D).jpg",
-          "alt": "אתר הנצחה - 14 הנצחה (תעלת המים)",
+          "full": "/media/images/memorial-site/memorial-site-038.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-038.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 675
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/15%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%90%D7%91%D7%A0%D7%99%20%D7%94%D7%96%D7%99%D7%9B%D7%A8%D7%95%D7%9F).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/15%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%90%D7%91%D7%A0%D7%99%20%D7%94%D7%96%D7%99%D7%9B%D7%A8%D7%95%D7%9F).jpg",
-          "alt": "אתר הנצחה - 15 הנצחה (אבני הזיכרון)",
+          "full": "/media/images/memorial-site/memorial-site-039.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-039.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 675
         },
         {
-          "full": "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg",
-          "thumb": "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg",
-          "alt": "אתר הנצחה - 16 הנצחה (מבט כללי)",
+          "full": "/media/images/memorial-site/memorial-site-040.jpg",
+          "thumb": "/media/images/thumbs/memorial-site/memorial-site-040.jpg",
+          "alt": "אתר הנצחה",
           "w": 900,
           "h": 730
         }
       ]
     },
     {
-      "key": "עיתונות",
+      "key": "press",
       "label": "עיתונות",
       "images": [
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(10).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(10).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (10)",
+          "full": "/media/images/press/press-001.jpg",
+          "thumb": "/media/images/thumbs/press/press-001.jpg",
+          "alt": "עיתונות",
           "w": 691,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(13).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(13).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (13)",
+          "full": "/media/images/press/press-002.jpg",
+          "thumb": "/media/images/thumbs/press/press-002.jpg",
+          "alt": "עיתונות",
           "w": 811,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(14).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(14).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (14)",
+          "full": "/media/images/press/press-003.jpg",
+          "thumb": "/media/images/thumbs/press/press-003.jpg",
+          "alt": "עיתונות",
           "w": 379,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(15).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(15).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (15)",
+          "full": "/media/images/press/press-004.jpg",
+          "thumb": "/media/images/thumbs/press/press-004.jpg",
+          "alt": "עיתונות",
           "w": 900,
           "h": 657
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(16).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(16).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (16)",
+          "full": "/media/images/press/press-005.jpg",
+          "thumb": "/media/images/thumbs/press/press-005.jpg",
+          "alt": "עיתונות",
           "w": 621,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(20).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(20).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (20)",
+          "full": "/media/images/press/press-006.jpg",
+          "thumb": "/media/images/thumbs/press/press-006.jpg",
+          "alt": "עיתונות",
           "w": 900,
           "h": 806
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(28).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(28).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (28)",
+          "full": "/media/images/press/press-007.jpg",
+          "thumb": "/media/images/thumbs/press/press-007.jpg",
+          "alt": "עיתונות",
           "w": 778,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(29).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(29).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (29)",
+          "full": "/media/images/press/press-008.jpg",
+          "thumb": "/media/images/thumbs/press/press-008.jpg",
+          "alt": "עיתונות",
           "w": 866,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(30).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(30).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (30)",
+          "full": "/media/images/press/press-009.jpg",
+          "thumb": "/media/images/thumbs/press/press-009.jpg",
+          "alt": "עיתונות",
           "w": 737,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(31).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(31).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (31)",
+          "full": "/media/images/press/press-010.jpg",
+          "thumb": "/media/images/thumbs/press/press-010.jpg",
+          "alt": "עיתונות",
           "w": 707,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(5).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(5).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (5)",
+          "full": "/media/images/press/press-011.jpg",
+          "thumb": "/media/images/thumbs/press/press-011.jpg",
+          "alt": "עיתונות",
           "w": 576,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(7).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(7).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (7)",
+          "full": "/media/images/press/press-012.jpg",
+          "thumb": "/media/images/thumbs/press/press-012.jpg",
+          "alt": "עיתונות",
           "w": 900,
           "h": 883
         },
         {
-          "full": "/media/images/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(9).jpg",
-          "thumb": "/media/images/thumbs/%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA/%D7%90%D7%9C%D7%91%D7%95%D7%9D%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9D%20(9).jpg",
-          "alt": "עיתונות - אלבום לזכר אלום (9)",
+          "full": "/media/images/press/press-013.jpg",
+          "thumb": "/media/images/thumbs/press/press-013.jpg",
+          "alt": "עיתונות",
           "w": 735,
           "h": 900
         }
       ]
     },
     {
-      "key": "כללי",
+      "key": "general",
       "label": "כללי",
       "images": [
         {
-          "full": "/media/images/%D7%9B%D7%9C%D7%9C%D7%99/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(33).jpg",
-          "thumb": "/media/images/thumbs/%D7%9B%D7%9C%D7%9C%D7%99/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(33).jpg",
-          "alt": "כללי - 01 ספר תורה לזכר אלון (33)",
+          "full": "/media/images/general/general-001.jpg",
+          "thumb": "/media/images/thumbs/general/general-001.jpg",
+          "alt": "כללי",
           "w": 900,
           "h": 635
         },
         {
-          "full": "/media/images/%D7%9B%D7%9C%D7%9C%D7%99/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(34).jpg",
-          "thumb": "/media/images/thumbs/%D7%9B%D7%9C%D7%9C%D7%99/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(34).jpg",
-          "alt": "כללי - 01 ספר תורה לזכר אלון (34)",
+          "full": "/media/images/general/general-002.jpg",
+          "thumb": "/media/images/thumbs/general/general-002.jpg",
+          "alt": "כללי",
           "w": 637,
           "h": 900
         },
         {
-          "full": "/media/images/%D7%9B%D7%9C%D7%9C%D7%99/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(35).jpg",
-          "thumb": "/media/images/thumbs/%D7%9B%D7%9C%D7%9C%D7%99/01%20%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%9C%D7%96%D7%9B%D7%A8%20%D7%90%D7%9C%D7%95%D7%9F%20(35).jpg",
-          "alt": "כללי - 01 ספר תורה לזכר אלון (35)",
+          "full": "/media/images/general/general-003.jpg",
+          "thumb": "/media/images/thumbs/general/general-003.jpg",
+          "alt": "כללי",
           "w": 900,
           "h": 636
         }

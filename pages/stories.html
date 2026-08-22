@@ -58,9 +58,6 @@
 <a class="nav-link font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/pages/legacy.html">הנצחה ומורשת</a>
 </div>
 <div class="flex items-center gap-3">
-<button aria-label="השתקה/השמעת קול לשיר ברקע" title="אצלנו בגן — שי-לי עטרי" class="text-[#1A2E44] hover:opacity-70 transition-opacity" id="song-widget">
-<span class="material-symbols-outlined text-xl" id="song-mute-icon">volume_off</span>
-</button>
 <button class="bg-[#1A2E44] text-white px-4 py-1.5 rounded text-sm font-label tracking-wide hover:bg-[#1A2E44]/90 transition-colors flex items-center gap-1.5" data-candle-trigger=""><img src="/media/icons/dam-hamacabim.png" alt="" class="memorial-photo text-lg"/> הוספת זיכרון</button>
 <button aria-expanded="false" aria-label="תפריט" class="md:hidden text-[#1A2E44]" id="mobile-nav-toggle">
 <span class="material-symbols-outlined">menu</span>
@@ -107,23 +104,22 @@
 </main>
 
 <!-- Footer -->
-<footer class="w-full mt-4 bg-[#e6e9ec] py-12 px-8 flex flex-col items-center gap-6 rtl rounded-t-xl transition-all duration-300">
+<footer class="w-full mt-4 bg-[#e6e9ec] py-10 px-8 flex flex-col items-center gap-4 rtl rounded-t-xl transition-all duration-300">
+<div class="flex flex-col items-center gap-1.5">
 <div class="text-lg font-serif font-semibold text-[#1A2E44]">אלון אברהם-חי בביאן הי״ד</div>
-<div class="flex flex-wrap justify-center gap-8">
+<div class="font-label text-sm text-[#585f65] tracking-wide" dir="rtl"><span class="font-bold text-xl" style="color:#1A2E44; vertical-align:baseline">א</span>ותך <span class="font-bold text-xl" style="color:#1A2E44; vertical-align:baseline">ל</span>עולם <span class="font-bold text-xl" style="color:#1A2E44; vertical-align:baseline">ו</span>עד <span class="font-bold text-xl" style="color:#1A2E44; vertical-align:baseline">נ</span>זכור</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mt-1">
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30 inline-flex items-center gap-1.5" data-candle-trigger="" href="#"><img src="/media/icons/dam-hamacabim.png" alt="" class="memorial-photo text-lg"/> הוספת זיכרון</a>
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="/pages/sections.html">עוד דרכים לזכור</a>
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="/index.html">חזרה לדף הבית</a>
 </div>
-<div class="text-xs font-label text-secondary text-center mt-4">© דף הנצחה לזכרו של אלון. לזכר עולם.</div>
 </footer>
 
 <!-- Scroll to top -->
 <button aria-label="חזרה למעלה" class="fixed bottom-8 right-8 z-50 w-14 h-14 bg-surface-container-lowest text-primary rounded shadow-2xl flex items-center justify-center border border-primary/20 opacity-0 pointer-events-none translate-y-4 transition-all duration-300" id="scroll-top-btn">
 <span class="material-symbols-outlined text-2xl">arrow_upward</span>
 </button>
-
-<!-- Ambient Song -->
-<audio id="bg-audio" preload="auto" src="/audio/atzlenu-bagan.mp3"></audio>
 
 <!-- Candle Modal -->
 <div class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#03192e]/80 backdrop-blur-md px-6" id="candle-modal">

@@ -31,3 +31,6 @@ images.zip
 
 # Runtime data written by server.js (candle-lighting submissions)
 data/
+
+# Local-only hero design explorations (canvas + option previews, not deployed)
+design/

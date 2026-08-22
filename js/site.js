@@ -311,124 +311,13 @@
   }
 
   // ---------------------------------------------------------------------
-  // Ambient background song (local file): stays paused/muted until the
-  // visitor explicitly clicks the song widget — no autoplay on entry. To
-  // keep it playing across page navigations (index <-> gallery are separate
-  // page loads, not one app), the current time and "is this visitor playing
-  // it" flag are persisted per tab, so the next page picks the song back up
-  // where it left off instead of restarting from the beginning.
+  // Single-media guard: only one audio/video should ever play at a time.
+  // Whenever any media element starts playing, pause every other one on the
+  // page (memorial videos, audio clips). "play" doesn't bubble, so this
+  // listens in the capture phase.
   // ---------------------------------------------------------------------
 
-  const SONG_STATE_KEY = "alon-bibian-song-state";
-  // Playlist plays in order and loops back to the first track after the last.
-  const SONG_PLAYLIST = ["/audio/atzlenu-bagan.mp3", "/audio/tachzor.mp3"];
-  const BG_AUDIO_VOLUME = 0.5;
-  const SONG_SAVE_INTERVAL_MS = 1000; // how often timeupdate persists the resume point
-
-  function loadSongState() {
-    try {
-      const raw = JSON.parse(sessionStorage.getItem(SONG_STATE_KEY));
-      return raw && typeof raw === "object" ? raw : {};
-    } catch (e) {
-      return {};
-    }
-  }
-
-  function saveSongState(state) {
-    try {
-      sessionStorage.setItem(SONG_STATE_KEY, JSON.stringify(state));
-    } catch (e) {}
-  }
-
-  function updateSongIcons(muted) {
-    const icon = document.getElementById("song-mute-icon");
-    if (icon) icon.textContent = muted ? "volume_off" : "volume_up";
-    const pulse = document.getElementById("song-widget-pulse");
-    if (pulse) pulse.style.display = muted ? "" : "none";
-  }
-
-  function setupSongWidget() {
-    const audio = document.getElementById("bg-audio");
-    const widget = document.getElementById("song-widget");
-    if (!audio) return;
-
-    const state = loadSongState();
-    audio.volume = BG_AUDIO_VOLUME;
-
-    let trackIndex =
-      Number.isInteger(state.track) && state.track >= 0 && state.track < SONG_PLAYLIST.length
-        ? state.track
-        : 0;
-    audio.src = SONG_PLAYLIST[trackIndex];
-
-    function persist(extra) {
-      saveSongState({
-        time: audio.currentTime,
-        playing: !audio.paused && !audio.muted,
-        track: trackIndex,
-        ...extra,
-      });
-    }
-
-    // Resume where the previous page left off instead of starting from 0,
-    // so moving between pages feels like one continuous song.
-    if (typeof state.time === "number" && isFinite(state.time) && state.time > 0) {
-      const resumeTime = state.time;
-      const applyResume = () => {
-        if (audio.duration && resumeTime < audio.duration) audio.currentTime = resumeTime;
-      };
-      if (audio.readyState >= 1) applyResume();
-      else audio.addEventListener("loadedmetadata", applyResume, { once: true });
-    }
-
-    // No autoplay: the song stays paused/muted on load. If the visitor was
-    // already playing it before navigating to this page, resume unmuted
-    // playback (browsers allow that once the origin has had a real
-    // interaction); otherwise stay silent until the widget is clicked.
-    audio.muted = true;
-    updateSongIcons(true);
-
-    function attemptPlay() {
-      const p = audio.play();
-      if (p && typeof p.catch === "function") p.catch(() => {});
-    }
-
-    if (state.playing) {
-      audio.muted = false;
-      attemptPlay();
-      updateSongIcons(false);
-    }
-
-    function toggle() {
-      if (audio.paused || audio.muted) {
-        attemptPlay();
-        audio.muted = false;
-        updateSongIcons(false);
-      } else {
-        audio.pause();
-        audio.muted = true;
-        updateSongIcons(true);
-      }
-      persist();
-    }
-
-    if (widget) widget.addEventListener("click", toggle);
-
-    // Advance to the next track in the playlist when one ends, looping back
-    // to the first track after the last.
-    audio.addEventListener("ended", () => {
-      trackIndex = (trackIndex + 1) % SONG_PLAYLIST.length;
-      audio.src = SONG_PLAYLIST[trackIndex];
-      audio.currentTime = 0;
-      attemptPlay();
-      persist({ time: 0 });
-    });
-
-    // Only one audio/video should ever play at a time. Whenever any media
-    // element starts playing, pause every other one on the page — the
-    // ambient song (with its own muted/icon/persist bookkeeping) and any
-    // memorial video or audio clip alike. "play" doesn't bubble, so this
-    // listens in the capture phase.
+  function setupSingleMediaPlayback() {
     document.addEventListener(
       "play",
       (e) => {
@@ -436,33 +325,11 @@
         if (!(el instanceof HTMLMediaElement)) return;
         document.querySelectorAll("audio, video").forEach((other) => {
           if (other === el || other.paused) return;
-          if (other === audio) {
-            audio.pause();
-            audio.muted = true;
-            updateSongIcons(true);
-            persist();
-          } else {
-            other.pause();
-          }
+          other.pause();
         });
       },
       true
     );
-
-    // Keep the resume point fresh so a navigation mid-song (or a closed tab
-    // that gets restored) picks up close to where it actually was.
-    let lastSaveAt = 0;
-    audio.addEventListener("timeupdate", () => {
-      const now = Date.now();
-      if (now - lastSaveAt > SONG_SAVE_INTERVAL_MS) {
-        lastSaveAt = now;
-        persist();
-      }
-    });
-    window.addEventListener("pagehide", () => persist());
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "hidden") persist();
-    });
   }
 
   // ---------------------------------------------------------------------
@@ -734,7 +601,7 @@
     setupNavHeightVar();
     setupCandles();
     setupMobileNav();
-    setupSongWidget();
+    setupSingleMediaPlayback();
     setupShareButton();
     setupScrollTopButton();
     setupMemorialDates();

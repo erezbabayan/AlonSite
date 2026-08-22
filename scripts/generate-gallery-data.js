@@ -20,18 +20,35 @@ const EXT_RE = /\.(jpe?g|png)$/i;
 
 // Narrative order (life-story flow) rather than alphabetical.
 const CATEGORY_ORDER = [
-  "ילדות ובגרות",
-  "בר מצווה אלון",
-  "חברים",
-  "צבא",
-  "משפחה",
-  "כתבים של אלון",
-  "הלוויה",
-  "הנצחה",
-  "אתר הנצחה",
-  "עיתונות",
-  "כללי",
+  "childhood",
+  "bar-mitzvah",
+  "friends",
+  "army",
+  "family",
+  "writings",
+  "funeral",
+  "commemoration",
+  "memorial-site",
+  "press",
+  "general",
 ];
+
+// Category folder names are English (for tooling ergonomics), but the site
+// itself is Hebrew — this is the single place that maps each folder back to
+// the Hebrew label visitors actually see.
+const CATEGORY_LABELS = {
+  childhood: "ילדות ובגרות",
+  "bar-mitzvah": "בר מצווה אלון",
+  friends: "חברים",
+  army: "צבא",
+  family: "משפחה",
+  writings: "כתבים של אלון",
+  funeral: "הלוויה",
+  commemoration: "הנצחה",
+  "memorial-site": "אתר הנצחה",
+  press: "עיתונות",
+  general: "כללי",
+};
 
 // "thumbs" holds generated thumbnails, not a category, and "og" holds only
 // the single Open Graph social-share image used in <meta> tags — neither is
@@ -89,13 +106,13 @@ const categories = orderedDirs.map((category) => {
     return {
       full: `/media/images/${toUrl(category)}/${toUrl(name)}`,
       thumb: `/media/images/thumbs/${toUrl(category)}/${toUrl(thumbName)}`,
-      alt: `${category} - ${name.replace(EXT_RE, "")}`,
+      alt: CATEGORY_LABELS[category] || category,
       w,
       h,
     };
   });
 
-  return { key: slugify(category), label: category, images };
+  return { key: slugify(category), label: CATEGORY_LABELS[category] || category, images };
 });
 console.log();
 

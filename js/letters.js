@@ -1,6 +1,6 @@
 // Letters page behavior: category filtering and the full-letter reader.
 // Reads window.LETTERS_DATA (see letters-data.js) and drives the markup in
-// letters.html. Depends on site.js for the shared nav/candles/song widgets.
+// letters.html. Depends on site.js for the shared nav/candles widgets.
 (function () {
   "use strict";
 

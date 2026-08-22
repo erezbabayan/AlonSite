@@ -39,9 +39,6 @@
 <a class="nav-link font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/pages/legacy.html">הנצחה ומורשת</a>
 </div>
 <div class="flex items-center gap-3">
-<button aria-label="השתקה/השמעת קול לשיר ברקע" title="אצלנו בגן — שי-לי עטרי" class="text-[#1A2E44] hover:opacity-70 transition-opacity" id="song-widget">
-<span class="material-symbols-outlined text-xl" id="song-mute-icon">volume_off</span>
-</button>
 <button class="bg-[#1A2E44] text-white px-4 py-1.5 rounded text-sm font-label tracking-wide hover:bg-[#1A2E44]/90 transition-colors flex items-center gap-1.5" data-candle-trigger=""><img src="/media/icons/dam-hamacabim.png" alt="" class="memorial-photo text-lg"/> הוספת זיכרון</button>
 <button aria-expanded="false" aria-label="תפריט" class="md:hidden text-[#1A2E44]" id="mobile-nav-toggle">
 <span class="material-symbols-outlined">menu</span>
@@ -64,7 +61,7 @@
 <!-- Header -->
 <section class="relative h-[62vh] min-h-[420px] flex items-end overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="אתר ההנצחה לחללי אסון המסוקים" class="w-full h-full object-cover" src="/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg"/>
+<img alt="אתר ההנצחה לחללי אסון המסוקים" class="w-full h-full object-cover" src="/media/images/thumbs/memorial-site/memorial-site-040.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-[#03192e] via-[#03192e]/55 to-[#03192e]/15"></div>
 </div>
 <div class="relative z-10 max-w-4xl mx-auto px-8 pb-14 text-center w-full">
@@ -129,22 +126,21 @@
 </main>
 
 <!-- Footer -->
-<footer class="w-full mt-4 bg-[#e6e9ec] py-12 px-8 flex flex-col items-center gap-6 rtl rounded-t-xl transition-all duration-300">
+<footer class="w-full mt-4 bg-[#e6e9ec] py-10 px-8 flex flex-col items-center gap-4 rtl rounded-t-xl transition-all duration-300">
+<div class="flex flex-col items-center gap-1.5">
 <div class="text-lg font-serif font-semibold text-[#1A2E44]">אלון אברהם-חי בביאן הי״ד</div>
-<div class="flex flex-wrap justify-center gap-8">
+<div class="font-label text-sm text-[#585f65] tracking-wide" dir="rtl"><span class="font-bold text-xl" style="color:#1A2E44; vertical-align:baseline">א</span>ותך <span class="font-bold text-xl" style="color:#1A2E44; vertical-align:baseline">ל</span>עולם <span class="font-bold text-xl" style="color:#1A2E44; vertical-align:baseline">ו</span>עד <span class="font-bold text-xl" style="color:#1A2E44; vertical-align:baseline">נ</span>זכור</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mt-1">
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30 inline-flex items-center gap-1.5" data-candle-trigger="" href="#"><img src="/media/icons/dam-hamacabim.png" alt="" class="memorial-photo text-lg"/> הוספת זיכרון</a>
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="/index.html">חזרה לדף הבית</a>
 </div>
-<div class="text-xs font-label text-secondary text-center mt-4">© דף הנצחה לזכרו של אלון. לזכר עולם.</div>
 </footer>
 
 <!-- Scroll to top -->
 <button aria-label="חזרה למעלה" class="fixed bottom-8 right-8 z-50 w-14 h-14 bg-surface-container-lowest text-primary rounded shadow-2xl flex items-center justify-center border border-primary/20 opacity-0 pointer-events-none translate-y-4 transition-all duration-300" id="scroll-top-btn">
 <span class="material-symbols-outlined text-2xl">arrow_upward</span>
 </button>
-
-<!-- Ambient Song -->
-<audio id="bg-audio" preload="auto" src="/audio/atzlenu-bagan.mp3"></audio>
 
 <!-- Candle Modal -->
 <div class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#03192e]/80 backdrop-blur-md px-6" id="candle-modal">
@@ -300,37 +296,37 @@
     // Photos of the memorial site near Kibbutz Dafna. Same files/paths as the
     // "אתר הנצחה" category in js/gallery-data.js (full gallery page).
     const MEMORIAL_PHOTOS = [
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/16%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%9E%D7%91%D7%98%20%D7%9B%D7%9C%D7%9C%D7%99).jpg", alt: "מבט כללי על אתר ההנצחה" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/15%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%90%D7%91%D7%A0%D7%99%20%D7%94%D7%96%D7%99%D7%9B%D7%A8%D7%95%D7%9F).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/15%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%90%D7%91%D7%A0%D7%99%20%D7%94%D7%96%D7%99%D7%9B%D7%A8%D7%95%D7%9F).jpg", alt: "אבני הזיכרון לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/14%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%AA%D7%A2%D7%9C%D7%AA%20%D7%94%D7%9E%D7%99%D7%9D).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/14%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(%D7%AA%D7%A2%D7%9C%D7%AA%20%D7%94%D7%9E%D7%99%D7%9D).jpg", alt: "תעלת המים באתר ההנצחה" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(1).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(1).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(2).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(2).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(3).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(3).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(4).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(4).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(5).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(5).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(6).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(6).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(7).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(7).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(8).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(8).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(9).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(9).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(10).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(10).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(11).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(11).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(12).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(12).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(13).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(13).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(58).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(14).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(14).jpg", alt: "אבני הזיכרון באתר ההנצחה" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(15).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(15).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(16).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(16).jpg", alt: "תעלת המים באתר ההנצחה" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(17).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(17).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(18).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(18).jpg", alt: "אנדרטת אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(19).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(19).jpg", alt: "אנדרטת אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(20).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(20).jpg", alt: "אנדרטת המסוק ליד שאר ישוב" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(21).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(21).jpg", alt: "אנדרטת המסוק ליד שאר ישוב" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(22).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(22).jpg", alt: "שאר ישוב - אנדרטה לזכר הנופלים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(23).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(23).jpg", alt: "שאר ישוב - אנדרטה לזכר הנופלים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(24).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(24).jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(25).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(25).jpg", alt: "אנדרטת אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(26).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(26).jpg", alt: "אנדרטת אסון המסוקים" },
-      { full: "/media/images/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(27).jpg", thumb: "/media/images/thumbs/%D7%90%D7%AA%D7%A8%20%D7%94%D7%A0%D7%A6%D7%97%D7%94/02%20%D7%94%D7%A0%D7%A6%D7%97%D7%94%20(27).jpg", alt: "אבני הזיכרון באתר ההנצחה" },
+      { full: "/media/images/memorial-site/memorial-site-040.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-040.jpg", alt: "מבט כללי על אתר ההנצחה" },
+      { full: "/media/images/memorial-site/memorial-site-039.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-039.jpg", alt: "אבני הזיכרון לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-038.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-038.jpg", alt: "תעלת המים באתר ההנצחה" },
+      { full: "/media/images/memorial-site/memorial-site-001.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-001.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-012.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-012.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-023.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-023.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-030.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-030.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-031.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-031.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-034.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-034.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-035.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-035.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-036.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-036.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-037.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-037.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-002.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-002.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-003.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-003.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-004.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-004.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-005.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-005.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-032.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-032.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-006.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-006.jpg", alt: "אבני הזיכרון באתר ההנצחה" },
+      { full: "/media/images/memorial-site/memorial-site-007.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-007.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-008.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-008.jpg", alt: "תעלת המים באתר ההנצחה" },
+      { full: "/media/images/memorial-site/memorial-site-009.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-009.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-010.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-010.jpg", alt: "אנדרטת אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-011.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-011.jpg", alt: "אנדרטת אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-013.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-013.jpg", alt: "אנדרטת המסוק ליד שאר ישוב" },
+      { full: "/media/images/memorial-site/memorial-site-014.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-014.jpg", alt: "אנדרטת המסוק ליד שאר ישוב" },
+      { full: "/media/images/memorial-site/memorial-site-015.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-015.jpg", alt: "שאר ישוב - אנדרטה לזכר הנופלים" },
+      { full: "/media/images/memorial-site/memorial-site-016.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-016.jpg", alt: "שאר ישוב - אנדרטה לזכר הנופלים" },
+      { full: "/media/images/memorial-site/memorial-site-017.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-017.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-018.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-018.jpg", alt: "אנדרטת אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-019.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-019.jpg", alt: "אנדרטת אסון המסוקים" },
+      { full: "/media/images/memorial-site/memorial-site-020.jpg", thumb: "/media/images/thumbs/memorial-site/memorial-site-020.jpg", alt: "אבני הזיכרון באתר ההנצחה" },
     ];
 
     const memorialGrid = document.getElementById("memorial-gallery");
