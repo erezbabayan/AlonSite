@@ -1,7 +1,69 @@
 (function () {
   "use strict";
 
+  // The memorial video plays inside a modal rather than sending visitors off
+  // to YouTube. The iframe src is only set on open (and cleared on close) so
+  // the embed never loads — or keeps playing — while the modal is closed.
+  function initVideoModal() {
+    const modal = document.getElementById("legacy-video-modal");
+    const frame = document.getElementById("legacy-video-frame");
+    if (!modal || !frame) return;
+
+    const titleEl = document.getElementById("legacy-video-title");
+    const descEl = document.getElementById("legacy-video-desc");
+    const closeBtn = document.getElementById("legacy-video-close");
+
+    function open(trigger) {
+      const id = trigger.getAttribute("data-video-id");
+      if (!id) return;
+
+      // Hand the stage over to the video: silence the ambient song through
+      // its own toggle so the nav icon and saved state stay in sync.
+      const songWidget = document.getElementById("song-widget");
+      const audio = document.getElementById("bg-audio");
+      if (songWidget && audio && !audio.paused && !audio.muted) songWidget.click();
+
+      frame.src =
+        "https://www.youtube-nocookie.com/embed/" +
+        encodeURIComponent(id) +
+        "?autoplay=1&rel=0";
+      titleEl.textContent = trigger.getAttribute("data-title") || "";
+      descEl.textContent = trigger.getAttribute("data-desc") || "";
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+
+    function close() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "";
+      frame.src = "";
+    }
+
+    document.querySelectorAll("[data-legacy-video-trigger]").forEach((trigger) => {
+      trigger.addEventListener("click", () => open(trigger));
+      trigger.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          open(trigger);
+        }
+      });
+    });
+
+    closeBtn.addEventListener("click", close);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) close();
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
+    initVideoModal();
+
     const modal = document.getElementById("legacy-modal");
     if (!modal) return;
 
