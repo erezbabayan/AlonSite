@@ -694,7 +694,7 @@
   // nav already highlights the current page on every other page.
   // ---------------------------------------------------------------------
 
-  const NAV_DESKTOP_ACTIVE = ["text-[#1A2E44]", "border-b-2", "border-[#1A2E44]", "pb-1"];
+  const NAV_DESKTOP_ACTIVE = ["is-active", "text-[#1A2E44]"];
   const NAV_DESKTOP_INACTIVE = ["text-[#585f65]", "hover:text-[#1A2E44]", "transition-colors", "duration-300"];
   const NAV_MOBILE_ACTIVE = ["text-[#1A2E44]"];
   const NAV_MOBILE_INACTIVE = ["text-[#585f65]"];
