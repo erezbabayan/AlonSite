@@ -1,6 +1,6 @@
 // Gallery page behavior: category filtering and the lightbox. Reads
 // window.GALLERY_DATA (see gallery-data.js) and drives the markup in
-// gallery.html. Depends on site.js for the shared nav/candles/song widgets.
+// gallery.html. Depends on site.js for the shared nav/candles widgets.
 (function () {
   "use strict";
 
@@ -9,7 +9,7 @@
   // Categories fall into two chronological groups: chapters of his life,
   // then the categories that came after — separated by a visual divider
   // so the grouping reads clearly instead of one jumbled row of chips.
-  const LIFE_KEYS = ["ילדות-ובגרות", "בר-מצווה-אלון", "חברים", "צבא", "משפחה", "כתבים-של-אלון"];
+  const LIFE_KEYS = ["childhood", "bar-mitzvah", "friends", "army", "family", "writings"];
 
   const FILTER_SWITCH_TRANSITION_MS = 220; // grid fade-out/in while switching categories
   const LIGHTBOX_SWAP_DELAY_MS = 150; // lets the fade-out finish before swapping the image src

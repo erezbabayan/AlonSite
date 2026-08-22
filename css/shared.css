@@ -24,9 +24,13 @@ html {
 main {
     padding-top: var(--nav-h, 4rem);
 }
-/* Offsets anchor-jump targets so content doesn't land underneath the fixed nav. */
+/* Offsets anchor-jump targets so content doesn't land underneath the fixed nav.
+   Exactly --nav-h and not a pixel more: a nav-link jump should park the
+   section's top edge flush against the nav, with no sliver of the previous
+   section still showing above it. The section's own top padding supplies the
+   breathing room. */
 section[id] {
-    scroll-margin-top: calc(var(--nav-h, 4rem) + 1rem);
+    scroll-margin-top: var(--nav-h, 4rem);
 }
 .gold-border { border-color: #7C8CA0; }
 .gold-text { color: #7C8CA0; }
@@ -222,4 +226,35 @@ body::before {
 }
 @media (prefers-reduced-motion: reduce) {
     .memorial-photo { animation: none; }
+}
+
+/* ---------------------------------------------------------------------
+   Top nav links
+   --------------------------------------------------------------------- */
+/* Same center-out rule the section jump-links on sections.html use: hovering
+   a nav item draws the exact underline the current page already wears, so
+   the hover previews "this is where you'd land". Drawn as a pseudo-element
+   rather than a border-bottom so it can animate without nudging the text. */
+.nav-link {
+    position: relative;
+    padding-bottom: 0.25rem;
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #1A2E44;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 300ms ease-out;
+}
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link.is-active::after {
+    transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+    .nav-link::after { transition: none; }
 }
