@@ -1,165 +1,238 @@
 /* index.html — home page only. Loaded after css/shared.css. */
 
-/* Hero: previous text size; full-bleed background photo */
+/* ---------------------------------------------------------------------
+   Hero: an editorial diptych. The photograph holds one side, the text the
+   other, each on its own surface — nothing is set over the image, so the
+   type carries no shadows and the photograph is never cut by words.
+
+   shared.css gives every page's <main> a padding-top of the measured nav
+   height. The hero pulls that back off so the photograph bleeds up behind
+   the frosted bar (DESIGN.md: the photography should show through the UI),
+   and the text column re-adds it as padding so the words stay clear of it.
+   --------------------------------------------------------------------- */
+#hero {
+    margin-top: calc(-1 * var(--nav-h, 4rem));
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background: #eef0f2;
+}
+
+@media (min-width: 900px) {
+    #hero {
+        height: 100svh;
+        min-height: 0;
+        /* The figure comes first in the DOM so it stacks on top on phones.
+           Reversing the row hands the RTL reading start — the right — to
+           the text column, and sends the photograph to the left. */
+        flex-direction: row-reverse;
+    }
+}
+
+/* --- the photograph --- */
+#hero .hero-figure {
+    position: relative;
+    flex: 0 0 46svh;
+    overflow: hidden;
+    background: #1A2E44;
+}
+
+@media (min-width: 900px) {
+    #hero .hero-figure {
+        flex: 1 1 auto;
+    }
+}
+
 #hero .hero-bg-img {
-  filter: saturate(0.88) contrast(1.02) brightness(0.96);
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 1.2s ease-out;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-out;
+    filter: saturate(0.88) contrast(1.02) brightness(0.96);
 }
 
 #hero .hero-bg-img-active {
-  opacity: 1;
+    opacity: 1;
 }
 
-#hero .hero-quote-text {
-  transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+/* Grounds the caption without a line: the image simply darkens into it. */
+#hero .hero-figure-scrim {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 11rem;
+    background: linear-gradient(to top, rgba(3, 25, 46, 0.72) 0%, rgba(3, 25, 46, 0) 100%);
+    pointer-events: none;
 }
 
-#hero .hero-quote-hidden {
-  opacity: 0;
-  visibility: hidden;
+#hero .hero-figure-caption {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.35rem;
+    margin: 0;
+    font-family: "Assistant", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.13em;
+    color: rgba(255, 255, 255, 0.76);
 }
 
-@media (min-width: 768px) {
-  #hero .hero-bg-img {
-    width: 108%;
-    max-width: none;
-  }
+@media (min-width: 900px) {
+    #hero .hero-figure-caption {
+        right: 2.25rem;
+        bottom: 2rem;
+    }
 }
 
-#hero .hero-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem;
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
-  align-self: center;
-  box-sizing: border-box;
+/* --- the text column --- */
+#hero .hero-panel {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    background: #eef0f2;
+    padding: 2.25rem 1.5rem 3rem;
+    overflow-y: auto;
 }
 
-#hero .hero-line {
-  position: static !important;
-  display: block;
-  float: none !important;
-  clear: both;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  transform: none !important;
-  white-space: normal !important;
-  line-height: 1.35 !important;
-  text-shadow: 0 2px 10px rgba(3, 25, 46, 0.55);
+@media (min-width: 900px) {
+    #hero .hero-panel {
+        flex: 0 0 clamp(31rem, 42%, 37.5rem);
+        padding: calc(var(--nav-h, 4rem) + 2.25rem) clamp(2.5rem, 3.4vw, 3.75rem) 2.75rem;
+    }
+}
+
+#hero .hero-panel-inner {
+    width: 100%;
+    max-width: 34rem;
+    margin: 0 auto;
+    font-family: "Assistant", sans-serif;
 }
 
 #hero .hero-kicker {
-  font-family: "Assistant", sans-serif;
-  font-size: clamp(0.95rem, 1.9vw, 1.15rem);
-  font-weight: 700;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.92);
-  margin-top: 0 !important;
-  margin-bottom: 0.4rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.34em;
+    color: #C9A34E;
+}
+
+/* The rule reads as a mark, not a border — it opens the line, it doesn't
+   fence anything off. */
+#hero .hero-kicker::before {
+    content: "";
+    display: block;
+    flex: none;
+    width: 1.75rem;
+    height: 2px;
+    background: currentColor;
 }
 
 #hero .hero-title {
-  font-family: "Assistant", sans-serif;
-  font-size: clamp(1.5rem, 4.3vw, 2.5rem);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.3rem !important;
+    margin: 0 0 1.1rem;
+    font-size: clamp(1.7rem, 2.5vw + 0.55rem, 2.45rem);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: #1A2E44;
 }
 
-#hero .hero-date {
-  font-family: "Assistant", sans-serif;
-  font-size: clamp(1.05rem, 2.3vw, 1.35rem);
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.88);
+#hero .hero-lead {
+    margin: 0 0 1rem;
+    font-size: clamp(1rem, 0.45vw + 0.87rem, 1.1rem);
+    line-height: 1.72;
+    color: #1A2E44;
 }
 
-#hero .hero-detail {
-  font-family: "Assistant", sans-serif;
-  font-size: clamp(0.9rem, 1.7vw, 1.1rem);
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.75);
+#hero .hero-dates {
+    margin: 0 0 0.55rem;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: #43474d;
 }
 
+#hero .hero-years {
+    margin: 0 0 1.55rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: #C9A34E;
+}
+
+#hero .hero-remembrance {
+    margin: 0 0 1.7rem;
+    font-size: clamp(1.12rem, 0.7vw + 0.88rem, 1.35rem);
+    font-weight: 600;
+    line-height: 1.4;
+    color: #C9A34E;
+}
+
+/* Reserves its own height so the panel never reflows when the quote fades
+   out on the third slide. */
 #hero .hero-quote-block {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 34rem;
-  margin: 1.5rem auto 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.55rem;
+    margin: 0;
+    padding: 0;
 }
 
-#hero .hero-quote-block::before {
-  content: "";
-  display: block;
-  width: 2.75rem;
-  height: 1px;
-  margin-bottom: 0.35rem;
-  background: rgba(255, 255, 255, 0.4);
+/* The recessed surface lives on the fading element itself, so the block
+   leaves with its background instead of stranding an empty grey box. */
+#hero .hero-quote-text {
+    padding: 1.3rem 1.4rem;
+    background: #e1e4e8;
+    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+}
+
+#hero .hero-quote-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Phones stack the panel to its natural height, so the space the hidden
+   quote holds open would read as a hole above the next section. The
+   fade is a desktop composition device; here the quote simply stays. */
+@media (max-width: 899px) {
+    #hero .hero-quote-hidden {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 #hero .hero-quote {
-  font-family: "Assistant", sans-serif;
-  font-style: italic;
-  font-size: clamp(0.95rem, 1.9vw, 1.2rem);
-  font-weight: 400;
-  max-width: none;
-  margin-top: 0 !important;
-  text-align: center;
-  line-height: 1.7 !important;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-#hero .hero-bottom-block {
-  width: 100%;
-  padding-top: 0.5rem;
-}
-
-#hero .hero-meta {
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  max-width: 26rem;
-  width: 100%;
-  margin-top: 0.55rem !important;
-  padding-top: 0.55rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.28);
-  font-family: "Assistant", sans-serif;
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
-  font-weight: 700;
+    margin: 0 0 0.7rem;
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: #43474d;
 }
 
 #hero .hero-quote-source {
-  font-family: "Assistant", sans-serif;
-  font-size: clamp(0.75rem, 1.3vw, 0.9rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.68);
-  text-align: center;
-  margin-top: 0.15rem !important;
+    margin: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.07em;
+    color: #585f65;
 }
 
-#hero .hero-meta-sep {
-  opacity: 0.55;
+/* Short laptop screens: tighten the rhythm rather than let the panel
+   scroll, so the whole memorial text still lands in one view. */
+@media (min-width: 900px) and (max-height: 800px) {
+    #hero .hero-panel {
+        padding-top: calc(var(--nav-h, 4rem) + 1.5rem);
+        padding-bottom: 1.75rem;
+    }
+    #hero .hero-kicker { margin-bottom: 0.9rem; }
+    #hero .hero-title { margin-bottom: 0.8rem; }
+    #hero .hero-lead { margin-bottom: 0.75rem; }
+    #hero .hero-years { margin-bottom: 1.1rem; }
+    #hero .hero-remembrance { margin-bottom: 1.15rem; }
+    #hero .hero-quote-text { padding: 1.05rem 1.2rem; }
+    #hero .hero-quote { line-height: 1.72; }
 }
 
 img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
-#hero .hero-bg-img { filter: saturate(0.88) contrast(1.02) brightness(0.96); }
 
 /* Photo frame: this page's specific shadow depth + hover lift. */
 .photo-frame {
