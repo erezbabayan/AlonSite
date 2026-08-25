@@ -200,7 +200,7 @@
 <footer>הרב צבי ליפשיץ</footer>
 </blockquote>
 </div>
-<p class="life-spine-lead">בחר במקום חדש שהוקם בגוש קטיף, כדי להתחיל דבר שאינו מוכר.</p>
+<p class="life-spine-lead">להתחיל דבר חדש במקום שאינו מוכר על מנת ליישב את הארץ</p>
 <div class="life-spine-copy">
 <div class="life-spine-text">
 <p>כשסיים את התיכון בחר במכינה התורנית הקדם־צבאית עצמונה. את הבחירה נימק במילים: "להתחיל דבר חדש במקום שאינו מוכר על מנת ליישב את הארץ." במכינה התעצבה אישיותו, אמונתו היכתה שורשים, והושם דגש על הכנה נפשית ופיזית לשירות. אלון לא הסתפק באימוני הכושר במכינה ודרש להגבירם.</p>
@@ -468,7 +468,6 @@
 <script>
 (function () {
   var slides = document.querySelectorAll('#hero .hero-bg-img');
-  var quoteBlock = document.querySelector('#hero .hero-quote-text');
   var caption = document.querySelector('#hero .hero-figure-caption');
   if (slides.length < 2) return;
   var i = 0;
@@ -480,7 +479,6 @@
     // dated, so one fixed line would put a place and a date on the first
     // slide that we don't actually know.
     if (caption && slides[i].dataset.caption) caption.textContent = slides[i].dataset.caption;
-    if (quoteBlock) quoteBlock.classList.toggle('hero-quote-hidden', i >= 2);
   }, 5000);
 })();
 </script>

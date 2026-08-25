@@ -286,7 +286,7 @@
     const grid = document.getElementById("names-grid");
     grid.innerHTML = OTHER_FALLEN.map((p) => `
       <div class="name-entry">
-        <span class="name-entry-name font-headline">${p.name}</span>
+        <span class="name-entry-name font-headline"><img src="/AlonSite/media/icons/dam-hamacabim.png" alt="" class="memorial-photo text-base ml-1"/> ${p.name}</span>
         <span class="name-entry-meta font-label">${p.rank} · ${p.unit}</span>
       </div>
     `).join("");
