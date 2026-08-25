@@ -1041,6 +1041,13 @@ window.GALLERY_DATA = {
           "alt": "ילדות ובגרות",
           "w": 628,
           "h": 900
+        },
+        {
+          "full": "/media/images/childhood/childhood-149.jpg",
+          "thumb": "/media/images/thumbs/childhood/childhood-149.jpg",
+          "alt": "ילדות ובגרות",
+          "w": 605,
+          "h": 900
         }
       ]
     },
@@ -3491,19 +3498,6 @@ window.GALLERY_DATA = {
       ]
     },
     {
-      "key": "writings",
-      "label": "כתבים של אלון",
-      "images": [
-        {
-          "full": "/media/images/writings/writings-001.jpg",
-          "thumb": "/media/images/thumbs/writings/writings-001.jpg",
-          "alt": "כתבים של אלון",
-          "w": 605,
-          "h": 900
-        }
-      ]
-    },
-    {
       "key": "funeral",
       "label": "הלוויה",
       "images": [
@@ -3848,6 +3842,13 @@ window.GALLERY_DATA = {
           "alt": "הנצחה",
           "w": 900,
           "h": 405
+        },
+        {
+          "full": "/media/images/commemoration/commemoration-020.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-020.jpg",
+          "alt": "הנצחה",
+          "w": 675,
+          "h": 900
         }
       ]
     },

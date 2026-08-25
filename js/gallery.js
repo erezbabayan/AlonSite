@@ -9,7 +9,7 @@
   // Categories fall into two chronological groups: chapters of his life,
   // then the categories that came after — separated by a visual divider
   // so the grouping reads clearly instead of one jumbled row of chips.
-  const LIFE_KEYS = ["childhood", "bar-mitzvah", "friends", "army", "family", "writings"];
+  const LIFE_KEYS = ["childhood", "bar-mitzvah", "friends", "army", "family"];
 
   const FILTER_SWITCH_TRANSITION_MS = 220; // grid fade-out/in while switching categories
   const LIGHTBOX_SWAP_DELAY_MS = 150; // lets the fade-out finish before swapping the image src

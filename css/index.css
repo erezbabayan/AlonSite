@@ -168,8 +168,6 @@
     color: #C9A34E;
 }
 
-/* Reserves its own height so the panel never reflows when the quote fades
-   out on the third slide. */
 #hero .hero-quote-block {
     /* Sits well below the memorial lines — the gap is what separates his
        words from ours, so it grows with the room the panel has. */
@@ -177,27 +175,9 @@
     padding: 0;
 }
 
-/* The recessed surface lives on the fading element itself, so the block
-   leaves with its background instead of stranding an empty grey box. */
 #hero .hero-quote-text {
     padding: 1.3rem 1.4rem;
     background: #e1e4e8;
-    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
-}
-
-#hero .hero-quote-hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-/* Phones stack the panel to its natural height, so the space the hidden
-   quote holds open would read as a hole above the next section. The
-   fade is a desktop composition device; here the quote simply stays. */
-@media (max-width: 899px) {
-    #hero .hero-quote-hidden {
-        opacity: 1;
-        visibility: visible;
-    }
 }
 
 #hero .hero-quote {

@@ -468,7 +468,6 @@
 <script>
 (function () {
   var slides = document.querySelectorAll('#hero .hero-bg-img');
-  var quoteBlock = document.querySelector('#hero .hero-quote-text');
   var caption = document.querySelector('#hero .hero-figure-caption');
   if (slides.length < 2) return;
   var i = 0;
@@ -480,7 +479,6 @@
     // dated, so one fixed line would put a place and a date on the first
     // slide that we don't actually know.
     if (caption && slides[i].dataset.caption) caption.textContent = slides[i].dataset.caption;
-    if (quoteBlock) quoteBlock.classList.toggle('hero-quote-hidden', i >= 2);
   }, 5000);
 })();
 </script>
