@@ -101,7 +101,7 @@
 <section class="bg-primary text-white py-20 px-8 reveal" id="names">
 <div class="max-w-6xl mx-auto">
 <div class="text-center mb-14">
-<img src="/AlonSite/media/icons/dam-hamacabim.png" alt="דם המכבים" class="memorial-photo text-5xl text-accent-gold mb-3 inline-block"/>
+<img src="/AlonSite/media/icons/dam-hamacabim.png" alt="דם המכבים" class="memorial-photo text-7xl text-accent-gold mb-3 inline-block"/>
 <h2 class="text-4xl font-headline font-bold gold-text mb-4">73 הנופלים</h2>
 <p class="font-body text-white/75 max-w-2xl mx-auto leading-relaxed">
     73 השמות החרוטים על אבני הזיכרון באתר ההנצחה בשאר ישוב. ביניהם אלון, 73 חיילי צה"ל שיצאו לפעילות מבצעית במוצבי הבופור ודלעת בלבנון במטרה להגן על גבולה הצפוני של מדינת ישראל ולא שבו.
@@ -135,6 +135,7 @@
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30 inline-flex items-center gap-1.5" data-candle-trigger="" href="#"><img src="/AlonSite/media/icons/dam-hamacabim.png" alt="" class="memorial-photo text-lg"/> הוספת זיכרון</a>
 <a class="font-label text-sm text-[#585f65] hover:underline decoration-[#1A2E44]/30" href="/AlonSite/index.html">חזרה לדף הבית</a>
 </div>
+<div class="text-xs font-label text-secondary text-center">תודתנו לחברת <a class="hover:underline decoration-[#1A2E44]/30" href="https://www.hostweb.co.il/" target="_blank" rel="noopener noreferrer">HostWeb</a> אחסון אתרים</div>
 </footer>
 
 <!-- Scroll to top -->
@@ -286,8 +287,11 @@
     const grid = document.getElementById("names-grid");
     grid.innerHTML = OTHER_FALLEN.map((p) => `
       <div class="name-entry">
-        <span class="name-entry-name font-headline"><img src="/AlonSite/media/icons/dam-hamacabim.png" alt="" class="memorial-photo text-base ml-1"/> ${p.name}</span>
-        <span class="name-entry-meta font-label">${p.rank} · ${p.unit}</span>
+        <img src="/AlonSite/media/icons/dam-hamacabim.png" alt="" class="memorial-photo name-entry-icon"/>
+        <div class="name-entry-text">
+          <span class="name-entry-name font-headline">${p.name}</span>
+          <span class="name-entry-meta font-label">${p.rank} · ${p.unit}</span>
+        </div>
       </div>
     `).join("");
 </script>
@@ -297,36 +301,36 @@
     // "אתר הנצחה" category in js/gallery-data.js (full gallery page).
     const MEMORIAL_PHOTOS = [
       { full: "/AlonSite/media/images/memorial-site/memorial-site-040.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-040.jpg", alt: "מבט כללי על אתר ההנצחה" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-018.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-018.jpg", alt: "אנדרטת אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-019.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-019.jpg", alt: "אנדרטת אסון המסוקים" },
       { full: "/AlonSite/media/images/memorial-site/memorial-site-039.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-039.jpg", alt: "אבני הזיכרון לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-013.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-013.jpg", alt: "אנדרטת המסוק ליד שאר ישוב" },
       { full: "/AlonSite/media/images/memorial-site/memorial-site-038.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-038.jpg", alt: "תעלת המים באתר ההנצחה" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-001.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-001.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-017.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-017.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-014.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-014.jpg", alt: "אנדרטת המסוק ליד שאר ישוב" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-007.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-007.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-006.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-006.jpg", alt: "אבני הזיכרון באתר ההנצחה" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-008.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-008.jpg", alt: "תעלת המים באתר ההנצחה" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-010.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-010.jpg", alt: "אנדרטת אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-011.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-011.jpg", alt: "אנדרטת אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-015.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-015.jpg", alt: "שאר ישוב - אנדרטה לזכר הנופלים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-016.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-016.jpg", alt: "שאר ישוב - אנדרטה לזכר הנופלים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-002.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-002.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-032.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-032.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-004.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-004.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-005.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-005.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-003.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-003.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-009.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-009.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
       { full: "/AlonSite/media/images/memorial-site/memorial-site-012.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-012.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-020.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-020.jpg", alt: "אבני הזיכרון באתר ההנצחה" },
       { full: "/AlonSite/media/images/memorial-site/memorial-site-023.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-023.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-001.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-001.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
       { full: "/AlonSite/media/images/memorial-site/memorial-site-030.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-030.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
+      { full: "/AlonSite/media/images/memorial-site/memorial-site-037.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-037.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
       { full: "/AlonSite/media/images/memorial-site/memorial-site-031.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-031.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
       { full: "/AlonSite/media/images/memorial-site/memorial-site-034.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-034.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
       { full: "/AlonSite/media/images/memorial-site/memorial-site-035.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-035.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
       { full: "/AlonSite/media/images/memorial-site/memorial-site-036.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-036.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-037.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-037.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-002.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-002.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-003.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-003.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-004.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-004.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-005.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-005.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-032.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-032.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-006.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-006.jpg", alt: "אבני הזיכרון באתר ההנצחה" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-007.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-007.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-008.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-008.jpg", alt: "תעלת המים באתר ההנצחה" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-009.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-009.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-010.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-010.jpg", alt: "אנדרטת אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-011.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-011.jpg", alt: "אנדרטת אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-013.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-013.jpg", alt: "אנדרטת המסוק ליד שאר ישוב" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-014.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-014.jpg", alt: "אנדרטת המסוק ליד שאר ישוב" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-015.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-015.jpg", alt: "שאר ישוב - אנדרטה לזכר הנופלים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-016.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-016.jpg", alt: "שאר ישוב - אנדרטה לזכר הנופלים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-017.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-017.jpg", alt: "אתר ההנצחה לחללי אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-018.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-018.jpg", alt: "אנדרטת אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-019.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-019.jpg", alt: "אנדרטת אסון המסוקים" },
-      { full: "/AlonSite/media/images/memorial-site/memorial-site-020.jpg", thumb: "/AlonSite/media/images/thumbs/memorial-site/memorial-site-020.jpg", alt: "אבני הזיכרון באתר ההנצחה" },
     ];
 
     const memorialGrid = document.getElementById("memorial-gallery");
