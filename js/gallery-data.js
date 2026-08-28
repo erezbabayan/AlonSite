@@ -2760,6 +2760,27 @@ window.GALLERY_DATA = {
           "alt": "צבא",
           "w": 900,
           "h": 660
+        },
+        {
+          "full": "/media/images/army/army-172.jpg",
+          "thumb": "/media/images/thumbs/army/army-172.jpg",
+          "alt": "צבא",
+          "w": 900,
+          "h": 635
+        },
+        {
+          "full": "/media/images/army/army-173.jpg",
+          "thumb": "/media/images/thumbs/army/army-173.jpg",
+          "alt": "צבא",
+          "w": 637,
+          "h": 900
+        },
+        {
+          "full": "/media/images/army/army-174.jpg",
+          "thumb": "/media/images/thumbs/army/army-174.jpg",
+          "alt": "צבא",
+          "w": 900,
+          "h": 636
         }
       ]
     },
@@ -3849,6 +3870,20 @@ window.GALLERY_DATA = {
           "alt": "הנצחה",
           "w": 675,
           "h": 900
+        },
+        {
+          "full": "/media/images/commemoration/commemoration-021.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-021.jpg",
+          "alt": "הנצחה",
+          "w": 675,
+          "h": 900
+        },
+        {
+          "full": "/media/images/commemoration/commemoration-022.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-022.jpg",
+          "alt": "הנצחה",
+          "w": 900,
+          "h": 599
         }
       ]
     },
@@ -4232,33 +4267,6 @@ window.GALLERY_DATA = {
           "alt": "עיתונות",
           "w": 735,
           "h": 900
-        }
-      ]
-    },
-    {
-      "key": "general",
-      "label": "כללי",
-      "images": [
-        {
-          "full": "/media/images/general/general-001.jpg",
-          "thumb": "/media/images/thumbs/general/general-001.jpg",
-          "alt": "כללי",
-          "w": 900,
-          "h": 635
-        },
-        {
-          "full": "/media/images/general/general-002.jpg",
-          "thumb": "/media/images/thumbs/general/general-002.jpg",
-          "alt": "כללי",
-          "w": 637,
-          "h": 900
-        },
-        {
-          "full": "/media/images/general/general-003.jpg",
-          "thumb": "/media/images/thumbs/general/general-003.jpg",
-          "alt": "כללי",
-          "w": 900,
-          "h": 636
         }
       ]
     }
