@@ -69,6 +69,9 @@
   background: linear-gradient(180deg, #fffdf8 0%, #faf6ea 100%);
   border-radius: 0.4rem;
   box-shadow: 0 20px 40px rgba(27, 28, 25, 0.18);
+  max-height: min(88dvh, 90vh);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 #story-reader-card.reader-card-visible {
   opacity: 1;
@@ -97,12 +100,14 @@
   border-radius: 0.35rem;
   overflow: hidden;
   font-style: normal;
+  max-width: 100%;
 }
 .story-letter-body .letter-figure img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  max-height: min(62vh, 520px);
+  max-height: min(52dvh, 440px);
   object-fit: contain;
   background: #ebe6db;
 }

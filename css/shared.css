@@ -16,6 +16,26 @@ body {
 html {
     scroll-behavior: smooth;
 }
+/* Clip sideways overflow (wide images / 100vw quirks) without killing
+   vertical page scroll for long memorial content. */
+html,
+body {
+    overflow-x: clip;
+    max-width: 100%;
+}
+/* Quiet scroll chrome for long letter/story readers and the hero text
+   column — wheel/touch/keyboard still scroll; the OS thumb stays hidden
+   so the parchment/photograph edge stays clean (DESIGN.md: dignified). */
+.quiet-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overscroll-behavior: contain;
+}
+.quiet-scroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
 /* The fixed top nav is usually one line (~4rem) but wraps to two lines on
    narrow screens once the title no longer fits. --nav-h is the real,
    measured nav height (set by site.js); the 4rem fallback only applies
