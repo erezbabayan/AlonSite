@@ -519,7 +519,7 @@
           const days = Math.round((next - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / MS_PER_DAY);
           const dateLabel = next.toLocaleDateString("he-IL", { year: "numeric", month: "long", day: "numeric" });
           const when = days === 0 ? "היום" : days === 1 ? "מחר" : `בעוד ${days} ימים`;
-          yahrzeitEl.textContent = `יום השנה הבא (כ"ח בשבט) — ${dateLabel} · ${when}`;
+          yahrzeitEl.textContent = `יום השנה הבא (כ"ח בשבט) - ${dateLabel} · ${when}`;
         }
       } catch (e) {
         // Hebrew-calendar Intl support isn't universal; leave the note

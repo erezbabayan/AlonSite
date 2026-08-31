@@ -228,6 +228,21 @@ body::before {
     .memorial-photo { animation: none; }
 }
 
+/* Soft ambient light behind the candle-section flower, standing in for a
+   boxed icon badge: a radial gradient has no edge to read as a shape, so it
+   avoids the concentric-square look a bordered/rounded container gave here. */
+.candle-halo {
+    background: radial-gradient(circle, rgba(124, 140, 160, 0.32), rgba(124, 140, 160, 0.12) 45%, rgba(124, 140, 160, 0) 72%);
+    animation: candle-halo-pulse 2400ms ease-in-out infinite;
+}
+@keyframes candle-halo-pulse {
+    0%, 100% { opacity: 0.75; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .candle-halo { animation: none; }
+}
+
 /* ---------------------------------------------------------------------
    Top nav links
    --------------------------------------------------------------------- */

@@ -2760,6 +2760,27 @@ window.GALLERY_DATA = {
           "alt": "צבא",
           "w": 900,
           "h": 660
+        },
+        {
+          "full": "/AlonSite/media/images/army/army-172.jpg",
+          "thumb": "/AlonSite/media/images/thumbs/army/army-172.jpg",
+          "alt": "צבא",
+          "w": 900,
+          "h": 635
+        },
+        {
+          "full": "/AlonSite/media/images/army/army-173.jpg",
+          "thumb": "/AlonSite/media/images/thumbs/army/army-173.jpg",
+          "alt": "צבא",
+          "w": 637,
+          "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/army/army-174.jpg",
+          "thumb": "/AlonSite/media/images/thumbs/army/army-174.jpg",
+          "alt": "צבא",
+          "w": 900,
+          "h": 636
         }
       ]
     },
@@ -3849,6 +3870,27 @@ window.GALLERY_DATA = {
           "alt": "הנצחה",
           "w": 675,
           "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/commemoration/commemoration-021.jpg",
+          "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-021.jpg",
+          "alt": "הנצחה",
+          "w": 675,
+          "h": 900
+        },
+        {
+          "full": "/AlonSite/media/images/commemoration/commemoration-022.jpg",
+          "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-022.jpg",
+          "alt": "הנצחה",
+          "w": 900,
+          "h": 599
+        },
+        {
+          "full": "/AlonSite/media/images/commemoration/commemoration-023.jpg",
+          "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-023.jpg",
+          "alt": "הנצחה",
+          "w": 900,
+          "h": 506
         }
       ]
     },
@@ -4232,33 +4274,6 @@ window.GALLERY_DATA = {
           "alt": "עיתונות",
           "w": 735,
           "h": 900
-        }
-      ]
-    },
-    {
-      "key": "general",
-      "label": "כללי",
-      "images": [
-        {
-          "full": "/AlonSite/media/images/general/general-001.jpg",
-          "thumb": "/AlonSite/media/images/thumbs/general/general-001.jpg",
-          "alt": "כללי",
-          "w": 900,
-          "h": 635
-        },
-        {
-          "full": "/AlonSite/media/images/general/general-002.jpg",
-          "thumb": "/AlonSite/media/images/thumbs/general/general-002.jpg",
-          "alt": "כללי",
-          "w": 637,
-          "h": 900
-        },
-        {
-          "full": "/AlonSite/media/images/general/general-003.jpg",
-          "thumb": "/AlonSite/media/images/thumbs/general/general-003.jpg",
-          "alt": "כללי",
-          "w": 900,
-          "h": 636
         }
       ]
     }

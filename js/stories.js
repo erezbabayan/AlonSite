@@ -48,7 +48,7 @@
       '<p class="story-quote">' +
       escapeHtml(story.quote) +
       "</p>" +
-      '<p class="story-from">— ' +
+      '<p class="story-from">- ' +
       escapeHtml(story.from) +
       "</p>" +
       '<span class="inline-flex items-center gap-1 text-accent-gold text-xs font-bold mt-auto pt-4">' +
