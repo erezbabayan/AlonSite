@@ -555,6 +555,122 @@
   }
 
   // ---------------------------------------------------------------------
+  // Life-spine photo crossfades + rotating quotes (chapters section).
+  // CSS keeps slides at opacity 0 until .is-active — this must run on load.
+  // Visible stations coordinate quote text so duplicates never show at once.
+  // ---------------------------------------------------------------------
+
+  const LIFE_SPINE_HOLD_MS = 7000;
+
+  function setupLifeSpineCarousels() {
+    const lifeSpine = document.querySelector(".life-spine");
+    if (!lifeSpine) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const stations = [];
+
+    function collectStation(container) {
+      const frame = container.querySelector(".crossfade-frame");
+      if (!frame) return;
+      const images = Array.from(frame.querySelectorAll("img"));
+      if (!images.length) return;
+      const quoteRotator = container.querySelector("[data-quote-rotate]");
+      stations.push({
+        root: container,
+        images: images,
+        quoteRotator: quoteRotator,
+        slideIndex: 0,
+        visible: false,
+      });
+    }
+
+    lifeSpine.querySelectorAll(".life-spine-media").forEach(collectStation);
+    lifeSpine.querySelectorAll(".life-spine-aside-media").forEach(collectStation);
+    if (!stations.length) return;
+
+    function quoteNodes(station) {
+      if (!station.quoteRotator) return [];
+      return Array.from(station.quoteRotator.querySelectorAll(".life-spine-quote"));
+    }
+
+    function quoteText(quoteEl) {
+      const p = quoteEl && quoteEl.querySelector("p");
+      return p ? p.textContent.trim() : "";
+    }
+
+    function slideCount(station) {
+      const quotes = quoteNodes(station);
+      return Math.max(station.images.length, quotes.length || 1);
+    }
+
+    function activeQuoteTexts(excludeStation) {
+      const texts = new Set();
+      stations.forEach((station) => {
+        if (station === excludeStation || !station.visible) return;
+        const quotes = quoteNodes(station);
+        if (!quotes.length) return;
+        const text = quoteText(quotes[station.slideIndex % quotes.length]);
+        if (text) texts.add(text);
+      });
+      return texts;
+    }
+
+    function pickSlideIndex(station, startIndex) {
+      const total = slideCount(station);
+      const quotes = quoteNodes(station);
+      const used = activeQuoteTexts(station);
+      for (let offset = 0; offset < total; offset++) {
+        const idx = (startIndex + offset) % total;
+        if (!quotes.length) return idx;
+        const text = quoteText(quotes[idx % quotes.length]);
+        if (!text || !used.has(text)) return idx;
+      }
+      return startIndex % total;
+    }
+
+    function applySlide(station, slideIndex) {
+      station.slideIndex = slideIndex;
+      const quotes = quoteNodes(station);
+      const imageIndex = slideIndex % station.images.length;
+      station.images.forEach((img, i) => {
+        img.classList.toggle("is-active", i === imageIndex);
+      });
+      if (quotes.length) {
+        const quoteIndex = slideIndex % quotes.length;
+        quotes.forEach((quote, i) => {
+          quote.classList.toggle("is-active", i === quoteIndex);
+        });
+      }
+    }
+
+    stations.forEach((station, order) => {
+      applySlide(station, pickSlideIndex(station, order));
+    });
+
+    if (!reducedMotion) {
+      stations.forEach((station) => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              station.visible = entry.isIntersecting;
+            });
+          },
+          { threshold: 0.12 }
+        );
+        observer.observe(station.root);
+      });
+
+      setInterval(() => {
+        stations.forEach((station) => {
+          if (!station.visible) return;
+          const next = pickSlideIndex(station, station.slideIndex + 1);
+          applySlide(station, next);
+        });
+      }, LIFE_SPINE_HOLD_MS);
+    }
+  }
+
+  // ---------------------------------------------------------------------
   // Home-page nav scroll spy — keeps "פרקי חיים" / "הנצחה ומורשת" in the
   // top nav underlined once their section is in view, matching how the
   // nav already highlights the current page on every other page.
@@ -606,13 +722,17 @@
     setupMemorialDates();
     setupRevealAnimations();
     setupHomeNavScrollSpy();
+    setupLifeSpineCarousels();
     setupPortraitPhotoFocus();
   });
 
   function setupPortraitPhotoFocus() {
-    document.querySelectorAll(".life-spine-media img").forEach((img) => {
+    document.querySelectorAll(".life-spine .crossfade-frame img").forEach((img) => {
       const mark = () => {
         if (!img.naturalWidth) return;
+        if (img.dataset.focus) {
+          img.style.objectPosition = img.dataset.focus;
+        }
         img.classList.toggle("is-portrait", img.naturalHeight > img.naturalWidth);
       };
       if (img.complete) mark();
