@@ -416,6 +416,52 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   width: 100%;
 }
 
+/* Rotating quotes under / beside photo stations */
+.life-spine-quote-rotate {
+  position: relative;
+  margin-top: 0.55rem;
+}
+
+.life-spine-media > .life-spine-quote-rotate {
+  margin-top: 0.45rem;
+}
+
+.life-spine-quote-rotate > .life-spine-quote {
+  margin: 0;
+  transition: opacity 450ms ease-out;
+}
+
+.life-spine-quote-rotate > .life-spine-quote:not(.is-active) {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.life-spine-quote-rotate > .life-spine-quote.is-active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Single-element pool rotator (life-spine-quotes.js) */
+.life-spine-rotate-quote {
+  transition: opacity 450ms ease-out;
+}
+
+.life-spine-rotate-quote.is-fading {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .life-spine-quote-rotate > .life-spine-quote,
+  .life-spine-rotate-quote {
+    transition: none;
+  }
+}
+
 .life-spine-heading {
   display: flex;
   flex-direction: row;

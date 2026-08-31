@@ -720,7 +720,36 @@
     setupRevealAnimations();
     setupHomeNavScrollSpy();
     setupPortraitPhotoFocus();
+    setupQuoteRotators();
   });
+
+  function setupQuoteRotators() {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const stations = document.querySelectorAll("[data-quote-rotate]");
+    stations.forEach((root, stationIdx) => {
+      const quotes = Array.from(root.querySelectorAll(":scope > .life-spine-quote"));
+      if (quotes.length < 2) return;
+
+      let tallest = 0;
+      quotes.forEach((q) => {
+        q.classList.add("is-active");
+        tallest = Math.max(tallest, q.offsetHeight);
+        q.classList.remove("is-active");
+      });
+      quotes[0].classList.add("is-active");
+      if (tallest) root.style.minHeight = `${tallest}px`;
+
+      if (reduceMotion) return;
+
+      let index = 0;
+      const holdMs = 5200 + (stationIdx % 4) * 350;
+      window.setInterval(() => {
+        quotes[index].classList.remove("is-active");
+        index = (index + 1) % quotes.length;
+        quotes[index].classList.add("is-active");
+      }, holdMs);
+    });
+  }
 
   function setupPortraitPhotoFocus() {
     document.querySelectorAll(".life-spine-media img").forEach((img) => {
