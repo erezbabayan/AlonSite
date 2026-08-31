@@ -43,7 +43,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="/AlonSite/js/tailwind-config.js?v=20260831j"></script>
-<link href="/AlonSite/css/shared.css?v=20260831m" rel="stylesheet"/>
+<link href="/AlonSite/css/shared.css?v=20260831j" rel="stylesheet"/>
 <link href="/AlonSite/css/sections.css?v=20260831j" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
@@ -420,7 +420,7 @@
 </div>
 </div>
 </div>
-<script src="/AlonSite/js/letters-data.js?v=20260831n"></script>
+<script src="/AlonSite/js/letters-data.js?v=20260831j"></script>
 <script>
   // Picks a different real letter to preview each visit, rather than
   // always showing the same one.
@@ -434,16 +434,7 @@
     if (letter.to) metaParts.push("אל " + letter.to);
     document.getElementById("letter-preview-meta").textContent = metaParts.join(" · ");
     document.getElementById("letter-preview-title").textContent = letter.title;
-    document.getElementById("letter-preview-body").textContent = String(letter.body || "")
-      .replace(/\r\n/g, "\n")
-      .split(/\n+/)
-      .map(function (l) { return l.trim(); })
-      .filter(function (l) {
-        return l && !/^\[IMG:/i.test(l) && !/^##\s/.test(l);
-      })
-      .join(" ")
-      .replace(/\s+/g, " ")
-      .trim();
+    document.getElementById("letter-preview-body").textContent = letter.body;
   })();
 
   // Videos open in a modal rather than playing inline - a YouTube-style

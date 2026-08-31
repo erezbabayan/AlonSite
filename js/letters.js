@@ -89,7 +89,7 @@
         </div>
         <h3 class="text-lg font-headline font-bold text-primary mb-2">${escapeHtml(letter.title)}</h3>
         ${meta}
-        <p class="letter-body text-sm text-on-surface-variant line-clamp-5 flex-1">${escapeHtml((window.LetterBody && window.LetterBody.plainExcerpt(letter.body)) || letter.body)}</p>
+        <p class="letter-body text-sm text-on-surface-variant line-clamp-5 flex-1">${escapeHtml(letter.body)}</p>
         <span class="inline-flex items-center gap-1 text-accent-gold text-xs font-bold mt-4">
           קראו את המכתב המלא
           <span class="material-symbols-outlined text-sm not-italic">arrow_back</span>
@@ -154,13 +154,10 @@
       if (letter.from) metaParts.push(`מאת ${letter.from}`);
       if (letter.to) metaParts.push(`אל ${letter.to}`);
       readerMeta.textContent = metaParts.join(" · ");
-      readerBody.innerHTML =
-        window.LetterBody && window.LetterBody.formatRich
-          ? window.LetterBody.formatRich(letter.body)
-          : letter.body
-              .split(/\n\n+/)
-              .map((p) => `<p class="mb-4 last:mb-0">${escapeHtml(p)}</p>`)
-              .join("");
+      readerBody.innerHTML = letter.body
+        .split(/\n\n+/)
+        .map((p) => `<p class="mb-4 last:mb-0">${escapeHtml(p)}</p>`)
+        .join("");
       readerSignature.textContent = letter.signature || "";
       readerCounter.textContent = `${readerIndex + 1} / ${visibleLetters.length}`;
       readerCard.scrollTop = 0;

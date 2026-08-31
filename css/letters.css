@@ -70,79 +70,10 @@
     transform: scale(0.97) translateY(6px);
     transition: opacity 300ms ease-out, transform 300ms ease-out;
     box-shadow: 0 20px 40px rgba(27, 28, 25, 0.14);
-    max-height: min(90dvh, 92vh);
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 #reader-card.reader-card-visible {
     opacity: 1;
     transform: scale(1) translateY(0);
-}
-
-/* Inline life-story / letter photographs inside the reader. */
-.letter-section-heading {
-    font-family: "Assistant", sans-serif;
-    font-style: normal;
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #1a2e44;
-    margin: 1.75rem 0 0.85rem;
-    letter-spacing: 0.02em;
-}
-.letter-section-heading:first-child {
-    margin-top: 0.25rem;
-}
-.letter-figure {
-    margin: 1.25rem 0 1.5rem;
-    background: #f3f0e8;
-    border-radius: 0.35rem;
-    overflow: hidden;
-    font-style: normal;
-    max-width: 100%;
-}
-.letter-figure img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: min(52dvh, 440px);
-    object-fit: contain;
-    background: #ebe6db;
-}
-.letter-figure-caption {
-    font-family: "Assistant", sans-serif;
-    font-size: 0.82rem;
-    line-height: 1.55;
-    color: rgba(26, 46, 68, 0.72);
-    padding: 0.65rem 0.85rem 0.85rem;
-}
-.letter-figure-cluster {
-    display: grid;
-    gap: 0.75rem;
-    margin: 1.25rem 0 1.5rem;
-}
-.letter-figure-cluster .letter-figure {
-    margin: 0;
-}
-.letter-figure-cluster.cluster-2,
-.letter-figure-cluster.cluster-3,
-.letter-figure-cluster.cluster-4 {
-    grid-template-columns: 1fr;
-}
-@media (min-width: 640px) {
-    .letter-figure-cluster.cluster-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-    .letter-figure-cluster.cluster-3,
-    .letter-figure-cluster.cluster-4 {
-        grid-template-columns: 1fr 1fr;
-    }
-    .letter-figure-cluster .letter-figure img {
-        max-height: 320px;
-        object-fit: cover;
-        width: 100%;
-        aspect-ratio: 4 / 3;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
