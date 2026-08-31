@@ -390,7 +390,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 .life-spine-prologue {
   margin: 1.75rem auto 0;
   max-width: 40rem;
-  text-align: right;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .life-spine-prologue p {
@@ -607,6 +608,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   line-height: 1.7;
   color: #1A2E44;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .life-spine-copy {
@@ -623,6 +626,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   font-size: 1.05rem;
   line-height: 1.75;
   color: #585f65;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .life-spine-text > p:last-child {
