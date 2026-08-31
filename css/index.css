@@ -613,22 +613,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-aside-media > .life-spine-quote-rotate {
   margin-top: 0.45rem;
-}
-
-/* Aside quotes sit under the photo inside the float column (sibling of media). */
-.life-spine-aside > .life-spine-quote-rotate {
-  float: inline-start;
-  width: min(42%, 22rem);
-  min-width: 12rem;
-  margin-top: 0;
-  margin-inline-end: 1.4rem;
-  margin-bottom: 0.55rem;
-}
-
-.life-spine-aside:nth-of-type(even) > .life-spine-quote-rotate {
-  float: inline-end;
-  margin-inline-end: 0;
-  margin-inline-start: 1.4rem;
+  width: 100%;
 }
 
 .life-spine-aside-copy {
@@ -720,9 +705,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   }
 
   .life-spine-aside-media,
-  .life-spine-aside:nth-of-type(even) .life-spine-aside-media,
-  .life-spine-aside > .life-spine-quote-rotate,
-  .life-spine-aside:nth-of-type(even) > .life-spine-quote-rotate {
+  .life-spine-aside:nth-of-type(even) .life-spine-aside-media {
     float: none;
     width: 100%;
     max-width: 26rem;

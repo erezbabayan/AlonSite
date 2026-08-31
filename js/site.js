@@ -647,17 +647,63 @@
       }
     }
 
+    function measureRotatorMaxQuoteHeight(rotator) {
+      const quotes = rotator.querySelectorAll(".life-spine-quote");
+      if (!quotes.length) return 0;
+
+      const width = rotator.getBoundingClientRect().width || rotator.offsetWidth;
+      if (width <= 0) return 0;
+
+      // Stacked grid quotes share one cell — measure each clone at rotator width.
+      const sandbox = document.createElement("div");
+      sandbox.setAttribute("aria-hidden", "true");
+      sandbox.style.cssText =
+        "position:absolute;left:-9999px;top:0;visibility:hidden;pointer-events:none;width:" +
+        width +
+        "px;";
+      document.body.appendChild(sandbox);
+
+      let maxHeight = 0;
+      quotes.forEach((quote) => {
+        const clone = quote.cloneNode(true);
+        clone.style.visibility = "visible";
+        clone.style.opacity = "1";
+        sandbox.appendChild(clone);
+        maxHeight = Math.max(maxHeight, clone.offsetHeight);
+        sandbox.removeChild(clone);
+      });
+
+      document.body.removeChild(sandbox);
+      return maxHeight;
+    }
+
+    function lockAsideMediaHeight(media, rotator, quoteHeight) {
+      if (!media || quoteHeight <= 0) return;
+      const imageBlock =
+        media.querySelector(".life-spine-rotate") || media.querySelector(".photo-frame");
+      const imageHeight = imageBlock ? imageBlock.offsetHeight : 0;
+      const quoteMargin = parseFloat(getComputedStyle(rotator).marginTop) || 0;
+      const combined = imageHeight + quoteMargin + quoteHeight;
+      if (combined > 0) {
+        media.style.minHeight = `${Math.ceil(combined)}px`;
+      }
+    }
+
     function lockQuoteRotatorHeights() {
       lifeSpine.querySelectorAll("[data-quote-rotate]").forEach((rotator) => {
         const quotes = rotator.querySelectorAll(".life-spine-quote");
         if (!quotes.length) return;
+
         rotator.style.minHeight = "";
-        let maxHeight = 0;
-        quotes.forEach((quote) => {
-          maxHeight = Math.max(maxHeight, quote.getBoundingClientRect().height);
-        });
+        const media =
+          rotator.closest(".life-spine-aside-media") ||
+          rotator.closest(".life-spine-media");
+        if (media) media.style.minHeight = "";
+
+        const maxHeight = measureRotatorMaxQuoteHeight(rotator);
         if (maxHeight > 0) {
           rotator.style.minHeight = `${Math.ceil(maxHeight)}px`;
+          lockAsideMediaHeight(media, rotator, maxHeight);
         }
       });
     }
