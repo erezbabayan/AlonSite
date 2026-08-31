@@ -79,6 +79,63 @@
   font-style: italic;
   line-height: 1.85;
 }
+.story-letter-body .letter-section-heading {
+  font-family: "Assistant", sans-serif;
+  font-style: normal;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a2e44;
+  margin: 1.75rem 0 0.85rem;
+  letter-spacing: 0.02em;
+}
+.story-letter-body .letter-section-heading:first-child {
+  margin-top: 0.25rem;
+}
+.story-letter-body .letter-figure {
+  margin: 1.25rem 0 1.5rem;
+  background: #f3f0e8;
+  border-radius: 0.35rem;
+  overflow: hidden;
+  font-style: normal;
+}
+.story-letter-body .letter-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(62vh, 520px);
+  object-fit: contain;
+  background: #ebe6db;
+}
+.story-letter-body .letter-figure-caption {
+  font-family: "Assistant", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: rgba(26, 46, 68, 0.72);
+  padding: 0.65rem 0.85rem 0.85rem;
+}
+.story-letter-body .letter-figure-cluster {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.5rem;
+}
+.story-letter-body .letter-figure-cluster .letter-figure {
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .story-letter-body .letter-figure-cluster.cluster-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .story-letter-body .letter-figure-cluster.cluster-3,
+  .story-letter-body .letter-figure-cluster.cluster-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .story-letter-body .letter-figure-cluster .letter-figure img {
+    max-height: 320px;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .story-card,

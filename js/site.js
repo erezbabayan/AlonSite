@@ -122,6 +122,119 @@
     return div.innerHTML;
   }
 
+  // Rich letter/story body: plain paragraphs, ## headings, and
+  // [IMG: /media/images/.../file.jpg | caption] markers (thumbs preferred when present).
+  // Consecutive IMG lines become a photo cluster/grid.
+  const IMG_LINE_RE = /^\[IMG:\s*([^|\]]+?)(?:\s*\|\s*([^\]]*?))?\]\s*$/i;
+  const HEADING_RE = /^##\s+(.+)$/;
+
+  function resolveLetterImageSrc(rawPath) {
+    let src = String(rawPath || "").trim().replace(/^["'`]+|["'`]+$/g, "");
+    if (!src) return "";
+    if (!src.startsWith("/")) {
+      if (src.includes("/")) src = "/AlonSite/media/images/" + src.replace(/^\/+/, "");
+      else src = "/AlonSite/media/images/" + src;
+    }
+    // Prefer gallery thumbs (≤900px) when the path points at a full image.
+    if (src.indexOf("/AlonSite/media/images/thumbs/") === -1 && src.indexOf("/AlonSite/media/images/") === 0) {
+      const rest = src.slice("/AlonSite/media/images/".length);
+      if (rest.indexOf("/") !== -1) src = "/AlonSite/media/images/thumbs/" + rest;
+    }
+    return src;
+  }
+
+  function figureHtml(src, caption) {
+    const safeSrc = escapeHtml(src);
+    const safeCap = caption ? escapeHtml(caption.trim()) : "";
+    const alt = safeCap || "תמונה";
+    return (
+      '<figure class="letter-figure">' +
+      '<img src="' +
+      safeSrc +
+      '" alt="' +
+      alt +
+      '" loading="lazy" decoding="async"/>' +
+      (safeCap ? '<figcaption class="letter-figure-caption">' + safeCap + "</figcaption>" : "") +
+      "</figure>"
+    );
+  }
+
+  function formatRichLetterBody(body) {
+    const text = String(body || "").replace(/\r\n/g, "\n").trim();
+    if (!text) return "";
+    const blocks = text.split(/\n\n+/);
+    const html = [];
+    let imgBuf = [];
+
+    function flushImgs() {
+      if (!imgBuf.length) return;
+      if (imgBuf.length === 1) {
+        html.push(figureHtml(imgBuf[0].src, imgBuf[0].caption));
+      } else {
+        html.push(
+          '<div class="letter-figure-cluster cluster-' +
+            Math.min(imgBuf.length, 4) +
+            '">' +
+            imgBuf.map((item) => figureHtml(item.src, item.caption)).join("") +
+            "</div>"
+        );
+      }
+      imgBuf = [];
+    }
+
+    blocks.forEach((block) => {
+      const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
+      if (!lines.length) return;
+
+      // Pure image block (one or more IMG lines)
+      if (lines.every((l) => IMG_LINE_RE.test(l))) {
+        lines.forEach((l) => {
+          const m = l.match(IMG_LINE_RE);
+          imgBuf.push({ src: resolveLetterImageSrc(m[1]), caption: (m[2] || "").trim() });
+        });
+        flushImgs();
+        return;
+      }
+
+      flushImgs();
+
+      lines.forEach((line) => {
+        const imgMatch = line.match(IMG_LINE_RE);
+        if (imgMatch) {
+          flushImgs();
+          html.push(figureHtml(resolveLetterImageSrc(imgMatch[1]), (imgMatch[2] || "").trim()));
+          return;
+        }
+        const hMatch = line.match(HEADING_RE);
+        if (hMatch) {
+          html.push('<h3 class="letter-section-heading">' + escapeHtml(hMatch[1].trim()) + "</h3>");
+          return;
+        }
+        html.push('<p class="mb-4 last:mb-0">' + escapeHtml(line) + "</p>");
+      });
+    });
+
+    flushImgs();
+    return html.join("");
+  }
+
+  function plainLetterExcerpt(body) {
+    return String(body || "")
+      .replace(/\r\n/g, "\n")
+      .split(/\n+/)
+      .map((l) => l.trim())
+      .filter((l) => l && !IMG_LINE_RE.test(l) && !HEADING_RE.test(l))
+      .join(" ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  window.LetterBody = {
+    escapeHtml: escapeHtml,
+    formatRich: formatRichLetterBody,
+    plainExcerpt: plainLetterExcerpt,
+  };
+
   function formatDate(iso) {
     return new Date(iso).toLocaleDateString("he-IL", { year: "numeric", month: "long", day: "numeric" });
   }

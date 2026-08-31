@@ -86,12 +86,15 @@
       if (letter.to) metaParts.push("אל " + letter.to);
       if (letter.dateLabel) metaParts.push(letter.dateLabel);
       readerMeta.textContent = metaParts.join(" · ");
-      readerBody.innerHTML = (letter.body || "")
-        .split(/\n\n+/)
-        .map(function (p) {
-          return '<p class="mb-4 last:mb-0">' + escapeHtml(p) + "</p>";
-        })
-        .join("");
+      readerBody.innerHTML =
+        window.LetterBody && window.LetterBody.formatRich
+          ? window.LetterBody.formatRich(letter.body || "")
+          : (letter.body || "")
+              .split(/\n\n+/)
+              .map(function (p) {
+                return '<p class="mb-4 last:mb-0">' + escapeHtml(p) + "</p>";
+              })
+              .join("");
       if (readerCounter) readerCounter.textContent = (readerIndex + 1) + " / " + stories.length;
       readerCard.scrollTop = 0;
       readerCard.classList.add("reader-card-visible");

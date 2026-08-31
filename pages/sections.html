@@ -420,7 +420,7 @@
 </div>
 </div>
 </div>
-<script src="/AlonSite/js/letters-data.js?v=20260831j"></script>
+<script src="/AlonSite/js/letters-data.js?v=20260831k"></script>
 <script>
   // Picks a different real letter to preview each visit, rather than
   // always showing the same one.
@@ -434,7 +434,16 @@
     if (letter.to) metaParts.push("אל " + letter.to);
     document.getElementById("letter-preview-meta").textContent = metaParts.join(" · ");
     document.getElementById("letter-preview-title").textContent = letter.title;
-    document.getElementById("letter-preview-body").textContent = letter.body;
+    document.getElementById("letter-preview-body").textContent = String(letter.body || "")
+      .replace(/\r\n/g, "\n")
+      .split(/\n+/)
+      .map(function (l) { return l.trim(); })
+      .filter(function (l) {
+        return l && !/^\[IMG:/i.test(l) && !/^##\s/.test(l);
+      })
+      .join(" ")
+      .replace(/\s+/g, " ")
+      .trim();
   })();
 
   // Videos open in a modal rather than playing inline - a YouTube-style
