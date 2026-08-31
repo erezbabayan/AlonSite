@@ -3884,6 +3884,13 @@ window.GALLERY_DATA = {
           "alt": "הנצחה",
           "w": 900,
           "h": 599
+        },
+        {
+          "full": "/media/images/commemoration/commemoration-023.jpg",
+          "thumb": "/media/images/thumbs/commemoration/commemoration-023.jpg",
+          "alt": "הנצחה",
+          "w": 900,
+          "h": 506
         }
       ]
     },
