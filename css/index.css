@@ -561,15 +561,14 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   min-width: 0;
 }
 
-/* Mid-chapter stations: float photo + quote beside prose (RTL magazine layout). */
+/* Mid-chapter stations: photo + quote beside prose (matches chapter two-rail). */
 .life-spine-aside {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.95fr) minmax(0, 1.25fr);
+  column-gap: 1.4rem;
+  row-gap: 0.55rem;
+  align-items: start;
   margin: 2.5rem 0 1.25rem;
-}
-
-.life-spine-aside::after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .life-spine-aside:first-of-type {
@@ -580,28 +579,35 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   margin-top: 2.75rem;
 }
 
-.life-spine-aside .life-spine-rotate,
-.life-spine-aside > .life-spine-quote-rotate {
-  float: inline-start;
-  width: min(26rem, 44%);
-  max-width: 100%;
-  margin-inline-end: 1.35rem;
+.life-spine-aside-media {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
 }
 
-.life-spine-aside > .life-spine-quote-rotate {
-  clear: inline-start;
+.life-spine-aside .life-spine-rotate {
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
-.life-spine-aside:nth-of-type(even) .life-spine-rotate,
-.life-spine-aside:nth-of-type(even) > .life-spine-quote-rotate {
-  float: inline-end;
-  margin-inline-end: 0;
-  margin-inline-start: 1.35rem;
-  clear: inline-end;
+.life-spine-aside-media > .life-spine-quote-rotate {
+  margin-top: 0.45rem;
 }
 
 .life-spine-aside-copy {
+  grid-column: 2;
+  grid-row: 1;
   min-width: 0;
+  align-self: start;
+}
+
+.life-spine-aside:nth-of-type(even) .life-spine-aside-media {
+  grid-column: 2;
+}
+
+.life-spine-aside:nth-of-type(even) .life-spine-aside-copy {
+  grid-column: 1;
 }
 
 .life-spine-text > p,
@@ -676,20 +682,22 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     grid-row: auto;
   }
 
-  .life-spine-aside .life-spine-rotate,
-  .life-spine-aside > .life-spine-quote-rotate {
-    float: none;
-    width: 100%;
-    max-width: 26rem;
-    margin-inline: 0;
-    clear: none;
-  }
-
   .life-spine-aside {
+    grid-template-columns: 1fr;
     margin: 2rem 0 0;
   }
 
   .life-spine-aside:first-of-type {
     margin-top: 2.25rem;
+  }
+
+  .life-spine-aside-media,
+  .life-spine-aside-copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .life-spine-aside .life-spine-rotate {
+    max-width: 26rem;
   }
 }
