@@ -274,11 +274,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     animation: candle-in 1400ms ease-out;
 }
 
-/* Photos quietly crossfading in one frame instead of a hard cut: each
-   holds for ~3s, dissolves into the next over ~1s, on a 12s loop shared
-   evenly across 3 images (4s each). Keyframe endpoints are equal (opacity 1
-   at 0% and 100%) so the loop restarts with no visible jump; each image's
-   delay is offset by one slot (4s) so they take turns in DOM order. */
+/* Life-spine photo crossfade — JS-driven, synced with quote rotator below.
+   ~7s hold per slide; ~1.1s ease-out dissolve (see site.js). */
 .crossfade-frame {
     background: #eceae5;
 }
@@ -292,7 +289,12 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     /* Default focal point: upper-body center, not forehead crop. */
     object-position: center 42%;
     transform-origin: center 42%;
-    animation: crossfade 12s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 1.1s ease-out;
+}
+
+.crossfade-frame img.is-active {
+    opacity: 1;
 }
 
 .crossfade-frame img.is-portrait {
@@ -304,81 +306,17 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     object-position: center center;
     transform-origin: center center;
 }
-.crossfade-frame img:nth-child(2) {
-    animation-delay: -4s;
-}
-.crossfade-frame img:nth-child(3) {
-    animation-delay: -8s;
-}
-.crossfade-frame:has(> img:nth-child(4):last-child) img {
-    animation-duration: 16s;
-}
-.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(2) {
-    animation-delay: -4s;
-}
-.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(3) {
-    animation-delay: -8s;
-}
-.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(4) {
-    animation-delay: -12s;
-}
-.crossfade-frame:has(> img:nth-child(5):last-child) img {
-    animation-name: crossfade-5;
-    animation-duration: 20s;
-}
-.crossfade-frame:has(> img:nth-child(5):last-child) img:nth-child(2) {
-    animation-delay: -4s;
-}
-.crossfade-frame:has(> img:nth-child(5):last-child) img:nth-child(3) {
-    animation-delay: -8s;
-}
-.crossfade-frame:has(> img:nth-child(5):last-child) img:nth-child(4) {
-    animation-delay: -12s;
-}
-.crossfade-frame:has(> img:nth-child(5):last-child) img:nth-child(5) {
-    animation-delay: -16s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img {
-    animation-name: crossfade-6;
-    animation-duration: 24s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(2) {
-    animation-delay: -4s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(3) {
-    animation-delay: -8s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(4) {
-    animation-delay: -12s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(5) {
-    animation-delay: -16s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(6) {
-    animation-delay: -20s;
-}
-@keyframes crossfade {
-    0%, 25% { opacity: 1; }
-    33.333%, 91.667% { opacity: 0; }
-    100% { opacity: 1; }
-}
-@keyframes crossfade-5 {
-    0%, 15% { opacity: 1; }
-    20%, 95% { opacity: 0; }
-    100% { opacity: 1; }
-}
-@keyframes crossfade-6 {
-    0%, 12.5% { opacity: 1; }
-    16.666%, 95.833% { opacity: 0; }
-    100% { opacity: 1; }
-}
+
 @media (prefers-reduced-motion: reduce) {
     .crossfade-frame img {
-        animation: none;
-        opacity: 0;
+        transition: none;
     }
+    .crossfade-frame img.is-active,
     .crossfade-frame img:first-child {
         opacity: 1;
+    }
+    .crossfade-frame img:not(.is-active):not(:first-child) {
+        opacity: 0;
     }
 }
 
@@ -410,6 +348,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   font-size: 1.05rem;
   line-height: 1.75;
   color: #585f65;
+  hyphens: none;
+  text-wrap: pretty;
 }
 
 .life-spine-prologue p:last-child {
@@ -441,7 +381,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-quote-rotate > .life-spine-quote {
   margin: 0;
-  transition: opacity 450ms ease-out;
+  transition: opacity 1.1s ease-out;
 }
 
 .life-spine-quote-rotate > .life-spine-quote:not(.is-active) {
@@ -461,7 +401,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 /* Single-element pool rotator (life-spine-quotes.js) */
 .life-spine-rotate-quote {
-  transition: opacity 450ms ease-out;
+  transition: opacity 1.1s ease-out;
 }
 
 .life-spine-rotate-quote.is-fading {
@@ -592,7 +532,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-media {
   grid-column: 1;
-  grid-row: 2 / 5;
+  grid-row: 2 / 4;
 }
 
 .life-spine-body .photo-frame {
@@ -611,6 +551,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   margin: 0;
   text-align: justify;
   text-justify: inter-word;
+  hyphens: none;
+  text-wrap: pretty;
 }
 
 .life-spine-copy {
@@ -628,25 +570,53 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   grid-template-columns: min(26rem, 44%) minmax(0, 1fr);
   column-gap: 1.35rem;
   align-items: start;
-  margin: 0.2rem 0 1.15rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.life-spine-aside:first-of-type {
+  margin-top: 3rem;
+}
+
+.life-spine-aside + .life-spine-aside {
+  margin-top: 3rem;
 }
 
 .life-spine-aside:nth-of-type(even) {
   grid-template-columns: minmax(0, 1fr) min(26rem, 44%);
 }
 
+.life-spine-aside .life-spine-rotate {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.life-spine-aside > .life-spine-quote-rotate {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.life-spine-aside-copy {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  align-self: start;
+}
+
 .life-spine-aside:nth-of-type(even) .life-spine-rotate {
   grid-column: 2;
+  grid-row: 1;
+}
+
+.life-spine-aside:nth-of-type(even) > .life-spine-quote-rotate {
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .life-spine-aside:nth-of-type(even) .life-spine-aside-copy {
   grid-column: 1;
-}
-
-.life-spine-aside .life-spine-rotate {
-  width: 100%;
-  max-width: none;
-  margin: 0;
+  grid-row: 1 / -1;
 }
 
 .life-spine-text {
@@ -732,11 +702,28 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   .life-spine-aside {
     grid-template-columns: 1fr;
     row-gap: 1.1rem;
-    margin: 1.1rem 0 0;
+    margin: 2.25rem 0 0;
+  }
+
+  .life-spine-aside .life-spine-rotate,
+  .life-spine-aside > .life-spine-quote-rotate,
+  .life-spine-aside-copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .life-spine-aside:first-of-type {
+    margin-top: 2.75rem;
+  }
+
+  .life-spine-aside + .life-spine-aside {
+    margin-top: 2.5rem;
   }
 
   .life-spine-aside:nth-of-type(even) .life-spine-rotate,
+  .life-spine-aside:nth-of-type(even) > .life-spine-quote-rotate,
   .life-spine-aside:nth-of-type(even) .life-spine-aside-copy {
     grid-column: 1;
+    grid-row: auto;
   }
 }

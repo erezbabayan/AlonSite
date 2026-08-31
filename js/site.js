@@ -720,34 +720,58 @@
     setupRevealAnimations();
     setupHomeNavScrollSpy();
     setupCarouselPhotoFocus();
-    setupQuoteRotators();
+    setupLifeSpineCarousels();
   });
 
-  function setupQuoteRotators() {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const stations = document.querySelectorAll("[data-quote-rotate]");
-    stations.forEach((root, stationIdx) => {
-      const quotes = Array.from(root.querySelectorAll(":scope > .life-spine-quote"));
-      if (quotes.length < 2) return;
+  /** Shared hold per slide — image + quote advance together on each tick. */
+  const LIFE_SPINE_CAROUSEL_MS = 7000;
 
-      let tallest = 0;
-      quotes.forEach((q) => {
-        q.classList.add("is-active");
-        tallest = Math.max(tallest, q.offsetHeight);
-        q.classList.remove("is-active");
-      });
-      quotes[0].classList.add("is-active");
-      if (tallest) root.style.minHeight = `${tallest}px`;
+  function setupLifeSpineCarousels() {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    document.querySelectorAll(".life-spine .crossfade-frame").forEach((frame) => {
+      const station = frame.closest(".life-spine-media, .life-spine-rotate");
+      if (!station) return;
+
+      const quoteRoot = station.querySelector("[data-quote-rotate]");
+      const images = Array.from(frame.querySelectorAll(":scope > img"));
+      const quotes = quoteRoot
+        ? Array.from(quoteRoot.querySelectorAll(":scope > .life-spine-quote"))
+        : [];
+
+      const rotateImages = images.length >= 2;
+      const rotateQuotes = quotes.length >= 2;
+      if (!rotateImages && !rotateQuotes) return;
+
+      if (rotateImages) {
+        images.forEach((img, i) => img.classList.toggle("is-active", i === 0));
+      }
+
+      if (rotateQuotes && quoteRoot) {
+        let tallest = 0;
+        quotes.forEach((q) => {
+          q.classList.add("is-active");
+          tallest = Math.max(tallest, q.offsetHeight);
+          q.classList.remove("is-active");
+        });
+        quotes[0].classList.add("is-active");
+        if (tallest) quoteRoot.style.minHeight = `${tallest}px`;
+      }
 
       if (reduceMotion) return;
 
-      let index = 0;
-      const holdMs = 5200 + (stationIdx % 4) * 350;
+      let tick = 0;
       window.setInterval(() => {
-        quotes[index].classList.remove("is-active");
-        index = (index + 1) % quotes.length;
-        quotes[index].classList.add("is-active");
-      }, holdMs);
+        tick += 1;
+        if (rotateImages) {
+          const imgIdx = tick % images.length;
+          images.forEach((img, i) => img.classList.toggle("is-active", i === imgIdx));
+        }
+        if (rotateQuotes) {
+          const quoteIdx = tick % quotes.length;
+          quotes.forEach((q, i) => q.classList.toggle("is-active", i === quoteIdx));
+        }
+      }, LIFE_SPINE_CAROUSEL_MS);
     });
   }
 
@@ -757,65 +781,82 @@
     "army-016.jpg": "center 42%",
     "army-017.jpg": "center 42%",
     "army-025.jpg": "center center",
-    "army-028.jpg": "50% 45%",
-    "army-029.jpg": "48% 45%",
-    "army-030.jpg": "28% 42%",
-    "army-035.jpg": "32% 45%",
+    "army-028.jpg": "center 52%",
+    "army-029.jpg": "55% 48%",
+    "army-030.jpg": "28% 55%",
+    "army-035.jpg": "28% 48%",
     "army-037.jpg": "center 42%",
     "army-038.jpg": "center 42%",
     "army-049.jpg": "center 42%",
     "army-066.jpg": "center 42%",
     "army-070.jpg": "center 42%",
-    "army-036.jpg": "62% 45%",
-    "army-041.jpg": "center 42%",
-    "army-092.jpg": "center 42%",
+    "army-073.jpg": "center 42%",
+    "army-036.jpg": "58% 42%",
+    "army-041.jpg": "center 32%",
+    "army-052.jpg": "center 35%",
+    "army-092.jpg": "center 35%",
     "army-102.jpg": "center 45%",
     "army-108.jpg": "center 45%",
     "army-124.jpg": "center 42%",
     "army-128.jpg": "center 42%",
     "army-143.jpg": "center center",
-    "army-165.jpg": "33% 42%",
-    "army-170.jpg": "center 42%",
+    "army-165.jpg": "33% 68%",
+    "army-170.jpg": "center 38%",
     "bar-mitzvah-001.jpg": "center 42%",
     "bar-mitzvah-004.jpg": "center 42%",
+    "bar-mitzvah-006.jpg": "center 42%",
     "bar-mitzvah-013.jpg": "center 42%",
     "bar-mitzvah-018.jpg": "center 42%",
     "bar-mitzvah-028.jpg": "center 42%",
-    "childhood-001.jpg": "center 45%",
-    "childhood-032.jpg": "center 42%",
-    "childhood-054.jpg": "center 42%",
-    "childhood-061.jpg": "center 42%",
-    "childhood-062.jpg": "center 42%",
+    "bar-mitzvah-034.jpg": "center 38%",
+    "childhood-001.jpg": "center 38%",
+    "childhood-032.jpg": "center 88%",
+    "childhood-054.jpg": "center 28%",
+    "childhood-061.jpg": "center 38%",
+    "childhood-062.jpg": "center 58%",
     "commemoration-001.jpg": "center center",
-    "commemoration-021.jpg": "center 30%",
-    "family-001.jpg": "center 42%",
-    "family-020.jpg": "center 42%",
+    "commemoration-003.jpg": "center center",
+    "commemoration-021.jpg": "center 32%",
+    "family-001.jpg": "center center",
+    "family-007.jpg": "center 40%",
+    "family-020.jpg": "center 78%",
+    "family-028.jpg": "center 42%",
     "family-042.jpg": "center 45%",
-    "family-047.jpg": "center 45%",
-    "friends-007.jpg": "center 42%",
+    "family-047.jpg": "center 38%",
+    "friends-007.jpg": "center 50%",
     "friends-011.jpg": "center 42%",
     "friends-020.jpg": "center 42%",
     "friends-021.jpg": "center 42%",
+    "friends-022.jpg": "center 42%",
     "friends-025.jpg": "center 45%",
     "funeral-001.jpg": "center 40%",
+    "funeral-003.jpg": "center 40%",
+    "funeral-005.jpg": "center 40%",
+    "memorial-site-038.jpg": "center center",
+    "memorial-site-039.jpg": "center center",
     "memorial-site-040.jpg": "center center",
   };
 
+  function setPhotoFocus(img, position) {
+    img.style.objectPosition = position;
+    img.style.transformOrigin = position;
+  }
+
   function setupCarouselPhotoFocus() {
-    const selectors = ".crossfade-frame img, #hero .hero-bg-img";
+    const selectors = ".crossfade-frame img, #hero .hero-bg-img, section .grid .photo-frame img";
     document.querySelectorAll(selectors).forEach((img) => {
       const apply = () => {
         if (!img.naturalWidth) return;
 
         const custom = img.dataset.focus || img.getAttribute("data-focus");
         if (custom) {
-          img.style.objectPosition = custom;
+          setPhotoFocus(img, custom);
           return;
         }
 
         const filename = img.src.split("/").pop().split("?")[0];
         if (CAROUSEL_FOCAL[filename]) {
-          img.style.objectPosition = CAROUSEL_FOCAL[filename];
+          setPhotoFocus(img, CAROUSEL_FOCAL[filename]);
           return;
         }
 
@@ -826,11 +867,11 @@
         img.classList.toggle("is-landscape", isLandscape);
 
         if (isPortrait) {
-          img.style.objectPosition = "center 42%";
+          setPhotoFocus(img, "center 45%");
         } else if (isLandscape) {
-          img.style.objectPosition = "center center";
+          setPhotoFocus(img, "center center");
         } else {
-          img.style.objectPosition = "center 40%";
+          setPhotoFocus(img, "center 40%");
         }
       };
 
