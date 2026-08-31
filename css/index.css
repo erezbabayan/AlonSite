@@ -519,20 +519,29 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   font-weight: 800;
   color: #1A2E44;
   margin: 0 0 0.35rem;
-  grid-column: 1 / -1;
+  grid-area: title;
+}
+
+.life-spine-stop > .life-spine-body {
+  grid-column: 3;
+  min-width: 0;
 }
 
 .life-spine-body {
   display: grid;
-  grid-template-columns: minmax(15rem, 0.95fr) minmax(0, 1.25fr);
+  grid-template-columns: minmax(12rem, 0.95fr) minmax(0, 1.25fr);
+  grid-template-areas:
+    "title title"
+    "media lead"
+    "media copy";
   column-gap: 1.4rem;
   row-gap: 0.7rem;
   align-items: start;
 }
 
 .life-spine-media {
-  grid-column: 1;
-  grid-row: 2 / -1;
+  grid-area: media;
+  min-width: 0;
 }
 
 .life-spine-body .photo-frame {
@@ -542,8 +551,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-lead {
-  grid-column: 2;
-  grid-row: 2;
+  grid-area: lead;
   font-size: 1.15rem;
   font-style: italic;
   line-height: 1.7;
@@ -556,15 +564,15 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-copy {
-  grid-column: 2;
-  grid-row: 3;
+  grid-area: copy;
   min-width: 0;
 }
 
 /* Mid-chapter stations: photo + quote beside prose (matches chapter two-rail). */
 .life-spine-aside {
   display: grid;
-  grid-template-columns: minmax(15rem, 0.95fr) minmax(0, 1.25fr);
+  grid-template-columns: minmax(12rem, 0.95fr) minmax(0, 1.25fr);
+  grid-template-areas: "media copy";
   column-gap: 1.4rem;
   row-gap: 0.55rem;
   align-items: start;
@@ -580,8 +588,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-aside-media {
-  grid-column: 1;
-  grid-row: 1;
+  grid-area: media;
   min-width: 0;
 }
 
@@ -596,18 +603,13 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-aside-copy {
-  grid-column: 2;
-  grid-row: 1;
+  grid-area: copy;
   min-width: 0;
   align-self: start;
 }
 
-.life-spine-aside:nth-of-type(even) .life-spine-aside-media {
-  grid-column: 2;
-}
-
-.life-spine-aside:nth-of-type(even) .life-spine-aside-copy {
-  grid-column: 1;
+.life-spine-aside:nth-of-type(even) {
+  grid-template-areas: "copy media";
 }
 
 .life-spine-text > p,
@@ -670,31 +672,30 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     display: none;
   }
 
+  .life-spine-stop > .life-spine-body {
+    grid-column: 1;
+  }
+
   .life-spine-body {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "media"
+      "lead"
+      "copy";
   }
 
-  .life-spine-media,
-  .life-spine-body .photo-frame,
-  .life-spine-lead,
-  .life-spine-copy {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .life-spine-aside {
+  .life-spine-aside,
+  .life-spine-aside:nth-of-type(even) {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "media"
+      "copy";
     margin: 2rem 0 0;
   }
 
   .life-spine-aside:first-of-type {
     margin-top: 2.25rem;
-  }
-
-  .life-spine-aside-media,
-  .life-spine-aside-copy {
-    grid-column: 1;
-    grid-row: auto;
   }
 
   .life-spine-aside .life-spine-rotate {
