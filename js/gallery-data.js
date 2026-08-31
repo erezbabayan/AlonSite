@@ -3865,13 +3865,6 @@ window.GALLERY_DATA = {
           "h": 405
         },
         {
-          "full": "/AlonSite/media/images/commemoration/commemoration-020.jpg",
-          "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-020.jpg",
-          "alt": "הנצחה",
-          "w": 675,
-          "h": 900
-        },
-        {
           "full": "/AlonSite/media/images/commemoration/commemoration-021.jpg",
           "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-021.jpg",
           "alt": "הנצחה",

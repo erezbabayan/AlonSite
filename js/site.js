@@ -172,16 +172,15 @@
     updateCandleLoadMoreButton(visible.length, newestFirst.length);
   }
 
-  const MODAL_FOCUS_DELAY_MS = 150; // let the open transition start before stealing focus
-
   function openModal() {
     const modal = document.getElementById("candle-modal");
     if (!modal) return;
     modal.classList.remove("hidden");
     modal.classList.add("flex");
     document.body.style.overflow = "hidden";
-    const nameInput = document.getElementById("candle-name-input");
-    if (nameInput) setTimeout(() => nameInput.focus(), MODAL_FOCUS_DELAY_MS);
+    // Deliberately no autofocus on the name field: it popped the mobile
+    // keyboard open and hid the dialog's text. Escape still closes (the
+    // keydown listener is on document), and the fields are one tap away.
   }
 
   function closeModal() {

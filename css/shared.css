@@ -273,3 +273,68 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
     .nav-link::after { transition: none; }
 }
+
+/* ---------------------------------------------------------------------
+   Typographic polish
+   --------------------------------------------------------------------- */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* Headings that wrap get their lines evened out instead of leaving one or
+   two words stranded on the last line — the single most visible difference
+   between a hand-set headline and a browser-default one. Body copy gets the
+   lighter "pretty" treatment, which only prevents orphans. */
+h1, h2, h3, .hero-title {
+    text-wrap: balance;
+}
+p, blockquote, figcaption {
+    text-wrap: pretty;
+}
+/* Underlines sit off the baseline rather than hugging it. */
+a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+}
+/* html { scroll-behavior: smooth } above is a motion effect like any other. */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
+
+/* ---------------------------------------------------------------------
+   Keyboard focus
+   One ring, in the site's own navy, instead of whatever blue each browser
+   draws by default. :focus-visible only, so a mouse click never shows it.
+   Element-level selectors so this outranks Tailwind's .outline-none without
+   touching the form fields, which have their own underline focus state.
+   --------------------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid #1A2E44;
+    outline-offset: 3px;
+}
+/* Navy-on-navy is invisible: on the dark sections and the media overlays the
+   same ring switches to the light accent. */
+.bg-primary :is(a, button):focus-visible,
+#lightbox :is(a, button):focus-visible,
+#legacy-modal :is(a, button):focus-visible,
+#candle-modal :is(a, button):focus-visible {
+    outline-color: #b4c8e4;
+}
+
+/* ---------------------------------------------------------------------
+   Floating elements (the two corner buttons)
+   DESIGN.md: shadows on floating elements are extra-diffused and tinted
+   from on-surface, never pure black. Tailwind's shadow-2xl is a black
+   shadow, which reads as a hard drop shadow against the pale surfaces.
+   --------------------------------------------------------------------- */
+#scroll-top-btn,
+.candle-fab {
+    box-shadow: 0 12px 28px rgba(27, 28, 25, 0.14), 0 2px 6px rgba(27, 28, 25, 0.07);
+}
+#scroll-top-btn:hover,
+.candle-fab:hover {
+    box-shadow: 0 18px 38px rgba(27, 28, 25, 0.20), 0 3px 8px rgba(27, 28, 25, 0.09);
+}

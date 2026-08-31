@@ -39,17 +39,19 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/AlonSite/media/icons/favicon-192.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/AlonSite/media/icons/favicon-180.png"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="/AlonSite/js/tailwind-config.js?v=20260827e"></script>
-<link href="/AlonSite/css/shared.css?v=20260827e" rel="stylesheet"/>
-<link href="/AlonSite/css/stories.css?v=20260827e" rel="stylesheet"/>
+<script src="/AlonSite/js/tailwind-config.js?v=20260831j"></script>
+<link href="/AlonSite/css/shared.css?v=20260831j" rel="stylesheet"/>
+<link href="/AlonSite/css/stories.css?v=20260831j" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <img src="/AlonSite/notify-visit.php?page=stories" alt="" width="1" height="1" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none" aria-hidden="true"/>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-[#eef0f2]/70 backdrop-blur-xl transition-all duration-400">
 <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto rtl">
-<a class="text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="/AlonSite/index.html">אלון אברהם-חי בביאן הי״ד</a>
+<a class="text-base sm:text-xl md:text-2xl font-serif font-bold text-[#1A2E44] hover:opacity-80 transition-opacity" href="/AlonSite/index.html">אלון אברהם-חי בביאן הי״ד</a>
 <div class="hidden md:flex gap-8 items-center">
 <a class="nav-link font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/AlonSite/index.html">דף הבית</a>
 <a class="nav-link font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/AlonSite/index.html#chapters">פרקי חיים</a>
@@ -58,7 +60,7 @@
 <a class="nav-link font-label text-lg tracking-tight text-[#585f65] hover:text-[#1A2E44] transition-colors duration-300" href="/AlonSite/pages/legacy.html">הנצחה ומורשת</a>
 </div>
 <div class="flex items-center gap-3">
-<button class="bg-[#1A2E44] text-white px-4 py-1.5 rounded text-sm font-label tracking-wide hover:bg-[#1A2E44]/90 transition-colors flex items-center gap-1.5" data-candle-trigger=""><img src="/AlonSite/media/icons/dam-hamacabim.png" alt="" class="memorial-photo text-lg"/> הוספת זיכרון</button>
+<button class="bg-[#1A2E44] text-white px-3 sm:px-4 py-1.5 rounded text-xs sm:text-sm font-label tracking-wide hover:bg-[#1A2E44]/90 transition-colors flex items-center gap-1.5 whitespace-nowrap" data-candle-trigger=""><img src="/AlonSite/media/icons/dam-hamacabim.png" alt="" class="memorial-photo text-lg"/> הוספת זיכרון</button>
 <button aria-expanded="false" aria-label="תפריט" class="md:hidden text-[#1A2E44]" id="mobile-nav-toggle">
 <span class="material-symbols-outlined">menu</span>
 </button>
@@ -79,8 +81,8 @@
 
 <!-- Header -->
 <section class="relative py-24 px-8 bg-primary text-white text-center overflow-hidden">
-<div class="absolute -top-32 -right-20 w-96 h-96 bg-accent-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-<div class="absolute -bottom-32 -left-20 w-96 h-96 bg-accent-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-32 -right-20 w-96 h-96 bg-accent-gold/10 rounded-[50%] blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -left-20 w-96 h-96 bg-accent-gold/10 rounded-[50%] blur-3xl pointer-events-none"></div>
 <div class="relative max-w-3xl mx-auto">
 <p class="font-label text-sm uppercase tracking-[0.4em] mb-4 text-white/70">מתוך המכתבים</p>
 <h1 class="text-4xl md:text-5xl font-headline font-bold mb-6 gold-text">סיפורים על אלון</h1>
@@ -118,7 +120,7 @@
 </footer>
 
 <!-- Scroll to top -->
-<button aria-label="חזרה למעלה" class="fixed bottom-8 right-8 z-50 w-14 h-14 bg-surface-container-lowest text-primary rounded shadow-2xl flex items-center justify-center border border-primary/20 opacity-0 pointer-events-none translate-y-4 transition-all duration-300" id="scroll-top-btn">
+<button aria-label="חזרה למעלה" class="fixed bottom-8 right-8 z-50 w-14 h-14 bg-surface-container-lowest text-primary rounded flex items-center justify-center border border-primary/20 opacity-0 pointer-events-none translate-y-4 transition-all duration-300" id="scroll-top-btn">
 <span class="material-symbols-outlined text-2xl">arrow_upward</span>
 </button>
 
@@ -129,8 +131,9 @@
 <span class="material-symbols-outlined">close</span>
 </button>
 <div class="flex flex-col items-center text-center mb-6">
-<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-accent-gold mb-4">
-<img src="/AlonSite/media/icons/dam-hamacabim.png" alt="דם המכבים" class="memorial-photo text-4xl"/>
+<div class="relative w-28 h-28 mb-2 flex items-center justify-center">
+<span aria-hidden="true" class="candle-halo absolute inset-0"></span>
+<img src="/AlonSite/media/icons/dam-hamacabim.png" alt="דם המכבים" class="memorial-photo relative z-10" style="height: 5rem"/>
 </div>
 <h3 class="font-headline text-2xl font-bold text-primary">הוספת זיכרון לזכרו</h3>
 <p class="text-sm text-secondary font-body mt-2">השאירו שם ומילה לזכרו של אלון. הן יצטרפו לרשימת הזיכרון בדף הבית.</p>
@@ -138,11 +141,11 @@
 <form class="flex flex-col gap-5" id="candle-form">
 <div>
 <label class="block font-label text-xs text-on-surface-variant uppercase tracking-wide mb-1" for="candle-name-input">שם *</label>
-<input class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body text-lg transition-colors" id="candle-name-input" maxlength="60" placeholder="השם שלך" required="" type="text"/>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body text-lg transition-colors" id="candle-name-input" maxlength="60" placeholder="השם שלך" required="" type="text"/>
 </div>
 <div>
 <label class="block font-label text-xs text-on-surface-variant uppercase tracking-wide mb-1" for="candle-message-input">הקדשה (לא חובה)</label>
-<textarea class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body resize-none transition-colors" id="candle-message-input" maxlength="300" placeholder="כתבו כמה מילים לזכרו..." rows="3"></textarea>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body resize-none transition-colors" id="candle-message-input" maxlength="300" placeholder="כתבו כמה מילים לזכרו..." rows="3"></textarea>
 </div>
 <button class="bg-primary text-white rounded-full py-3 font-bold text-lg shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2" id="candle-submit-btn" type="submit">
 <img src="/AlonSite/media/icons/dam-hamacabim.png" alt="דם המכבים" class="memorial-photo text-2xl"/> הוסיפו זיכרון
@@ -172,8 +175,8 @@
 </div>
 </div>
 
-<script src="/AlonSite/js/letters-data.js?v=20260827e"></script>
-<script src="/AlonSite/js/stories-data.js?v=20260827e"></script>
-<script src="/AlonSite/js/stories.js?v=20260827e"></script>
-<script src="/AlonSite/js/site.js?v=20260827e"></script>
+<script src="/AlonSite/js/letters-data.js?v=20260831j"></script>
+<script src="/AlonSite/js/stories-data.js?v=20260831j"></script>
+<script src="/AlonSite/js/stories.js?v=20260831j"></script>
+<script src="/AlonSite/js/site.js?v=20260831j"></script>
 </body></html>
