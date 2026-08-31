@@ -311,6 +311,22 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 .crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(4) {
     animation-delay: -12s;
 }
+.crossfade-frame:has(> img:nth-child(5):last-child) img {
+    animation-name: crossfade-5;
+    animation-duration: 20s;
+}
+.crossfade-frame:has(> img:nth-child(5):last-child) img:nth-child(2) {
+    animation-delay: -4s;
+}
+.crossfade-frame:has(> img:nth-child(5):last-child) img:nth-child(3) {
+    animation-delay: -8s;
+}
+.crossfade-frame:has(> img:nth-child(5):last-child) img:nth-child(4) {
+    animation-delay: -12s;
+}
+.crossfade-frame:has(> img:nth-child(5):last-child) img:nth-child(5) {
+    animation-delay: -16s;
+}
 .crossfade-frame:has(> img:nth-child(6):last-child) img {
     animation-name: crossfade-6;
     animation-duration: 24s;
@@ -333,6 +349,11 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 @keyframes crossfade {
     0%, 25% { opacity: 1; }
     33.333%, 91.667% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes crossfade-5 {
+    0%, 15% { opacity: 1; }
+    20%, 95% { opacity: 0; }
     100% { opacity: 1; }
 }
 @keyframes crossfade-6 {
@@ -361,8 +382,53 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-intro {
-  max-width: 36rem;
+  max-width: 42rem;
   margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.life-spine-prologue {
+  margin: 1.75rem auto 0;
+  max-width: 40rem;
+  text-align: right;
+}
+
+.life-spine-prologue p {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #585f65;
+}
+
+.life-spine-prologue p:last-child {
+  margin-bottom: 0;
+}
+
+.life-spine-photo-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 0.65rem;
+  margin: 1.15rem 0 1.35rem;
+}
+
+.life-spine-thumb {
+  margin: 0;
+}
+
+.life-spine-thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 0.35rem;
+}
+
+.life-spine-thumb figcaption {
+  margin-top: 0.28rem;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: #7C8CA0;
   text-align: center;
 }
 
@@ -518,8 +584,12 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   color: #585f65;
 }
 
-.life-spine-text p:last-child {
+.life-spine-text > p:last-child {
   margin-bottom: 0;
+}
+
+.life-spine-text .life-spine-photo-row + p {
+  margin-top: 0.15rem;
 }
 
 .life-spine-quote {
