@@ -574,7 +574,11 @@
       if (!frame) return;
       const images = Array.from(frame.querySelectorAll("img"));
       if (!images.length) return;
-      const quoteRotator = container.querySelector("[data-quote-rotate]");
+      const quoteHost =
+        container.closest(".life-spine-aside, .life-spine-media") || container;
+      const quoteRotator =
+        container.querySelector("[data-quote-rotate]") ||
+        quoteHost.querySelector("[data-quote-rotate]");
       stations.push({
         root: container,
         images: images,
@@ -643,9 +647,30 @@
       }
     }
 
+    function lockQuoteRotatorHeights() {
+      lifeSpine.querySelectorAll("[data-quote-rotate]").forEach((rotator) => {
+        const quotes = rotator.querySelectorAll(".life-spine-quote");
+        if (!quotes.length) return;
+        rotator.style.minHeight = "";
+        let maxHeight = 0;
+        quotes.forEach((quote) => {
+          maxHeight = Math.max(maxHeight, quote.getBoundingClientRect().height);
+        });
+        if (maxHeight > 0) {
+          rotator.style.minHeight = `${Math.ceil(maxHeight)}px`;
+        }
+      });
+    }
+
     stations.forEach((station, order) => {
       applySlide(station, pickSlideIndex(station, order));
     });
+
+    lockQuoteRotatorHeights();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(lockQuoteRotatorHeights);
+    }
+    window.addEventListener("resize", lockQuoteRotatorHeights, { passive: true });
 
     if (!reducedMotion) {
       stations.forEach((station) => {
