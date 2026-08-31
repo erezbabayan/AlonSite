@@ -606,17 +606,165 @@
     setupMemorialDates();
     setupRevealAnimations();
     setupHomeNavScrollSpy();
-    setupPortraitPhotoFocus();
+    setupCarouselPhotoFocus();
+    setupLifeSpineCarousels();
   });
 
-  function setupPortraitPhotoFocus() {
-    document.querySelectorAll(".life-spine-media img").forEach((img) => {
-      const mark = () => {
+  /** Shared hold per slide — image + quote advance together on each tick. */
+  const LIFE_SPINE_CAROUSEL_MS = 7000;
+
+  function setupLifeSpineCarousels() {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    document.querySelectorAll(".life-spine .crossfade-frame").forEach((frame) => {
+      const rotateHost = frame.closest(".life-spine-media, .life-spine-rotate");
+      if (!rotateHost) return;
+
+      const station = rotateHost.closest(".life-spine-aside") || rotateHost;
+      const quoteRoot = station.querySelector("[data-quote-rotate]");
+      const images = Array.from(frame.querySelectorAll(":scope > img"));
+      const quotes = quoteRoot
+        ? Array.from(quoteRoot.querySelectorAll(":scope > .life-spine-quote"))
+        : [];
+
+      const rotateImages = images.length >= 2;
+      const rotateQuotes = quotes.length >= 2;
+      if (!rotateImages && !rotateQuotes) return;
+
+      if (rotateImages) {
+        images.forEach((img, i) => img.classList.toggle("is-active", i === 0));
+      }
+
+      if (rotateQuotes && quoteRoot) {
+        let tallest = 0;
+        quotes.forEach((q) => {
+          q.classList.add("is-active");
+          tallest = Math.max(tallest, q.offsetHeight);
+          q.classList.remove("is-active");
+        });
+        quotes[0].classList.add("is-active");
+        if (tallest) quoteRoot.style.minHeight = `${tallest}px`;
+      }
+
+      if (reduceMotion) return;
+
+      let tick = 0;
+      window.setInterval(() => {
+        tick += 1;
+        if (rotateImages) {
+          const imgIdx = tick % images.length;
+          images.forEach((img, i) => img.classList.toggle("is-active", i === imgIdx));
+        }
+        if (rotateQuotes) {
+          const quoteIdx = tick % quotes.length;
+          quotes.forEach((q, i) => q.classList.toggle("is-active", i === quoteIdx));
+        }
+      }, LIFE_SPINE_CAROUSEL_MS);
+    });
+  }
+
+  /** Per-image focal points so Alon stays centered and visible in 4:3 carousels. */
+  const CAROUSEL_FOCAL = {
+    "army-016-alon.jpg": "62% 40%",
+    "army-016.jpg": "center 42%",
+    "army-017.jpg": "center 42%",
+    "army-025.jpg": "center center",
+    "army-028.jpg": "center 52%",
+    "army-029.jpg": "55% 48%",
+    "army-030.jpg": "28% 55%",
+    "army-035.jpg": "28% 48%",
+    "army-037.jpg": "center 42%",
+    "army-038.jpg": "center 42%",
+    "army-049.jpg": "center 42%",
+    "army-066.jpg": "center 42%",
+    "army-070.jpg": "center 42%",
+    "army-073.jpg": "center 42%",
+    "army-036.jpg": "58% 42%",
+    "army-041.jpg": "center 32%",
+    "army-052.jpg": "center 35%",
+    "army-092.jpg": "center 35%",
+    "army-102.jpg": "center 45%",
+    "army-108.jpg": "center 45%",
+    "army-124.jpg": "center 42%",
+    "army-128.jpg": "center 42%",
+    "army-143.jpg": "center center",
+    "army-165.jpg": "33% 68%",
+    "army-170.jpg": "center 38%",
+    "bar-mitzvah-001.jpg": "center 42%",
+    "bar-mitzvah-004.jpg": "center 42%",
+    "bar-mitzvah-006.jpg": "center 42%",
+    "bar-mitzvah-013.jpg": "center 42%",
+    "bar-mitzvah-018.jpg": "center 42%",
+    "bar-mitzvah-028.jpg": "center 42%",
+    "bar-mitzvah-034.jpg": "center 38%",
+    "childhood-001.jpg": "center 38%",
+    "childhood-032.jpg": "center 88%",
+    "childhood-054.jpg": "center 28%",
+    "childhood-061.jpg": "center 38%",
+    "childhood-062.jpg": "center 58%",
+    "commemoration-001.jpg": "center center",
+    "commemoration-003.jpg": "center center",
+    "commemoration-021.jpg": "center 32%",
+    "family-001.jpg": "center center",
+    "family-007.jpg": "center 40%",
+    "family-020.jpg": "center 78%",
+    "family-028.jpg": "center 42%",
+    "family-042.jpg": "center 45%",
+    "family-047.jpg": "center 38%",
+    "friends-007.jpg": "center 50%",
+    "friends-011.jpg": "center 42%",
+    "friends-020.jpg": "center 42%",
+    "friends-021.jpg": "center 42%",
+    "friends-022.jpg": "center 42%",
+    "friends-025.jpg": "center 45%",
+    "funeral-001.jpg": "center 40%",
+    "funeral-003.jpg": "center 40%",
+    "funeral-005.jpg": "center 40%",
+    "memorial-site-038.jpg": "center center",
+    "memorial-site-039.jpg": "center center",
+    "memorial-site-040.jpg": "center center",
+  };
+
+  function setPhotoFocus(img, position) {
+    img.style.objectPosition = position;
+    img.style.transformOrigin = position;
+  }
+
+  function setupCarouselPhotoFocus() {
+    const selectors = ".crossfade-frame img, #hero .hero-bg-img, section .grid .photo-frame img";
+    document.querySelectorAll(selectors).forEach((img) => {
+      const apply = () => {
         if (!img.naturalWidth) return;
-        img.classList.toggle("is-portrait", img.naturalHeight > img.naturalWidth);
+
+        const custom = img.dataset.focus || img.getAttribute("data-focus");
+        if (custom) {
+          setPhotoFocus(img, custom);
+          return;
+        }
+
+        const filename = img.src.split("/").pop().split("?")[0];
+        if (CAROUSEL_FOCAL[filename]) {
+          setPhotoFocus(img, CAROUSEL_FOCAL[filename]);
+          return;
+        }
+
+        const ratio = img.naturalWidth / img.naturalHeight;
+        const isPortrait = ratio < 0.85;
+        const isLandscape = ratio > 1.15;
+        img.classList.toggle("is-portrait", isPortrait);
+        img.classList.toggle("is-landscape", isLandscape);
+
+        if (isPortrait) {
+          setPhotoFocus(img, "center 45%");
+        } else if (isLandscape) {
+          setPhotoFocus(img, "center center");
+        } else {
+          setPhotoFocus(img, "center 40%");
+        }
       };
-      if (img.complete) mark();
-      else img.addEventListener("load", mark);
+
+      if (img.complete) apply();
+      else img.addEventListener("load", apply, { once: true });
     });
   }
 })();
