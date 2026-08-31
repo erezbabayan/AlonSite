@@ -56,6 +56,11 @@ tailwind.config = {
         secondary: "#585f65",
         "accent-gold": "#7C8CA0", // Dusty slate-blue (was gold)
       },
+      // Deliberately squarer than Tailwind's defaults. Note that `full` is
+      // remapped to 0.75rem, so `rounded-full` does NOT produce a circle or a
+      // pill here — it's just the largest step on this scale, which is what
+      // the wide text buttons want. Anything that must actually be round
+      // (spinners, icon buttons, glow blobs) uses `rounded-[50%]` instead.
       borderRadius: {
         DEFAULT: "0.125rem",
         lg: "0.25rem",
