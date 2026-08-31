@@ -719,7 +719,7 @@
     setupMemorialDates();
     setupRevealAnimations();
     setupHomeNavScrollSpy();
-    setupPortraitPhotoFocus();
+    setupCarouselPhotoFocus();
     setupQuoteRotators();
   });
 
@@ -751,14 +751,91 @@
     });
   }
 
-  function setupPortraitPhotoFocus() {
-    document.querySelectorAll(".life-spine-media img").forEach((img) => {
-      const mark = () => {
+  /** Per-image focal points so Alon stays centered and visible in 4:3 carousels. */
+  const CAROUSEL_FOCAL = {
+    "army-016-alon.jpg": "62% 40%",
+    "army-016.jpg": "center 42%",
+    "army-017.jpg": "center 42%",
+    "army-025.jpg": "center center",
+    "army-028.jpg": "50% 45%",
+    "army-029.jpg": "48% 45%",
+    "army-030.jpg": "28% 42%",
+    "army-035.jpg": "32% 45%",
+    "army-037.jpg": "center 42%",
+    "army-038.jpg": "center 42%",
+    "army-049.jpg": "center 42%",
+    "army-066.jpg": "center 42%",
+    "army-070.jpg": "center 42%",
+    "army-036.jpg": "62% 45%",
+    "army-041.jpg": "center 42%",
+    "army-092.jpg": "center 42%",
+    "army-102.jpg": "center 45%",
+    "army-108.jpg": "center 45%",
+    "army-124.jpg": "center 42%",
+    "army-128.jpg": "center 42%",
+    "army-143.jpg": "center center",
+    "army-165.jpg": "33% 42%",
+    "army-170.jpg": "center 42%",
+    "bar-mitzvah-001.jpg": "center 42%",
+    "bar-mitzvah-004.jpg": "center 42%",
+    "bar-mitzvah-013.jpg": "center 42%",
+    "bar-mitzvah-018.jpg": "center 42%",
+    "bar-mitzvah-028.jpg": "center 42%",
+    "childhood-001.jpg": "center 45%",
+    "childhood-032.jpg": "center 42%",
+    "childhood-054.jpg": "center 42%",
+    "childhood-061.jpg": "center 42%",
+    "childhood-062.jpg": "center 42%",
+    "commemoration-001.jpg": "center center",
+    "commemoration-021.jpg": "center 30%",
+    "family-001.jpg": "center 42%",
+    "family-020.jpg": "center 42%",
+    "family-042.jpg": "center 45%",
+    "family-047.jpg": "center 45%",
+    "friends-007.jpg": "center 42%",
+    "friends-011.jpg": "center 42%",
+    "friends-020.jpg": "center 42%",
+    "friends-021.jpg": "center 42%",
+    "friends-025.jpg": "center 45%",
+    "funeral-001.jpg": "center 40%",
+    "memorial-site-040.jpg": "center center",
+  };
+
+  function setupCarouselPhotoFocus() {
+    const selectors = ".crossfade-frame img, #hero .hero-bg-img";
+    document.querySelectorAll(selectors).forEach((img) => {
+      const apply = () => {
         if (!img.naturalWidth) return;
-        img.classList.toggle("is-portrait", img.naturalHeight > img.naturalWidth);
+
+        const custom = img.dataset.focus || img.getAttribute("data-focus");
+        if (custom) {
+          img.style.objectPosition = custom;
+          return;
+        }
+
+        const filename = img.src.split("/").pop().split("?")[0];
+        if (CAROUSEL_FOCAL[filename]) {
+          img.style.objectPosition = CAROUSEL_FOCAL[filename];
+          return;
+        }
+
+        const ratio = img.naturalWidth / img.naturalHeight;
+        const isPortrait = ratio < 0.85;
+        const isLandscape = ratio > 1.15;
+        img.classList.toggle("is-portrait", isPortrait);
+        img.classList.toggle("is-landscape", isLandscape);
+
+        if (isPortrait) {
+          img.style.objectPosition = "center 42%";
+        } else if (isLandscape) {
+          img.style.objectPosition = "center center";
+        } else {
+          img.style.objectPosition = "center 40%";
+        }
       };
-      if (img.complete) mark();
-      else img.addEventListener("load", mark);
+
+      if (img.complete) apply();
+      else img.addEventListener("load", apply, { once: true });
     });
   }
 })();

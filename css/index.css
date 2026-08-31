@@ -279,19 +279,30 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
    evenly across 3 images (4s each). Keyframe endpoints are equal (opacity 1
    at 0% and 100%) so the loop restarts with no visible jump; each image's
    delay is offset by one slot (4s) so they take turns in DOM order. */
+.crossfade-frame {
+    background: #eceae5;
+}
+
 .crossfade-frame img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 32%;
-    transform-origin: center 32%;
+    /* Default focal point: upper-body center, not forehead crop. */
+    object-position: center 42%;
+    transform-origin: center 42%;
     animation: crossfade 12s ease-in-out infinite;
 }
-.life-spine-media img.is-portrait {
-    object-position: center 18%;
-    transform-origin: center 18%;
+
+.crossfade-frame img.is-portrait {
+    object-position: center 42%;
+    transform-origin: center 42%;
+}
+
+.crossfade-frame img.is-landscape {
+    object-position: center center;
+    transform-origin: center center;
 }
 .crossfade-frame img:nth-child(2) {
     animation-delay: -4s;
@@ -611,35 +622,51 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   align-items: start;
 }
 
-.life-spine-text > .life-spine-rotate {
-  float: right;
-  clear: right;
-  width: min(26rem, 44%);
-  margin: 0.2rem 0 1.15rem 1.35rem;
+/* Mid-chapter photo stations: image column + prose column (no float wrap). */
+.life-spine-aside {
+  display: grid;
+  grid-template-columns: min(26rem, 44%) minmax(0, 1fr);
+  column-gap: 1.35rem;
+  align-items: start;
+  margin: 0.2rem 0 1.15rem;
 }
 
-.life-spine-text > .life-spine-rotate:nth-of-type(even) {
-  float: left;
-  clear: left;
-  margin: 0.2rem 1.35rem 1.15rem 0;
+.life-spine-aside:nth-of-type(even) {
+  grid-template-columns: minmax(0, 1fr) min(26rem, 44%);
 }
 
-.life-spine-text::after {
-  content: "";
-  display: table;
-  clear: both;
+.life-spine-aside:nth-of-type(even) .life-spine-rotate {
+  grid-column: 2;
 }
 
-.life-spine-text p {
+.life-spine-aside:nth-of-type(even) .life-spine-aside-copy {
+  grid-column: 1;
+}
+
+.life-spine-aside .life-spine-rotate {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.life-spine-text {
+  direction: rtl;
+}
+
+.life-spine-text > p,
+.life-spine-aside-copy p {
   margin: 0 0 0.9rem;
   font-size: 1.05rem;
   line-height: 1.75;
   color: #585f65;
   text-align: justify;
   text-justify: inter-word;
+  hyphens: none;
+  text-wrap: pretty;
 }
 
-.life-spine-text > p:last-child {
+.life-spine-text > p:last-child,
+.life-spine-aside-copy p:last-child {
   margin-bottom: 0;
 }
 
@@ -702,11 +729,14 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     grid-row: auto;
   }
 
-  .life-spine-text > .life-spine-rotate,
-  .life-spine-text > .life-spine-rotate:nth-of-type(even) {
-    float: none;
-    clear: none;
-    width: 100%;
+  .life-spine-aside {
+    grid-template-columns: 1fr;
+    row-gap: 1.1rem;
     margin: 1.1rem 0 0;
+  }
+
+  .life-spine-aside:nth-of-type(even) .life-spine-rotate,
+  .life-spine-aside:nth-of-type(even) .life-spine-aside-copy {
+    grid-column: 1;
   }
 }
