@@ -532,7 +532,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-media {
   grid-column: 1;
-  grid-row: 2 / 4;
+  grid-row: 2 / -1;
 }
 
 .life-spine-body .photo-frame {
@@ -558,69 +558,50 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 .life-spine-copy {
   grid-column: 2;
   grid-row: 3;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  align-items: start;
+  min-width: 0;
 }
 
-/* Mid-chapter photo stations: image column + prose column (no float wrap). */
+/* Mid-chapter stations: float photo + quote beside prose (RTL magazine layout). */
 .life-spine-aside {
-  display: grid;
-  grid-template-columns: min(26rem, 44%) minmax(0, 1fr);
-  column-gap: 1.35rem;
-  align-items: start;
-  margin: 2.5rem 0 1.5rem;
+  margin: 2.5rem 0 1.25rem;
+}
+
+.life-spine-aside::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .life-spine-aside:first-of-type {
-  margin-top: 3rem;
+  margin-top: 2.75rem;
 }
 
 .life-spine-aside + .life-spine-aside {
-  margin-top: 3rem;
+  margin-top: 2.75rem;
 }
 
-.life-spine-aside:nth-of-type(even) {
-  grid-template-columns: minmax(0, 1fr) min(26rem, 44%);
-}
-
-.life-spine-aside .life-spine-rotate {
-  grid-column: 1;
-  grid-row: 1;
-  width: 100%;
-  max-width: none;
-  margin: 0;
+.life-spine-aside .life-spine-rotate,
+.life-spine-aside > .life-spine-quote-rotate {
+  float: inline-start;
+  width: min(26rem, 44%);
+  max-width: 100%;
+  margin-inline-end: 1.35rem;
 }
 
 .life-spine-aside > .life-spine-quote-rotate {
-  grid-column: 1;
-  grid-row: 2;
+  clear: inline-start;
+}
+
+.life-spine-aside:nth-of-type(even) .life-spine-rotate,
+.life-spine-aside:nth-of-type(even) > .life-spine-quote-rotate {
+  float: inline-end;
+  margin-inline-end: 0;
+  margin-inline-start: 1.35rem;
+  clear: inline-end;
 }
 
 .life-spine-aside-copy {
-  grid-column: 2;
-  grid-row: 1 / -1;
-  align-self: start;
-}
-
-.life-spine-aside:nth-of-type(even) .life-spine-rotate {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.life-spine-aside:nth-of-type(even) > .life-spine-quote-rotate {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.life-spine-aside:nth-of-type(even) .life-spine-aside-copy {
-  grid-column: 1;
-  grid-row: 1 / -1;
-}
-
-.life-spine-text {
-  direction: rtl;
+  min-width: 0;
 }
 
 .life-spine-text > p,
@@ -683,10 +664,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     display: none;
   }
 
-  .life-spine-copy {
-    grid-template-columns: 1fr;
-  }
-
   .life-spine-body {
     grid-template-columns: 1fr;
   }
@@ -699,31 +676,20 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     grid-row: auto;
   }
 
-  .life-spine-aside {
-    grid-template-columns: 1fr;
-    row-gap: 1.1rem;
-    margin: 2.25rem 0 0;
+  .life-spine-aside .life-spine-rotate,
+  .life-spine-aside > .life-spine-quote-rotate {
+    float: none;
+    width: 100%;
+    max-width: 26rem;
+    margin-inline: 0;
+    clear: none;
   }
 
-  .life-spine-aside .life-spine-rotate,
-  .life-spine-aside > .life-spine-quote-rotate,
-  .life-spine-aside-copy {
-    grid-column: 1;
-    grid-row: auto;
+  .life-spine-aside {
+    margin: 2rem 0 0;
   }
 
   .life-spine-aside:first-of-type {
-    margin-top: 2.75rem;
-  }
-
-  .life-spine-aside + .life-spine-aside {
-    margin-top: 2.5rem;
-  }
-
-  .life-spine-aside:nth-of-type(even) .life-spine-rotate,
-  .life-spine-aside:nth-of-type(even) > .life-spine-quote-rotate,
-  .life-spine-aside:nth-of-type(even) .life-spine-aside-copy {
-    grid-column: 1;
-    grid-row: auto;
+    margin-top: 2.25rem;
   }
 }
