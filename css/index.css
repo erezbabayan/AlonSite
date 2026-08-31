@@ -404,10 +404,20 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   margin-bottom: 0;
 }
 
-/* Mid-chapter rotating photo station — visual rhythm inside long prose. */
+/* Mid-chapter rotating photo stations — stacked below the primary station. */
 .life-spine-rotate {
-  margin: 1.4rem 0 1.55rem;
+  margin: 0;
   max-width: 26rem;
+  width: 100%;
+}
+
+.life-spine-body > .life-spine-rotate {
+  grid-column: 1 / -1;
+  margin-top: 0.85rem;
+}
+
+.life-spine-body > .life-spine-rotate + .life-spine-rotate {
+  margin-top: 1.35rem;
 }
 
 .life-spine-rotate .photo-frame {
@@ -579,7 +589,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-media {
   grid-column: 1;
-  grid-row: 2 / 5;
+  /* Span lead + copy only — mid-chapter rotates sit in rows below. */
+  grid-row: 2 / 4;
 }
 
 .life-spine-body .photo-frame {
@@ -672,12 +683,17 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   .life-spine-media,
   .life-spine-body .photo-frame,
   .life-spine-lead,
-  .life-spine-copy {
+  .life-spine-copy,
+  .life-spine-body > .life-spine-rotate {
     grid-column: 1;
     grid-row: auto;
   }
 
   .life-spine-rotate {
     max-width: none;
+  }
+
+  .life-spine-body > .life-spine-rotate {
+    margin-top: 1.1rem;
   }
 }
