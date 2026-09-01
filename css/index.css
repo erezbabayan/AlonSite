@@ -635,6 +635,11 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   min-width: 0;
 }
 
+.life-spine-tail-left {
+  display: block;
+  text-align: left;
+}
+
 .life-spine-text > p,
 .life-spine-copy > p,
 .life-spine-aside-copy p {
