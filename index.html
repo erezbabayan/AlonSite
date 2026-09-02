@@ -25,6 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Playpen+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="/js/tailwind-config.js?v=20260831q"></script>
+<script src="/js/gallery-data.js?v=20260902a" defer></script>
 <link href="/css/shared.css?v=20260831q" rel="stylesheet"/>
 <link href="/css/index.css?v=20260901a" rel="stylesheet"/>
 <script type="application/ld+json">
@@ -597,7 +598,7 @@
 </a>
 </div>
 <p class="text-sm text-white/50 font-label tracking-wide mb-12">הצצה קטנה מתוך למעלה מ-560 תמונות בגלריה המלאה - ילדות, חברים, שירות צבאי ומשפחה.</p>
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5">
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5" id="home-gallery-grid">
 <a class="photo-frame block hover:-translate-y-1 transition-transform duration-500" href="/pages/gallery.html">
 <span class="photo-frame-inner block aspect-square">
 <img alt="בבופור" class="w-full h-full object-cover" loading="lazy" src="/media/images/thumbs/army/army-029.jpg"/>
@@ -715,6 +716,65 @@
 </div>
 </div>
 <script src="/js/site.js?v=20260901a"></script>
+<script>
+// Home gallery preview: reshuffle the 8 thumbnails on every page load, drawn
+// from the auto-generated GALLERY_DATA so the strip never goes stale as photos
+// are added. Only the "life" categories are used — the section promises
+// "ילדות, חברים, שירות צבאי ומשפחה", not the funeral/commemoration sets.
+(function () {
+  var LIFE_CATEGORIES = ['childhood', 'bar-mitzvah', 'friends', 'army', 'family'];
+
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+    }
+    return arr;
+  }
+
+  function pick(count) {
+    var data = window.GALLERY_DATA;
+    if (!data || !data.categories) return [];
+    // One pool per category, each already shuffled, so drawing round-robin
+    // spreads the 8 across as many chapters of his life as possible.
+    var pools = shuffle(data.categories
+      .filter(function (cat) {
+        return LIFE_CATEGORIES.indexOf(cat.key) !== -1 && cat.images && cat.images.length;
+      })
+      .map(function (cat) {
+        return { label: cat.label, images: shuffle(cat.images.slice()) };
+      }));
+    if (!pools.length) return [];
+
+    var picked = [];
+    for (var round = 0; picked.length < count && round < 40; round++) {
+      for (var i = 0; i < pools.length && picked.length < count; i++) {
+        var img = pools[i].images[round];
+        if (img) picked.push({ img: img, label: pools[i].label });
+      }
+    }
+    return picked;
+  }
+
+  function render() {
+    var grid = document.getElementById('home-gallery-grid');
+    if (!grid) return;
+    var frames = grid.querySelectorAll('img');
+    var picked = pick(frames.length);
+    if (picked.length < frames.length) return; // keep the static fallback
+    for (var i = 0; i < frames.length; i++) {
+      frames[i].src = picked[i].img.thumb;
+      frames[i].alt = 'אלון ז״ל — ' + picked[i].label;
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    render();
+  }
+})();
+</script>
 <script>
 (function () {
   var slides = document.querySelectorAll('#hero .hero-bg-img');
