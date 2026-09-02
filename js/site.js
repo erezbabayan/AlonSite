@@ -767,6 +767,29 @@
     sections.forEach((s) => observer.observe(s));
   }
 
+  // ---------------------------------------------------------------------
+  // Prominent nav (all pages) — every page opens with a navy header
+  // section right under <main>. Once that header scrolls out of view the
+  // translucent nav flips to a solid navy band so it stays impossible to
+  // miss, reminding visitors there's a full nav's worth of other pages up
+  // there rather than just this one page's scroll.
+  // ---------------------------------------------------------------------
+
+  function setupNavProminentOnScroll() {
+    const nav = document.querySelector("nav");
+    const header = document.querySelector("main > section");
+    if (!nav || !header || !("IntersectionObserver" in window)) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          nav.classList.toggle("nav-prominent", !entry.isIntersecting);
+        });
+      }
+    );
+    observer.observe(header);
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     setupNavHeightVar();
     setupCandles();
@@ -774,6 +797,7 @@
     setupSingleMediaPlayback();
     setupShareButton();
     setupScrollTopButton();
+    setupNavProminentOnScroll();
     setupMemorialDates();
     setupRevealAnimations();
     setupHomeNavScrollSpy();

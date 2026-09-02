@@ -253,6 +253,7 @@ body::before {
 .nav-link {
     position: relative;
     padding-bottom: 0.25rem;
+    transition: color 300ms ease-out;
 }
 .nav-link::after {
     content: "";
@@ -272,6 +273,39 @@ body::before {
 }
 @media (prefers-reduced-motion: reduce) {
     .nav-link::after { transition: none; }
+}
+
+/* ---------------------------------------------------------------------
+   Prominent nav — once the page's opening navy header has scrolled out of
+   view, the translucent nav flips to a solid navy band instead of blending
+   into the surface, so it stays impossible to miss and signals there's a
+   full nav worth of other pages above, not just this one page's scroll.
+   Toggled site-wide by setupNavProminentOnScroll() in site.js.
+   --------------------------------------------------------------------- */
+nav.nav-prominent {
+    background-color: rgba(26, 46, 68, 0.94);
+}
+
+nav.nav-prominent a.font-serif {
+    color: #ffffff !important;
+}
+
+nav.nav-prominent .nav-link {
+    color: rgba(255, 255, 255, 0.72) !important;
+}
+
+nav.nav-prominent .nav-link:hover,
+nav.nav-prominent .nav-link:focus-visible,
+nav.nav-prominent .nav-link.is-active {
+    color: #ffffff !important;
+}
+
+nav.nav-prominent .nav-link::after {
+    background-color: #ffffff;
+}
+
+nav.nav-prominent #mobile-nav-toggle {
+    color: #ffffff !important;
 }
 
 /* ---------------------------------------------------------------------
