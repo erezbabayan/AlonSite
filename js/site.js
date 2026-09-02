@@ -560,7 +560,9 @@
   // Visible stations coordinate quote text so duplicates never show at once.
   // ---------------------------------------------------------------------
 
-  const LIFE_SPINE_HOLD_MS = 7000;
+  const LIFE_SPINE_HOLD_MS = 6000;
+  // Must match the opacity transition on .crossfade-frame img in css/index.css.
+  const LIFE_SPINE_FADE_MS = 1500;
 
   function setupLifeSpineCarousels() {
     const lifeSpine = document.querySelector(".life-spine");
@@ -585,6 +587,7 @@
         quoteRotator: quoteRotator,
         slideIndex: 0,
         visible: false,
+        leaveTimer: 0,
       });
     }
 
@@ -636,9 +639,23 @@
       station.slideIndex = slideIndex;
       const quotes = quoteNodes(station);
       const imageIndex = slideIndex % station.images.length;
+      const outgoing = station.images.find((img) => img.classList.contains("is-active"));
+      const incoming = station.images[imageIndex];
       station.images.forEach((img, i) => {
         img.classList.toggle("is-active", i === imageIndex);
       });
+      // Hold the outgoing frame opaque beneath the incoming one until the fade
+      // finishes, so the dissolve never drops to the mat colour in the middle.
+      if (outgoing && outgoing !== incoming) {
+        window.clearTimeout(station.leaveTimer);
+        station.images.forEach((img) => {
+          if (img !== outgoing) img.classList.remove("is-leaving");
+        });
+        outgoing.classList.add("is-leaving");
+        station.leaveTimer = window.setTimeout(() => {
+          outgoing.classList.remove("is-leaving");
+        }, LIFE_SPINE_FADE_MS);
+      }
       if (quotes.length) {
         const quoteIndex = slideIndex % quotes.length;
         quotes.forEach((quote, i) => {
