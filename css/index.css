@@ -386,16 +386,27 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   width: 100%;
 }
 
-/* Rotating quotes under / beside photo stations — grid stack keeps height
-   at the tallest quote so adjacent prose never reflows on rotation. */
+/* The photo's own caption — a real cutline naming whichever frame is
+   currently showing (site.js keeps it in sync with the crossfade), not the
+   rotating quote below. Keeping these separate is what stops a photo from
+   ever looking captioned by a sentence that has nothing to do with it. */
+.life-spine-caption {
+  margin: 0.55rem 0 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #7C8CA0;
+}
+
+/* Rotating pull-quotes: relocated into the body copy (a sibling of the
+   paragraphs, not nested under a photo) so a quote never reads as if it
+   were describing whatever image happens to be on screen. Grid stack keeps
+   height at the tallest quote so the paragraph below never reflows on
+   rotation. */
 .life-spine-quote-rotate {
   display: grid;
   grid-template-areas: "stack";
-  margin-top: 0.55rem;
-}
-
-.life-spine-media > .life-spine-quote-rotate {
-  margin-top: 0.45rem;
+  margin: 1.6rem 0;
 }
 
 .life-spine-quote-rotate > .life-spine-quote {
@@ -618,10 +629,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   margin: 0;
 }
 
-.life-spine-aside-media > .life-spine-quote-rotate {
-  margin-top: 0.45rem;
-}
-
 .life-spine-aside-copy {
   min-width: 0;
   flex: 1 1 auto;
@@ -658,7 +665,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-quote {
-  margin: 0.45rem 0 0;
+  margin: 0;
   padding: 0;
   background: none;
   border: none;
@@ -668,18 +675,22 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 .life-spine-quote p {
   margin: 0;
   padding: 0;
-  font-size: 0.86rem;
+  max-width: 34rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.5;
+  font-style: italic;
+  line-height: 1.55;
   color: #1A2E44;
   background: none;
   outline: none;
+  hyphens: none;
+  text-wrap: pretty;
 }
 
 .life-spine-quote footer {
   display: block;
-  margin-top: 0.22rem;
-  font-size: 0.68rem;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0;
   color: #7C8CA0;
