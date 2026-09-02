@@ -344,7 +344,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-inner {
-  max-width: 68rem;
+  max-width: 72rem;
   margin: 0 auto;
 }
 
@@ -561,26 +561,25 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   display: block;
 }
 
-/* The chapter's lead photo beside its lead + body copy, as a two-column grid
-   instead of a float. A float leaves a gap under the photo whenever the
-   wrapped text is shorter than it (same problem fixed on life-spine-aside
-   above) — worse here because the wrapped side can run several paragraphs,
-   so how much gap appeared varied unpredictably chapter to chapter and
-   viewport to viewport. The photo spans both grid rows so it sits beside
-   the lead-plus-copy pair as one column; the tradeoff is that body text
-   never widens back out to the full measure once past the photo, which
-   reads as an ordinary single-width newspaper column anyway. */
+/* The chapter's lead photo floats beside the lead + the start of body copy,
+   same as the small aside photos above: text hugs it tightly, then — once
+   there's enough of it to clear the photo's height — widens back out to the
+   full timeline measure, the way a real newspaper column runs past an inset
+   photo. This only stays gap-free because every chapter's lead+copy already
+   runs taller than its lead photo (checked across all seven); a chapter
+   that was ever shorter than its own photo would need the fixed two-column
+   treatment instead (see life-spine-aside-media, which stays that way on
+   purpose since a one-paragraph caption can't be relied on to outrun it). */
 .life-spine-row {
-  display: grid;
-  grid-template-columns: min(39.6%, 21.6rem) 1fr;
-  column-gap: 1.6rem;
-  align-items: start;
+  display: flow-root;
 }
 
 .life-spine-media {
-  grid-column: 1;
-  grid-row: 1 / span 2;
+  float: inline-start;
+  width: min(39.6%, 21.6rem);
   min-width: 12rem;
+  margin-inline-end: 1.6rem;
+  margin-bottom: 0.85rem;
 }
 
 .life-spine-body .photo-frame {
@@ -590,8 +589,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-lead {
-  grid-column: 2;
-  grid-row: 1;
   font-size: 1.25rem;
   font-style: italic;
   line-height: 1.7;
@@ -603,8 +600,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-copy {
-  grid-column: 2;
-  grid-row: 2;
   min-width: 0;
 }
 
@@ -742,22 +737,12 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     grid-column: 1;
   }
 
-  .life-spine-row {
-    grid-template-columns: 1fr;
-  }
-
   .life-spine-media {
-    grid-column: 1;
-    grid-row: auto;
+    float: none;
     width: 100%;
     max-width: 23.4rem;
+    margin-inline: 0;
     margin-bottom: 0.9rem;
-  }
-
-  .life-spine-lead,
-  .life-spine-copy {
-    grid-column: 1;
-    grid-row: auto;
   }
 
   .life-spine-aside,
