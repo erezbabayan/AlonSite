@@ -558,15 +558,29 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-body {
-  display: flow-root;
+  display: block;
+}
+
+/* The chapter's lead photo beside its lead + body copy, as a two-column grid
+   instead of a float. A float leaves a gap under the photo whenever the
+   wrapped text is shorter than it (same problem fixed on life-spine-aside
+   above) — worse here because the wrapped side can run several paragraphs,
+   so how much gap appeared varied unpredictably chapter to chapter and
+   viewport to viewport. The photo spans both grid rows so it sits beside
+   the lead-plus-copy pair as one column; the tradeoff is that body text
+   never widens back out to the full measure once past the photo, which
+   reads as an ordinary single-width newspaper column anyway. */
+.life-spine-row {
+  display: grid;
+  grid-template-columns: min(39.6%, 21.6rem) 1fr;
+  column-gap: 1.6rem;
+  align-items: start;
 }
 
 .life-spine-media {
-  float: inline-start;
-  width: min(39.6%, 21.6rem);
+  grid-column: 1;
+  grid-row: 1 / span 2;
   min-width: 12rem;
-  margin-inline-end: 1.6rem;
-  margin-bottom: 0.85rem;
 }
 
 .life-spine-body .photo-frame {
@@ -576,6 +590,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-lead {
+  grid-column: 2;
+  grid-row: 1;
   font-size: 1.25rem;
   font-style: italic;
   line-height: 1.7;
@@ -587,6 +603,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-copy {
+  grid-column: 2;
+  grid-row: 2;
   min-width: 0;
 }
 
@@ -715,12 +733,22 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     grid-column: 1;
   }
 
+  .life-spine-row {
+    grid-template-columns: 1fr;
+  }
+
   .life-spine-media {
-    float: none;
+    grid-column: 1;
+    grid-row: auto;
     width: 100%;
     max-width: 23.4rem;
-    margin-inline: 0;
     margin-bottom: 0.9rem;
+  }
+
+  .life-spine-lead,
+  .life-spine-copy {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .life-spine-aside,
