@@ -608,20 +608,25 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   min-width: 0;
 }
 
-/* Mid-chapter stations: photo + quote beside a single paired paragraph — never
-   more than one (see life-spine-aside-copy usage across the page), so a flex
-   row that vertically centers the pair is safe here. A float used to hold this
-   pairing, but the photo column's height is fixed by its aspect ratio while
-   the paragraph's is whatever the sentence needs; top-aligning the two left a
-   block of dead air under the shorter paragraph. Centering splits that
-   leftover space evenly instead of dumping it all at the bottom. */
+/* Mid-chapter stations: a small inset photo with its paragraph hugging it
+   tightly on the near side — Word's "Tight" wrap, not "Square" — so the
+   text reads as one column flowing around a photo rather than two boxed-off
+   halves. That means a float, not a flex row: floats are what let text
+   fill in close beside the photo and then run the full column width again
+   once it clears. Kept small (28%) specifically so a one-paragraph caption
+   almost always out-runs the photo's height — the float's one real failure
+   mode is the reverse case (a full-height float with no dedicated text to
+   fill it), which is why the photo is sized down rather than up. */
 .life-spine-aside {
   clear: both;
-  display: flex;
-  align-items: center;
-  gap: 1.4rem;
   margin: 2.5rem 0 1.25rem;
   width: 100%;
+}
+
+.life-spine-aside::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .life-spine-aside:first-of-type {
@@ -632,13 +637,18 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   margin-top: 2.75rem;
 }
 
-.life-spine-aside:nth-of-type(even) {
-  flex-direction: row-reverse;
+.life-spine-aside-media {
+  float: inline-start;
+  width: min(28%, 14rem);
+  min-width: 10rem;
+  margin-inline-end: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.life-spine-aside-media {
-  flex: 0 0 min(34.2%, 18rem);
-  min-width: 12rem;
+.life-spine-aside:nth-of-type(even) .life-spine-aside-media {
+  float: inline-end;
+  margin-inline-end: 0;
+  margin-inline-start: 1.2rem;
 }
 
 .life-spine-aside .life-spine-rotate {
@@ -649,7 +659,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-aside-copy {
   min-width: 0;
-  flex: 1 1 auto;
 }
 
 /* One readable measure across a chapter, whether a paragraph sits beside a
@@ -753,9 +762,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
   .life-spine-aside,
   .life-spine-aside:nth-of-type(even) {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
     margin: 1.5rem 0 0;
   }
 
@@ -765,9 +771,10 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
   .life-spine-aside-media,
   .life-spine-aside:nth-of-type(even) .life-spine-aside-media {
-    flex: 0 0 auto;
+    float: none;
     width: 100%;
     max-width: 23.4rem;
+    margin-inline: 0;
     margin-bottom: 0.55rem;
   }
 
