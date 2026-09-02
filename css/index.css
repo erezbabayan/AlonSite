@@ -579,17 +579,20 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   min-width: 0;
 }
 
-/* Mid-chapter stations: photo + quote beside paired prose; continuation wraps full width below. */
+/* Mid-chapter stations: photo + quote beside a single paired paragraph — never
+   more than one (see life-spine-aside-copy usage across the page), so a flex
+   row that vertically centers the pair is safe here. A float used to hold this
+   pairing, but the photo column's height is fixed by its aspect ratio while
+   the paragraph's is whatever the sentence needs; top-aligning the two left a
+   block of dead air under the shorter paragraph. Centering splits that
+   leftover space evenly instead of dumping it all at the bottom. */
 .life-spine-aside {
   clear: both;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
   margin: 2.5rem 0 1.25rem;
   width: 100%;
-}
-
-.life-spine-aside::after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .life-spine-aside:first-of-type {
@@ -600,18 +603,13 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   margin-top: 2.75rem;
 }
 
-.life-spine-aside-media {
-  float: inline-start;
-  width: min(34.2%, 18rem);
-  min-width: 12rem;
-  margin-inline-end: 1.4rem;
-  margin-bottom: 0.55rem;
+.life-spine-aside:nth-of-type(even) {
+  flex-direction: row-reverse;
 }
 
-.life-spine-aside:nth-of-type(even) .life-spine-aside-media {
-  float: inline-end;
-  margin-inline-end: 0;
-  margin-inline-start: 1.4rem;
+.life-spine-aside-media {
+  flex: 0 0 min(34.2%, 18rem);
+  min-width: 12rem;
 }
 
 .life-spine-aside .life-spine-rotate {
@@ -626,6 +624,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-aside-copy {
   min-width: 0;
+  flex: 1 1 auto;
 }
 
 /* One readable measure across a chapter, whether a paragraph sits beside a
@@ -715,6 +714,9 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
   .life-spine-aside,
   .life-spine-aside:nth-of-type(even) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
     margin: 1.5rem 0 0;
   }
 
@@ -724,10 +726,9 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
   .life-spine-aside-media,
   .life-spine-aside:nth-of-type(even) .life-spine-aside-media {
-    float: none;
+    flex: 0 0 auto;
     width: 100%;
     max-width: 23.4rem;
-    margin-inline: 0;
     margin-bottom: 0.55rem;
   }
 
