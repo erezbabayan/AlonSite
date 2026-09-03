@@ -555,6 +555,177 @@
   }
 
   // ---------------------------------------------------------------------
+  // Life-spine photo crossfades + rotating quotes (chapters section).
+  // CSS keeps slides at opacity 0 until .is-active — this must run on load.
+  // Visible stations coordinate quote text so duplicates never show at once.
+  // ---------------------------------------------------------------------
+
+  const LIFE_SPINE_HOLD_MS = 6000;
+  // Must match the opacity transition on .crossfade-frame img in css/index.css.
+  const LIFE_SPINE_FADE_MS = 1500;
+
+  function setupLifeSpineCarousels() {
+    const lifeSpine = document.querySelector(".life-spine");
+    if (!lifeSpine) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const stations = [];
+
+    function collectStation(container) {
+      const frame = container.querySelector(".crossfade-frame");
+      if (!frame) return;
+      const images = Array.from(frame.querySelectorAll("img"));
+      if (!images.length) return;
+      // The quote lives beside the paragraphs now, not under the photo, so
+      // the search has to climb past the media block itself: for an aside
+      // that's the shared .life-spine-aside wrapper, for a chapter's lead
+      // photo it's .life-spine-body (the ancestor it shares with .life-spine-copy).
+      const quoteHost = container.closest(".life-spine-aside, .life-spine-body") || container;
+      const quoteRotator =
+        container.querySelector("[data-quote-rotate]") ||
+        quoteHost.querySelector("[data-quote-rotate]");
+      // .life-spine-caption, not [data-caption] — that attribute already
+      // names something else entirely on the hero's own image carousel.
+      const captionEl = container.querySelector(".life-spine-caption");
+      stations.push({
+        root: container,
+        images: images,
+        quoteRotator: quoteRotator,
+        captionEl: captionEl,
+        slideIndex: 0,
+        visible: false,
+        leaveTimer: 0,
+      });
+    }
+
+    lifeSpine.querySelectorAll(".life-spine-media").forEach(collectStation);
+    lifeSpine.querySelectorAll(".life-spine-aside-media").forEach(collectStation);
+    if (!stations.length) return;
+
+    function quoteNodes(station) {
+      if (!station.quoteRotator) return [];
+      return Array.from(station.quoteRotator.querySelectorAll(".life-spine-quote"));
+    }
+
+    function quoteText(quoteEl) {
+      const p = quoteEl && quoteEl.querySelector("p");
+      return p ? p.textContent.trim() : "";
+    }
+
+    function slideCount(station) {
+      const quotes = quoteNodes(station);
+      return Math.max(station.images.length, quotes.length || 1);
+    }
+
+    function activeQuoteTexts(excludeStation) {
+      const texts = new Set();
+      stations.forEach((station) => {
+        if (station === excludeStation || !station.visible) return;
+        const quotes = quoteNodes(station);
+        if (!quotes.length) return;
+        const text = quoteText(quotes[station.slideIndex % quotes.length]);
+        if (text) texts.add(text);
+      });
+      return texts;
+    }
+
+    function pickSlideIndex(station, startIndex) {
+      const total = slideCount(station);
+      const quotes = quoteNodes(station);
+      const used = activeQuoteTexts(station);
+      for (let offset = 0; offset < total; offset++) {
+        const idx = (startIndex + offset) % total;
+        if (!quotes.length) return idx;
+        const text = quoteText(quotes[idx % quotes.length]);
+        if (!text || !used.has(text)) return idx;
+      }
+      return startIndex % total;
+    }
+
+    function applySlide(station, slideIndex) {
+      station.slideIndex = slideIndex;
+      const quotes = quoteNodes(station);
+      const imageIndex = slideIndex % station.images.length;
+      const outgoing = station.images.find((img) => img.classList.contains("is-active"));
+      const incoming = station.images[imageIndex];
+      station.images.forEach((img, i) => {
+        img.classList.toggle("is-active", i === imageIndex);
+      });
+      // Caption always names whichever frame the photo is actually showing —
+      // it rotates on the image's own index, never the quote's, so the two
+      // can never drift out of sync with each other.
+      if (station.captionEl && incoming) {
+        station.captionEl.textContent = incoming.alt || "";
+      }
+      // Hold the outgoing frame opaque beneath the incoming one until the fade
+      // finishes, so the dissolve never drops to the mat colour in the middle.
+      if (outgoing && outgoing !== incoming) {
+        window.clearTimeout(station.leaveTimer);
+        station.images.forEach((img) => {
+          if (img !== outgoing) img.classList.remove("is-leaving");
+        });
+        outgoing.classList.add("is-leaving");
+        station.leaveTimer = window.setTimeout(() => {
+          outgoing.classList.remove("is-leaving");
+        }, LIFE_SPINE_FADE_MS);
+      }
+      if (quotes.length) {
+        const quoteIndex = slideIndex % quotes.length;
+        quotes.forEach((quote, i) => {
+          quote.classList.toggle("is-active", i === quoteIndex);
+        });
+      }
+    }
+
+    function lockQuoteRotatorHeights() {
+      lifeSpine.querySelectorAll("[data-quote-rotate]").forEach((rotator) => {
+        const quotes = rotator.querySelectorAll(".life-spine-quote");
+        if (!quotes.length) return;
+        rotator.style.minHeight = "";
+        let maxHeight = 0;
+        quotes.forEach((quote) => {
+          maxHeight = Math.max(maxHeight, quote.getBoundingClientRect().height);
+        });
+        if (maxHeight > 0) {
+          rotator.style.minHeight = `${Math.ceil(maxHeight)}px`;
+        }
+      });
+    }
+
+    stations.forEach((station, order) => {
+      applySlide(station, pickSlideIndex(station, order));
+    });
+
+    lockQuoteRotatorHeights();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(lockQuoteRotatorHeights);
+    }
+    window.addEventListener("resize", lockQuoteRotatorHeights, { passive: true });
+
+    if (!reducedMotion) {
+      stations.forEach((station) => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              station.visible = entry.isIntersecting;
+            });
+          },
+          { threshold: 0.12 }
+        );
+        observer.observe(station.root);
+      });
+
+      setInterval(() => {
+        stations.forEach((station) => {
+          if (!station.visible) return;
+          const next = pickSlideIndex(station, station.slideIndex + 1);
+          applySlide(station, next);
+        });
+      }, LIFE_SPINE_HOLD_MS);
+    }
+  }
+
+  // ---------------------------------------------------------------------
   // Home-page nav scroll spy — keeps "פרקי חיים" / "הנצחה ומורשת" in the
   // top nav underlined once their section is in view, matching how the
   // nav already highlights the current page on every other page.
@@ -596,6 +767,29 @@
     sections.forEach((s) => observer.observe(s));
   }
 
+  // ---------------------------------------------------------------------
+  // Prominent nav (all pages) — every page opens with a navy header
+  // section right under <main>. Once that header scrolls out of view the
+  // translucent nav flips to a solid navy band so it stays impossible to
+  // miss, reminding visitors there's a full nav's worth of other pages up
+  // there rather than just this one page's scroll.
+  // ---------------------------------------------------------------------
+
+  function setupNavProminentOnScroll() {
+    const nav = document.querySelector("nav");
+    const header = document.querySelector("main > section");
+    if (!nav || !header || !("IntersectionObserver" in window)) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          nav.classList.toggle("nav-prominent", !entry.isIntersecting);
+        });
+      }
+    );
+    observer.observe(header);
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     setupNavHeightVar();
     setupCandles();
@@ -603,16 +797,21 @@
     setupSingleMediaPlayback();
     setupShareButton();
     setupScrollTopButton();
+    setupNavProminentOnScroll();
     setupMemorialDates();
     setupRevealAnimations();
     setupHomeNavScrollSpy();
+    setupLifeSpineCarousels();
     setupPortraitPhotoFocus();
   });
 
   function setupPortraitPhotoFocus() {
-    document.querySelectorAll(".life-spine-media img").forEach((img) => {
+    document.querySelectorAll(".life-spine .crossfade-frame img").forEach((img) => {
       const mark = () => {
         if (!img.naturalWidth) return;
+        if (img.dataset.focus) {
+          img.style.objectPosition = img.dataset.focus;
+        }
         img.classList.toggle("is-portrait", img.naturalHeight > img.naturalWidth);
       };
       if (img.complete) mark();

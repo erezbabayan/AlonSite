@@ -12,6 +12,11 @@
    --------------------------------------------------------------------- */
 #hero {
     margin-top: calc(-1 * var(--nav-h, 4rem));
+    /* At least one viewport, never a cage: the text column used to be a
+       scroll container with its scrollbar suppressed, so on short screens
+       the memorial text scrolled *inside* the hero with nothing on screen
+       to say so. The hero now grows past the fold when the words need the
+       room, and the ordinary page scroll carries the reader down. */
     min-height: 100svh;
     display: flex;
     flex-direction: column;
@@ -20,8 +25,6 @@
 
 @media (min-width: 900px) {
     #hero {
-        height: 100svh;
-        min-height: 0;
         /* The figure comes first in the DOM so it stacks on top on phones.
            Reversing the row hands the RTL reading start — the right — to
            the text column, and sends the photograph to the left. */
@@ -89,12 +92,13 @@
 
 /* --- the text column --- */
 #hero .hero-panel {
+    /* 1 1 auto, not 1 1 0: the column may grow, but it must never be
+       squeezed below the height of the text it holds. */
     flex: 1 1 auto;
     display: flex;
     align-items: center;
     background: #eef0f2;
     padding: 2.25rem 1.5rem 3rem;
-    overflow-y: auto;
 }
 
 @media (min-width: 900px) {
@@ -200,8 +204,8 @@
     color: #585f65;
 }
 
-/* Short laptop screens: tighten the rhythm rather than let the panel
-   scroll, so the whole memorial text still lands in one view. */
+/* Short laptop screens: tighten the rhythm so the whole memorial text still
+   lands in one view without the hero having to run past the fold. */
 @media (min-width: 900px) and (max-height: 800px) {
     #hero .hero-panel {
         padding-top: calc(var(--nav-h, 4rem) + 1.5rem);
@@ -246,6 +250,15 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     }
 }
 
+/* Home gallery preview strip: the thumbnails are reshuffled at random on every
+   load, so no per-photo focal point can be authored. Square-cropping a portrait
+   from the center cuts heads off, so anchor every one of the ten to the top of
+   the frame — a bit of feet lost beats a face lost. */
+#home-gallery-grid .photo-frame-inner img {
+    object-position: center top;
+    transform-origin: center top;
+}
+
 /* Life-chapters photos: deeper resting shadow than the shared default. */
 .photo-frame-stacked {
     box-shadow: 0 14px 28px rgba(27, 28, 25, 0.16);
@@ -261,79 +274,67 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     animation: candle-in 1400ms ease-out;
 }
 
-/* Photos quietly crossfading in one frame instead of a hard cut: each
-   holds for ~3s, dissolves into the next over ~1s, on a 12s loop shared
-   evenly across 3 images (4s each). Keyframe endpoints are equal (opacity 1
-   at 0% and 100%) so the loop restarts with no visible jump; each image's
-   delay is offset by one slot (4s) so they take turns in DOM order. */
-.crossfade-frame img {
+/* Life-spine photo crossfade — JS-driven, synced with the quote rotator below.
+   6s hold per slide, 1.5s dissolve (LIFE_SPINE_HOLD_MS / _FADE_MS in site.js).
+
+   Selectors are .photo-frame-qualified on purpose: the grayscale hover rule
+   above declares its own `transition` at that same specificity, and a bare
+   `.crossfade-frame img` loses to it on pointer devices — which dropped the
+   opacity transition entirely and made the slides hard-cut. */
+.crossfade-frame {
+    background: #eceae5;
+}
+
+.photo-frame .crossfade-frame img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 32%;
-    transform-origin: center 32%;
-    animation: crossfade 12s ease-in-out infinite;
+    /* Default focal point: upper-body center, not forehead crop. */
+    object-position: center 42%;
+    transform-origin: center 42%;
+    opacity: 0;
+    z-index: 0;
+    transition:
+        opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1),
+        filter 600ms ease-out,
+        transform 700ms ease-out;
 }
-.life-spine-media img.is-portrait {
-    object-position: center 18%;
-    transform-origin: center 18%;
+
+/* The outgoing frame is held fully opaque *underneath* the incoming one for the
+   length of the dissolve. Fading both at once leaves them each near 50% mid-way,
+   which lets the mat show through and reads as a flash. */
+.photo-frame .crossfade-frame img.is-leaving {
+    opacity: 1;
+    z-index: 1;
 }
-.crossfade-frame img:nth-child(2) {
-    animation-delay: -4s;
+
+.photo-frame .crossfade-frame img.is-active {
+    opacity: 1;
+    z-index: 2;
 }
-.crossfade-frame img:nth-child(3) {
-    animation-delay: -8s;
+
+.crossfade-frame img.is-portrait {
+    object-position: center 42%;
+    transform-origin: center 42%;
 }
-.crossfade-frame:has(> img:nth-child(4):last-child) img {
-    animation-duration: 16s;
+
+.crossfade-frame img.is-landscape {
+    object-position: center center;
+    transform-origin: center center;
 }
-.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(2) {
-    animation-delay: -4s;
-}
-.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(3) {
-    animation-delay: -8s;
-}
-.crossfade-frame:has(> img:nth-child(4):last-child) img:nth-child(4) {
-    animation-delay: -12s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img {
-    animation-name: crossfade-6;
-    animation-duration: 24s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(2) {
-    animation-delay: -4s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(3) {
-    animation-delay: -8s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(4) {
-    animation-delay: -12s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(5) {
-    animation-delay: -16s;
-}
-.crossfade-frame:has(> img:nth-child(6):last-child) img:nth-child(6) {
-    animation-delay: -20s;
-}
-@keyframes crossfade {
-    0%, 25% { opacity: 1; }
-    33.333%, 91.667% { opacity: 0; }
-    100% { opacity: 1; }
-}
-@keyframes crossfade-6 {
-    0%, 12.5% { opacity: 1; }
-    16.666%, 95.833% { opacity: 0; }
-    100% { opacity: 1; }
-}
+
 @media (prefers-reduced-motion: reduce) {
     .crossfade-frame img {
-        animation: none;
-        opacity: 0;
+        transition: none;
     }
+    .crossfade-frame img.is-active,
     .crossfade-frame img:first-child {
         opacity: 1;
+    }
+    .crossfade-frame img:not(.is-active):not(:first-child) {
+        opacity: 0;
     }
 }
 
@@ -343,14 +344,98 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-inner {
-  max-width: 68rem;
+  max-width: 72rem;
   margin: 0 auto;
 }
 
 .life-spine-intro {
-  max-width: 36rem;
+  max-width: 48rem;
   margin: 0 auto 3.5rem;
   text-align: center;
+}
+
+.life-spine-prologue {
+  margin: 1.75rem auto 0;
+  max-width: 46rem;
+  text-align: start;
+}
+
+.life-spine-prologue p {
+  margin: 0 0 1rem;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  color: #585f65;
+  hyphens: none;
+  text-wrap: pretty;
+}
+
+.life-spine-prologue p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mid-chapter rotating photo stations — parallel to prose in the chapter grid. */
+.life-spine-rotate {
+  margin: 0;
+  max-width: 23.4rem;
+  width: 100%;
+}
+
+.life-spine-rotate .photo-frame {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+}
+
+/* The photo's own caption — a real cutline naming whichever frame is
+   currently showing (site.js keeps it in sync with the crossfade), not the
+   rotating quote below. Keeping these separate is what stops a photo from
+   ever looking captioned by a sentence that has nothing to do with it. */
+.life-spine-caption {
+  margin: 0.55rem 0 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #7C8CA0;
+}
+
+/* Rotating pull-quotes: relocated into the body copy (a sibling of the
+   paragraphs, not nested under a photo) so a quote never reads as if it
+   were describing whatever image happens to be on screen. Grid stack keeps
+   height at the tallest quote so the paragraph below never reflows on
+   rotation. */
+.life-spine-quote-rotate {
+  display: grid;
+  grid-template-areas: "stack";
+  margin: 1.6rem 0;
+}
+
+.life-spine-quote-rotate > .life-spine-quote {
+  grid-area: stack;
+  margin: 0;
+  align-self: start;
+  /* visibility flips only once the fade has finished, so the outgoing quote
+     dissolves with its photo instead of blinking out on the first frame. */
+  transition: opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 1500ms;
+}
+
+.life-spine-quote-rotate > .life-spine-quote:not(.is-active) {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.life-spine-quote-rotate > .life-spine-quote.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  transition: opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .life-spine-quote-rotate > .life-spine-quote {
+    transition: none;
+  }
 }
 
 .life-spine-heading {
@@ -388,7 +473,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-stop {
   display: grid;
-  grid-template-columns: 7.25rem 1.25rem minmax(0, 1fr);
+  grid-template-columns: 8.25rem 1.25rem minmax(0, 1fr);
   column-gap: 1.15rem;
   align-items: start;
   margin-bottom: 3.25rem;
@@ -401,16 +486,16 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 
 .life-spine-date {
   font-family: "Assistant", sans-serif;
-  font-size: 0.92rem;
+  font-size: 1.15rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: #7C8CA0;
   margin: 0;
 }
 
 .life-spine-hebrew {
-  margin: 0.28rem 0 0;
-  font-size: 0.78rem;
+  margin: 0.3rem 0 0;
+  font-size: 0.92rem;
   font-weight: 600;
   line-height: 1.45;
   color: #585f65;
@@ -434,12 +519,16 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   height: 0.7rem;
   border-radius: 999px;
   background: #1A2E44;
+  z-index: 1;
 }
 
+/* One unbroken line: it runs the full height of the chapter and reaches
+   exactly into the next one (bottom == .life-spine-stop's margin-bottom), so
+   the spine never breaks between chapters. The dot sits on top of it. */
 .life-spine-rail::after {
   content: "";
   position: absolute;
-  top: 1.35rem;
+  top: 0;
   bottom: -3.25rem;
   right: 50%;
   width: 2px;
@@ -447,8 +536,12 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   background: #d5d8dc;
 }
 
+.life-spine-stop:first-of-type .life-spine-rail::after {
+  top: 0.45rem;
+}
+
 .life-spine-stop-last .life-spine-rail::after {
-  display: none;
+  bottom: 0;
 }
 
 .life-spine-title {
@@ -456,21 +549,37 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   font-size: clamp(1.45rem, 2.4vw, 1.9rem);
   font-weight: 800;
   color: #1A2E44;
-  margin: 0 0 0.35rem;
-  grid-column: 1 / -1;
+  margin: 0 0 0.55rem;
+}
+
+.life-spine-stop > .life-spine-body {
+  grid-column: 3;
+  min-width: 0;
 }
 
 .life-spine-body {
-  display: grid;
-  grid-template-columns: minmax(15rem, 0.95fr) minmax(0, 1.25fr);
-  column-gap: 1.4rem;
-  row-gap: 0.7rem;
-  align-items: start;
+  display: block;
+}
+
+/* The chapter's lead photo floats beside the lead + the start of body copy,
+   same as the small aside photos above: text hugs it tightly, then — once
+   there's enough of it to clear the photo's height — widens back out to the
+   full timeline measure, the way a real newspaper column runs past an inset
+   photo. This only stays gap-free because every chapter's lead+copy already
+   runs taller than its lead photo (checked across all seven); a chapter
+   that was ever shorter than its own photo would need the fixed two-column
+   treatment instead (see life-spine-aside-media, which stays that way on
+   purpose since a one-paragraph caption can't be relied on to outrun it). */
+.life-spine-row {
+  display: flow-root;
 }
 
 .life-spine-media {
-  grid-column: 1;
-  grid-row: 2 / 5;
+  float: inline-start;
+  width: min(39.6%, 21.6rem);
+  min-width: 12rem;
+  margin-inline-end: 1.6rem;
+  margin-bottom: 0.85rem;
 }
 
 .life-spine-body .photo-frame {
@@ -480,37 +589,105 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-lead {
-  grid-column: 2;
-  grid-row: 2;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-style: italic;
   line-height: 1.7;
   color: #1A2E44;
-  margin: 0;
+  margin: 0 0 0.95rem;
+  text-align: start;
+  hyphens: none;
+  text-wrap: pretty;
 }
 
 .life-spine-copy {
-  grid-column: 2;
-  grid-row: 3;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  align-items: start;
+  min-width: 0;
 }
 
-.life-spine-text p {
-  margin: 0 0 0.9rem;
-  font-size: 1.05rem;
-  line-height: 1.75;
+/* Mid-chapter stations: a small inset photo with its paragraph hugging it
+   tightly on the near side — Word's "Tight" wrap, not "Square" — so the
+   text reads as one column flowing around a photo rather than two boxed-off
+   halves. That means a float, not a flex row: floats are what let text
+   fill in close beside the photo and then run the full column width again
+   once it clears. Kept small (28%) specifically so a one-paragraph caption
+   almost always out-runs the photo's height — the float's one real failure
+   mode is the reverse case (a full-height float with no dedicated text to
+   fill it), which is why the photo is sized down rather than up. */
+.life-spine-aside {
+  clear: both;
+  margin: 2.5rem 0 1.25rem;
+  width: 100%;
+}
+
+.life-spine-aside::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.life-spine-aside:first-of-type {
+  margin-top: 2.75rem;
+}
+
+.life-spine-aside + .life-spine-aside {
+  margin-top: 2.75rem;
+}
+
+.life-spine-aside-media {
+  float: inline-start;
+  width: min(28%, 14rem);
+  min-width: 10rem;
+  margin-inline-end: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.life-spine-aside:nth-of-type(even) .life-spine-aside-media {
+  float: inline-end;
+  margin-inline-end: 0;
+  margin-inline-start: 1.2rem;
+}
+
+.life-spine-aside .life-spine-rotate {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.life-spine-aside-copy {
+  min-width: 0;
+}
+
+/* One readable measure across a chapter, whether a paragraph sits beside a
+   photo or clear of one. Both declarations are needed and neither works alone:
+   `max-width` by itself leaves the full-width box anchored under the float, so
+   the float eats most of it and the line collapses; `display: flow-root` makes
+   the paragraph a block formatting context, which the spec keeps from
+   overlapping a float's margin box, so the box is placed beside the photo at
+   whatever room is left instead of running underneath it. Together they yield
+   three honest columns — beside a chapter photo, beside an aside photo, and
+   clear of both — rather than a jump from a narrow column to the full body
+   width, which stranded short continuation paragraphs as one very long line. */
+.life-spine-text > p,
+.life-spine-copy > p,
+.life-spine-aside-copy p {
+  display: flow-root;
+  max-width: 42rem;
+  margin: 0 0 1rem;
+  font-size: 1.12rem;
+  line-height: 1.8;
   color: #585f65;
+  text-align: start;
+  hyphens: none;
+  text-wrap: pretty;
 }
 
-.life-spine-text p:last-child {
+.life-spine-text > p:last-child,
+.life-spine-copy > p:last-child,
+.life-spine-aside-copy p:last-child {
   margin-bottom: 0;
 }
 
 .life-spine-quote {
-  margin: 0.45rem 0 0;
+  margin: 0;
   padding: 0;
   background: none;
   border: none;
@@ -520,18 +697,22 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 .life-spine-quote p {
   margin: 0;
   padding: 0;
-  font-size: 0.86rem;
+  max-width: 34rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.5;
+  font-style: italic;
+  line-height: 1.55;
   color: #1A2E44;
   background: none;
   outline: none;
+  hyphens: none;
+  text-wrap: pretty;
 }
 
 .life-spine-quote footer {
   display: block;
-  margin-top: 0.22rem;
-  font-size: 0.68rem;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0;
   color: #7C8CA0;
@@ -541,7 +722,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   .life-spine-stop {
     grid-template-columns: 1fr;
     row-gap: 0.55rem;
-    margin-bottom: 2.75rem;
+    margin-bottom: 2rem;
   }
 
   .life-spine-year {
@@ -552,19 +733,37 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
     display: none;
   }
 
-  .life-spine-copy {
-    grid-template-columns: 1fr;
-  }
-
-  .life-spine-body {
-    grid-template-columns: 1fr;
-  }
-
-  .life-spine-media,
-  .life-spine-body .photo-frame,
-  .life-spine-lead,
-  .life-spine-copy {
+  .life-spine-stop > .life-spine-body {
     grid-column: 1;
-    grid-row: auto;
+  }
+
+  .life-spine-media {
+    float: none;
+    width: 100%;
+    max-width: 23.4rem;
+    margin-inline: 0;
+    margin-bottom: 0.9rem;
+  }
+
+  .life-spine-aside,
+  .life-spine-aside:nth-of-type(even) {
+    margin: 1.5rem 0 0;
+  }
+
+  .life-spine-aside:first-of-type {
+    margin-top: 1.75rem;
+  }
+
+  .life-spine-aside-media,
+  .life-spine-aside:nth-of-type(even) .life-spine-aside-media {
+    float: none;
+    width: 100%;
+    max-width: 23.4rem;
+    margin-inline: 0;
+    margin-bottom: 0.55rem;
+  }
+
+  .life-spine-aside .life-spine-rotate {
+    max-width: 23.4rem;
   }
 }

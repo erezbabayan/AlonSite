@@ -3742,15 +3742,15 @@ window.GALLERY_DATA = {
           "full": "/AlonSite/media/images/commemoration/commemoration-002.jpg",
           "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-002.jpg",
           "alt": "הנצחה",
-          "w": 635,
-          "h": 900
+          "w": 900,
+          "h": 634
         },
         {
           "full": "/AlonSite/media/images/commemoration/commemoration-003.jpg",
           "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-003.jpg",
           "alt": "הנצחה",
-          "w": 640,
-          "h": 900
+          "w": 900,
+          "h": 643
         },
         {
           "full": "/AlonSite/media/images/commemoration/commemoration-004.jpg",
@@ -3813,13 +3813,6 @@ window.GALLERY_DATA = {
           "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-012.jpg",
           "alt": "הנצחה",
           "w": 637,
-          "h": 900
-        },
-        {
-          "full": "/AlonSite/media/images/commemoration/commemoration-013.jpg",
-          "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-013.jpg",
-          "alt": "הנצחה",
-          "w": 667,
           "h": 900
         },
         {
