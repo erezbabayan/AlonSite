@@ -113,6 +113,7 @@
     max-width: 34rem;
     margin: 0 auto;
     font-family: "Assistant", sans-serif;
+    text-align: center;
 }
 
 /* The column is centred, so weight hung under the text lifts it: the block
@@ -150,19 +151,17 @@
 }
 
 #hero .hero-dates {
-    margin: 0 0 0.55rem;
+    margin: 0 0 1.55rem;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #43474d;
 }
 
 #hero .hero-years {
-    margin: 0 0 1.55rem;
+    margin: 1.35rem 0 0;
     font-size: 0.88rem;
     font-weight: 700;
     letter-spacing: 0.16em;
-    /* Same tone as .hero-dates directly above — the two read as one block of
-       dating, with weight and tracking doing the separating instead of hue. */
     color: #43474d;
 }
 
@@ -214,8 +213,9 @@
     #hero .hero-kicker { margin-bottom: 0.9rem; }
     #hero .hero-title { margin-bottom: 0.8rem; }
     #hero .hero-lead { margin-bottom: 0.75rem; }
-    #hero .hero-years { margin-bottom: 1.1rem; }
+    #hero .hero-dates { margin-bottom: 1.1rem; }
     #hero .hero-remembrance { margin-bottom: 1.15rem; }
+    #hero .hero-years { margin-top: 1rem; }
     #hero .hero-quote-text { padding: 1.05rem 1.2rem; }
     #hero .hero-quote { line-height: 1.72; }
 }
