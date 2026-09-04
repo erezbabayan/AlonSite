@@ -17,6 +17,7 @@
   var countEl = document.getElementById("stories-count");
   var readerEl = document.getElementById("story-reader");
   var readerCard = document.getElementById("story-reader-card");
+  var readerScroll = document.getElementById("story-reader-scroll");
   var readerTitle = document.getElementById("story-reader-title");
   var readerMeta = document.getElementById("story-reader-meta");
   var readerBody = document.getElementById("story-reader-body");
@@ -38,18 +39,25 @@
     return null;
   }
 
+  function displayFrom(story, letter) {
+    if (letter && window.letterDisplayFrom) return window.letterDisplayFrom(letter);
+    return story.from || (letter && letter.from) || "";
+  }
+
   function cardHtml(story, index) {
+    var letter = findLetter(story.letterId);
+    var fromText = displayFrom(story, letter);
     return (
       '<button type="button" class="story-card" data-index="' +
       index +
       '" aria-label="פתחו את המכתב המלא של ' +
-      escapeHtml(story.from) +
+      escapeHtml(fromText) +
       '">' +
       '<p class="story-quote">' +
       escapeHtml(story.quote) +
       "</p>" +
       '<p class="story-from">- ' +
-      escapeHtml(story.from) +
+      escapeHtml(fromText) +
       "</p>" +
       '<span class="inline-flex items-center gap-1 text-accent-gold text-xs font-bold mt-auto pt-4">' +
       "למכתב המלא" +
@@ -80,11 +88,15 @@
 
     readerCard.classList.remove("reader-card-visible");
     setTimeout(function () {
-      readerTitle.textContent = letter.title || "";
+      readerTitle.textContent = window.letterDisplayTitle
+        ? window.letterDisplayTitle(letter)
+        : letter.title || "";
       var metaParts = [];
-      if (letter.from) metaParts.push("מאת " + letter.from);
+      var fromText = displayFrom(story, letter);
+      if (fromText) metaParts.push("מאת " + fromText);
       if (letter.to) metaParts.push("אל " + letter.to);
-      if (letter.dateLabel) metaParts.push(letter.dateLabel);
+      var dateText = window.letterDisplayDate ? window.letterDisplayDate(letter) : letter.dateLabel;
+      if (dateText) metaParts.push(dateText);
       readerMeta.textContent = metaParts.join(" · ");
       readerBody.innerHTML = (letter.body || "")
         .split(/\n\n+/)
@@ -93,7 +105,8 @@
         })
         .join("");
       if (readerCounter) readerCounter.textContent = (readerIndex + 1) + " / " + stories.length;
-      readerCard.scrollTop = 0;
+      if (readerScroll) readerScroll.scrollTop = 0;
+      else readerCard.scrollTop = 0;
       readerCard.classList.add("reader-card-visible");
     }, READER_SWAP_DELAY_MS);
 

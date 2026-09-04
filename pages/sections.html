@@ -171,7 +171,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
 <a class="section-link-card flex items-center gap-4 bg-surface-container-highest rounded-md p-4" href="/pages/letters.html">
 <span class="flex-1 text-right">
-<span class="block font-headline font-bold text-primary text-sm">לכל 54 המכתבים</span>
+<span class="block font-headline font-bold text-primary text-sm">לכל המכתבים שנכתבו על אלון</span>
 <span class="block font-label text-xs text-secondary mt-0.5">הארכיון המלא, מסונן לפי קטגוריה</span>
 </span>
 <span class="material-symbols-outlined text-primary/60 text-lg shrink-0" aria-hidden="true">chevron_left</span>
@@ -420,20 +420,25 @@
 </div>
 </div>
 </div>
-<script src="/js/letters-data.js?v=20260831j"></script>
+<script src="/js/letters-data.js?v=20260904d"></script>
 <script>
   // Picks a different real letter to preview each visit, rather than
   // always showing the same one.
   (function () {
     "use strict";
-    var letters = (window.LETTERS_DATA && window.LETTERS_DATA.letters) || [];
+    var letters = ((window.LETTERS_DATA && window.LETTERS_DATA.letters) || []).filter(function (l) {
+      return l.category && l.category !== "story";
+    });
     if (!letters.length) return;
     var letter = letters[Math.floor(Math.random() * letters.length)];
     var metaParts = [];
-    if (letter.from) metaParts.push(letter.from);
+    var fromText = window.letterDisplayFrom ? window.letterDisplayFrom(letter) : letter.from;
+    if (fromText) metaParts.push(fromText);
     if (letter.to) metaParts.push("אל " + letter.to);
     document.getElementById("letter-preview-meta").textContent = metaParts.join(" · ");
-    document.getElementById("letter-preview-title").textContent = letter.title;
+    document.getElementById("letter-preview-title").textContent = window.letterDisplayTitle
+      ? window.letterDisplayTitle(letter)
+      : letter.title;
     document.getElementById("letter-preview-body").textContent = letter.body;
   })();
 
