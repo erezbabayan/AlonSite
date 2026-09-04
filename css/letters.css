@@ -15,8 +15,23 @@
     background: linear-gradient(180deg, #fffdf8 0%, #faf6ea 100%);
     border-radius: 0.4rem;
     box-shadow: inset 0 0 0 1px rgba(124, 140, 160, 0.14);
-    transition: transform 400ms ease-out, box-shadow 400ms ease-out, background-color 400ms ease-out;
+    transition: transform 400ms ease-out, box-shadow 400ms ease-out, background 400ms ease-out;
     overflow: hidden;
+}
+.letter-card[data-category="family"] {
+    background: linear-gradient(180deg, #fff9f4 0%, #f4e6d8 100%);
+}
+.letter-card[data-category="friends"] {
+    background: linear-gradient(180deg, #f6faf5 0%, #e4efe3 100%);
+}
+.letter-card[data-category="army"] {
+    background: linear-gradient(180deg, #f5f6f0 0%, #e6e7d8 100%);
+}
+.letter-card[data-category="articles"] {
+    background: linear-gradient(180deg, #f5f7fb 0%, #e4ebf3 100%);
+}
+.letter-card[data-category="writings"] {
+    background: linear-gradient(180deg, #fffdf4 0%, #f3ead0 100%);
 }
 /* A folded top corner, like a kept page — quiet nod to "this is a real
    letter" without leaning on shadow for depth. */
@@ -66,6 +81,9 @@
     transform: none !important;
 }
 #reader-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     opacity: 0;
     transform: scale(0.97) translateY(6px);
     transition: opacity 300ms ease-out, transform 300ms ease-out;
@@ -74,6 +92,22 @@
 #reader-card.reader-card-visible {
     opacity: 1;
     transform: scale(1) translateY(0);
+}
+.reader-header {
+    flex-shrink: 0;
+    z-index: 1;
+    background-color: #fffdf8;
+    box-shadow: 0 10px 18px -14px rgba(27, 28, 25, 0.28);
+}
+#reader-card[data-category="family"] .reader-header { background-color: #fff9f4; }
+#reader-card[data-category="friends"] .reader-header { background-color: #f6faf5; }
+#reader-card[data-category="army"] .reader-header { background-color: #f5f6f0; }
+#reader-card[data-category="articles"] .reader-header { background-color: #f5f7fb; }
+#reader-card[data-category="writings"] .reader-header { background-color: #fffdf4; }
+.reader-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
