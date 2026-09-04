@@ -44,7 +44,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="/AlonSite/js/tailwind-config.js?v=20260831j"></script>
 <link href="/AlonSite/css/shared.css?v=20260831j" rel="stylesheet"/>
-<link href="/AlonSite/css/stories.css?v=20260904c" rel="stylesheet"/>
+<link href="/AlonSite/css/stories.css?v=20260831j" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <img src="/AlonSite/notify-visit.php?page=stories" alt="" width="1" height="1" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none" aria-hidden="true"/>
@@ -166,21 +166,17 @@
 <span class="material-symbols-outlined text-5xl">chevron_left</span>
 </button>
 <div class="max-w-2xl w-full mx-auto flex flex-col items-center gap-5">
-<div class="w-full max-h-[70vh] flex flex-col overflow-hidden" id="story-reader-card">
-<div class="reader-header px-8 md:px-10 pt-8 md:pt-10 pb-4">
+<div class="w-full max-h-[70vh] overflow-y-auto p-8 md:p-10" id="story-reader-card">
 <h3 class="text-2xl font-headline font-bold text-primary mb-2" id="story-reader-title"></h3>
-<p class="font-label text-xs text-secondary/80" id="story-reader-meta"></p>
-</div>
-<div class="reader-scroll px-8 md:px-10 pb-8 md:pb-10" id="story-reader-scroll">
+<p class="font-label text-xs text-secondary/80 mb-6" id="story-reader-meta"></p>
 <div class="story-letter-body text-on-surface-variant text-lg" id="story-reader-body"></div>
-</div>
 </div>
 <p id="story-reader-counter" dir="ltr" class="font-label text-white/80 text-xs tracking-wide"></p>
 </div>
 </div>
 
-<script src="/AlonSite/js/letters-data.js?v=20260904d"></script>
-<script src="/AlonSite/js/stories-data.js?v=20260904c"></script>
-<script src="/AlonSite/js/stories.js?v=20260904c"></script>
+<script src="/AlonSite/js/letters-data.js?v=20260831j"></script>
+<script src="/AlonSite/js/stories-data.js?v=20260831j"></script>
+<script src="/AlonSite/js/stories.js?v=20260831j"></script>
 <script src="/AlonSite/js/site.js?v=20260902b"></script>
 </body></html>

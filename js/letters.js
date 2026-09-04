@@ -10,10 +10,11 @@
   const READER_CLOSE_TRANSITION_MS = 280; // matches the CSS reader-open transition duration
   const SWIPE_THRESHOLD_PX = 40; // minimum horizontal drag to count as a swipe
 
-  // The life-story text is kept in LETTERS_DATA for the stories page, but it
-  // is not a letter — hide it here. `order` remains the primary sort key.
+  // Most real letters have no exact date in the source material — only a
+  // handful carry a real ISO `date`. `order` reflects the sequence the family
+  // organized the material in (grouped by author/category), and is the
+  // primary sort key; letters that do have a real date keep it for display.
   const letters = ((window.LETTERS_DATA && window.LETTERS_DATA.letters) || [])
-    .filter((l) => l.category && l.category !== "story")
     .slice()
     .sort((a, b) => (a.order || 0) - (b.order || 0));
   const categories = (window.LETTERS_DATA && window.LETTERS_DATA.categories) || [];
@@ -38,16 +39,15 @@
     return div.innerHTML;
   }
 
-  function displayTitle(letter) {
-    return window.letterDisplayTitle ? window.letterDisplayTitle(letter) : letter.title || "";
-  }
-
-  function displayFrom(letter) {
-    return window.letterDisplayFrom ? window.letterDisplayFrom(letter) : letter.from || "";
-  }
-
+  // Prefers a free-text `dateLabel` (e.g. "חודש לפני נפילתו", "תשנ"ז") for
+  // letters without a known exact date, over guessing/formatting a fake one.
   function formatDate(letter) {
-    return window.letterDisplayDate ? window.letterDisplayDate(letter) : letter.dateLabel || "";
+    if (letter.dateLabel) return letter.dateLabel;
+    if (letter.date) {
+      const d = new Date(letter.date);
+      if (!isNaN(d)) return d.toLocaleDateString("he-IL", { year: "numeric", month: "long", day: "numeric" });
+    }
+    return "";
   }
 
   function categoryCount(key) {
@@ -72,9 +72,8 @@
   }
 
   function letterCardHtml(letter, index) {
-    const fromText = displayFrom(letter);
     const metaParts = [];
-    if (fromText) metaParts.push(`מאת <span class="text-primary/80 font-semibold">${escapeHtml(fromText)}</span>`);
+    if (letter.from) metaParts.push(`מאת <span class="text-primary/80 font-semibold">${escapeHtml(letter.from)}</span>`);
     if (letter.to) metaParts.push(`אל <span class="text-primary/80 font-semibold">${escapeHtml(letter.to)}</span>`);
     const meta = metaParts.length
       ? `<p class="font-label text-xs text-secondary/80 mb-3">${metaParts.join(" · ")}</p>`
@@ -82,13 +81,13 @@
 
     const dateText = formatDate(letter);
     return `
-      <button data-index="${index}" data-category="${escapeHtml(letter.category || "")}" class="letter-card text-right p-6 md:p-7 flex flex-col">
+      <button data-index="${index}" class="letter-card text-right p-6 md:p-7 flex flex-col">
         <span class="letter-fold" aria-hidden="true"></span>
         <div class="flex items-start justify-between gap-3 mb-4">
           <span class="letter-tag font-label text-[0.62rem] uppercase tracking-[0.18em] font-bold text-accent-gold">${escapeHtml(categoryLabel(letter.category))}</span>
-          ${dateText ? `<span class="font-label text-xs text-secondary shrink-0 mt-0.5">${escapeHtml(dateText)}</span>` : ""}
+          ${dateText ? `<span class="font-label text-xs text-secondary shrink-0 mt-0.5" dir="ltr">${escapeHtml(dateText)}</span>` : ""}
         </div>
-        <h3 class="text-lg font-headline font-bold text-primary mb-2">${escapeHtml(displayTitle(letter))}</h3>
+        <h3 class="text-lg font-headline font-bold text-primary mb-2">${escapeHtml(letter.title)}</h3>
         ${meta}
         <p class="letter-body text-sm text-on-surface-variant line-clamp-5 flex-1">${escapeHtml(letter.body)}</p>
         <span class="inline-flex items-center gap-1 text-accent-gold text-xs font-bold mt-4">
@@ -100,13 +99,7 @@
 
   function renderGrid() {
     visibleLetters = activeKey === ALL_KEY ? letters : letters.filter((l) => l.category === activeKey);
-    if (activeKey === ALL_KEY) {
-      countEl.textContent = "מכתבים שנכתבו על אלון";
-    } else if (activeKey === "writings") {
-      countEl.textContent = "דברים שכתב אלון";
-    } else {
-      countEl.textContent = `${visibleLetters.length} מכתבים`;
-    }
+    countEl.textContent = `${visibleLetters.length} מכתבים`;
 
     if (visibleLetters.length === 0) {
       gridEl.innerHTML = "";
@@ -141,7 +134,6 @@
 
   const readerEl = document.getElementById("letter-reader");
   const readerCard = document.getElementById("reader-card");
-  const readerScroll = document.getElementById("reader-scroll");
   const readerCategory = document.getElementById("reader-category");
   const readerTitle = document.getElementById("reader-title");
   const readerDate = document.getElementById("reader-date");
@@ -155,13 +147,11 @@
     if (!letter) return;
     readerCard.classList.remove("reader-card-visible");
     setTimeout(() => {
-      readerCard.dataset.category = letter.category || "";
       readerCategory.textContent = categoryLabel(letter.category);
-      readerTitle.textContent = displayTitle(letter);
+      readerTitle.textContent = letter.title;
       readerDate.textContent = formatDate(letter);
-      const fromText = displayFrom(letter);
       const metaParts = [];
-      if (fromText) metaParts.push(`מאת ${fromText}`);
+      if (letter.from) metaParts.push(`מאת ${letter.from}`);
       if (letter.to) metaParts.push(`אל ${letter.to}`);
       readerMeta.textContent = metaParts.join(" · ");
       readerBody.innerHTML = letter.body
@@ -170,7 +160,7 @@
         .join("");
       readerSignature.textContent = letter.signature || "";
       readerCounter.textContent = `${readerIndex + 1} / ${visibleLetters.length}`;
-      if (readerScroll) readerScroll.scrollTop = 0;
+      readerCard.scrollTop = 0;
       readerCard.classList.add("reader-card-visible");
     }, READER_SWAP_DELAY_MS);
   }
