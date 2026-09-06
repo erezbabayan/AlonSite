@@ -584,14 +584,10 @@
       const quoteRotator =
         container.querySelector("[data-quote-rotate]") ||
         quoteHost.querySelector("[data-quote-rotate]");
-      // .life-spine-caption, not [data-caption] — that attribute already
-      // names something else entirely on the hero's own image carousel.
-      const captionEl = container.querySelector(".life-spine-caption");
       stations.push({
         root: container,
         images: images,
         quoteRotator: quoteRotator,
-        captionEl: captionEl,
         slideIndex: 0,
         visible: false,
         leaveTimer: 0,
@@ -651,12 +647,6 @@
       station.images.forEach((img, i) => {
         img.classList.toggle("is-active", i === imageIndex);
       });
-      // Caption always names whichever frame the photo is actually showing —
-      // it rotates on the image's own index, never the quote's, so the two
-      // can never drift out of sync with each other.
-      if (station.captionEl && incoming) {
-        station.captionEl.textContent = incoming.alt || "";
-      }
       // Hold the outgoing frame opaque beneath the incoming one until the fade
       // finishes, so the dissolve never drops to the mat colour in the middle.
       if (outgoing && outgoing !== incoming) {
