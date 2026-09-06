@@ -11,6 +11,7 @@
 window.LETTERS_DATA = {
   categories: [
     { key: "family", label: "משפחה" },
+    { key: "family-friends", label: "חברי המשפחה" },
     { key: "friends", label: "חברים" },
     { key: "army", label: "צבא" },
     { key: "articles", label: "מאמרים" },
@@ -20,13 +21,13 @@ window.LETTERS_DATA = {
   bookDateLabel: "תשנ״ח (1998), מתוך ספר הזיכרון לזכרו",
   // Display name + relation for titles: "מכתב מארז, אח של אלון"
   authors: {
-    "wr-1": { name: "אלון", role: "לדקלה, אחותו", title: "מכתב מאלון לדקלה, אחותו" },
-    "wr-2": { name: "אלון", role: "עלון המכינה", title: "מכתב מאלון — קווים לדמותו של המנהיג" },
-    "wr-3": { name: "אלון", role: "בשיחה עם אביו", title: "מכתב מאלון, בשיחה עם אביו" },
-    "wr-4": { name: "אלון", role: "בראיון מהבופור", title: "מכתב מאלון, בראיון מהבופור" },
-    "wr-5": { name: "אלון", role: "שיר שכתב", title: "שיר מאלון — שיר מחאה של הנינים" },
-    "wr-6": { name: "אלון", role: "שיר שכתב", title: "שיר מאלון — עץ האלון" },
-    "wr-7": { name: "אלון", role: "לרב רפי פרץ, ראש המכינה", title: "מכתב מאלון לרב רפי פרץ, ראש המכינה" },
+    "wr-1": { name: "אלון", role: "לדקלה, אחותו", title: "מכתב מאלון" },
+    "wr-2": { name: "אלון", role: "עלון המכינה", title: "מכתב מאלון" },
+    "wr-3": { name: "אלון", role: "בשיחה עם אביו", title: "מכתב מאלון" },
+    "wr-4": { name: "אלון", role: "בראיון מהבופור", title: "מכתב מאלון" },
+    "wr-5": { name: "אלון", role: "שיר שכתב", title: "שיר מאלון" },
+    "wr-6": { name: "אלון", role: "שיר שכתב", title: "שיר מאלון" },
+    "wr-7": { name: "אלון", role: "לרב רפי פרץ, ראש המכינה", title: "מכתב מאלון" },
     "fam-0": { name: "המשפחה", role: "משפחתו של אלון", title: "מכתב מהמשפחה" },
     "fam-1": { name: "ראובן", role: "אביו של אלון" },
     "fam-2": { name: "חנה", role: "אימו של אלון" },
@@ -43,7 +44,7 @@ window.LETTERS_DATA = {
     "ext-1": { name: "אבי גבאי", role: "בן משפחה" },
     "ext-2": { name: "אילה גת", role: "בת משפחה" },
     "ext-3": { name: "אמירה מיארה", role: "דודתו של אלון" },
-    "ext-4": { name: "בבא אליהו וסבתא עליזה", role: "סבו וסבתו של אלון" },
+    "ext-4": { name: "בבא אליהו ז״ל וסבתא עליזה ז״ל", role: "סבו וסבתו של אלון" },
     "ext-5": { name: "בנות בני עקיבא", role: "חניכותיו של אלון" },
     "ext-6": { name: "דליה בביאן", role: "דודתו של אלון" },
     "ext-7": { name: "דרור אריה", role: "משפחה" },
@@ -54,23 +55,23 @@ window.LETTERS_DATA = {
     "ext-12": { name: "ציונה בביאן", role: "דודתו של אלון" },
     "army-1": { name: "דניאל מכטה", role: "חייל מילואים שפגש את אלון" },
     "army-2": { name: "אלון פרידמן", role: "המג״ד של אלון" },
-    "army-3": { name: "ארז גרשטיין", role: "מח״ט גולני" },
+    "army-3": { name: "ארז גרשטיין ז״ל", role: "מח״ט גולני" },
     "army-4": { name: "ערן גרניט", role: "מפקד פלוגה של אלון בטירונות" },
     "army-5": { name: "בינה עשת", role: "אם של חבר לקורס קצינים" },
     "army-6": { name: "אבי עייש", role: "חייל של אלון" },
     "army-7": { name: "עדי סרדס", role: "חייל של אלון" },
     "army-8": { name: "גיורא חזן", role: "קצין במוצב הבופור" },
-    "army-9": { name: "אמנון ליפקין-שחק", role: "הרמטכ״ל" },
+    "army-9": { name: "אמנון ליפקין-שחק ז״ל", role: "הרמטכ״ל" },
     "army-10": { name: "דורון אריאל", role: "משפחה" },
     "army-11": { name: "עזי", role: "סמל של אלון בפלחי״ק גולני" },
     "army-12": { name: "מיקל רבינו", role: "מפקד פלוגה בפלחי״ק גולני" },
     "army-13": { name: "יאיר רובינשטיין", role: "מפקדו של אלון בגדוד 51" },
     "army-14": { name: "צוות גפן", role: "חבריו של אלון לקורס קצינים" },
-    "art-1": { name: "הרב צבי רוזנר", role: "רב בית הכנסת משכן יוסף" },
+    "art-1": { name: "הרב צבי רוזנר ז״ל", role: "רב בית הכנסת משכן יוסף" },
     "art-2": { name: "הרב רפי פרץ", role: "ראש המכינה הקדם־צבאית עצמונה" },
     "art-3": { name: "לא חתום בשם", role: "מתוך הספר לזכרו" },
     "art-4": { name: "הרב צבי ליפשיץ", role: "ר״מ במכינת עצמונה" },
-    "art-5": { name: "יוסף אלמליח", role: "ידיד משפחה" },
+    "art-5": { name: "יוסף אלמליח", role: "ידיד משפחה", title: "מכתב מיוסף אלמליח" },
     "art-6": { name: "הרב רפי פרץ", role: "ראש המכינה הקדם־צבאית עצמונה" },
     "art-7": { name: "הרב דוד שמחון", role: "רב" }
   },
@@ -358,6 +359,7 @@ window.LETTERS_DATA = {
       order: 12,
       from: "דקלה בביאן",
       to: "אלון",
+      dateLabel: "תשנ״ח (1998), מתוך ספר הזיכרון לזכרו",
       category: "family",
       body:
         `אלון - החייל שלי. כל כך רציתי לשמוע שוב את צפצוף המכונית של אבא ביום שישי, שמבשר על בואו של אלוני, אלוני שלי. אלון שחזר כשלגופו מדים ועל כתפיו הרחבות את אחי - מרים אותו חייל, אותו אלון גדול וחסון, שהיה מחבק אותו בכל כוחו, מביט בי בעיניו הכחולות ואומר: "שיתולה.... אני מת עלייך", אותו אדם שרק הוא, אך ורק הוא ידע לתת ולהעניק לי. האח שכל כך אהבתי לכבד, לא מתוך יראה אלא מתוך הערכה והמון אהבה. איך שאהבתי לכתוב לו על הרגעים המאושרים, על הלימודים, על המשפחה ובכלל על החיים.
@@ -556,13 +558,12 @@ window.LETTERS_DATA = {
 שי נוישטטר`,
       signature: ""
     },
-    {
-      id: "ext-1",
+    { id: "ext-1",
       title: "מכתב מאבי גבאי",
       order: 21,
       from: "אבי גבאי",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `אל אלון יקירנו
 
@@ -597,13 +598,12 @@ window.LETTERS_DATA = {
 אבי גבאי`,
       signature: ""
     },
-    {
-      id: "ext-2",
+    { id: "ext-2",
       title: "מכתב מאילה גת (שם טוב)",
       order: 22,
       from: "אילה גת (שם טוב)",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `אלון של כולנו
 
@@ -630,13 +630,12 @@ window.LETTERS_DATA = {
 אילה גת (שם טוב)`,
       signature: ""
     },
-    {
-      id: "ext-3",
+    { id: "ext-3",
       title: "מכתב מהדודה אמירה",
       order: 23,
       from: "אמירה מיארה",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `אלוני
 
@@ -669,13 +668,12 @@ window.LETTERS_DATA = {
 אמירה`,
       signature: ""
     },
-    {
-      id: "ext-4",
+    { id: "ext-4",
       title: "מכתב מבבא וסבתא",
       order: 24,
       from: "בבא אליהו וסבתא עליזה",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `אלוני
 
@@ -741,13 +739,12 @@ window.LETTERS_DATA = {
 בנות "בני עקיבא" אל אלון בכינה כי איננו!`,
       signature: ""
     },
-    {
-      id: "ext-6",
+    { id: "ext-6",
       title: "במה אברכך (שיר)",
       order: 26,
       from: "דליה בביאן",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `במה אברכך
 
@@ -772,13 +769,12 @@ window.LETTERS_DATA = {
 דליה בביאן`,
       signature: ""
     },
-    {
-      id: "ext-7",
+    { id: "ext-7",
       title: "לכל עץ יש שורשים",
       order: 27,
       from: "דרור אריה",
       to: "משפחת בביאן",
-      category: "family",
+      category: "family-friends",
       body:
         `משפחת אלון
 
@@ -807,13 +803,12 @@ window.LETTERS_DATA = {
 דרור אריה`,
       signature: ""
     },
-    {
-      id: "ext-8",
+    { id: "ext-8",
       title: "מכתב מהדודה הדיה",
       order: 28,
       from: "הדיה בביאן",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `אלוני
 
@@ -834,13 +829,12 @@ window.LETTERS_DATA = {
 הדיה`,
       signature: ""
     },
-    {
-      id: "ext-9",
+    { id: "ext-9",
       title: "מכתב מבן הדוד ישי",
       order: 29,
       from: "ישי טחויליאן",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `אלון
 
@@ -871,13 +865,12 @@ window.LETTERS_DATA = {
 ישי טחויליאן`,
       signature: ""
     },
-    {
-      id: "ext-10",
+    { id: "ext-10",
       title: "מכתב מסיגלית",
       order: 30,
       from: "סיגלית בביאן-חסידים",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `אלון
 
@@ -900,13 +893,12 @@ window.LETTERS_DATA = {
 סיגלית בביאן - חסידים`,
       signature: ""
     },
-    {
-      id: "ext-11",
+    { id: "ext-11",
       title: "מכתב מעופר, הנין הראשון",
       order: 31,
       from: "עופר בביאן",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `אלון
 
@@ -925,13 +917,12 @@ window.LETTERS_DATA = {
 עופר בביאן`,
       signature: ""
     },
-    {
-      id: "ext-12",
+    { id: "ext-12",
       title: "אלוני - רק שלי",
       order: 32,
       from: "ציונה בביאן",
       to: "אלון",
-      category: "family",
+      category: "family-friends",
       body:
         `אלוני - רק שלי
 
@@ -1110,7 +1101,7 @@ window.LETTERS_DATA = {
       id: "army-3",
       title: "דברי מח\"ט גולני",
       order: 36,
-      from: "ארז גרשטיין",
+      from: "ארז גרשטיין ז״ל",
       to: "",
       category: "army",
       body:
@@ -1233,7 +1224,7 @@ window.LETTERS_DATA = {
       title: "מכתב הרמטכ\"ל למשפחה",
       dateLabel: "ממשרד הביטחון, לאחר נפילתו",
       order: 42,
-      from: "אמנון ליפקין-שחק, הרמטכ״ל",
+      from: "אמנון ליפקין-שחק ז״ל, הרמטכ״ל",
       to: "המשפחה",
       category: "army",
       body:
@@ -1511,13 +1502,12 @@ window.LETTERS_DATA = {
 צבירת כוח כזו ועידון רצוני כזה בנפש אחת, שולח את קוויו אלינו, אל סביבתו הקרובה, ובודאי אל אוצר חייה של האומה, ובונה את התוכן של הרצון הבחירי של יחידיה ביתר שאת, ובודאי מרחיב את עילוי חייהם של הקרובים לו ביותר. עילוי חיים זה שקיבלנו מאלון חי בנו, משפיע עלינו ובונה אותנו — ובזה שמחתנו, נחמתנו.`,
       signature: ""
     },
-    {
-      id: "art-5",
+    { id: "art-5",
       title: "מותר לשאול",
       order: 52,
       from: "יוסף אלמליח",
       to: "",
-      category: "articles",
+      category: "family-friends",
       body:
         `"ויחל משה את פני ה' אלוקיו וכו'"
 
@@ -1611,8 +1601,14 @@ window.LETTERS_DATA = {
 
   window.letterDisplayTitle = function (letter) {
     var a = authorOf(letter);
+    // Title is only "מכתב מ..." / "שיר מ..." — role stays in the meta line.
     if (a && a.title) return a.title;
-    if (a && a.name && a.role) return "מכתב מ" + a.name + ", " + a.role;
+    if (a && a.name) {
+      if (letter && (letter.id === "wr-5" || letter.id === "wr-6")) {
+        return "שיר מ" + a.name;
+      }
+      return "מכתב מ" + a.name;
+    }
     return (letter && letter.title) || "";
   };
 
