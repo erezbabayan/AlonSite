@@ -365,6 +365,9 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   font-size: 1.12rem;
   line-height: 1.8;
   color: #585f65;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: start;
   hyphens: none;
   text-wrap: pretty;
 }
@@ -598,6 +601,7 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   color: #1A2E44;
   margin: 0 0 0.95rem;
   text-align: justify;
+  text-justify: inter-word;
   text-align-last: start;
   hyphens: none;
   text-wrap: pretty;
@@ -676,9 +680,19 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   line-height: 1.8;
   color: #585f65;
   text-align: justify;
+  text-justify: inter-word;
   text-align-last: start;
   hyphens: none;
   text-wrap: pretty;
+}
+
+/* Continuation after an image cluster: leave the float behind and reclaim the
+   full spine column (not the half-measure left beside the photo). */
+.life-spine-aside + p,
+.life-spine-text > .life-spine-aside ~ p {
+  clear: both;
+  max-width: none;
+  width: 100%;
 }
 
 .life-spine-text > p:last-child,
