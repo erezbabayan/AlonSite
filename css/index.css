@@ -594,7 +594,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 .life-spine-lead {
   display: flow-root;
   max-width: none;
-  width: 100%;
   font-size: 1.25rem;
   font-style: italic;
   line-height: 1.7;
@@ -664,17 +663,16 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   min-width: 0;
 }
 
-/* Full-width chapter prose. `display: flow-root` keeps a paragraph that sits
-   beside a floated photo from running under the float's margin box — it takes
-   whatever width is left next to the image cluster. Once the float clears
-   (continuation paragraphs after an aside), the same rule spans the full
-   content column with no artificial max-width. */
+/* Chapter prose. `display: flow-root` + auto width (no width:100%) is what lets
+   a paragraph sit *beside* a floated photo at the remaining measure — a definite
+   100% width won't fit next to the float and drops below it. `max-width: none`
+   removes the old 42rem cap so once the float clears, continuation lines reclaim
+   the full spine column instead of a narrow RTL strip with empty left margin. */
 .life-spine-text > p,
 .life-spine-copy > p,
 .life-spine-aside-copy p {
   display: flow-root;
   max-width: none;
-  width: 100%;
   margin: 0 0 1rem;
   font-size: 1.12rem;
   line-height: 1.8;
@@ -686,13 +684,11 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   text-wrap: pretty;
 }
 
-/* Continuation after an image cluster: leave the float behind and reclaim the
-   full spine column (not the half-measure left beside the photo). */
+/* Continuation after an image cluster: clear the float and span the full column. */
 .life-spine-aside + p,
 .life-spine-text > .life-spine-aside ~ p {
   clear: both;
   max-width: none;
-  width: 100%;
 }
 
 .life-spine-text > p:last-child,
