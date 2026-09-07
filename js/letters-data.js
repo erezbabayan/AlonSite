@@ -2,7 +2,7 @@
 // "מכתבים-וכתבים-של-אלון.docx" and split/lightly punctuation-cleaned in
 // content/letters-draft/02-letters-combined.md (source of truth for the raw
 // text; regenerate this file from there, do not hand-edit the `body` fields).
-//
+/
 // Most items have no exact date in the source, so `date` (real ISO, used for
 // display + as a sort fallback) is set only where the text itself states one.
 // `dateLabel` carries a free-text timing note (e.g. "בשבעה", "תשנ\"ג") instead
@@ -25,8 +25,8 @@ window.LETTERS_DATA = {
     "wr-2": { name: "אלון", role: "עלון המכינה", title: "מאמר של אלון — קווים לדמותו של המנהיג" },
     "wr-3": { name: "אלון", role: "בשיחה עם אביו", title: "אלון בשיחה עם אביו" },
     "wr-4": { name: "אלון", role: "בראיון מהבופור", title: "אלון בראיון מהבופור" },
-    "wr-5": { name: "אלון", role: "שיר שכתב", title: "שיר מאלון — שיר מחאה של הנינים" },
-    "wr-6": { name: "אלון", role: "שיר שכתב", title: "שיר מאלון — עץ האלון" },
+    "wr-5": { name: "אלון", role: "שיר שכתב", title: "שיר של אלון — שיר מחאה של הנינים" },
+    "wr-6": { name: "אלון", role: "שיר שכתב", title: "שיר של אלון — עץ האלון" },
     "wr-7": { name: "אלון", role: "לרב רפי פרץ, ראש המכינה", title: "מכתב מאלון לרב רפי פרץ, ראש המכינה" },
     "fam-1": { name: "ראובן", role: "אביו של אלון" },
     "fam-2": { name: "חנה", role: "אימו של אלון" },
@@ -1590,6 +1590,16 @@ window.LETTERS_DATA = {
 
   window.letterAuthor = authorOf;
 
+  // Legacy "שיר מ{name}" → "שיר של {name}" (songs by Alon / others).
+  function normalizeSongTitle(title, name) {
+    if (!title || !name) return title;
+    var legacy = "שיר מ" + name;
+    if (title.indexOf(legacy) === 0) {
+      return "שיר של " + name + title.slice(legacy.length);
+    }
+    return title;
+  }
+
   window.letterDisplayTitle = function (letter) {
     var a = authorOf(letter);
     var isArticle = letter && letter.category === "articles";
@@ -1603,7 +1613,14 @@ window.LETTERS_DATA = {
         ? articleTitle.slice(letterPrefix.length)
         : articleTitle;
     }
-    if (a && a.title) return a.title;
+    if (a && a.title) return normalizeSongTitle(a.title, a.name);
+    if (a && a.name && a.role && /שיר/.test(a.role)) {
+      var songName = (letter && letter.title) || "";
+      songName = songName.replace(/\s*\(שיר\)\s*$/, "").trim();
+      return songName
+        ? "שיר של " + a.name + " — " + songName
+        : "שיר של " + a.name;
+    }
     if (a && a.name && a.role) return letterPrefix + a.name + ", " + a.role;
     return (letter && letter.title) || "";
   };

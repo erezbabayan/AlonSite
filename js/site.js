@@ -1,16 +1,16 @@
-// Shared behavior for the memorial site: candle-lighting (backed by a JSON
-// file on the server via /api/candles, shared across all visitors), mobile
-// nav toggle, and the share button. Included by index.html and gallery.html.
+/ Shared behavior for the memorial site: candle-lighting (backed by a JSON
+/ file on the server via /api/candles, shared across all visitors), mobile
+/ nav toggle, and the share button. Included by index.html and gallery.html.
 (function () {
   "use strict";
 
-  // ---------------------------------------------------------------------
-  // Candles
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Candles
+  / ---------------------------------------------------------------------
 
   let candlesCache = [];
 
-  const CANDLES_PAGE_SIZE = 18; // cards per "show more" batch, fits 3 grid columns x 6 rows
+  const CANDLES_PAGE_SIZE = 18; / cards per "show more" batch, fits 3 grid columns x 6 rows
   let visibleCandleCount = CANDLES_PAGE_SIZE;
   const CANDLES_LOCAL_KEY = "alon-memorial-candles";
 
@@ -178,9 +178,9 @@
     modal.classList.remove("hidden");
     modal.classList.add("flex");
     document.body.style.overflow = "hidden";
-    // Deliberately no autofocus on the name field: it popped the mobile
-    // keyboard open and hid the dialog's text. Escape still closes (the
-    // keydown listener is on document), and the fields are one tap away.
+    / Deliberately no autofocus on the name field: it popped the mobile
+    / keyboard open and hid the dialog's text. Escape still closes (the
+    / keydown listener is on document), and the fields are one tap away.
   }
 
   function closeModal() {
@@ -260,19 +260,19 @@
     }
   }
 
-  // ---------------------------------------------------------------------
-  // Mobile nav
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Mobile nav
+  / ---------------------------------------------------------------------
 
-  // ---------------------------------------------------------------------
-  // Nav height
-  // The fixed top nav is normally one line (~4rem), but wraps to two lines
-  // on narrow screens once the site title no longer fits — anything that
-  // assumes a fixed nav height (main's top padding, the sticky filter bar,
-  // anchor scroll offsets) would otherwise sit partly hidden underneath it.
-  // Measuring the real height and exposing it as --nav-h keeps all of that
-  // correct regardless of title length, viewport width, or font load timing.
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Nav height
+  / The fixed top nav is normally one line (~4rem), but wraps to two lines
+  / on narrow screens once the site title no longer fits — anything that
+  / assumes a fixed nav height (main's top padding, the sticky filter bar,
+  / anchor scroll offsets) would otherwise sit partly hidden underneath it.
+  / Measuring the real height and exposing it as --nav-h keeps all of that
+  / correct regardless of title length, viewport width, or font load timing.
+  / ---------------------------------------------------------------------
   function setupNavHeightVar() {
     const nav = document.querySelector("nav");
     if (!nav) return;
@@ -309,12 +309,12 @@
     });
   }
 
-  // ---------------------------------------------------------------------
-  // Single-media guard: only one audio/video should ever play at a time.
-  // Whenever any media element starts playing, pause every other one on the
-  // page (memorial videos, audio clips). "play" doesn't bubble, so this
-  // listens in the capture phase.
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Single-media guard: only one audio/video should ever play at a time.
+  / Whenever any media element starts playing, pause every other one on the
+  / page (memorial videos, audio clips). "play" doesn't bubble, so this
+  / listens in the capture phase.
+  / ---------------------------------------------------------------------
 
   function setupSingleMediaPlayback() {
     document.addEventListener(
@@ -331,15 +331,15 @@
     );
   }
 
-  // ---------------------------------------------------------------------
-  // Share button
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Share button
+  / ---------------------------------------------------------------------
 
-  const COPY_FEEDBACK_MS = 2000; // how long "link copied" replaces the button label
+  const COPY_FEEDBACK_MS = 2000; / how long "link copied" replaces the button label
 
-  // Clipboard API needs a secure context and can still be denied by browser
-  // policy (seen in practice: NotAllowedError even on https). This legacy
-  // technique works everywhere with no permissions involved.
+  / Clipboard API needs a secure context and can still be denied by browser
+  / policy (seen in practice: NotAllowedError even on https). This legacy
+  / technique works everywhere with no permissions involved.
   function legacyCopy(text) {
     const textarea = document.createElement("textarea");
     textarea.value = text;
@@ -380,9 +380,9 @@
       try {
         window.prompt("העתיקו את הקישור:", url);
       } catch (e) {
-        // Some embedded/restricted browsers disable prompt() outright —
-        // fall back to showing the raw link in the button so there's
-        // always something the visitor can select and copy by hand.
+        / Some embedded/restricted browsers disable prompt() outright —
+        / fall back to showing the raw link in the button so there's
+        / always something the visitor can select and copy by hand.
         btn.textContent = url;
       }
     }
@@ -404,11 +404,11 @@
     });
   }
 
-  // ---------------------------------------------------------------------
-  // Scroll-to-top button
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Scroll-to-top button
+  / ---------------------------------------------------------------------
 
-  const SCROLL_TOP_VISIBLE_AT_PX = 400; // how far down the page before the button appears
+  const SCROLL_TOP_VISIBLE_AT_PX = 400; / how far down the page before the button appears
 
   function setupScrollTopButton() {
     const btn = document.getElementById("scroll-top-btn");
@@ -427,18 +427,18 @@
     btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   }
 
-  // ---------------------------------------------------------------------
-  // Living-memorial dates: how long it's been, and when the next Hebrew-
-  // calendar yahrzeit (anniversary) falls. Both are derived at load time
-  // instead of hardcoded so the page stays accurate on every future visit.
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Living-memorial dates: how long it's been, and when the next Hebrew-
+  / calendar yahrzeit (anniversary) falls. Both are derived at load time
+  / instead of hardcoded so the page stays accurate on every future visit.
+  / ---------------------------------------------------------------------
 
-  // Death: 4 Feb 1997 = 28 Shevat 5757 (תשנ״ז). Years-since counts
-  // completed Hebrew yahrzeits (כ״ח בשבט), not the Gregorian anniversary.
+  / Death: 4 Feb 1997 = 28 Shevat 5757 (תשנ״ז). Years-since counts
+  / completed Hebrew yahrzeits (כ״ח בשבט), not the Gregorian anniversary.
   const DEATH_HEBREW_YEAR = 5757;
   const YAHRZEIT_HEBREW_MONTH = "Shevat";
   const YAHRZEIT_HEBREW_DAY = 28;
-  const YAHRZEIT_SEARCH_WINDOW_DAYS = 400; // comfortably more than one Hebrew year
+  const YAHRZEIT_SEARCH_WINDOW_DAYS = 400; / comfortably more than one Hebrew year
   const MS_PER_DAY = 86400000;
   const HEBREW_MONTH_ORDER = {
     Tishri: 1,
@@ -506,7 +506,7 @@
           yearsEl.textContent = `${years} שנים לאסון המסוקים`;
         }
       } catch (e) {
-        // Keep the HTML fallback (currently 29) if Hebrew calendar isn't available.
+        / Keep the HTML fallback (currently 29) if Hebrew calendar isn't available.
       }
     }
 
@@ -521,23 +521,23 @@
           yahrzeitEl.textContent = `יום השנה הבא (כ"ח בשבט) - ${dateLabel} · ${when}`;
         }
       } catch (e) {
-        // Hebrew-calendar Intl support isn't universal; leave the note
-        // blank rather than show something wrong.
+        / Hebrew-calendar Intl support isn't universal; leave the note
+        / blank rather than show something wrong.
       }
     }
   }
 
-  // ---------------------------------------------------------------------
-  // Scroll-reveal animations
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Scroll-reveal animations
+  / ---------------------------------------------------------------------
 
-  const REVEAL_INTERSECTION_THRESHOLD = 0.15; // fraction of the element visible before it reveals
+  const REVEAL_INTERSECTION_THRESHOLD = 0.15; / fraction of the element visible before it reveals
 
   function setupRevealAnimations() {
     const targets = document.querySelectorAll(".reveal");
     if (!targets.length || !("IntersectionObserver" in window)) return;
-    // Only hide-then-reveal once JS has actually run — if this script fails
-    // to load, content stays visible (no animation) instead of disappearing.
+    / Only hide-then-reveal once JS has actually run — if this script fails
+    / to load, content stays visible (no animation) instead of disappearing.
     targets.forEach((t) => t.classList.add("reveal-pending"));
     const observer = new IntersectionObserver(
       (entries) => {
@@ -554,14 +554,14 @@
     targets.forEach((t) => observer.observe(t));
   }
 
-  // ---------------------------------------------------------------------
-  // Life-spine photo crossfades + rotating quotes (chapters section).
-  // CSS keeps slides at opacity 0 until .is-active — this must run on load.
-  // Visible stations coordinate quote text so duplicates never show at once.
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Life-spine photo crossfades + rotating quotes (chapters section).
+  / CSS keeps slides at opacity 0 until .is-active — this must run on load.
+  / Visible stations coordinate quote text so duplicates never show at once.
+  / ---------------------------------------------------------------------
 
   const LIFE_SPINE_HOLD_MS = 6000;
-  // Must match the opacity transition on .crossfade-frame img in css/index.css.
+  / Must match the opacity transition on .crossfade-frame img in css/index.css.
   const LIFE_SPINE_FADE_MS = 1500;
 
   function setupLifeSpineCarousels() {
@@ -576,10 +576,10 @@
       if (!frame) return;
       const images = Array.from(frame.querySelectorAll("img"));
       if (!images.length) return;
-      // The quote lives beside the paragraphs now, not under the photo, so
-      // the search has to climb past the media block itself: for an aside
-      // that's the shared .life-spine-aside wrapper, for a chapter's lead
-      // photo it's .life-spine-body (the ancestor it shares with .life-spine-copy).
+      / The quote lives beside the paragraphs now, not under the photo, so
+      / the search has to climb past the media block itself: for an aside
+      / that's the shared .life-spine-aside wrapper, for a chapter's lead
+      / photo it's .life-spine-body (the ancestor it shares with .life-spine-copy).
       const quoteHost = container.closest(".life-spine-aside, .life-spine-body") || container;
       const quoteRotator =
         container.querySelector("[data-quote-rotate]") ||
@@ -647,8 +647,8 @@
       station.images.forEach((img, i) => {
         img.classList.toggle("is-active", i === imageIndex);
       });
-      // Hold the outgoing frame opaque beneath the incoming one until the fade
-      // finishes, so the dissolve never drops to the mat colour in the middle.
+      / Hold the outgoing frame opaque beneath the incoming one until the fade
+      / finishes, so the dissolve never drops to the mat colour in the middle.
       if (outgoing && outgoing !== incoming) {
         window.clearTimeout(station.leaveTimer);
         station.images.forEach((img) => {
@@ -715,11 +715,11 @@
     }
   }
 
-  // ---------------------------------------------------------------------
-  // Home-page nav scroll spy — keeps "פרקי חיים" / "הנצחה ומורשת" in the
-  // top nav underlined once their section is in view, matching how the
-  // nav already highlights the current page on every other page.
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Home-page nav scroll spy — keeps "פרקי חיים" / "הנצחה ומורשת" in the
+  / top nav underlined once their section is in view, matching how the
+  / nav already highlights the current page on every other page.
+  / ---------------------------------------------------------------------
 
   const NAV_DESKTOP_ACTIVE = ["is-active", "text-[#1A2E44]"];
   const NAV_DESKTOP_INACTIVE = ["text-[#585f65]", "hover:text-[#1A2E44]", "transition-colors", "duration-300"];
@@ -757,13 +757,13 @@
     sections.forEach((s) => observer.observe(s));
   }
 
-  // ---------------------------------------------------------------------
-  // Prominent nav (all pages) — every page opens with a navy header
-  // section right under <main>. Once that header scrolls out of view the
-  // translucent nav flips to a solid navy band so it stays impossible to
-  // miss, reminding visitors there's a full nav's worth of other pages up
-  // there rather than just this one page's scroll.
-  // ---------------------------------------------------------------------
+  / ---------------------------------------------------------------------
+  / Prominent nav (all pages) — every page opens with a navy header
+  / section right under <main>. Once that header scrolls out of view the
+  / translucent nav flips to a solid navy band so it stays impossible to
+  / miss, reminding visitors there's a full nav's worth of other pages up
+  / there rather than just this one page's scroll.
+  / ---------------------------------------------------------------------
 
   function setupNavProminentOnScroll() {
     const nav = document.querySelector("nav");

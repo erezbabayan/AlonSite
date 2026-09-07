@@ -1,13 +1,13 @@
 <?php
-// Lightweight visit-notification beacon. Embedded as a 1x1 tracking pixel
-// near the top of every page (see the <img src="notify-visit.php?page=...">
-// tag right after <body>). Emails the site owner on every single hit — no
-// dedup or bot-filtering, by design: the owner asked to be notified of
-// every visit, however frequent.
-//
-// Requires PHP + a working mail() transport on the host. This repo's local
-// dev server (server.js) is plain Node and cannot execute this file —
-// it only works once deployed to real PHP hosting.
+/ Lightweight visit-notification beacon. Embedded as a 1x1 tracking pixel
+/ near the top of every page (see the <img src="notify-visit.php?page=...">
+/ tag right after <body>). Emails the site owner on every single hit — no
+/ dedup or bot-filtering, by design: the owner asked to be notified of
+/ every visit, however frequent.
+/
+/ Requires PHP + a working mail() transport on the host. This repo's local
+/ dev server (server.js) is plain Node and cannot execute this file —
+/ it only works once deployed to real PHP hosting.
 
 $to = "roeygol@gmail.com, erezbabayan@gmail.com";
 
@@ -38,9 +38,9 @@ $headers = "From: no-reply@{$domain}\r\n"
 
 @mail($to, $subject, $body, $headers);
 
-// Always respond with a real 1x1 transparent GIF so the <img> beacon never
-// shows a broken-image icon, regardless of whether the mail() call above
-// succeeded.
+/ Always respond with a real 1x1 transparent GIF so the <img> beacon never
+/ shows a broken-image icon, regardless of whether the mail() call above
+/ succeeded.
 header("Content-Type: image/gif");
 header("Cache-Control: no-store, no-cache, must-revalidate");
-echo base64_decode("R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==");
+echo base64_decode("R0lGODlhAQABAIAAAAAAAP//ywAAAAAAQABAAACAUwAOw==");

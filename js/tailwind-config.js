@@ -1,7 +1,7 @@
-// Shared Tailwind theme (design tokens) for the memorial site. Included by
-// index.html, gallery.html, sections.html, and letters.html so the palette,
-// radii, and font stack stay a single source of truth instead of being
-// duplicated per page.
+/ Shared Tailwind theme (design tokens) for the memorial site. Included by
+/ index.html, gallery.html, sections.html, and letters.html so the palette,
+/ radii, and font stack stay a single source of truth instead of being
+/ duplicated per page.
 tailwind.config = {
   darkMode: "class",
   theme: {
@@ -39,7 +39,7 @@ tailwind.config = {
         "on-primary": "#ffffff",
         "tertiary-fixed": "#f1e0cc",
         "inverse-surface": "#30312e",
-        primary: "#1A2E44", // Navy from Eternal Grace
+        primary: "#1A2E44", / Navy from Eternal Grace
         "primary-fixed": "#d1e4ff",
         "inverse-on-surface": "#f2f1ec",
         "error-container": "#ffdad6",
@@ -49,18 +49,18 @@ tailwind.config = {
         "on-primary-fixed": "#061d32",
         "on-secondary-fixed-variant": "#41484e",
         "on-tertiary": "#ffffff",
-        background: "#eef0f2", // Cool slate-grey (was warm cream)
+        background: "#eef0f2", / Cool slate-grey (was warm cream)
         "secondary-fixed": "#dce3eb",
         "outline-variant": "#c4c6cd",
         "secondary-fixed-dim": "#c0c7ce",
         secondary: "#585f65",
-        "accent-gold": "#7C8CA0", // Dusty slate-blue (was gold)
+        "accent-gold": "#7C8CA0", / Dusty slate-blue (was gold)
       },
-      // Deliberately squarer than Tailwind's defaults. Note that `full` is
-      // remapped to 0.75rem, so `rounded-full` does NOT produce a circle or a
-      // pill here — it's just the largest step on this scale, which is what
-      // the wide text buttons want. Anything that must actually be round
-      // (spinners, icon buttons, glow blobs) uses `rounded-[50%]` instead.
+      / Deliberately squarer than Tailwind's defaults. Note that `full` is
+      / remapped to 0.75rem, so `rounded-full` does NOT produce a circle or a
+      / pill here — it's just the largest step on this scale, which is what
+      / the wide text buttons want. Anything that must actually be round
+      / (spinners, icon buttons, glow blobs) uses `rounded-[50%]` instead.
       borderRadius: {
         DEFAULT: "0.125rem",
         lg: "0.25rem",

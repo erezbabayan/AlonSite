@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  // The memorial video plays inside a modal rather than sending visitors off
-  // to YouTube. The iframe src is only set on open (and cleared on close) so
-  // the embed never loads — or keeps playing — while the modal is closed.
+  / The memorial video plays inside a modal rather than sending visitors off
+  / to YouTube. The iframe src is only set on open (and cleared on close) so
+  / the embed never loads — or keeps playing — while the modal is closed.
   function initVideoModal() {
     const modal = document.getElementById("legacy-video-modal");
     const frame = document.getElementById("legacy-video-frame");
@@ -18,7 +18,7 @@
       if (!id) return;
 
       frame.src =
-        "https://www.youtube-nocookie.com/embed/" +
+        "https:/KEEP:/www.youtube-nocookie.com/embed/" +
         encodeURIComponent(id) +
         "?autoplay=1&rel=0";
       titleEl.textContent = trigger.getAttribute("data-title") || "";
@@ -131,7 +131,7 @@
     document.addEventListener("keydown", (e) => {
       if (modal.classList.contains("hidden")) return;
       if (e.key === "Escape") closeModal();
-      // RTL: right arrow = previous, left arrow = next.
+      / RTL: right arrow = previous, left arrow = next.
       if (e.key === "ArrowRight") showImage(currentIndex - 1);
       if (e.key === "ArrowLeft") showImage(currentIndex + 1);
     });
