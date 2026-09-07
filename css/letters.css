@@ -21,6 +21,9 @@
 .letter-card[data-category="family"] {
     background: linear-gradient(180deg, #fff9f4 0%, #f4e6d8 100%);
 }
+.letter-card[data-category="family-circle"] {
+    background: linear-gradient(180deg, #faf7f2 0%, #efe6da 100%);
+}
 .letter-card[data-category="friends"] {
     background: linear-gradient(180deg, #f6faf5 0%, #e4efe3 100%);
 }
@@ -100,6 +103,7 @@
     box-shadow: 0 10px 18px -14px rgba(27, 28, 25, 0.28);
 }
 #reader-card[data-category="family"] .reader-header { background-color: #fff9f4; }
+#reader-card[data-category="family-circle"] .reader-header { background-color: #faf7f2; }
 #reader-card[data-category="friends"] .reader-header { background-color: #f6faf5; }
 #reader-card[data-category="army"] .reader-header { background-color: #f5f6f0; }
 #reader-card[data-category="articles"] .reader-header { background-color: #f5f7fb; }

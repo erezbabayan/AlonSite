@@ -167,7 +167,8 @@
 
 /* The vow reads as an inscription rather than a heading: a touch larger
    than it was, a lighter weight, and the letters opened up so the line
-   carries by spacing instead of by boldness. */
+   carries by spacing instead of by boldness. The name and the acrostic
+   initials (א־ל־ו־נ) carry the weight — navy on the gold inscription. */
 #hero .hero-remembrance {
     margin: 0 0 1.7rem;
     font-size: clamp(1.18rem, 0.75vw + 0.92rem, 1.45rem);
@@ -175,6 +176,19 @@
     line-height: 1.55;
     letter-spacing: 0.07em;
     color: #C9A34E;
+}
+
+#hero .hero-remembrance-name {
+    font-weight: 700;
+    font-size: 1.22em;
+    letter-spacing: 0.04em;
+    color: #1A2E44;
+}
+
+#hero .acrostic-letter {
+    font-weight: 700;
+    font-size: 1.14em;
+    color: #1A2E44;
 }
 
 #hero .hero-quote-block {
@@ -365,6 +379,8 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   font-size: 1.12rem;
   line-height: 1.8;
   color: #585f65;
+  text-align: justify;
+  text-justify: inter-word;
   hyphens: none;
   text-wrap: pretty;
 }
@@ -384,18 +400,6 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   margin: 0;
   max-width: none;
   width: 100%;
-}
-
-/* The photo's own caption — a real cutline naming whichever frame is
-   currently showing (site.js keeps it in sync with the crossfade), not the
-   rotating quote below. Keeping these separate is what stops a photo from
-   ever looking captioned by a sentence that has nothing to do with it. */
-.life-spine-caption {
-  margin: 0.55rem 0 0;
-  font-size: 0.82rem;
-  font-style: italic;
-  line-height: 1.5;
-  color: #7C8CA0;
 }
 
 /* Rotating pull-quotes: relocated into the body copy (a sibling of the
@@ -589,12 +593,16 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-lead {
+  display: flow-root;
+  max-width: none;
   font-size: 1.25rem;
   font-style: italic;
   line-height: 1.7;
   color: #1A2E44;
   margin: 0 0 0.95rem;
-  text-align: start;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: start;
   hyphens: none;
   text-wrap: pretty;
 }
@@ -656,28 +664,32 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   min-width: 0;
 }
 
-/* One readable measure across a chapter, whether a paragraph sits beside a
-   photo or clear of one. Both declarations are needed and neither works alone:
-   `max-width` by itself leaves the full-width box anchored under the float, so
-   the float eats most of it and the line collapses; `display: flow-root` makes
-   the paragraph a block formatting context, which the spec keeps from
-   overlapping a float's margin box, so the box is placed beside the photo at
-   whatever room is left instead of running underneath it. Together they yield
-   three honest columns — beside a chapter photo, beside an aside photo, and
-   clear of both — rather than a jump from a narrow column to the full body
-   width, which stranded short continuation paragraphs as one very long line. */
+/* Chapter prose. `display: flow-root` + auto width (no width:100%) is what lets
+   a paragraph sit *beside* a floated photo at the remaining measure — a definite
+   100% width won't fit next to the float and drops below it. `max-width: none`
+   removes the old 42rem cap so once the float clears, continuation lines reclaim
+   the full spine column instead of a narrow RTL strip with empty left margin. */
 .life-spine-text > p,
 .life-spine-copy > p,
 .life-spine-aside-copy p {
   display: flow-root;
-  max-width: 42rem;
+  max-width: none;
   margin: 0 0 1rem;
   font-size: 1.12rem;
   line-height: 1.8;
   color: #585f65;
-  text-align: start;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: start;
   hyphens: none;
   text-wrap: pretty;
+}
+
+/* Continuation after an image cluster: clear the float and span the full column. */
+.life-spine-aside + p,
+.life-spine-text > .life-spine-aside ~ p {
+  clear: both;
+  max-width: none;
 }
 
 .life-spine-text > p:last-child,
