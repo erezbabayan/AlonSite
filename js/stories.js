@@ -100,7 +100,7 @@
           return '<p class="mb-4 last:mb-0">' + escapeHtml(p) + "</p>";
         })
         .join("");
-      if (readerCounter) readerCounter.textContent = (readerIndex + 1) + " // " + stories.length;
+      if (readerCounter) readerCounter.textContent = (readerIndex + 1) + " / " + stories.length;
       if (readerScroll) readerScroll.scrollTop = 0;
       else readerCard.scrollTop = 0;
       readerCard.classList.add("reader-card-visible");

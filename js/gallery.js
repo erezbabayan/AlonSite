@@ -65,7 +65,7 @@
     // aspect-ratio (from the real pixel dimensions gallery-data.js records
     // per photo) reserves the frame's true height up front, so the layout
     // pass below can measure accurate heights before any image has loaded.
-    const ratio = img.w && img.h ? `${img.w} // ${img.h}` : "3 // 4";
+    const ratio = img.w && img.h ? `${img.w} / ${img.h}` : "3 / 4";
     return `
       <div class="masonry-item">
         <button data-index="${index}" class="gallery-thumb group relative block w-full">
@@ -244,7 +244,7 @@
       lightboxImg.src = img.full;
       lightboxImg.alt = img.alt;
       lightboxLabel.textContent = img.categoryLabel;
-      lightboxCounter.textContent = `${lightboxIndex + 1} // ${visibleImages.length}`;
+      lightboxCounter.textContent = `${lightboxIndex + 1} / ${visibleImages.length}`;
       lightboxSpinner.classList.remove("hidden");
       lightboxSpinner.classList.add("flex");
     };

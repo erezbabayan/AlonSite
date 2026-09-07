@@ -35,7 +35,7 @@
     try {
       localStorage.setItem(CANDLES_LOCAL_KEY, JSON.stringify(list));
     } catch (e) {
-      /* private mode // quota */
+      /* private mode / quota */
     }
   }
 
@@ -716,7 +716,7 @@
   }
 
   // ---------------------------------------------------------------------
-  // Home-page nav scroll spy — keeps "פרקי חיים" // "הנצחה ומורשת" in the
+  // Home-page nav scroll spy — keeps "פרקי חיים" / "הנצחה ומורשת" in the
   // top nav underlined once their section is in view, matching how the
   // nav already highlights the current page on every other page.
   // ---------------------------------------------------------------------

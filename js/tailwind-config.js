@@ -67,13 +67,16 @@ tailwind.config = {
         xl: "0.5rem",
         full: "0.75rem",
       },
+      // Reads the font tokens defined in css/shared.css (--font-sans,
+      // --font-handwritten) instead of naming a font here, so swapping the
+      // site's typeface only ever means editing that one :root block.
       fontFamily: {
-        serif: ["Assistant", "sans-serif"],
-        sans: ["Assistant", "sans-serif"],
-        headline: ["Assistant", "sans-serif"],
-        body: ["Assistant", "sans-serif"],
-        label: ["Assistant", "sans-serif"],
-        handwritten: ["Playpen Sans", "Assistant", "cursive"],
+        serif: ["var(--font-sans)"],
+        sans: ["var(--font-sans)"],
+        headline: ["var(--font-sans)"],
+        body: ["var(--font-sans)"],
+        label: ["var(--font-sans)"],
+        handwritten: ["var(--font-handwritten)"],
       },
     },
   },

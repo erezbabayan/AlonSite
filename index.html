@@ -23,10 +23,11 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&amp;family=Playpen+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="/AlonSite/js/tailwind-config.js?v=20260831q"></script>
+<!-- Font family/weights here must match css/shared.css --font-sans (see "Changing the site font" in CLAUDE.md) -->
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&amp;family=Playpen+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="/AlonSite/js/tailwind-config.js?v=20260906a"></script>
 <script src="/AlonSite/js/gallery-data.js?v=20260902a" defer></script>
-<link href="/AlonSite/css/shared.css?v=20260831q" rel="stylesheet"/>
+<link href="/AlonSite/css/shared.css?v=20260906a" rel="stylesheet"/>
 <link href="/AlonSite/css/index.css?v=20260907c" rel="stylesheet"/>
 <script type="application/ld+json">
 {
@@ -711,10 +712,10 @@
 </div>
 <script src="/AlonSite/js/site.js?v=20260907a"></script>
 <script>
-/ Home gallery preview: reshuffle the 10 thumbnails on every page load, drawn
-/ from the auto-generated GALLERY_DATA so the strip never goes stale as photos
-/ are added. Only the "life" categories are used — the section promises
-/ "ילדות, חברים, שירות צבאי ומשפחה", not the funeral/commemoration sets.
+// Home gallery preview: reshuffle the 10 thumbnails on every page load, drawn
+// from the auto-generated GALLERY_DATA so the strip never goes stale as photos
+// are added. Only the "life" categories are used — the section promises
+// "ילדות, חברים, שירות צבאי ומשפחה", not the funeral/commemoration sets.
 (function () {
   var LIFE_CATEGORIES = ['childhood', 'bar-mitzvah', 'friends', 'army', 'family'];
 
@@ -729,8 +730,8 @@
   function pick(count) {
     var data = window.GALLERY_DATA;
     if (!data || !data.categories) return [];
-    / One pool per category, each already shuffled, so drawing round-robin
-    / spreads the 10 across as many chapters of his life as possible.
+    // One pool per category, each already shuffled, so drawing round-robin
+    // spreads the 10 across as many chapters of his life as possible.
     var pools = shuffle(data.categories
       .filter(function (cat) {
         return LIFE_CATEGORIES.indexOf(cat.key) !== -1 && cat.images && cat.images.length;
@@ -755,7 +756,7 @@
     if (!grid) return;
     var frames = grid.querySelectorAll('img');
     var picked = pick(frames.length);
-    if (picked.length < frames.length) return; / keep the static fallback
+    if (picked.length < frames.length) return; // keep the static fallback
     for (var i = 0; i < frames.length; i++) {
       frames[i].src = picked[i].img.thumb;
       frames[i].alt = 'אלון ז״ל — ' + picked[i].label;
@@ -779,9 +780,9 @@
     slides[i].classList.remove('hero-bg-img-active');
     i = (i + 1) % slides.length;
     slides[i].classList.add('hero-bg-img-active');
-    / Each frame carries its own caption: only the Beaufort photographs are
-    / dated, so one fixed line would put a place and a date on the first
-    / slide that we don't actually know.
+    // Each frame carries its own caption: only the Beaufort photographs are
+    // dated, so one fixed line would put a place and a date on the first
+    // slide that we don't actually know.
     if (caption && slides[i].dataset.caption) caption.textContent = slides[i].dataset.caption;
   }, 5000);
 })();

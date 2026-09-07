@@ -51,12 +51,12 @@
     padding-block: 0.15rem;
 }
 .letter-body {
-    font-family: "Assistant", sans-serif;
+    font-family: var(--font-sans);
     font-style: italic;
     line-height: 1.85;
 }
 .letter-signature {
-    font-family: "Assistant", sans-serif;
+    font-family: var(--font-sans);
     font-style: italic;
     font-weight: 600;
 }

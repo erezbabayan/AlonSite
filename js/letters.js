@@ -153,7 +153,7 @@
         .map((p) => `<p class="mb-4 last:mb-0">${escapeHtml(p)}</p>`)
         .join("");
       readerSignature.textContent = letter.signature || "";
-      readerCounter.textContent = `${readerIndex + 1} // ${visibleLetters.length}`;
+      readerCounter.textContent = `${readerIndex + 1} / ${visibleLetters.length}`;
       if (readerScroll) readerScroll.scrollTop = 0;
       readerCard.classList.add("reader-card-visible");
     }, READER_SWAP_DELAY_MS);

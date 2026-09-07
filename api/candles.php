@@ -1,6 +1,10 @@
 <?php
 header("Content-Type: application/json; charset=utf-8");
-header("Access-Control-Allow-Origin: *");
+// Scoped to the site's own origin rather than "*" — this endpoint has no
+// auth, so a wildcard would let any third-party page drive it (read or
+// post candles) using a visitor's browser with no server-side signal to
+// tell that traffic apart from the real site.
+header("Access-Control-Allow-Origin: https://alonb.com");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 

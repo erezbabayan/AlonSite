@@ -4,13 +4,33 @@
    rules belong in that page's own css/<page>.css instead. */
 
 /* ---------------------------------------------------------------------
+   Font tokens — the ONE place to change when swapping the site's typeface.
+   Every font-family rule on the site (here and in the page-specific
+   stylesheets) reads one of these variables instead of a literal font name,
+   and js/tailwind-config.js points its fontFamily config at the same
+   variables, so Tailwind utilities (font-sans, font-headline, font-body,
+   font-label, font-serif) pick up the change too without editing that file.
+   The one thing a variable can't reach: the Google Fonts <link> repeated in
+   every page's <head> still has to be updated by hand (see the comment
+   next to it, and "Changing the site font" in CLAUDE.md) since there's no
+   shared include to hold it.
+   --------------------------------------------------------------------- */
+:root {
+    --font-sans: "Heebo", sans-serif;
+    --font-handwritten: "Playpen Sans", "Heebo", cursive;
+    /* Not the brand font — just a decorative quotation-mark glyph on the
+       letter/story cards, kept independent of --font-sans on purpose. */
+    --font-decorative-quote: Georgia, "Times New Roman", serif;
+}
+
+/* ---------------------------------------------------------------------
    Base
    --------------------------------------------------------------------- */
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 body {
-    font-family: 'Assistant', sans-serif;
+    font-family: var(--font-sans);
     background-color: #eef0f2;
 }
 html {

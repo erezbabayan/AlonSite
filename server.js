@@ -10,6 +10,11 @@ var path = require("path");
 
 var DEFAULT_PORT = 8420;
 var PORT = process.env.PORT || DEFAULT_PORT;
+// Defaults to loopback-only: this server has no auth and will happily hand
+// out any file under ROOT (see the dotfile guard below), so it shouldn't be
+// reachable from other devices on the network by default. Set HOST=0.0.0.0
+// (e.g. to test from a phone on the same wifi) only on a network you trust.
+var HOST = process.env.HOST || "127.0.0.1";
 var ROOT = __dirname;
 var CANDLES_FILE = path.join(ROOT, "data", "candles.json");
 
@@ -47,6 +52,23 @@ function readCandles() {
 function writeCandles(candles) {
   fs.mkdirSync(path.dirname(CANDLES_FILE), { recursive: true });
   fs.writeFileSync(CANDLES_FILE, JSON.stringify(candles, null, 2));
+}
+
+// Node runs this single-threaded, but the read-modify-write below spans an
+// await-free tick boundary (readCandles/writeCandles are sync, but the
+// caller reaches here from an async "end" event), so two POSTs whose events
+// land back-to-back can still interleave and the second write can clobber
+// the first. This chain forces every append to wait for the previous one,
+// matching the flock()-based locking api/candles.php already does.
+var candleWriteQueue = Promise.resolve();
+
+function appendCandle(entry) {
+  candleWriteQueue = candleWriteQueue.then(function () {
+    var candles = readCandles();
+    candles.push(entry);
+    writeCandles(candles);
+  });
+  return candleWriteQueue;
 }
 
 function sendJson(res, status, body) {
@@ -87,11 +109,10 @@ function handlePostCandle(req, res) {
       sendJson(res, 400, { error: "name is required" });
       return;
     }
-    var candles = readCandles();
     var entry = { name: name, message: message, date: new Date().toISOString() };
-    candles.push(entry);
-    writeCandles(candles);
-    sendJson(res, 201, entry);
+    appendCandle(entry).then(function () {
+      sendJson(res, 201, entry);
+    });
   });
 }
 
@@ -100,8 +121,22 @@ function serveStaticFile(req, res) {
   if (urlPath === "/") urlPath = "/AlonSite/index.html";
   var filePath = path.normalize(path.join(ROOT, urlPath));
 
-  // Guard against path traversal outside the site root.
-  if (filePath.indexOf(ROOT) !== 0) {
+  // Guard against path traversal outside the site root. Compared with the
+  // separator appended so a sibling directory that merely starts with the
+  // same characters as ROOT (e.g. "AlonSite-backup") can't slip through a
+  // bare indexOf(ROOT) === 0 prefix check.
+  if (filePath !== ROOT && filePath.indexOf(ROOT + path.sep) !== 0) {
+    res.writeHead(403);
+    res.end("Forbidden");
+    return;
+  }
+
+  // Dotfiles/dot-directories (.git, .env, .claude, ...) are never meant to
+  // be public, regardless of MIME type — this server has no other access
+  // control, so it must not hand out repo internals to anyone who requests
+  // them by path.
+  var segments = urlPath.split("/");
+  if (segments.some(function (seg) { return seg.length > 1 && seg[0] === "."; })) {
     res.writeHead(403);
     res.end("Forbidden");
     return;
@@ -164,6 +199,6 @@ var server = http.createServer(function (req, res) {
   serveStaticFile(req, res);
 });
 
-server.listen(PORT, function () {
-  console.log("Server running at http://localhost:" + PORT);
+server.listen(PORT, HOST, function () {
+  console.log("Server running at http://" + HOST + ":" + PORT);
 });
