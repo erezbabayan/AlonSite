@@ -91,13 +91,9 @@
       readerTitle.textContent = window.letterDisplayTitle
         ? window.letterDisplayTitle(letter)
         : letter.title || "";
-      var metaParts = [];
-      var fromText = displayFrom(story, letter);
-      if (fromText) metaParts.push("מאת " + fromText);
-      if (letter.to) metaParts.push("אל " + letter.to);
+      // Author/recipient byline intentionally omitted — title already carries that context.
       var dateText = window.letterDisplayDate ? window.letterDisplayDate(letter) : letter.dateLabel;
-      if (dateText) metaParts.push(dateText);
-      readerMeta.textContent = metaParts.join(" · ");
+      readerMeta.textContent = dateText || "";
       readerBody.innerHTML = (letter.body || "")
         .split(/\n\n+/)
         .map(function (p) {

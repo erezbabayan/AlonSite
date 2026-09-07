@@ -11,6 +11,7 @@
 window.LETTERS_DATA = {
   categories: [
     { key: "family", label: "משפחה" },
+    { key: "family-circle", label: "חברי המשפחה" },
     { key: "friends", label: "חברים" },
     { key: "army", label: "צבא" },
     { key: "articles", label: "מאמרים" },
@@ -78,7 +79,7 @@ window.LETTERS_DATA = {
     {
       id: "wr-1",
       title: "מכתב לדקלה מהמוצב",
-      dateLabel: "מהמוצב, תשנ״ז",
+      dateLabel: "שלושה שבועות לפני האסון · ינואר 1997",
       order: 7,
       from: "אלון בביאן",
       to: "דקלה (אחותו)",
@@ -562,7 +563,7 @@ window.LETTERS_DATA = {
       order: 21,
       from: "אבי גבאי",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `אל אלון יקירנו
 
@@ -603,7 +604,7 @@ window.LETTERS_DATA = {
       order: 22,
       from: "אילה גת (שם טוב)",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `אלון של כולנו
 
@@ -636,7 +637,7 @@ window.LETTERS_DATA = {
       order: 23,
       from: "אמירה מיארה",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `אלוני
 
@@ -675,7 +676,7 @@ window.LETTERS_DATA = {
       order: 24,
       from: "בבא אליהו וסבתא עליזה",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `אלוני
 
@@ -747,7 +748,7 @@ window.LETTERS_DATA = {
       order: 26,
       from: "דליה בביאן",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `במה אברכך
 
@@ -778,7 +779,7 @@ window.LETTERS_DATA = {
       order: 27,
       from: "דרור אריה",
       to: "משפחת בביאן",
-      category: "family",
+      category: "family-circle",
       body:
         `משפחת אלון
 
@@ -813,7 +814,7 @@ window.LETTERS_DATA = {
       order: 28,
       from: "הדיה בביאן",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `אלוני
 
@@ -840,7 +841,7 @@ window.LETTERS_DATA = {
       order: 29,
       from: "ישי טחויליאן",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `אלון
 
@@ -877,7 +878,7 @@ window.LETTERS_DATA = {
       order: 30,
       from: "סיגלית בביאן-חסידים",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `אלון
 
@@ -906,7 +907,7 @@ window.LETTERS_DATA = {
       order: 31,
       from: "עופר בביאן",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `אלון
 
@@ -931,7 +932,7 @@ window.LETTERS_DATA = {
       order: 32,
       from: "ציונה בביאן",
       to: "אלון",
-      category: "family",
+      category: "family-circle",
       body:
         `אלוני - רק שלי
 
