@@ -589,12 +589,16 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
 }
 
 .life-spine-lead {
+  display: flow-root;
+  max-width: none;
+  width: 100%;
   font-size: 1.25rem;
   font-style: italic;
   line-height: 1.7;
   color: #1A2E44;
   margin: 0 0 0.95rem;
-  text-align: start;
+  text-align: justify;
+  text-align-last: start;
   hyphens: none;
   text-wrap: pretty;
 }
@@ -656,26 +660,23 @@ img { filter: saturate(0.82) contrast(0.97) brightness(0.99); }
   min-width: 0;
 }
 
-/* One readable measure across a chapter, whether a paragraph sits beside a
-   photo or clear of one. Both declarations are needed and neither works alone:
-   `max-width` by itself leaves the full-width box anchored under the float, so
-   the float eats most of it and the line collapses; `display: flow-root` makes
-   the paragraph a block formatting context, which the spec keeps from
-   overlapping a float's margin box, so the box is placed beside the photo at
-   whatever room is left instead of running underneath it. Together they yield
-   three honest columns — beside a chapter photo, beside an aside photo, and
-   clear of both — rather than a jump from a narrow column to the full body
-   width, which stranded short continuation paragraphs as one very long line. */
+/* Full-width chapter prose. `display: flow-root` keeps a paragraph that sits
+   beside a floated photo from running under the float's margin box — it takes
+   whatever width is left next to the image cluster. Once the float clears
+   (continuation paragraphs after an aside), the same rule spans the full
+   content column with no artificial max-width. */
 .life-spine-text > p,
 .life-spine-copy > p,
 .life-spine-aside-copy p {
   display: flow-root;
-  max-width: 42rem;
+  max-width: none;
+  width: 100%;
   margin: 0 0 1rem;
   font-size: 1.12rem;
   line-height: 1.8;
   color: #585f65;
-  text-align: start;
+  text-align: justify;
+  text-align-last: start;
   hyphens: none;
   text-wrap: pretty;
 }
