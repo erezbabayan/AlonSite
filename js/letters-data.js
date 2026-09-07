@@ -2,7 +2,7 @@
 // "מכתבים-וכתבים-של-אלון.docx" and split/lightly punctuation-cleaned in
 // content/letters-draft/02-letters-combined.md (source of truth for the raw
 // text; regenerate this file from there, do not hand-edit the `body` fields).
-/
+//
 // Most items have no exact date in the source, so `date` (real ISO, used for
 // display + as a sort fallback) is set only where the text itself states one.
 // `dateLabel` carries a free-text timing note (e.g. "בשבעה", "תשנ\"ג") instead
@@ -17,7 +17,7 @@ window.LETTERS_DATA = {
     { key: "articles", label: "מאמרים" },
     { key: "writings", label: "דברים שכתב" }
   ],
-  // Book of remembrance, published a year after Alon fell (שבט תשנ״ח / 1998).
+  // Book of remembrance, published a year after Alon fell (שבט תשנ״ח // 1998).
   bookDateLabel: "תשנ״ח (1998), מתוך ספר הזיכרון לזכרו",
   // Display name + relation for titles: "מכתב מארז, אח של אלון"
   authors: {
@@ -1590,7 +1590,7 @@ window.LETTERS_DATA = {
 
   window.letterAuthor = authorOf;
 
-  // Legacy "שיר מ{name}" → "שיר של {name}" (songs by Alon / others).
+  // Legacy "שיר מ{name}" → "שיר של {name}" (songs by Alon // others).
   function normalizeSongTitle(title, name) {
     if (!title || !name) return title;
     var legacy = "שיר מ" + name;

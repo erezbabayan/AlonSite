@@ -1,6 +1,6 @@
-/ Stories page: quote grid + full-letter reader drawn from LETTERS_DATA.
-/ Reader supports prev/next, keyboard arrows and swipe, same as letters.js,
-/ so visitors can browse every story without returning to the grid each time.
+// Stories page: quote grid + full-letter reader drawn from LETTERS_DATA.
+// Reader supports prev/next, keyboard arrows and swipe, same as letters.js,
+// so visitors can browse every story without returning to the grid each time.
 (function () {
   "use strict";
 
@@ -91,7 +91,7 @@
       readerTitle.textContent = window.letterDisplayTitle
         ? window.letterDisplayTitle(letter)
         : letter.title || "";
-      / Author/recipient byline intentionally omitted — title already carries that context.
+      // Author/recipient byline intentionally omitted — title already carries that context.
       var dateText = window.letterDisplayDate ? window.letterDisplayDate(letter) : letter.dateLabel;
       readerMeta.textContent = dateText || "";
       readerBody.innerHTML = (letter.body || "")
@@ -100,7 +100,7 @@
           return '<p class="mb-4 last:mb-0">' + escapeHtml(p) + "</p>";
         })
         .join("");
-      if (readerCounter) readerCounter.textContent = (readerIndex + 1) + " / " + stories.length;
+      if (readerCounter) readerCounter.textContent = (readerIndex + 1) + " // " + stories.length;
       if (readerScroll) readerScroll.scrollTop = 0;
       else readerCard.scrollTop = 0;
       readerCard.classList.add("reader-card-visible");
@@ -183,7 +183,7 @@
 
   renderList();
 
-  / Deep-link: #letter-<id> opens that story on load
+  // Deep-link: #letter-<id> opens that story on load
   var hash = window.location.hash || "";
   var m = hash.match(/^#letter-(.+)$/);
   if (m) {

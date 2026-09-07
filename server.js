@@ -1,7 +1,7 @@
-/ Minimal dependency-free static file server + JSON API for candle-lighting
-/ data. Replaces the old localStorage-only candle list (which only the
-/ lighting visitor's own browser could see) with a server-side JSON file
-/ shared by every visitor. Run with: node server.js
+// Minimal dependency-free static file server + JSON API for candle-lighting
+// data. Replaces the old localStorage-only candle list (which only the
+// lighting visitor's own browser could see) with a server-side JSON file
+// shared by every visitor. Run with: node server.js
 "use strict";
 
 var http = require("http");
@@ -13,7 +13,7 @@ var PORT = process.env.PORT || DEFAULT_PORT;
 var ROOT = __dirname;
 var CANDLES_FILE = path.join(ROOT, "data", "candles.json");
 
-var MAX_CANDLE_BODY_BYTES = 10000; / guards the POST /api/candles request body
+var MAX_CANDLE_BODY_BYTES = 10000; // guards the POST /api/candles request body
 var CANDLE_NAME_MAX_LENGTH = 200;
 var CANDLE_MESSAGE_MAX_LENGTH = 2000;
 
@@ -100,7 +100,7 @@ function serveStaticFile(req, res) {
   if (urlPath === "/") urlPath = "/AlonSite/index.html";
   var filePath = path.normalize(path.join(ROOT, urlPath));
 
-  / Guard against path traversal outside the site root.
+  // Guard against path traversal outside the site root.
   if (filePath.indexOf(ROOT) !== 0) {
     res.writeHead(403);
     res.end("Forbidden");
@@ -117,9 +117,9 @@ function serveStaticFile(req, res) {
     var contentType = MIME_TYPES[ext] || "application/octet-stream";
     var range = req.headers.range;
 
-    / Video/audio scrubbing relies on the browser being able to request
-    / arbitrary byte ranges; without 206 support, seeking is limited to
-    / whatever has already downloaded.
+    // Video/audio scrubbing relies on the browser being able to request
+    // arbitrary byte ranges; without 206 support, seeking is limited to
+    // whatever has already downloaded.
     if (range) {
       var match = /^bytes=(\d*)-(\d*)$/.exec(range);
       var start = match && match[1] ? parseInt(match[1], 10) : 0;

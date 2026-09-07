@@ -1,17 +1,17 @@
-/ Letters page behavior: category filtering and the full-letter reader.
-/ Reads window.LETTERS_DATA (see letters-data.js) and drives the markup in
-/ letters.html. Depends on site.js for the shared nav/candles widgets.
+// Letters page behavior: category filtering and the full-letter reader.
+// Reads window.LETTERS_DATA (see letters-data.js) and drives the markup in
+// letters.html. Depends on site.js for the shared nav/candles widgets.
 (function () {
   "use strict";
 
   const ALL_KEY = "__all__";
-  const FILTER_SWITCH_TRANSITION_MS = 220; / grid fade-out/in while switching categories
-  const READER_SWAP_DELAY_MS = 120; / lets the fade-out finish before swapping the letter content
-  const READER_CLOSE_TRANSITION_MS = 280; / matches the CSS reader-open transition duration
-  const SWIPE_THRESHOLD_PX = 40; / minimum horizontal drag to count as a swipe
+  const FILTER_SWITCH_TRANSITION_MS = 220; // grid fade-out/in while switching categories
+  const READER_SWAP_DELAY_MS = 120; // lets the fade-out finish before swapping the letter content
+  const READER_CLOSE_TRANSITION_MS = 280; // matches the CSS reader-open transition duration
+  const SWIPE_THRESHOLD_PX = 40; // minimum horizontal drag to count as a swipe
 
-  / The life-story text is kept in LETTERS_DATA for the stories page, but it
-  / is not a letter — hide it here. `order` remains the primary sort key.
+  // The life-story text is kept in LETTERS_DATA for the stories page, but it
+  // is not a letter — hide it here. `order` remains the primary sort key.
   const letters = ((window.LETTERS_DATA && window.LETTERS_DATA.letters) || [])
     .filter((l) => l.category && l.category !== "story")
     .slice()
@@ -122,9 +122,9 @@
     }, FILTER_SWITCH_TRANSITION_MS);
   });
 
-  / -----------------------------------------------------------------------
-  / Reader modal
-  / -----------------------------------------------------------------------
+  // -----------------------------------------------------------------------
+  // Reader modal
+  // -----------------------------------------------------------------------
 
   const readerEl = document.getElementById("letter-reader");
   const readerCard = document.getElementById("reader-card");
@@ -146,14 +146,14 @@
       readerCategory.textContent = categoryLabel(letter.category);
       readerTitle.textContent = displayTitle(letter);
       readerDate.textContent = formatDate(letter);
-      / Author/recipient byline intentionally omitted — title already carries that context.
+      // Author/recipient byline intentionally omitted — title already carries that context.
       readerMeta.textContent = "";
       readerBody.innerHTML = letter.body
         .split(/\n\n+/)
         .map((p) => `<p class="mb-4 last:mb-0">${escapeHtml(p)}</p>`)
         .join("");
       readerSignature.textContent = letter.signature || "";
-      readerCounter.textContent = `${readerIndex + 1} / ${visibleLetters.length}`;
+      readerCounter.textContent = `${readerIndex + 1} // ${visibleLetters.length}`;
       if (readerScroll) readerScroll.scrollTop = 0;
       readerCard.classList.add("reader-card-visible");
     }, READER_SWAP_DELAY_MS);

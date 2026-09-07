@@ -1,9 +1,9 @@
-/ Curated story-quotes ABOUT Alon — drawn from letters already on the site.
-/ Only concrete memories of who he was and what he did; not grief, not the
-/ disaster itself. Each item points back to its source letter via letterId.
+// Curated story-quotes ABOUT Alon — drawn from letters already on the site.
+// Only concrete memories of who he was and what he did; not grief, not the
+// disaster itself. Each item points back to its source letter via letterId.
 window.STORIES_DATA = {
   stories: [
-    / —— דברים שכתב ——
+    // —— דברים שכתב ——
     {
       id: "s-wr-1b",
       letterId: "wr-1",
@@ -26,7 +26,7 @@ window.STORIES_DATA = {
         "בראיון עיתונאי ציטטו את דבריו: \"האחריות מאוד כבדה, עצם החשיבה על זה קשה. אבל המדינה חשובה לי והחובה של כל חייל היא לעשות את הטוב ביותר שהוא יכול.\"",
     },
 
-    / —— משפחה ——
+    // —— משפחה ——
     {
       id: "s-reuven-3",
       letterId: "fam-1",
@@ -63,7 +63,7 @@ window.STORIES_DATA = {
         "בשבת האחרונה שהיינו אצל סבתא אמר לי שאם לא אלמד — לא אצליח בחיים ולא אוכל להתקבל לסיירת. הבטחתי לו שאלמד ורציתי להראות לו שכן אצליח.",
     },
 
-    / —— חברים ——
+    // —— חברים ——
     {
       id: "s-avi-3",
       letterId: "frn-1",
@@ -100,7 +100,7 @@ window.STORIES_DATA = {
         "זכור לי במיוחד כשישבנו בכיתה ואלון הצביע במשך קרוב לשעה. לאחר שזכות הדיבור לו ניתנה, העיר למורה ש'כומר' אומרים במלעיל ולא במלרע. הכיתה התפוצצה מצחוק — והסיפור הקטן מבטא את האופי שלו, את השאיפה לאמת.",
     },
 
-    / —— משפחה ——
+    // —— משפחה ——
     {
       id: "s-avi-gabay",
       letterId: "ext-1",
@@ -158,7 +158,7 @@ window.STORIES_DATA = {
         "הייתי רצה לקנות לו דברים מוזרים לחבילה, לקבל תודה גדולה עם חיבוק גדול — וחצי חיוך של: \"מה היית צריכה, תפסיקי לפנק אותי, בגללך אני שמן ומפונק\".",
     },
 
-    / —— צבא ——
+    // —— צבא ——
     {
       id: "s-path-5",
       letterId: "story-1",
