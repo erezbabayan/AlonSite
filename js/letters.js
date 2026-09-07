@@ -42,10 +42,6 @@
     return window.letterDisplayTitle ? window.letterDisplayTitle(letter) : letter.title || "";
   }
 
-  function displayFrom(letter) {
-    return window.letterDisplayFrom ? window.letterDisplayFrom(letter) : letter.from || "";
-  }
-
   function formatDate(letter) {
     return window.letterDisplayDate ? window.letterDisplayDate(letter) : letter.dateLabel || "";
   }
@@ -72,14 +68,6 @@
   }
 
   function letterCardHtml(letter, index) {
-    const fromText = displayFrom(letter);
-    const metaParts = [];
-    if (fromText) metaParts.push(`מאת <span class="text-primary/80 font-semibold">${escapeHtml(fromText)}</span>`);
-    if (letter.to) metaParts.push(`אל <span class="text-primary/80 font-semibold">${escapeHtml(letter.to)}</span>`);
-    const meta = metaParts.length
-      ? `<p class="font-label text-xs text-secondary/80 mb-3">${metaParts.join(" · ")}</p>`
-      : "";
-
     const dateText = formatDate(letter);
     return `
       <button data-index="${index}" data-category="${escapeHtml(letter.category || "")}" class="letter-card text-right p-6 md:p-7 flex flex-col">
@@ -89,7 +77,6 @@
           ${dateText ? `<span class="font-label text-xs text-secondary shrink-0 mt-0.5">${escapeHtml(dateText)}</span>` : ""}
         </div>
         <h3 class="text-lg font-headline font-bold text-primary mb-2">${escapeHtml(displayTitle(letter))}</h3>
-        ${meta}
         <p class="letter-body text-sm text-on-surface-variant line-clamp-5 flex-1">${escapeHtml(letter.body)}</p>
         <span class="inline-flex items-center gap-1 text-accent-gold text-xs font-bold mt-4">
           קראו את המכתב המלא
@@ -159,11 +146,8 @@
       readerCategory.textContent = categoryLabel(letter.category);
       readerTitle.textContent = displayTitle(letter);
       readerDate.textContent = formatDate(letter);
-      const fromText = displayFrom(letter);
-      const metaParts = [];
-      if (fromText) metaParts.push(`מאת ${fromText}`);
-      if (letter.to) metaParts.push(`אל ${letter.to}`);
-      readerMeta.textContent = metaParts.join(" · ");
+      // Author/recipient byline intentionally omitted — title already carries that context.
+      readerMeta.textContent = "";
       readerBody.innerHTML = letter.body
         .split(/\n\n+/)
         .map((p) => `<p class="mb-4 last:mb-0">${escapeHtml(p)}</p>`)
