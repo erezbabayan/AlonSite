@@ -165,5 +165,5 @@ var server = http.createServer(function (req, res) {
 });
 
 server.listen(PORT, function () {
-  console.log("Server running at http:/KEEP:/localhost:" + PORT);
+  console.log("Server running at http://localhost:" + PORT);
 });

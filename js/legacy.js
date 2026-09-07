@@ -18,7 +18,7 @@
       if (!id) return;
 
       frame.src =
-        "https:/KEEP:/www.youtube-nocookie.com/embed/" +
+        "https://www.youtube-nocookie.com/embed/" +
         encodeURIComponent(id) +
         "?autoplay=1&rel=0";
       titleEl.textContent = trigger.getAttribute("data-title") || "";

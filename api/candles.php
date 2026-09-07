@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
   exit;
 }
 
-$body = json_decode(file_get_contents("php:/KEEP:/input"), true);
+$body = json_decode(file_get_contents("php://input"), true);
 $name = isset($body["name"]) ? trim($body["name"]) : "";
 $message = isset($body["message"]) ? trim($body["message"]) : "";
 if ($name === "") {
