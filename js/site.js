@@ -1,6 +1,6 @@
-// Shared behavior for the memorial site: candle-lighting (backed by a JSON
-// file on the server via /api/candles, shared across all visitors), mobile
-// nav toggle, and the share button. Included by index.html and gallery.html.
+// Shared behavior for the memorial site: candle-lighting (backed by Convex
+// at CONVEX_SITE_URL, with the local Node / PHP /api/candles endpoints as
+// fallback), mobile nav toggle, and the share button. Included by every page.
 (function () {
   "use strict";
 
@@ -68,9 +68,22 @@
     });
   }
 
+  function convexCandlesUrl() {
+    const base = typeof window !== "undefined" ? window.CONVEX_SITE_URL : "";
+    if (!base) return "";
+    return String(base).replace(/\/$/, "") + "/api/candles";
+  }
+
   function fetchCandles() {
     const root = siteRoot();
-    return fetchJsonArray(root + "/api/candles")
+    const convexUrl = convexCandlesUrl();
+    const first = convexUrl
+      ? fetchJsonArray(convexUrl)
+      : Promise.reject(new Error("no convex"));
+    return first
+      .catch(function () {
+        return fetchJsonArray(root + "/api/candles");
+      })
       .catch(function () {
         return fetchJsonArray(root + "/api/candles.php");
       })
@@ -82,11 +95,19 @@
       });
   }
 
+  function postJson(url, headers, body) {
+    return fetch(url, { method: "POST", headers: headers, body: body }).then(function (res) {
+      if (!res.ok) throw new Error("request failed");
+      return res.json();
+    });
+  }
+
   function postCandle(name, message) {
     const entry = { name: name, message: message, date: new Date().toISOString() };
     const root = siteRoot();
     const body = JSON.stringify({ name: name, message: message });
     const headers = { "Content-Type": "application/json" };
+    const convexUrl = convexCandlesUrl();
 
     function saveLocal(saved) {
       const list = readLocalCandles();
@@ -95,16 +116,16 @@
       return saved;
     }
 
-    return fetch(root + "/api/candles", { method: "POST", headers: headers, body: body })
-      .then(function (res) {
-        if (!res.ok) throw new Error("request failed");
-        return res.json();
+    const first = convexUrl
+      ? postJson(convexUrl, headers, body)
+      : Promise.reject(new Error("no convex"));
+
+    return first
+      .catch(function () {
+        return postJson(root + "/api/candles", headers, body);
       })
       .catch(function () {
-        return fetch(root + "/api/candles.php", { method: "POST", headers: headers, body: body }).then(function (res) {
-          if (!res.ok) throw new Error("request failed");
-          return res.json();
-        });
+        return postJson(root + "/api/candles.php", headers, body);
       })
       .then(function (saved) {
         const ok = saved && saved.name ? saved : entry;

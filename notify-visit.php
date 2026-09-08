@@ -1,9 +1,10 @@
 <?php
 // Lightweight visit-notification beacon. Embedded as a 1x1 tracking pixel
 // near the top of every page (see the <img src="notify-visit.php?page=...">
-// tag right after <body>). Emails the site owner on every single hit — no
-// dedup or bot-filtering, by design: the owner asked to be notified of
-// every visit, however frequent.
+// tag right after <body>). Emails the site owner once per browser session —
+// a cookie set on the first hit suppresses the email on every subsequent
+// page the same visitor loads, until they close the browser (or the cookie
+// is otherwise cleared).
 //
 // Requires PHP + a working mail() transport on the host. This repo's local
 // dev server (server.js) is plain Node and cannot execute this file —
@@ -36,7 +37,10 @@ $domain = isset($_SERVER["SERVER_NAME"]) ? clean_header_value($_SERVER["SERVER_N
 $headers = "From: no-reply@{$domain}\r\n"
     . "Content-Type: text/plain; charset=UTF-8\r\n";
 
-@mail($to, $subject, $body, $headers);
+if (!isset($_COOKIE["alon_visited"])) {
+    setcookie("alon_visited", "1", 0, "/");
+    @mail($to, $subject, $body, $headers);
+}
 
 // Always respond with a real 1x1 transparent GIF so the <img> beacon never
 // shows a broken-image icon, regardless of whether the mail() call above
