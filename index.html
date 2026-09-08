@@ -26,15 +26,24 @@
 <!-- Font family/weights here must match css/shared.css --font-sans (see "Changing the site font" in CLAUDE.md) -->
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&amp;family=Playpen+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="/AlonSite/js/tailwind-config.js?v=20260906a"></script>
-<script src="/AlonSite/js/gallery-data.js?v=20260902a" defer></script>
+<script src="/AlonSite/js/gallery-data.js?v=20260908a" defer></script>
 <link href="/AlonSite/css/shared.css?v=20260906a" rel="stylesheet"/>
 <link href="/AlonSite/css/index.css?v=20260907d" rel="stylesheet"/>
+<link rel="preload" as="image" fetchpriority="high" href="/AlonSite/media/images/thumbs/army/army-165.jpg"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "אלון אברהם-חי בביאן",
-  "alternateName": "סגן אלון אברהם-חי בביאן הי״ד",
+  "alternateName": [
+    "סגן אלון אברהם-חי בביאן הי״ד",
+    "סגן אלון בביאן",
+    "אלון בביאן",
+    "Alon Babayan",
+    "Alon Avraham Chai Babayan",
+    "Alon Avraham-Chai Babayan",
+    "Lt. Alon Babayan"
+  ],
   "description": "סגן אלון אברהם-חי בביאן הי״ד, לוחם בחטיבת גולני, נפל באסון המסוקים ב-4 בפברואר 1997 בגיל 21.",
   "birthDate": "1975-10-01",
   "deathDate": "1997-02-04",
@@ -83,13 +92,13 @@
      memorial text on its own light surface on the other. -->
 <section data-nav-section="home" id="hero">
 <div class="hero-figure">
-<img data-caption="אלון בשירותו בחטיבת גולני" alt="אלון בצבא" class="hero-bg-img hero-bg-img-active" style="object-position: 33% 42%" src="/AlonSite/media/images/thumbs/army/army-165.jpg"/>
-<img data-caption="אלון במוצב הבופור" alt="אלון, סגן בחטיבת גולני, בבופור" class="hero-bg-img" style="object-position: 28% 42%" src="/AlonSite/media/images/thumbs/army/army-030.jpg"/>
-<img data-caption="אלון במוצב הבופור · דצמבר 1996" alt="אלון בבופור" class="hero-bg-img" style="object-position: 48% 45%" src="/AlonSite/media/images/thumbs/army/army-029.jpg"/>
-<img data-caption="אלון בטקס סיום קורס קצינים בבה״ד 1" alt="אלון בטקס סיום קורס קצינים בבה״ד 1" class="hero-bg-img" style="object-position: 62% 40%" src="/AlonSite/media/hero/army-016-alon.jpg"/>
-<img data-caption="אלון בתרגיל חטיבה" alt="אלון בגולני" class="hero-bg-img" style="object-position: 50% 22%" src="/AlonSite/media/hero/alon-golani-smile.jpg"/>
-<img data-caption="אלון במוצב הבופור · דצמבר 1996" alt="אלון בבופור" class="hero-bg-img" style="object-position: 62% 45%" src="/AlonSite/media/images/thumbs/army/army-036.jpg"/>
-<img data-caption="אלון במוצב הבופור · דצמבר 1996" alt="אלון בבופור" class="hero-bg-img" style="object-position: 32% 45%" src="/AlonSite/media/images/thumbs/army/army-035.jpg"/>
+<img data-caption="אלון בשירותו בחטיבת גולני" alt="אלון בצבא" class="hero-bg-img hero-bg-img-active" style="object-position: 33% 42%" fetchpriority="high" src="/AlonSite/media/images/thumbs/army/army-165.jpg"/>
+<img data-caption="אלון במוצב הבופור" alt="אלון, סגן בחטיבת גולני, בבופור" class="hero-bg-img" style="object-position: 28% 42%" data-src="/AlonSite/media/images/thumbs/army/army-030.jpg"/>
+<img data-caption="אלון במוצב הבופור · דצמבר 1996" alt="אלון בבופור" class="hero-bg-img" style="object-position: 48% 45%" data-src="/AlonSite/media/images/thumbs/army/army-029.jpg"/>
+<img data-caption="אלון בטקס סיום קורס קצינים בבה״ד 1" alt="אלון בטקס סיום קורס קצינים בבה״ד 1" class="hero-bg-img" style="object-position: 62% 40%" data-src="/AlonSite/media/hero/army-016-alon.jpg"/>
+<img data-caption="אלון בתרגיל חטיבה" alt="אלון בגולני" class="hero-bg-img" style="object-position: 50% 22%" data-src="/AlonSite/media/hero/alon-golani-smile.jpg"/>
+<img data-caption="אלון במוצב הבופור · דצמבר 1996" alt="אלון בבופור" class="hero-bg-img" style="object-position: 62% 45%" data-src="/AlonSite/media/images/thumbs/army/army-036.jpg"/>
+<img data-caption="אלון במוצב הבופור · דצמבר 1996" alt="אלון בבופור" class="hero-bg-img" style="object-position: 32% 45%" data-src="/AlonSite/media/images/thumbs/army/army-035.jpg"/>
 <div aria-hidden="true" class="hero-figure-scrim"></div>
 <p class="hero-figure-caption">אלון בשירותו בחטיבת גולני</p>
 </div>
@@ -777,6 +786,17 @@
   var caption = document.querySelector('#hero .hero-figure-caption');
   if (slides.length < 2) return;
   var i = 0;
+  // Frames after the first ship with data-src instead of src, so the
+  // browser's preload scanner doesn't fetch all seven hero photos at once
+  // and starve the one actually visible on first paint. Each frame's real
+  // download is kicked off one step ahead of when it needs to be shown.
+  function load(slide) {
+    if (slide.dataset.src) {
+      slide.src = slide.dataset.src;
+      delete slide.dataset.src;
+    }
+  }
+  load(slides[1]);
   setInterval(function () {
     slides[i].classList.remove('hero-bg-img-active');
     i = (i + 1) % slides.length;
@@ -785,6 +805,7 @@
     // dated, so one fixed line would put a place and a date on the first
     // slide that we don't actually know.
     if (caption && slides[i].dataset.caption) caption.textContent = slides[i].dataset.caption;
+    load(slides[(i + 1) % slides.length]);
   }, 5000);
 })();
 </script>

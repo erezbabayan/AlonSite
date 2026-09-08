@@ -416,6 +416,16 @@
         lightboxEl.classList.remove("flex");
       }, 280);
     }
+    // The lightbox photo is the real source file, so the first one a
+    // visitor opens can't help being a real download. Once it's loaded,
+    // quietly fetch both neighbors in the background so prev/next always
+    // feels instant regardless of which way they go.
+    function prefetchLightboxNeighbors(index) {
+      [(index - 1 + MEMORIAL_PHOTOS.length) % MEMORIAL_PHOTOS.length, (index + 1) % MEMORIAL_PHOTOS.length].forEach((i) => {
+        new Image().src = MEMORIAL_PHOTOS[i].full;
+      });
+    }
+
     function updateLightbox(fade) {
       const photo = MEMORIAL_PHOTOS[lightboxIndex];
       const swap = () => {
@@ -430,6 +440,7 @@
         lightboxImg.style.transform = "scale(1)";
         lightboxSpinner.classList.add("hidden");
         lightboxSpinner.classList.remove("flex");
+        prefetchLightboxNeighbors(lightboxIndex);
       };
       if (fade) {
         lightboxImg.style.opacity = "0";

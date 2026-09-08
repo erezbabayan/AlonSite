@@ -16,6 +16,14 @@
   const LIGHTBOX_CLOSE_TRANSITION_MS = 280; // matches the CSS lightbox-open transition duration
   const SWIPE_THRESHOLD_PX = 40; // minimum horizontal drag to count as a swipe
 
+  // The full "הכל" view can run past 600 photos. Building all of them as DOM
+  // nodes and masonry-measuring every one on first paint (even with the
+  // images themselves lazy-loaded) is the actual first-load cost, so the
+  // grid renders in batches and grows as the visitor scrolls toward it.
+  const INITIAL_BATCH = 48;
+  const LOAD_MORE_BATCH = 36;
+  const PAGINATE = "IntersectionObserver" in window;
+
   const DATA = window.GALLERY_DATA || { categories: [] };
 
   // Flat list of every image with its category label, in category order.
@@ -31,6 +39,7 @@
   let activeKey = ALL_KEY;
   let visibleImages = flatImages;
   let lightboxIndex = 0;
+  let renderedCount = 0;
 
   function pillHtml(p) {
     return `
@@ -148,6 +157,32 @@
     layoutResizeTimer = setTimeout(layoutMasonry, LAYOUT_DEBOUNCE_MS);
   });
 
+  function bindThumbs() {
+    gridEl.querySelectorAll(".gallery-thumb:not([data-bound])").forEach((btn) => {
+      btn.dataset.bound = "1";
+      btn.addEventListener("click", () => openLightbox(Number(btn.dataset.index)));
+      const imgEl = btn.querySelector("img");
+      if (imgEl.complete) {
+        imgEl.classList.add("loaded");
+      } else {
+        imgEl.addEventListener("load", () => imgEl.classList.add("loaded"));
+      }
+    });
+  }
+
+  function appendMore() {
+    if (renderedCount >= visibleImages.length) return;
+    const nextCount = Math.min(renderedCount + LOAD_MORE_BATCH, visibleImages.length);
+    const html = visibleImages
+      .slice(renderedCount, nextCount)
+      .map((img, i) => galleryItemHtml(img, renderedCount + i))
+      .join("");
+    renderedCount = nextCount;
+    gridEl.insertAdjacentHTML("beforeend", html);
+    bindThumbs();
+    layoutMasonry();
+  }
+
   function renderGrid() {
     visibleImages = activeKey === ALL_KEY ? flatImages : flatImages.filter((img) => img.categoryKey === activeKey);
 
@@ -157,22 +192,18 @@
       gridEl.innerHTML = "";
       gridEl.style.height = "0px";
       emptyEl.classList.remove("hidden");
+      renderedCount = 0;
       return;
     }
     emptyEl.classList.add("hidden");
 
-    gridEl.innerHTML = visibleImages.map(galleryItemHtml).join("");
+    renderedCount = PAGINATE ? Math.min(INITIAL_BATCH, visibleImages.length) : visibleImages.length;
+    gridEl.innerHTML = visibleImages
+      .slice(0, renderedCount)
+      .map((img, i) => galleryItemHtml(img, i))
+      .join("");
 
-    gridEl.querySelectorAll(".gallery-thumb").forEach((btn) => {
-      btn.addEventListener("click", () => openLightbox(Number(btn.dataset.index)));
-      const imgEl = btn.querySelector("img");
-      if (imgEl.complete) {
-        imgEl.classList.add("loaded");
-      } else {
-        imgEl.addEventListener("load", () => imgEl.classList.add("loaded"));
-      }
-    });
-
+    bindThumbs();
     layoutMasonry();
   }
 
@@ -235,6 +266,29 @@
     }, LIGHTBOX_CLOSE_TRANSITION_MS);
   }
 
+  // The lightbox photo is the real, un-shrunk source file (some run past
+  // 8MB), so the very first one a visitor opens can't help being a real
+  // download. What we CAN fix is every photo after that: a rolling window of
+  // PREFETCH_WINDOW images on both sides is kept downloaded at all times, so
+  // however fast someone clicks next/prev, they're always a few photos ahead
+  // of the network. prefetchedUrls is keyed by URL (not index) so it stays
+  // valid across category filter changes, which don't touch the underlying
+  // files.
+  const PREFETCH_WINDOW = 3;
+  const prefetchedUrls = new Set();
+  function prefetchLightboxNeighbors(index) {
+    for (let side = -1; side <= 1; side += 2) {
+      for (let step = 1; step <= PREFETCH_WINDOW; step++) {
+        const i = (index + side * step + visibleImages.length * PREFETCH_WINDOW) % visibleImages.length;
+        const neighbor = visibleImages[i];
+        if (neighbor && !prefetchedUrls.has(neighbor.full)) {
+          prefetchedUrls.add(neighbor.full);
+          new Image().src = neighbor.full;
+        }
+      }
+    }
+  }
+
   function updateLightbox() {
     const img = visibleImages[lightboxIndex];
     if (!img) return;
@@ -253,6 +307,7 @@
       lightboxImg.style.transform = "scale(1)";
       lightboxSpinner.classList.add("hidden");
       lightboxSpinner.classList.remove("flex");
+      prefetchLightboxNeighbors(lightboxIndex);
     };
     if (lightboxImg.src) {
       setTimeout(() => {
@@ -317,6 +372,18 @@
     },
     { passive: true }
   );
+
+  if (PAGINATE) {
+    const sentinelEl = document.getElementById("gallery-load-more-sentinel");
+    if (sentinelEl) {
+      new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) appendMore();
+        },
+        { rootMargin: "800px 0px" }
+      ).observe(sentinelEl);
+    }
+  }
 
   renderAll();
 })();

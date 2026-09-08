@@ -78,6 +78,13 @@
       currentIndex = (index + images.length) % images.length;
       imgEl.src = images[currentIndex];
       imgEl.alt = title;
+      // Each entry only ever has one or two photos (a before/after pair),
+      // so the "other" one is worth quietly fetching in the background —
+      // by the time a visitor hits prev/next it's already cached, instead
+      // of a multi-MB source file starting to download only on click.
+      images.forEach((src, i) => {
+        if (i !== currentIndex) new Image().src = src;
+      });
     }
 
     function openModal(trigger) {
