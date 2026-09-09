@@ -3983,13 +3983,6 @@ window.GALLERY_DATA = {
           "h": 675
         },
         {
-          "full": "/AlonSite/media/images/memorial-site/memorial-site-014.jpg",
-          "thumb": "/AlonSite/media/images/thumbs/memorial-site/memorial-site-014.jpg",
-          "alt": "אתר הנצחה",
-          "w": 900,
-          "h": 675
-        },
-        {
           "full": "/AlonSite/media/images/memorial-site/memorial-site-015.jpg",
           "thumb": "/AlonSite/media/images/thumbs/memorial-site/memorial-site-015.jpg",
           "alt": "אתר הנצחה",
@@ -4142,13 +4135,6 @@ window.GALLERY_DATA = {
           "alt": "אתר הנצחה",
           "w": 900,
           "h": 637
-        },
-        {
-          "full": "/AlonSite/media/images/memorial-site/memorial-site-037.jpg",
-          "thumb": "/AlonSite/media/images/thumbs/memorial-site/memorial-site-037.jpg",
-          "alt": "אתר הנצחה",
-          "w": 900,
-          "h": 638
         },
         {
           "full": "/AlonSite/media/images/memorial-site/memorial-site-038.jpg",

@@ -1,6 +1,6 @@
-// Shared behavior for the memorial site: candle-lighting (backed by Convex
-// at CONVEX_SITE_URL, with the local Node / PHP /api/candles endpoints as
-// fallback), mobile nav toggle, and the share button. Included by every page.
+// Shared behavior for the memorial site: candle-lighting (backed by the
+// local Node / PHP /api/candles endpoints), mobile nav toggle, and the share
+// button. Included by every page.
 (function () {
   "use strict";
 
@@ -68,22 +68,9 @@
     });
   }
 
-  function convexCandlesUrl() {
-    const base = typeof window !== "undefined" ? window.CONVEX_SITE_URL : "";
-    if (!base) return "";
-    return String(base).replace(/\/$/, "") + "/api/candles";
-  }
-
   function fetchCandles() {
     const root = siteRoot();
-    const convexUrl = convexCandlesUrl();
-    const first = convexUrl
-      ? fetchJsonArray(convexUrl)
-      : Promise.reject(new Error("no convex"));
-    return first
-      .catch(function () {
-        return fetchJsonArray(root + "/api/candles");
-      })
+    return fetchJsonArray(root + "/api/candles")
       .catch(function () {
         return fetchJsonArray(root + "/api/candles.php");
       })
@@ -107,7 +94,6 @@
     const root = siteRoot();
     const body = JSON.stringify({ name: name, message: message });
     const headers = { "Content-Type": "application/json" };
-    const convexUrl = convexCandlesUrl();
 
     function saveLocal(saved) {
       const list = readLocalCandles();
@@ -116,14 +102,7 @@
       return saved;
     }
 
-    const first = convexUrl
-      ? postJson(convexUrl, headers, body)
-      : Promise.reject(new Error("no convex"));
-
-    return first
-      .catch(function () {
-        return postJson(root + "/api/candles", headers, body);
-      })
+    return postJson(root + "/api/candles", headers, body)
       .catch(function () {
         return postJson(root + "/api/candles.php", headers, body);
       })

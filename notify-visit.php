@@ -56,7 +56,7 @@ if ($ip !== "-") {
         . '</td></tr>';
 }
 
-$body = '<!DOCTYPE html><html dir="rtl" lang="he"><body style="margin:0;padding:0;background:#eef0f2;font-family:Arial, Helvetica, sans-serif;">'
+$htmlBody = '<!DOCTYPE html><html dir="rtl" lang="he"><body style="margin:0;padding:0;background:#eef0f2;font-family:Arial, Helvetica, sans-serif;">'
     . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef0f2;padding:24px 0;"><tr><td align="center">'
     . '<table role="presentation" width="480" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;max-width:480px;">'
     . '<tr><td style="background:#1A2E44;padding:20px 24px;"><span style="color:#ffffff;font-size:17px;font-weight:bold;">כניסה חדשה לאתר ההנצחה של אלון בביאן</span></td></tr>'
@@ -74,9 +74,34 @@ $body = '<!DOCTYPE html><html dir="rtl" lang="he"><body style="margin:0;padding:
     . '</td></tr></table>'
     . '</body></html>';
 
+$plainBody = "כניסה חדשה לאתר ההנצחה של אלון בביאן\n\n"
+    . "דף: {$page}\n"
+    . "זמן: {$time}\n"
+    . "מפנה: {$referrer}\n"
+    . "דפדפן: {$userAgent}\n"
+    . "IP: {$ip}\n";
+
+// A bare HTML-only body (no MIME-Version, no plain-text alternative) is a
+// classic spam-filter trigger: mail() still reports success because it
+// handed the message to the local MTA, but receiving servers like Gmail
+// can silently drop or spam-box it. Send a real multipart/alternative
+// message instead so both a plain-text and HTML part are present.
 $domain = isset($_SERVER["SERVER_NAME"]) ? clean_header_value($_SERVER["SERVER_NAME"], 255) : "alonsite.local";
+$fromAddress = "no-reply@{$domain}";
+$boundary = "alt-" . bin2hex(random_bytes(16));
 $headers = "From: no-reply@{$domain}\r\n"
-    . "Content-Type: text/html; charset=UTF-8\r\n";
+    . "MIME-Version: 1.0\r\n"
+    . "Content-Type: multipart/alternative; boundary=\"{$boundary}\"\r\n";
+
+$body = "--{$boundary}\r\n"
+    . "Content-Type: text/plain; charset=UTF-8\r\n"
+    . "Content-Transfer-Encoding: 8bit\r\n\r\n"
+    . $plainBody . "\r\n"
+    . "--{$boundary}\r\n"
+    . "Content-Type: text/html; charset=UTF-8\r\n"
+    . "Content-Transfer-Encoding: 8bit\r\n\r\n"
+    . $htmlBody . "\r\n"
+    . "--{$boundary}--";
 
 $now = time();
 $cookieLastVisit = isset($_COOKIE["alon_visited"]) ? (int) $_COOKIE["alon_visited"] : 0;
@@ -122,7 +147,7 @@ if ($ip !== "-") {
 
 $mailSent = null;
 if (!$recentByCookie && !$recentlySeen) {
-    $mailSent = @mail($to, $subject, $body, $headers);
+    $mailSent = @mail($to, $subject, $body, $headers, "-f{$fromAddress}");
 }
 
 // Temporary diagnostic log to figure out why an expected email didn't go
