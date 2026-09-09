@@ -120,9 +120,28 @@ if ($ip !== "-") {
     }
 }
 
+$mailSent = null;
 if (!$recentByCookie && !$recentlySeen) {
-    @mail($to, $subject, $body, $headers);
+    $mailSent = @mail($to, $subject, $body, $headers);
 }
+
+// Temporary diagnostic log to figure out why an expected email didn't go
+// out. Safe to delete this block (and data/notify-debug.log) once resolved.
+@file_put_contents(
+    __DIR__ . DIRECTORY_SEPARATOR . "data" . DIRECTORY_SEPARATOR . "notify-debug.log",
+    sprintf(
+        "[%s] ip=%s page=%s recentByCookie=%s recentlySeen=%s mailAttempted=%s mailSent=%s lastError=%s\n",
+        $time,
+        $ip,
+        $page,
+        $recentByCookie ? "yes" : "no",
+        $recentlySeen ? "yes" : "no",
+        $mailSent === null ? "no" : "yes",
+        $mailSent === null ? "-" : ($mailSent ? "yes" : "no"),
+        $mailSent === false ? json_encode(error_get_last()) : "-"
+    ),
+    FILE_APPEND
+);
 
 // Always respond with a real 1x1 transparent GIF so the <img> beacon never
 // shows a broken-image icon, regardless of whether the mail() call above

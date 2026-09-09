@@ -3877,6 +3877,13 @@ window.GALLERY_DATA = {
           "alt": "הנצחה",
           "w": 900,
           "h": 506
+        },
+        {
+          "full": "/AlonSite/media/images/commemoration/commemoration-024.jpg",
+          "thumb": "/AlonSite/media/images/thumbs/commemoration/commemoration-024.jpg",
+          "alt": "הנצחה",
+          "w": 625,
+          "h": 900
         }
       ]
     },
