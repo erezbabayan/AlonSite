@@ -179,7 +179,8 @@ $deviceExtra = "";
 if ($ip !== "-") {
     $ipForUrl = rawurlencode($ip);
     $deviceExtra = '<div dir="rtl" style="margin-top:12px;text-align:right;">'
-        . '<a href="https://mxtoolbox.com/SuperTool.aspx?action=ptr%3a' . $ipForUrl . '&run=toolpage" style="display:inline-block;padding:9px 16px;background:#ffffff;color:#1A2E44;border-radius:999px;font-size:12px;font-weight:700;text-decoration:none;">בדיקת IP</a>'
+        . '<a href="https://mxtoolbox.com/SuperTool.aspx?action=ptr%3a' . $ipForUrl . '&run=toolpage" style="display:inline-block;margin-inline-end:8px;margin-bottom:6px;padding:9px 16px;background:#ffffff;color:#1A2E44;border-radius:999px;font-size:12px;font-weight:700;text-decoration:none;">בדיקת IP</a>'
+        . '<a href="https://ipinfo.io/' . $ipForUrl . '" style="display:inline-block;margin-inline-end:8px;margin-bottom:6px;padding:9px 16px;background:#ffffff;color:#1A2E44;border-radius:999px;font-size:12px;font-weight:700;text-decoration:none;">פרטי IP (ipinfo)</a>'
         . '</div>';
 }
 $deviceChip = h_chip("מכשיר", $deviceRows, $deviceExtra);
