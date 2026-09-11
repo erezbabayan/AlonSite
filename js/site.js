@@ -137,7 +137,7 @@
             <img src="/AlonSite/media/icons/dam-hamacabim.png" alt="דם המכבים" class="memorial-photo text-accent-gold text-xl"/>
             ${escapeHtml(candle.name)}
           </span>
-          <span class="font-label text-xs text-secondary" dir="ltr">${formatDate(candle.date)}</span>
+          <span class="font-label text-xs text-secondary" dir="rtl">${formatDate(candle.date)}</span>
         </div>
         ${message}
       </div>`;

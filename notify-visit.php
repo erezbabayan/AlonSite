@@ -82,12 +82,16 @@ $page = isset($_GET["page"]) ? clean_header_value($_GET["page"], 100) : "unknown
 $referrer = isset($_SERVER["HTTP_REFERER"]) ? clean_header_value($_SERVER["HTTP_REFERER"], 300) : "-";
 $userAgent = isset($_SERVER["HTTP_USER_AGENT"]) ? clean_header_value($_SERVER["HTTP_USER_AGENT"], 300) : "-";
 $ip = isset($_SERVER["REMOTE_ADDR"]) ? $_SERVER["REMOTE_ADDR"] : "-";
-$time = date("Y-m-d H:i:s");
+// Explicit timezone rather than the host's default (which showed up 2-3
+// hours behind real Israel time) — Israeli date convention is
+// day.month.year, not ISO's year-month-day.
+$nowDt = new DateTime("now", new DateTimeZone("Asia/Jerusalem"));
+$time = $nowDt->format("d.m.Y, H:i:s");
 
-// Date/time + page/IP in the subject line (not just the body) so each
+// Date/time + page in the subject line (not just the body) so each
 // notification is distinguishable at a glance in an inbox list, without
 // opening the email.
-$subjectText = "התבצעה כניסה חדשה לאתר ההנצחה של אלון בביאן - {$time} | דף: {$page} | IP: {$ip}";
+$subjectText = "התבצעה כניסה חדשה לאתר ההנצחה של אלון בביאן - {$time} | דף: {$page}";
 $subject = "=?UTF-8?B?" . base64_encode($subjectText) . "?=";
 
 function h($value) {
@@ -132,8 +136,14 @@ function hostname_of($url) {
 // re-wraps the content, which loses a dir="rtl" set only at the top, so RTL
 // has to be nailed down at each nested table for it to survive.
 function h_row($label, $valueHtml) {
-    return '<tr dir="rtl"><td align="right" style="padding:7px 0;color:#585f65;width:74px;vertical-align:top;">' . h($label) . '</td>'
-        . '<td align="right" style="padding:7px 0;color:#1A2E44;vertical-align:top;line-height:1.6;">' . $valueHtml . '</td></tr>';
+    // <bdi> isolates the value from the surrounding bidi context and forces
+    // it to read as one RTL block, even when the value is mostly Latin (an
+    // IP, a raw user-agent string) — without it, a value that happens to
+    // start with a Latin character can flip the row to render left-aligned
+    // in some clients, despite dir="rtl" elsewhere.
+    return '<tr dir="rtl"><td dir="rtl" align="right" style="padding:7px 0;color:#585f65;width:74px;vertical-align:top;">' . h($label) . '</td>'
+        . '<td dir="rtl" align="right" style="padding:7px 0;color:#1A2E44;vertical-align:top;line-height:1.6;">'
+        . '<bdi dir="rtl" style="unicode-bidi:isolate;direction:rtl;">' . $valueHtml . '</bdi></td></tr>';
 }
 
 function h_chip($title, $rowsHtml, $extraHtml = "") {
@@ -195,12 +205,17 @@ $htmlBody = '<!DOCTYPE html><html dir="rtl" lang="he"><head><meta charset="utf-8
     . '</td></tr></table>'
     . '</body></html>';
 
-$plainBody = "כניסה חדשה לאתר ההנצחה של אלון בביאן\n\n"
-    . "דף: {$page}\n"
-    . "זמן: {$time}\n"
-    . ($referrer !== "-" ? "מפנה: {$referrer}\n" : "")
-    . "מכשיר: " . ($device ? "{$device} — " : "") . "{$userAgent}\n"
-    . "IP: {$ip}\n";
+// U+200F (RLM) at the start of each line: plain-text clients auto-detect
+// paragraph direction from the first strong character, and a line like
+// "IP: 89.138.70.62" can otherwise get judged LTR since the visible first
+// characters read as Latin/neutral.
+$rlm = "\xE2\x80\x8F";
+$plainBody = $rlm . "כניסה חדשה לאתר ההנצחה של אלון בביאן\n\n"
+    . $rlm . "דף: {$page}\n"
+    . $rlm . "זמן: {$time}\n"
+    . ($referrer !== "-" ? $rlm . "מפנה: {$referrer}\n" : "")
+    . $rlm . "מכשיר: " . ($device ? "{$device} — " : "") . "{$userAgent}\n"
+    . $rlm . "IP: {$ip}\n";
 
 // A bare HTML-only body (no MIME-Version, no plain-text alternative) is a
 // classic spam-filter trigger: mail() still reports success because it
