@@ -136,11 +136,20 @@
 
 #hero .hero-title {
     margin: 0 0 1.1rem;
-    font-size: clamp(1.7rem, 2.5vw + 0.55rem, 2.45rem);
+    /* Must always read as one line (esp. on phones), so the font shrinks
+       with viewport width rather than wrapping the name mid-title. */
+    font-size: clamp(1.05rem, 6.6vw, 2.45rem);
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: -0.015em;
     color: #1A2E44;
+    white-space: nowrap;
+}
+
+@media (min-width: 900px) {
+    #hero .hero-title {
+        font-size: clamp(1.7rem, 2.5vw + 0.55rem, 2.45rem);
+    }
 }
 
 #hero .hero-lead {

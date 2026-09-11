@@ -2781,6 +2781,13 @@ window.GALLERY_DATA = {
           "alt": "צבא",
           "w": 900,
           "h": 636
+        },
+        {
+          "full": "/AlonSite/media/images/army/army-175.jpg",
+          "thumb": "/AlonSite/media/images/thumbs/army/army-175.jpg",
+          "alt": "צבא",
+          "w": 710,
+          "h": 900
         }
       ]
     },
