@@ -82,6 +82,10 @@ $page = isset($_GET["page"]) ? clean_header_value($_GET["page"], 100) : "unknown
 $referrer = isset($_SERVER["HTTP_REFERER"]) ? clean_header_value($_SERVER["HTTP_REFERER"], 300) : "-";
 $userAgent = isset($_SERVER["HTTP_USER_AGENT"]) ? clean_header_value($_SERVER["HTTP_USER_AGENT"], 300) : "-";
 $ip = isset($_SERVER["REMOTE_ADDR"]) ? $_SERVER["REMOTE_ADDR"] : "-";
+$acceptLanguage = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? clean_header_value($_SERVER["HTTP_ACCEPT_LANGUAGE"], 100) : "-";
+$language = primary_language($acceptLanguage);
+$secChUaPlatform = isset($_SERVER["HTTP_SEC_CH_UA_PLATFORM"]) ? clean_header_value($_SERVER["HTTP_SEC_CH_UA_PLATFORM"], 50) : null;
+$secChUa = isset($_SERVER["HTTP_SEC_CH_UA"]) ? clean_header_value($_SERVER["HTTP_SEC_CH_UA"], 300) : null;
 // Explicit timezone rather than the host's default (which showed up 2-3
 // hours behind real Israel time) — Israeli date convention is
 // day.month.year, not ISO's year-month-day.
@@ -131,6 +135,49 @@ function hostname_of($url) {
     return $host ?: null;
 }
 
+// Client Hints (Sec-CH-UA*) are sent automatically by Chromium-based
+// browsers (Chrome, Edge, Opera, Samsung Internet) without any server-side
+// opt-in — free, more precise device info than guessing from the raw
+// User-Agent string via regex. Safari/Firefox don't send these at all, so
+// this returns null there and the caller falls back to parse_device().
+function parse_client_hints($platformHeader, $uaHintHeader) {
+    $platform = $platformHeader ? trim($platformHeader, "\" \t\n\r") : null;
+
+    $brand = null;
+    $version = null;
+    if ($uaHintHeader) {
+        $candidates = [];
+        foreach (explode(",", $uaHintHeader) as $part) {
+            if (preg_match('/"([^"]+)";v="([^"]+)"/', trim($part), $m)) {
+                if (stripos($m[1], "Not") !== false) continue; // greased "Not.A.Brand" entries
+                $candidates[$m[1]] = $m[2];
+            }
+        }
+        foreach ($candidates as $name => $v) {
+            // Prefer the browser's real brand over the generic "Chromium"
+            // entry that's also present for compatibility.
+            if ($name !== "Chromium") {
+                $brand = $name;
+                $version = $v;
+                break;
+            }
+        }
+        if (!$brand && $candidates) {
+            $brand = array_key_first($candidates);
+            $version = $candidates[$brand];
+        }
+    }
+
+    $parts = array_filter([$platform, $brand ? "{$brand} {$version}" : null]);
+    return $parts ? implode(" · ", $parts) : null;
+}
+
+function primary_language($acceptLanguage) {
+    if (!$acceptLanguage) return null;
+    $first = trim(explode(";", explode(",", $acceptLanguage)[0])[0]);
+    return $first ?: null;
+}
+
 // Every row/table/cell repeats dir="rtl" (as an HTML attribute, not just
 // CSS) and explicit text-align — Gmail's sanitizer strips <html>/<body> and
 // re-wraps the content, which loses a dir="rtl" set only at the top, so RTL
@@ -158,15 +205,22 @@ function h_chip($title, $rowsHtml, $extraHtml = "") {
 }
 
 $referrerHost = hostname_of($referrer);
-$device = parse_device($userAgent);
+// Client Hints, when the browser sends them, are more precise than the
+// User-Agent regex guess below — prefer them when available.
+$device = parse_client_hints($secChUaPlatform, $secChUa) ?: parse_device($userAgent);
 
-$visitRows = h_row("דף", "<b>" . h($page) . "</b>") . h_row("זמן", h($time));
+// "index" is the homepage's internal page id, not a meaningful label for
+// the reader — skip the row rather than showing "דף: index".
+$visitRows = ($page !== "index" ? h_row("דף", "<b>" . h($page) . "</b>") : "") . h_row("זמן", h($time));
 if ($referrer !== "-") {
     $visitRows .= h_row(
         "מפנה",
         h($referrerHost ?: $referrer)
             . ($referrerHost ? '<div style="font-size:12px;color:#7c828a;word-break:break-all;margin-top:2px;">' . h($referrer) . '</div>' : "")
     );
+}
+if ($language) {
+    $visitRows .= h_row("שפה", h($language));
 }
 $visitChip = h_chip("הביקור", $visitRows);
 
@@ -194,7 +248,7 @@ $htmlBody = '<!DOCTYPE html><html dir="rtl" lang="he"><head><meta charset="utf-8
     . '<table role="presentation" dir="rtl" width="480" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:20px;overflow:hidden;max-width:480px;box-shadow:0 20px 40px rgba(27,28,25,0.08);font-family:' . $fontStack . ';">'
     . '<tr><td style="height:4px;line-height:4px;font-size:0;background:#1A2E44;">&nbsp;</td></tr>'
     . '<tr><td align="right" style="padding:34px 32px 4px;">'
-    . '<div style="font-family:' . $fontStack . ';font-size:12px;font-weight:700;letter-spacing:0.08em;color:#7C8CA0;margin:0 0 10px;text-align:right;">האתר של אלון בביאן</div>'
+    . '<div style="font-family:' . $fontStack . ';font-size:12px;font-weight:700;letter-spacing:0.08em;color:#7C8CA0;margin:0 0 10px;text-align:right;">אתר ההנצחה של אלון אברהם-חי בביאן</div>'
     . '<div style="font-family:' . $fontStack . ';font-size:25px;font-weight:800;color:#1A2E44;line-height:1.4;text-align:right;">כניסה חדשה לאתר ההנצחה</div>'
     . '</td></tr>'
     . $visitChip
@@ -212,9 +266,10 @@ $htmlBody = '<!DOCTYPE html><html dir="rtl" lang="he"><head><meta charset="utf-8
 // characters read as Latin/neutral.
 $rlm = "\xE2\x80\x8F";
 $plainBody = $rlm . "כניסה חדשה לאתר ההנצחה של אלון בביאן\n\n"
-    . $rlm . "דף: {$page}\n"
+    . ($page !== "index" ? $rlm . "דף: {$page}\n" : "")
     . $rlm . "זמן: {$time}\n"
     . ($referrer !== "-" ? $rlm . "מפנה: {$referrer}\n" : "")
+    . ($language ? $rlm . "שפה: {$language}\n" : "")
     . $rlm . "מכשיר: " . ($device ? "{$device} — " : "") . "{$userAgent}\n"
     . $rlm . "IP: {$ip}\n";
 
