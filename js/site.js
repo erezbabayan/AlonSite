@@ -172,6 +172,44 @@
     updateCandleLoadMoreButton(visible.length, newestFirst.length);
   }
 
+  // Single source of truth for the "add a memory" modal markup, injected
+  // into every page at runtime instead of being copy-pasted into each HTML
+  // file (it used to be duplicated verbatim across 7 pages).
+  const CANDLE_MODAL_HTML = `
+<div class="fixed inset-0 z-[110] hidden items-center justify-center bg-[#03192e]/80 backdrop-blur-md px-6" id="candle-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-8 relative shadow-2xl">
+<button aria-label="סגור" class="absolute top-5 left-5 text-secondary hover:text-primary transition-colors" id="candle-modal-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex flex-col items-center text-center mb-6">
+<div class="relative w-28 h-28 mb-2 flex items-center justify-center">
+<span aria-hidden="true" class="candle-halo absolute inset-0"></span>
+<img src="/AlonSite/media/icons/dam-hamacabim.png" alt="דם המכבים" class="memorial-photo relative z-10" style="height: 5rem"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary">הוספת זיכרון לזכרו של אלון</h3>
+<p class="text-sm text-secondary font-body mt-2">השאירו שם והקדשה לזכרו של אלון, שיישארו לזכרו כחלק מסיפורו.</p>
+</div>
+<form class="flex flex-col gap-5" id="candle-form">
+<div>
+<label class="block font-label text-xs text-on-surface-variant uppercase tracking-wide mb-1" for="candle-name-input">שם *</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body text-lg transition-colors" id="candle-name-input" maxlength="60" placeholder="השם שלך" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label text-xs text-on-surface-variant uppercase tracking-wide mb-1" for="candle-message-input">הקדשה (לא חובה)</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:border-primary outline-none py-2 font-body resize-none transition-colors" id="candle-message-input" maxlength="300" placeholder="כתבו כמה מילים לזכרו..." rows="3"></textarea>
+</div>
+<button class="bg-primary text-white rounded-full py-3 font-bold text-lg shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2" id="candle-submit-btn" type="submit">
+<img src="/AlonSite/media/icons/dam-hamacabim.png" alt="דם המכבים" class="memorial-photo text-2xl"/> הוסיפו זיכרון
+</button>
+</form>
+</div>
+</div>`;
+
+  function injectCandleModal() {
+    if (document.getElementById("candle-modal")) return;
+    document.body.insertAdjacentHTML("beforeend", CANDLE_MODAL_HTML);
+  }
+
   function openModal() {
     const modal = document.getElementById("candle-modal");
     if (!modal) return;
@@ -222,6 +260,8 @@
   }
 
   function setupCandles() {
+    injectCandleModal();
+
     fetchCandles().then((candles) => {
       candlesCache = candles;
       renderCandles();
