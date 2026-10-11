@@ -119,6 +119,8 @@ function handlePostCandle(req, res) {
 function serveStaticFile(req, res) {
   var urlPath = decodeURIComponent(req.url.split("?")[0]);
   if (urlPath === "/") urlPath = "/AlonSite/index.html";
+  // Mirror Cloudflare's clean URLs: /pages/gallery serves pages/gallery.html.
+  else if (!path.extname(urlPath) && urlPath.indexOf("/AlonSite/pages/") === 0) urlPath += ".html";
   var filePath = path.normalize(path.join(ROOT, urlPath));
 
   // Guard against path traversal outside the site root. Compared with the
