@@ -746,6 +746,7 @@
       });
 
       setInterval(() => {
+        if (document.documentElement.classList.contains("a11y-nomotion")) return;
         stations.forEach((station) => {
           if (!station.visible) return;
           const next = pickSlideIndex(station, station.slideIndex + 1);
